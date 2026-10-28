@@ -298,7 +298,13 @@ def norm(s):
     s = re.sub(r'\b(fc|afc|sc|cf|fk|sv|vfl|vfb|1\.|club|de|sport|esporte|clube)\b', ' ', s)
     return re.sub(r'[^a-z0-9 ]', ' ', s).split()
 
-ALIAS = {'queens park rangers': 'qpr', 'wolverhampton wanderers': 'wolves', 'heart of midlothian': 'hearts'}
+ALIAS = {'queens park rangers': 'qpr', 'wolverhampton wanderers': 'wolves', 'heart of midlothian': 'hearts',
+         'manchester city': 'Man City', 'borussia mönchengladbach': "M'gladbach", 'fc cologne': 'FC Koln', 'athletic club': 'Ath Bilbao',
+         'deportivo': 'La Coruna', 'rc celta fortuna': 'Celta B', 'real sociedad ii': 'Sociedad B', 'stade rennais': 'Rennes',
+         'oh leuven': 'Oud-Heverlee Leuven', 'sporting cp': 'Sp Lisbon', 'amed sfk': 'Amedspor', 'erzurum bb': 'Erzurumspor',
+         'istanbul basaksehir': 'Buyuksehyr', 'rapid vienna': 'SK Rapid', 'agf': 'Aarhus', 'f.c. københavn': 'FC Copenhagen',
+         'sønderjyske fodbold': 'Sonderjyske', 'urawa red diamonds': 'Urawa Reds', 'pumas unam': 'UNAM Pumas',
+         'hamarkameratene': 'HamKam', 'la galaxy': 'Los Angeles Galaxy', 'lafc': 'Los Angeles FC', 'red bull new york': 'New York Red Bulls'}
 
 def match_team(name, teams):
     name = ALIAS.get(name.strip().lower(), name)
