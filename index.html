@@ -2,7 +2,7 @@
 <html lang="es"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
-<meta name="gm-v" content="20261028220203"><meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="gm-v" content="20261028220943"><meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Golmetría"><link rel="apple-touch-icon" href="icon-180.png"><link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#0a0b14"><meta name="color-scheme" content="dark">
 <title>Golmetría</title>
@@ -153,7 +153,7 @@ function init(){
 /* ===== ESTADO ===== */
 const TYPES=[['all','Todas las apuestas'],['o15','Más de 1.5 goles'],['o25','Más de 2.5 goles'],['o35','Más de 3.5 goles'],['btts','Ambos marcan'],['g1t','Gol en 1er tiempo'],['win','Ganador / Doble op.']];
 let days=[...new Set(DATA.map(m=>m.date))].sort();if(!days.length)days=[loc(new Date())];
-let day=days.includes(loc(new Date()))?loc(new Date()):days[0],type='all',thr=.75,cthr=.51,view='valor',bets=LS.get('gm_bets',[]),cur=null,custom={},pend=null,slip=[],mode='simple',askDel=null;
+let day=days.includes(loc(new Date()))?loc(new Date()):days[0],type='all',thr=.75,cthr=.51,view='valor',bets=LS.get('gm_bets',[]),cur=null,custom={},pend=null,slip=[],mode='simple',askDel=null;let askMk=null;
 const dn=d=>{const t=loc(new Date()),tm=loc(new Date(Date.now()+864e5));return d===t?'Hoy':d===tm?'Mañana':new Date(d+'T12:00').toLocaleDateString('es',{weekday:'short'})};
 const dd=d=>new Date(d+'T12:00').toLocaleDateString('es',{day:'numeric',month:'short'});
 const pc=x=>Math.round(x*100)+'%',val=b=>b.odd?b.p*b.odd-1:null,fmt=v=>v==null?'—':(v>=0?'+':'')+Math.round(v*100)+'%';
@@ -256,15 +256,17 @@ function evalBet(b,r){const L=b.label,hg=r.hg,ag=r.ag,t=hg+ag;
  if(b.btype==='g1t')return r.h1==null||r.a1==null?null:(r.h1+r.a1)>0;
  if(b.btype==='corn'){if(r.hc==null||r.ac==null)return null;let m=L.match(/^Córners de (.+) más de ([\d.]+)$/);if(m){const x=parseFloat(m[2]);return m[1]===b.home?r.hc>x:m[1]===b.away?r.ac>x:null}m=L.match(/^Córners más de ([\d.]+)$/);return m?(r.hc+r.ac)>parseFloat(m[1]):null}
  return null}
-function settle(){let ch=false;bets.forEach(b=>{if(b.res!=='p'||!b.btype)return;const r=findRes(b);if(!r)return;const v=evalBet(b,r);if(v===null)return;b.res=v?'w':'l';b.auto=true;ch=true});if(ch)LS.set('gm_bets',bets)}
-const noAuto=b=>{const r=findRes(b);return r&&evalBet(b,r)===null?'Esta liga no tiene resultado automático para este tipo de apuesta.':'Se marca sola cuando el partido termine.'};
+function settle(){let ch=false;bets.forEach(b=>{if(!b.btype||(b.res!=='p'&&!b.man))return;const r=findRes(b);if(!r)return;const v=evalBet(b,r);if(v===null)return;b.res=v?'w':'l';b.auto=true;delete b.man;ch=true});if(ch)LS.set('gm_bets',bets)}
+const canMan=b=>{if(b.res!=='p')return false;const r=findRes(b);return r?evalBet(b,r)===null:Date.now()>new Date(b.utc).getTime()+4*3600e3};
+const noAuto=b=>canMan(b)?'La app no tiene este resultado. Márcalo tú cuando termine el partido.':'Se marca sola cuando el partido termine.';
+const mkRow=b=>{if(askMk&&askMk.split('|')[1]==b.id){const w=askMk[0]==='w';return `<div class="warn" style="margin:12px 0 0 4px">¿Confirmas que esta apuesta fue ${w?'ganada':'perdida'}?<div class="act" style="margin:10px 0 0"><button class="btn" data-mok="${askMk}">Sí, confirmar</button><button class="btn g" data-mno="1">No</button></div></div>`}return null};
 const stl=r=>`<span class="st ${r}">${r==='w'?'Ganada':r==='l'?'Perdida':'Pendiente'}</span>`;
 const askRow=(k,txt)=>askDel===k?`<div class="warn" style="margin:12px 0 0 4px">¿Borrar ${txt}? No se puede deshacer.<div class="act" style="margin:10px 0 0"><button class="btn" style="background:#e0334f;box-shadow:none" data-del="${k}">Sí, borrar</button><button class="btn g" data-nodel="1">No</button></div></div>`:null;
 function combosOf(){const o={};bets.forEach(b=>{if(b.cb)(o[b.cb]=o[b.cb]||[]).push(b)});return Object.keys(o).map(k=>{const l=o[k];return{id:k,legs:l,res:l.some(a=>a.res==='l')?'l':l.every(a=>a.res==='w')?'w':'p',p:prodp(l)}})}
 function renderMis(){settle();const sim=bets.filter(b=>!b.cb),cs=combosOf(),items=mode==='simple'?sim:cs,done=items.filter(b=>b.res!=='p'),w=done.filter(b=>b.res==='w');
  $('#seg').innerHTML=`<button class="${mode==='simple'?'on':''}" data-mode="simple">Simples<small>${sim.length}</small></button><button class="${mode==='combo'?'on':''}" data-mode="combo">Combinadas<small>${cs.length}</small></button>`;
  $('#sum').innerHTML=`<div><b>${done.length?Math.round(w.length/done.length*100)+'%':'—'}</b>Aciertos</div><div><b>${w.length} · ${done.length-w.length}</b>Ganadas · Perdidas</div><div><b>${items.length-done.length}</b>Pendientes</div>`;
- if(mode==='simple')$('#l-mis').innerHTML=sim.length?sim.map(b=>`<div class="card ${b.res==='w'?'v':b.res==='l'?'l':''}"><div class="meta">${b.date} · ${b.res==='w'?'Ganada':b.res==='l'?'Perdida':'Pendiente'}${b.auto?' · marcada sola':''}</div><div class="tm" style="margin-bottom:4px">${b.match}</div><div class="lab" style="font-size:15px;margin-bottom:6px">${b.label} <span style="color:var(--mu);font-weight:600">${b.odd?'@ '+(+b.odd).toFixed(2)+' · ':''}prob. ${pc(b.p)}</span></div>`+(b.res==='p'?`<div style="font-size:13px;color:var(--mu);margin-bottom:4px">${noAuto(b)}</div>`:'')+(askRow('s'+b.id,'esta apuesta')||`<div class="act" style="margin-top:0"><button class="btn g" data-ask="s${b.id}">Borrar</button></div>`)+'</div>').join(''):'<div class="empty">Todavía no guardas apuestas simples.<br>En cualquier apuesta toca “Guardar apuesta”. Cuando el partido termine, la app la marca sola.</div>';
+ if(mode==='simple')$('#l-mis').innerHTML=sim.length?sim.map(b=>`<div class="card ${b.res==='w'?'v':b.res==='l'?'l':''}"><div class="meta">${b.date} · ${b.res==='w'?'Ganada':b.res==='l'?'Perdida':'Pendiente'}${b.auto?' · marcada sola':''}${b.man?' · marcada por ti':''}</div><div class="tm" style="margin-bottom:4px">${b.match}</div><div class="lab" style="font-size:15px;margin-bottom:6px">${b.label} <span style="color:var(--mu);font-weight:600">${b.odd?'@ '+(+b.odd).toFixed(2)+' · ':''}prob. ${pc(b.p)}</span></div>`+(b.res==='p'?`<div style="font-size:13px;color:var(--mu);margin-bottom:4px">${noAuto(b)}</div>`:'')+(askRow('s'+b.id,'esta apuesta')||mkRow(b)||`<div class="act" style="margin-top:0">${canMan(b)?`<button class="btn g" data-mk="w|${b.id}">Ganada</button><button class="btn g" data-mk="l|${b.id}">Perdida</button>`:''}${b.man?`<button class="btn g" data-undo="${b.id}">Deshacer</button>`:''}<button class="btn g" data-ask="s${b.id}">Borrar</button></div>`)+'</div>').join(''):'<div class="empty">Todavía no guardas apuestas simples.<br>En cualquier apuesta toca “Guardar apuesta”. Cuando el partido termine, la app la marca sola.</div>';
  else $('#l-mis').innerHTML=cs.length?cs.map(c=>{const pend=c.legs.filter(a=>a.res==='p').length;return `<div class="card ${c.res==='w'?'v':c.res==='l'?'l':''}"><div class="meta">Combinada de ${c.legs.length} apuestas · ${stl(c.res)}</div><div class="pcb"><strong>${pcx(c.p)}%</strong><span>probabilidad de que salgan todas</span></div><div style="font-size:13px;color:var(--mu)">${c.res==='l'?'Perdida: una apuesta falló.':c.res==='w'?'Ganada: todas acertaron.':'Pendiente: faltan '+pend+' por terminar.'}</div>`+c.legs.map(a=>`<div class="leg"><div style="flex:1;min-width:0"><b>${a.label}</b><small>${a.match}</small></div>${stl(a.res)}</div>`).join('')+(askRow('c'+c.id,'esta combinada completa')||`<div class="act" style="margin-left:0"><button class="btn g" data-split="${c.id}">Separar</button><button class="btn g" data-ask="c${c.id}">Borrar combinada</button></div>`)+'</div>'}).join(''):'<div class="empty">Todavía no guardas combinadas.<br>En Valor, toca “Guardar apuesta” y elige “Añadir a combinada”.</div>';}
 document.addEventListener('click',e=>{const t=e.target;
  const d=t.closest('.day');if(d){if(d.id==='lv'){liveOn=!liveOn}else{liveOn=false;day=d.dataset.d}render();moved();return}
@@ -273,6 +275,10 @@ document.addEventListener('click',e=>{const t=e.target;
  if(t.closest('#clr')){sel=favSet().size?favSet():new Set(LGS.map(x=>x[0]));LS.set('gm_lg',[...sel]);type='all';liveOn=false;$('#ft').value='all';drawLg();render();moved();return}
  const n=t.closest('nav button');if(n){setView(n.dataset.v);return}
  const sv=t.closest('[data-sv]');if(sv){const[a,b]=sv.dataset.sv.split('|');askSave(a,+b);return}
+ const mk=t.closest('[data-mk]');if(mk){askMk=mk.dataset.mk;renderMis();return}
+ if(t.closest('[data-mno]')){askMk=null;renderMis();return}
+ const mo=t.closest('[data-mok]');if(mo){const[k,id]=mo.dataset.mok.split('|'),b=bets.find(x=>x.id==id);if(b&&canMan(b)){b.res=k;b.man=true}askMk=null;LS.set('gm_bets',bets);renderMis();return}
+ const ud=t.closest('[data-undo]');if(ud){const b=bets.find(x=>x.id==ud.dataset.undo);if(b){b.res='p';delete b.man}LS.set('gm_bets',bets);renderMis();return}
  const rm=t.closest('[data-rm]');if(rm){slip.splice(+rm.dataset.rm,1);openSlip();render();return}
  const md=t.closest('[data-mode]');if(md){mode=md.dataset.mode;askDel=null;renderMis();return}
  const ak=t.closest('[data-ask]');if(ak){askDel=ak.dataset.ask;renderMis();return}
