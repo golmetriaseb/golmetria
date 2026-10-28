@@ -467,6 +467,51 @@ def apply_cal(cal, k, p):
                 q = y0 + t * (y1 - y0); break
     return min(0.98, max(0.02, q))
 
+def espn_results(l, teams):
+    """Marcadores finales de ayer y hoy desde ESPN (solo goles). Nunca debe romper el proceso."""
+    out = []
+    for i in (0, 1, 2):
+        d = TODAY - timedelta(days=i)
+        try:
+            j = json.loads(fetch(f"https://site.api.espn.com/apis/site/v2/sports/soccer/{l['espn']}/scoreboard?dates={d:%Y%m%d}", tries=2))
+        except Exception:
+            continue
+        for ev in j.get('events', []):
+            try:
+                if not ev['status']['type'].get('completed'):
+                    continue
+                comp = ev['competitions'][0]['competitors']
+                ch = next(c for c in comp if c['homeAway'] == 'home')
+                ca = next(c for c in comp if c['homeAway'] == 'away')
+                th, ta = match_team(ch['team']['displayName'], teams), match_team(ca['team']['displayName'], teams)
+                hg, ag = int(ch['score']), int(ca['score'])
+                k = datetime.fromisoformat(ev['date'].replace('Z', '+00:00'))
+            except Exception:
+                continue
+            if th and ta:
+                out.append(dict(l=l['code'], h=th, a=ta, d=k.date().isoformat(), hg=hg, ag=ag, h1=None, a1=None, hc=None, ac=None))
+    return out
+
+def build_results(H):
+    res, cut = [], TODAY - timedelta(days=14)
+    for l in LEAGUES:
+        code = l['code']
+        got = []
+        for m in H.get(code, []):
+            if m['d'] >= cut:
+                got.append(dict(l=code, h=m['h'], a=m['a'], d=m['d'].isoformat(), hg=int(m['hg']), ag=int(m['ag']),
+                                h1=None if m['h1'] is None else int(m['h1']), a1=None if m['a1'] is None else int(m['a1']),
+                                hc=None if m['hc'] is None else int(m['hc']), ac=None if m['ac'] is None else int(m['ac'])))
+        try:
+            for e in espn_results(l, status['leagues'][code].get('teams', [])):
+                dup = any(g['h'] == e['h'] and g['a'] == e['a'] and abs((date.fromisoformat(g['d']) - date.fromisoformat(e['d'])).days) <= 1 for g in got)
+                if not dup:
+                    got.append(e)
+        except Exception as ex:
+            log('resultados espn', code, str(ex)[:100])
+        res += got
+    return res
+
 def main():
     fx = load_fixtures()
     bt, pooled, H, F = {}, {'ALL': {k: [] for k in BT_KEYS}, 'FAV': {k: [] for k in BT_KEYS}}, {}, {}
@@ -533,6 +578,12 @@ def main():
     status['calibration'] = {k: [[round(x, 3), round(y, 3)] for x, y in v] for k, v in cal.items()}
     json.dump(dict(generated=NOW.strftime('%Y-%m-%dT%H:%M:%SZ'), matches=matches, status=status), open('data.json', 'w'), ensure_ascii=False, separators=(',', ':'))
     bt['ALL'] = allsum; bt['FAV'] = summarize(pooled['FAV'])
+    try:
+        rs = build_results(H)
+        json.dump(dict(generated=NOW.strftime('%Y-%m-%dT%H:%M:%SZ'), results=rs), open('results.json', 'w'), ensure_ascii=False, separators=(',', ':'))
+        log('resultados:', len(rs))
+    except Exception as ex:
+        status['errors'].append('resultados: ' + str(ex)[:150])
     json.dump(dict(generated=NOW.strftime('%Y-%m-%dT%H:%M:%SZ'), leagues=bt), open('backtest.json', 'w'), ensure_ascii=False, indent=1)
     log(json.dumps(status, indent=1, ensure_ascii=False)[:3000]); log('partidos:', len(matches))
 
