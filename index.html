@@ -49,7 +49,7 @@ body{margin:0;background:radial-gradient(700px 320px at 85% -80px,rgba(46,197,25
 .ring:before{content:"";position:absolute;inset:8px;border-radius:50%;background:var(--card2)}
 .ring span{position:relative;font:italic 800 26px var(--f1)}
 .tile.tv{background:linear-gradient(180deg,#17270b,#0d1707);border-color:#4f8a14;box-shadow:0 0 20px rgba(182,255,59,.15)}.tile.tv strong{color:var(--ok)}.tile.tv em{color:#d4ff8f}
-.tile.tn strong{color:var(--mu)}
+.tile.tn strong{color:var(--mu)}.tile.tr{background:linear-gradient(180deg,#2a1d05,#1a1204);border-color:#8a6212}.tile.tr strong{color:var(--go)}.tile.tr em{color:#ffd88a}.tile.tr small{color:#ffd88a}
 .act{display:flex;gap:8px;margin:14px 0 0 4px}
 .btn{border:0;border-radius:12px;padding:12px 18px;font:italic 800 16px var(--f1);text-transform:uppercase;letter-spacing:.6px;background:linear-gradient(135deg,#1f7bff,#2ec5ff);color:#fff;box-shadow:0 6px 16px rgba(31,123,255,.35)}
 .btn.g{background:var(--card2);border:1px solid var(--ln2);color:var(--tx);box-shadow:none}
@@ -144,11 +144,11 @@ function flat(){const o=[];ms().forEach(m=>m.bets.forEach(b=>{if(type==='all'||b
 const LC={ENG:'#6ea0ff',GER:'#ff7a7a',SCO:'#7ad7ff',SUI:'#ff9ac2',BRA:'#4fe0a0'};
 const ini=n=>n.replace(/[^A-Za-zÁÉÍÓÚÑáéíóúñ ]/g,'').split(' ').filter(Boolean).slice(0,2).map(w=>w[0]).join('').toUpperCase()||n.slice(0,2).toUpperCase();
 function head(m){const c=LC[m.league]||'#a3a9d6';return`<div class="ch"><span class="lgc" style="color:${c}">${m.leagueName}</span><span class="tpill">${dn(m.date)} · ${m.time}</span></div><div class="vs"><div class="tmx"><i>${ini(m.home)}</i><b>${m.home}</b></div><span class="vsx">VS</span><div class="tmx"><i>${ini(m.away)}</i><b>${m.away}</b></div></div>`}
-function bcard(x,cls){const{m,b}=x,v=val(b),hi=b.p>=.75,ok=v!=null&&v>=.05,deg=Math.round(b.p*360),rc=hi?'var(--go)':'var(--bl)';return`<div class="card ${cls}">${head(m)}
+function bcard(x,cls){const{m,b}=x,v=val(b),hi=b.p>=.75,ok=v!=null&&v>=.05,rv=v!=null&&v>.35,deg=Math.round(b.p*360),rc=hi?'var(--go)':'var(--bl)';return`<div class="card ${cls}">${head(m)}
 <div class="pick"><small>LA APUESTA</small>${b.label}</div>
 <div class="mt"><div class="tile"><small>PROBABILIDAD</small><div class="ring" style="background:conic-gradient(${rc} ${deg}deg,var(--ln2) 0)"><span style="color:${rc}">${pc(b.p)}</span></div><em>Pasa ${Math.round(b.p*100)} de cada 100 veces</em></div>
 <div class="tile"><small>CUOTA</small><strong>${b.odd?b.odd.toFixed(2):'—'}</strong><em>${b.odd?'Cuota justa: '+(1/b.p).toFixed(2):'Sin cuota de la casa. Cuota justa: '+(1/b.p).toFixed(2)}</em></div>
-<div class="tile ${ok?'tv':'tn'}"><small>VALOR</small><strong>${fmt(v)}</strong><em>${v==null?'Escribe tu cuota en “Ver partido”':ok?'Conviene: la casa paga de más':'No conviene: paga poco'}</em></div></div>
+<div class="tile ${rv?'tr':ok?'tv':'tn'}"><small>${rv?'VALOR · REVISAR':'VALOR'}</small><strong>${fmt(v)}</strong><em>${v==null?'Escribe tu cuota en “Ver partido”':rv?'Muy alto: revisa, puede ser un error del modelo':ok?'Conviene: la casa paga de más':'No conviene: paga poco'}</em></div></div>
 <div class="act"><button class="btn" data-sv="${m.id}|${m.bets.indexOf(b)}">Guardar apuesta</button><button class="btn g" data-m="${m.id}">Ver partido</button></div></div>`}
 function emptyMsg(kind){const L=lg==='all'?'todas las ligas':DATA.find(m=>m.league===lg).leagueName,T=type==='all'?'todas las apuestas':TYPES.find(t=>t[0]===type)[1],D=dn(day).toLowerCase();
  const what=kind==='v'?'apuestas de valor':'apuestas con 75% de probabilidad o más';
@@ -157,7 +157,7 @@ function emptyMsg(kind){const L=lg==='all'?'todas las ligas':DATA.find(m=>m.leag
 function render(){
  document.querySelectorAll('.day').forEach(e=>e.classList.toggle('on',e.dataset.d===day));
  const F=flat();
- const V=F.filter(x=>x.b.p>=.28&&val(x.b)!=null&&val(x.b)>=.05).sort((a,b)=>val(b.b)-val(a.b)).slice(0,40);
+ const V=F.filter(x=>x.b.p>=.28&&val(x.b)!=null&&val(x.b)>=.05).sort((a,b)=>((val(a.b)>.35)-(val(b.b)>.35))||(val(b.b)-val(a.b))).slice(0,40);
  $('#l-valor').innerHTML=V.length?V.map(x=>bcard(x,'v')).join(''):emptyMsg('v');
  const S=F.filter(x=>x.b.p>=.75).sort((a,b)=>b.b.p-a.b.p).slice(0,40);
  $('#l-seg').innerHTML=S.length?S.map(x=>bcard(x,'s')).join(''):emptyMsg('s');
