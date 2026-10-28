@@ -488,9 +488,31 @@ def espn_results(l, teams):
                 k = datetime.fromisoformat(ev['date'].replace('Z', '+00:00'))
             except Exception:
                 continue
+            h1 = a1 = None
+            try:  # marcador del primer tiempo desde linescores
+                h1, a1 = int(float(ch['linescores'][0]['value'])), int(float(ca['linescores'][0]['value']))
+                if h1 > hg or a1 > ag:
+                    h1 = a1 = None
+            except Exception:
+                h1 = a1 = None
             if th and ta:
-                out.append(dict(l=l['code'], h=th, a=ta, d=k.date().isoformat(), hg=hg, ag=ag, h1=None, a1=None, hc=None, ac=None))
+                out.append(dict(l=l['code'], h=th, a=ta, d=k.date().isoformat(), hg=hg, ag=ag, h1=h1, a1=a1, hc=None, ac=None, _id=ev.get('id'), _hid=ch['team'].get('id'), _aid=ca['team'].get('id')))
     return out
+
+def espn_corners(l, e):
+    """Córners desde el detalle del partido en ESPN. Si no hay dato, queda en None. Nunca rompe el proceso."""
+    try:
+        j = json.loads(fetch(f"https://site.api.espn.com/apis/site/v2/sports/soccer/{l['espn']}/summary?event={e['_id']}", tries=2))
+        got = {}
+        for t in j['boxscore']['teams']:
+            for st in t.get('statistics', []):
+                if st.get('name') == 'wonCorners':
+                    got[str(t['team']['id'])] = int(float(st['displayValue']))
+        if e['_hid'] in got and e['_aid'] in got:
+            e['hc'], e['ac'] = got[e['_hid']], got[e['_aid']]
+            log('córners espn', l['code'], e['h'], e['a'], e['hc'], e['ac'])
+    except Exception as ex:
+        log('córners espn sin dato', l['code'], str(ex)[:60])
 
 def build_results(H):
     res, cut = [], TODAY - timedelta(days=14)
@@ -506,9 +528,13 @@ def build_results(H):
             for e in espn_results(l, status['leagues'][code].get('teams', [])):
                 dup = any(g['h'] == e['h'] and g['a'] == e['a'] and abs((date.fromisoformat(g['d']) - date.fromisoformat(e['d'])).days) <= 1 for g in got)
                 if not dup:
+                    espn_corners(l, e)
                     got.append(e)
         except Exception as ex:
             log('resultados espn', code, str(ex)[:100])
+        for g in got:
+            for k in ('_id', '_hid', '_aid'):
+                g.pop(k, None)
         res += got
     return res
 
