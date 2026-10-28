@@ -424,21 +424,69 @@ def summarize(recs):
                       avg_pred=round(sum(r[0] for r in v) / len(v), 3), real=round(base, 3), bins=bins)
     return out
 
+CAL_KEYS = ('o15', 'o25', 'o35', 'btts', 'g1t', 'c85', 'c95', 'c105')
+
+def make_calibration(summary):
+    """Corrige el sesgo del modelo con lo que paso en partidos reales (por mercado, con interpolacion y encogimiento)."""
+    cal = {}
+    for k in CAL_KEYS:
+        r = summary.get(k)
+        if not r: continue
+        pts = []
+        for b in r['bins']:
+            if b['n'] >= 30:
+                w = b['n'] / (b['n'] + 300.0)
+                pts.append((b['pred'], b['pred'] + w * (b['real'] - b['pred'])))
+        if len(pts) >= 2:
+            cal[k] = sorted(pts)
+    return cal
+
+def apply_cal(cal, k, p):
+    pts = cal.get(k)
+    if p is None or not pts: return p
+    if p <= pts[0][0]:
+        q = p + (pts[0][1] - pts[0][0])
+    elif p >= pts[-1][0]:
+        q = p + (pts[-1][1] - pts[-1][0])
+    else:
+        q = p
+        for (x0, y0), (x1, y1) in zip(pts, pts[1:]):
+            if x0 <= p <= x1:
+                t = (p - x0) / (x1 - x0) if x1 > x0 else 0
+                q = y0 + t * (y1 - y0); break
+    return min(0.98, max(0.02, q))
+
 def main():
     fx = load_fixtures()
-    matches, bt, pooled = [], {}, {'ALL': {k: [] for k in BT_KEYS}, 'FAV': {k: [] for k in BT_KEYS}}
+    bt, pooled, H, F = {}, {'ALL': {k: [] for k in BT_KEYS}, 'FAV': {k: [] for k in BT_KEYS}}, {}, {}
+    # --- pasada 1: historial y prueba contra partidos reales
     for l in LEAGUES:
         code = l['code']
         st = status['leagues'][code] = dict(name=l['name'])
         hist = load_history(l)
+        H[code] = hist
         st['hist'] = len(hist)
         st['last_result'] = hist[-1]['d'].isoformat() if hist else None
         st['has_corners'] = sum(1 for m in hist if m['hc'] is not None)
         st['has_half'] = sum(1 for m in hist if m['h1'] is not None)
-        teams = sorted({m['h'] for m in hist} | {m['a'] for m in hist})
-        st['teams'] = teams
+        st['teams'] = sorted({m['h'] for m in hist} | {m['a'] for m in hist})
+        st['fav'] = l['fav']
+        try:
+            r = backtest(hist)
+            bt[code] = summarize(r)
+            for k in BT_KEYS:
+                pooled['ALL'][k] += r[k]
+                if l['fav']: pooled['FAV'][k] += r[k]
+        except Exception as e:
+            status['errors'].append(f'backtest {code}: {e}')
+    allsum = summarize(pooled['ALL'])
+    cal = make_calibration(allsum)
+    # --- pasada 2: calendario y predicciones (con correccion)
+    matches = []
+    for l in LEAGUES:
+        code = l['code']; st = status['leagues'][code]; hist = H[code]; teams = st['teams']
         lf = fx.get(code, [])
-        st['fixtures_fd'] = len(lf); st['fav'] = l['fav']
+        st['fixtures_fd'] = len(lf)
         try:
             ef, miss = espn_fixtures(l, teams)
         except Exception as e:
@@ -456,24 +504,23 @@ def main():
             M = markets(hist, f['h'], f['a'], TODAY)
             if not M:
                 st['skipped'] = st.get('skipped', 0) + 1; continue
+            M['g1t'] = apply_cal(cal, 'g1t', M.get('g1t'))
+            for k in ('o15', 'o25', 'o35', 'btts'):
+                M[k] = apply_cal(cal, k, M[k])
+            for k, ck in (('c85', 'c85'), ('c95', 'c95'), ('c105', 'c105')):
+                if k in M: M[k] = apply_cal(cal, ck, M[k])
             matches.append(dict(id=f"{code}-{f['k']:%Y%m%d}-{slug(f['h'])}-{slug(f['a'])}", league=code, leagueName=l['name'],
-                                utc=f['k'].strftime('%Y-%m-%dT%H:%M:%SZ'), home=f['h'], away=f['a'], src=f['src'], fav=l['fav'], oddsFrom=('promedio de casas' if f['src']=='fd' else ('DraftKings' if any(f['odds'].values()) else None)),
+                                utc=f['k'].strftime('%Y-%m-%dT%H:%M:%SZ'), home=f['h'], away=f['a'], src=f['src'], fav=l['fav'],
+                                oddsFrom=('promedio de casas' if f['src'] == 'fd' else ('DraftKings' if any(f['odds'].values()) else None)),
                                 lh=round(M['lh'], 2), la=round(M['la'], 2), bets=bets_for(M, f['h'], f['a'], f['odds'])))
             done += 1
         st['matches'] = done
-        try:
-            r = backtest(hist)
-            bt[code] = summarize(r)
-            for k in BT_KEYS:
-                pooled['ALL'][k] += r[k]
-                if l['fav']: pooled['FAV'][k] += r[k]
-        except Exception as e:
-            status['errors'].append(f'backtest {code}: {e}')
     matches.sort(key=lambda m: m['utc'])
+    status['calibration'] = {k: [[round(x, 3), round(y, 3)] for x, y in v] for k, v in cal.items()}
     json.dump(dict(generated=NOW.strftime('%Y-%m-%dT%H:%M:%SZ'), matches=matches, status=status), open('data.json', 'w'), ensure_ascii=False, separators=(',', ':'))
-    bt['ALL'] = summarize(pooled['ALL']); bt['FAV'] = summarize(pooled['FAV'])
+    bt['ALL'] = allsum; bt['FAV'] = summarize(pooled['FAV'])
     json.dump(dict(generated=NOW.strftime('%Y-%m-%dT%H:%M:%SZ'), leagues=bt), open('backtest.json', 'w'), ensure_ascii=False, indent=1)
-    log(json.dumps(status, indent=1, ensure_ascii=False)); log('partidos:', len(matches))
+    log(json.dumps(status, indent=1, ensure_ascii=False)[:3000]); log('partidos:', len(matches))
 
 if __name__ == '__main__':
     main()
