@@ -2,7 +2,7 @@
 <html lang="es"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
-<meta name="gm-v" content="20261028204657"><meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="gm-v" content="20261028211438"><meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Golmetría"><link rel="apple-touch-icon" href="icon-180.png"><link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#0a0b14"><meta name="color-scheme" content="dark">
 <title>Golmetría</title>
@@ -22,7 +22,7 @@ html,body{touch-action:pan-x pan-y;-webkit-text-size-adjust:100%}body{margin:0;b
 .day{flex:none;border:1px solid var(--ln2);background:var(--card);border-radius:12px;padding:7px 15px;text-align:center;font:italic 800 17px var(--f1);text-transform:uppercase;color:var(--tx);min-width:66px;line-height:1.1}
 .day small{display:block;font:600 10.5px Barlow;font-style:normal;color:var(--mu);margin-top:1px;letter-spacing:.6px}
 .day.lv{color:#ff8a5c;border-color:#5a2f1f}.day.lv small{display:inline;font:800 15px var(--f1);color:inherit;margin-left:2px}.day.lv.zero{opacity:.5}.day.lv.on{background:linear-gradient(135deg,#ff6b2c,#ff9a3c);color:#fff;border-color:transparent;box-shadow:0 4px 18px rgba(255,120,50,.35)}.lvnote{font-size:13px;line-height:1.45;color:#ffb28f;border:1px solid #5a2f1f;background:#1d120d;border-radius:12px;padding:10px 12px;margin-bottom:12px}.day.on{background:linear-gradient(135deg,#1f7bff,#2ec5ff);border-color:transparent;color:#fff;box-shadow:0 4px 18px rgba(46,197,255,.35)}.day.on small{color:#d9f3ff}
-.sel{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.actl{display:none;align-items:center;justify-content:space-between;gap:10px;margin-top:10px;border:1px solid #1d3b57;background:rgba(46,197,255,.07);border-radius:12px;padding:9px 12px;font-size:13px;color:#b9dcf0}.actl.on{display:flex}.actl b{color:var(--tx)}.actl button{border:0;background:var(--card2);color:var(--tx);border-radius:8px;padding:6px 10px;font:700 12px Barlow;cursor:pointer;flex:none}.note{display:none;margin:12px 0 0;border:1px solid #5a4a1d;background:#1d170a;border-radius:12px;padding:10px 12px;font-size:13px;line-height:1.45;color:#ffd98a}.note.on{display:block}.rs{margin:12px 0 0;font-size:13px;color:var(--mu);line-height:1.9}.rs button{border:0;background:none;color:var(--bl);font:700 13px Barlow;text-decoration:underline;cursor:pointer;padding:0}.thr{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:0 0 14px}.thr span{font-size:12px;color:var(--mu);font-weight:700;letter-spacing:.5px;text-transform:uppercase}.thr button{border:1px solid var(--ln2);background:var(--card);color:var(--tx);border-radius:999px;padding:8px 14px;font:700 13px Barlow;cursor:pointer}.thr button.on{background:var(--tx);color:#0a0c12;border-color:var(--tx)}.sel{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .sel #fl{width:100%;color:var(--tx);background:var(--card);border:1px solid var(--ln2);border-radius:12px;padding:11px 13px;font:700 14px Barlow;text-align:left;display:flex;justify-content:space-between;align-items:center}.sel #fl:after{content:'';width:8px;height:8px;border-right:2px solid var(--bl);border-bottom:2px solid var(--bl);transform:rotate(45deg);margin:-3px 2px 0 6px}.lgh{font:italic 800 13px var(--f1);letter-spacing:1px;text-transform:uppercase;color:var(--bl);padding:12px 4px 4px}.lrow{display:flex;align-items:center;gap:12px;padding:12px 4px;border-bottom:1px solid var(--ln2);font:700 16px Barlow}.sheet .lrow input{width:22px;height:22px;margin:0;padding:0;border:0;accent-color:#2ec5ff;flex:none}.lrow small{margin-left:auto;color:var(--mu);font-weight:500;font-size:13px}#ll{max-height:52vh;overflow-y:auto;-webkit-overflow-scrolling:touch;margin-bottom:12px}.lbt{display:flex;gap:8px;margin-bottom:10px}.lbt button{flex:1}.sel select{width:100%;appearance:none;color:var(--tx);background:var(--card) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%232ec5ff' stroke-width='2' fill='none'/%3E%3C/svg%3E") no-repeat right 12px center;border:1px solid var(--ln2);border-radius:12px;padding:11px 30px 11px 13px;font:700 14px Barlow}
 .demo{border:1px dashed #6a5217;background:var(--gobg);color:var(--go);border-radius:12px;padding:9px 12px;font-size:13px;margin:14px 0 0}
 .intro{margin:22px 0 14px}.intro h2{font:italic 800 36px/1 var(--f1);text-transform:uppercase;margin:0 0 6px;letter-spacing:.3px}.intro h2 em{font-style:italic;color:var(--ok)}.intro h2:after{content:"";display:block;width:54px;height:4px;border-radius:2px;background:linear-gradient(90deg,var(--bl),var(--ok));margin-top:8px;transform:skewX(-20deg)}.intro p{margin:0;color:var(--mu);font-size:14px;line-height:1.4}
@@ -85,9 +85,11 @@ nav button.on{color:var(--bl)}nav button.on svg{filter:drop-shadow(0 0 6px rgba(
 <div class="sel"><button id="fl" type="button"></button><select id="ft"></select></div>
 </div></div></div>
 <div class="wrap">
+<div class="actl" id="actl"><span id="actt"></span><button id="clr" type="button">Quitar filtros ✕</button></div><div class="note" id="note"></div><div class="rs" id="rs"></div>
 <div class="demo" id="demo"><b>Datos de ejemplo.</b> Así se verá la app. Con los partidos reales la conectamos después.</div>
 <section class="view on" id="v-valor"><div class="intro"><h2>Apuestas de <em>valor</em></h2><p>La casa paga más de lo que debería. Ordenadas de mayor a menor valor.</p></div><div id="l-valor"></div></section>
-<section class="view" id="v-seg"><div class="intro"><h2>Más <em>probables</em></h2><p>Las que más veces ocurren (75% o más). Ninguna es segura: pueden perder y pueden no tener valor.</p></div><div id="l-seg"></div></section>
+<section class="view" id="v-seg"><div class="intro"><h2>Más <em>probables</em></h2><p>Las que más veces ocurren. Ninguna es segura: pueden perder y pueden no tener valor.</p></div><div class="thr" id="thr"></div><div id="l-seg"></div></section>
+<section class="view" id="v-corn"><div class="intro"><h2><em>Córners</em></h2><p>Totales y por equipo, de mayor a menor probabilidad. No hay cuota gratis de córners: escribe la de tu casa en “Ver partido” y la app te dice si hay valor.</p></div><div class="thr" id="cthr"></div><div id="l-corn"></div></section>
 <section class="view" id="v-par"><div class="intro"><h2>Partidos del <em>día</em></h2><p>Toca un partido para ver todas sus apuestas.</p></div><div id="l-par"></div></section>
 <section class="view" id="v-mis"><div class="intro"><h2>Mis <em>apuestas</em></h2><p>Guarda apuestas y marca si ganaste o perdiste.</p></div><div class="sum" id="sum"></div><div id="l-mis"></div></section>
 </div>
@@ -98,6 +100,7 @@ nav button.on{color:var(--bl)}nav button.on svg{filter:drop-shadow(0 0 6px rgba(
 <nav>
 <button data-v="valor" class="on"><svg viewBox="0 0 24 24"><path d="M6.5 3.5h11l4 5.5L12 20.5 2.5 9z"/><path d="M2.5 9h19M9 3.5L7.5 9 12 20.5 16.5 9 15 3.5"/></svg>Valor</button>
 <button data-v="seg"><svg viewBox="0 0 24 24"><path d="M3 17.5l5.5-5.5 4 4L21 7"/><path d="M15 7h6v6"/></svg>Más probables</button>
+<button data-v="corn"><svg viewBox="0 0 24 24"><path d="M5 21V4"/><path d="M5 4.5h12l-3 4 3 4H5"/></svg>Córners</button>
 <button data-v="par"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/><circle cx="12" cy="15.5" r="2"/></svg>Partidos</button>
 <button data-v="mis"><svg viewBox="0 0 24 24"><path d="M4 8a2 2 0 012-2h12a2 2 0 012 2v2.2a2 2 0 000 3.6V16a2 2 0 01-2 2H6a2 2 0 01-2-2v-2.2a2 2 0 000-3.6z"/><path d="M14.5 6v12" stroke-dasharray="1.5 2.5"/></svg>Mis apuestas</button>
 </nav>
@@ -136,9 +139,9 @@ chkV();document.addEventListener('visibilitychange',()=>{if(!document.hidden)chk
 document.addEventListener('gesturestart',e=>e.preventDefault());document.addEventListener('gesturechange',e=>e.preventDefault());
 function init(){
 /* ===== ESTADO ===== */
-const TYPES=[['all','Todas las apuestas'],['o15','Más de 1.5 goles'],['o25','Más de 2.5 goles'],['o35','Más de 3.5 goles'],['btts','Ambos marcan'],['corn','Córners'],['g1t','Gol en 1er tiempo'],['win','Ganador / Doble op.']];
+const TYPES=[['all','Todas las apuestas'],['o15','Más de 1.5 goles'],['o25','Más de 2.5 goles'],['o35','Más de 3.5 goles'],['btts','Ambos marcan'],['g1t','Gol en 1er tiempo'],['win','Ganador / Doble op.']];
 let days=[...new Set(DATA.map(m=>m.date))].sort();if(!days.length)days=[loc(new Date())];
-let day=days.includes(loc(new Date()))?loc(new Date()):days[0],type='all',view='valor',bets=LS.get('gm_bets',[]),cur=null,custom={},pend=null;
+let day=days.includes(loc(new Date()))?loc(new Date()):days[0],type='all',thr=.75,cthr=.51,view='valor',bets=LS.get('gm_bets',[]),cur=null,custom={},pend=null;
 const dn=d=>{const t=loc(new Date()),tm=loc(new Date(Date.now()+864e5));return d===t?'Hoy':d===tm?'Mañana':new Date(d+'T12:00').toLocaleDateString('es',{weekday:'short'})};
 const dd=d=>new Date(d+'T12:00').toLocaleDateString('es',{day:'numeric',month:'short'});
 const pc=x=>Math.round(x*100)+'%',val=b=>b.odd?b.p*b.odd-1:null,fmt=v=>v==null?'—':(v>=0?'+':'')+Math.round(v*100)+'%';
@@ -157,7 +160,7 @@ let liveOn=false;
 function isLive(m){const e=Date.now()-new Date(m.utc);return e>=0&&e<=130*6e4}
 function over(m){return Date.now()-new Date(m.utc)>130*6e4}
 function ms(){return liveOn?DATA.filter(m=>isLive(m)&&sel.has(m.league)):DATA.filter(m=>m.date===day&&!over(m)&&sel.has(m.league))}
-function flat(){const o=[];ms().forEach(m=>m.bets.forEach(b=>{if(type==='all'||b.type===type)o.push({m,b})}));return o}
+function flat(c){const o=[];ms().forEach(m=>m.bets.forEach(b=>{if(c?b.type==='corn':(b.type!=='corn'&&(type==='all'||b.type===type)))o.push({m,b})}));return o}
 const LC={ENG:'#6ea0ff',GER:'#ff7a7a',SCO:'#7ad7ff',SUI:'#ff9ac2',BRA:'#4fe0a0'};
 const ini=n=>n.replace(/[^A-Za-zÁÉÍÓÚÑáéíóúñ ]/g,'').split(' ').filter(Boolean).slice(0,2).map(w=>w[0]).join('').toUpperCase()||n.slice(0,2).toUpperCase();
 function st(m){const e=Date.now()-new Date(m.utc);if(!(e>=0))return`<span class="tpill">${dn(m.date)} · ${m.time}</span>`;return e<115*6e4?`<span class="tpill live">● EN JUEGO · empezó ${m.time}</span>`:`<span class="tpill end">TERMINADO · ${m.time}</span>`}
@@ -168,28 +171,44 @@ function bcard(x,cls){const{m,b}=x,v=val(b),hi=b.p>=.75,ok=v!=null&&v>=.05,rv=v!
 <div class="tile"><small>CUOTA</small><strong>${b.odd?b.odd.toFixed(2):'—'}</strong><em>${b.odd?'Cuota justa: '+(1/b.p).toFixed(2):'Sin cuota de la casa. Cuota justa: '+(1/b.p).toFixed(2)}</em></div>
 <div class="tile ${rv?'tr':ok?'tv':'tn'}"><small>${rv?'VALOR · REVISAR':'VALOR'}</small><strong>${fmt(v)}</strong><em>${v==null?'Escribe tu cuota en “Ver partido”':rv?'Muy alto: revisa, puede ser un error del modelo':ok?'Conviene: la casa paga de más':'No conviene: paga poco'}</em></div></div>
 <div class="act"><button class="btn" data-sv="${m.id}|${m.bets.indexOf(b)}">Guardar apuesta</button><button class="btn g" data-m="${m.id}">Ver partido</button></div></div>`}
-function emptyMsg(kind){if(liveOn&&ms().length)return`<div class="empty"><b style="display:block;color:var(--tx);font:italic 800 20px var(--f1);text-transform:uppercase;margin-bottom:6px">Sin ${kind==='v'?'apuestas de valor':'apuestas con 75% o más'}</b>Hay ${ms().length} partido(s) en juego, pero ninguno tiene ${kind==='v'?'apuestas de valor':'apuestas con 75% o más'}.<br>Mira la pestaña <b>Partidos</b> para verlos todos.</div>`;if(liveOn)return`<div class="empty"><b style="display:block;color:var(--tx);font:italic 800 20px var(--f1);text-transform:uppercase;margin-bottom:6px">Ningún partido en juego</b>Ahora mismo no hay partidos en juego en ${lgLabel().toLowerCase()}.<br>Cuando empiece alguno, aparecerá aquí.</div>`;const L=lgLabel().toLowerCase(),T=type==='all'?'todas las apuestas':TYPES.find(t=>t[0]===type)[1],D=dn(day).toLowerCase();
- const what=kind==='v'?'apuestas de valor':'apuestas con 75% de probabilidad o más';
+function emptyMsg(kind){if(liveOn&&ms().length)return`<div class="empty"><b style="display:block;color:var(--tx);font:italic 800 20px var(--f1);text-transform:uppercase;margin-bottom:6px">Sin ${kind==='v'?'apuestas de valor':kind==='c'?'córners con '+pc(cthr):'apuestas con '+pc(thr)+' o más'}</b>Hay ${ms().length} partido(s) en juego, pero ninguno tiene ${kind==='v'?'apuestas de valor':kind==='c'?'córners con '+pc(cthr)+' o más':'apuestas con '+pc(thr)+' o más'}.<br>Mira la pestaña <b>Partidos</b> para verlos todos.</div>`;if(liveOn)return`<div class="empty"><b style="display:block;color:var(--tx);font:italic 800 20px var(--f1);text-transform:uppercase;margin-bottom:6px">Ningún partido en juego</b>Ahora mismo no hay partidos en juego en ${lgLabel().toLowerCase()}.<br>Cuando empiece alguno, aparecerá aquí.</div>`;const L=lgLabel().toLowerCase(),T=kind==='c'||type==='all'?'todas las apuestas':TYPES.find(t=>t[0]===type)[1],D=dn(day).toLowerCase();
+ const what=kind==='v'?'apuestas de valor':kind==='c'?'córners con '+pc(cthr)+' de probabilidad o más':'apuestas con '+pc(thr)+' de probabilidad o más';
  const tip=(sel.size<LGS.length||type!=='all')?'Quita un filtro o prueba otro día.':'Prueba otro día.';
- return`<div class="empty"><b style="display:block;color:var(--tx);font:italic 800 20px var(--f1);text-transform:uppercase;margin-bottom:6px">Sin ${what}</b>${D==='hoy'?'Hoy':'El '+D} no hay ${what} en ${L} · ${T}.<br>${kind==='v'?'Eso también es información: hoy no conviene apostar aquí.':'Ninguna apuesta llega a ese nivel de probabilidad.'}<br><span style="color:var(--bl)">${tip}</span></div>`}
+ return`<div class="empty"><b style="display:block;color:var(--tx);font:italic 800 20px var(--f1);text-transform:uppercase;margin-bottom:6px">Sin ${what}</b>${D==='hoy'?'Hoy':'El '+D} no hay ${what} en ${L} · ${T}.<br>${kind==='v'?'Eso también es información: hoy no conviene apostar aquí.':'Prueba bajar el mínimo de probabilidad.'}<br><span style="color:var(--bl)">${tip}</span></div>`}
 function render(){
  document.querySelectorAll('.day').forEach(e=>e.classList.toggle('on',liveOn?e.id==='lv':e.dataset.d===day));const nl=DATA.filter(m=>isLive(m)&&sel.has(m.league)).length;$('#lvn').textContent=nl;$('#lv').classList.toggle('zero',!nl);
  const nv=M0=>M0.filter(m=>m.bets.some(b=>b.p>=.28&&val(b)!=null&&val(b)>=.05)).length;const LM=liveOn?ms():[];const LN=liveOn?'<div class="lvnote"><b>● En vivo: '+LM.length+(LM.length===1?' partido en juego':' partidos en juego')+' · '+nv(LM)+' con apuestas de valor.</b> Las probabilidades y cuotas son de antes del partido. La cuota real en vivo es otra: escribe la tuya para ver si aún hay valor.</div>':'';
- const F=flat();
+ const F=flat(false);
  const V=F.filter(x=>x.b.p>=.28&&val(x.b)!=null&&val(x.b)>=.05).sort((a,b)=>((val(a.b)>.35)-(val(b.b)>.35))||(val(b.b)-val(a.b))).slice(0,40);
- const CS=F.filter(x=>x.b.type==='corn'&&!x.b.odd&&x.b.p>.51).sort((a,b)=>b.b.p-a.b.p).slice(0,40);
- const CH=CS.length?'<div class="lgh" style="margin-top:18px">Córners · solo probabilidad</div><p style="color:var(--mu);font-size:13px;line-height:1.45;margin:0 0 12px">No hay cuota gratuita de córners, así que no puedo calcular el valor. Son las de más de 51%. Si tu casa tiene cuota, abre "Ver partido" y escríbela.</p>'+CS.map(x=>bcard(x,'s')).join(''):'';
- $('#l-valor').innerHTML=(V.length?LN+V.map(x=>bcard(x,'v')).join(''):emptyMsg('v'))+CH;
- const S=F.filter(x=>x.b.p>=.75).sort((a,b)=>b.b.p-a.b.p).slice(0,40);
+ $('#l-valor').innerHTML=V.length?LN+V.map(x=>bcard(x,'v')).join(''):emptyMsg('v');
+ const S=F.filter(x=>x.b.p>=thr).sort((a,b)=>b.b.p-a.b.p).slice(0,60);
  $('#l-seg').innerHTML=S.length?LN+S.map(x=>bcard(x,'s')).join(''):emptyMsg('s');
+ const C=flat(true).filter(x=>x.b.p>=cthr).sort((a,b)=>b.b.p-a.b.p).slice(0,60);
+ $('#l-corn').innerHTML=C.length?LN+C.map(x=>bcard(x,x.b.p>=.75?'s':'')).join(''):emptyMsg('c');
+ const th=(a,k)=>'<span>Desde</span>'+[.75,.65,.51].map(x=>`<button data-${k}="${x}" class="${a===x?'on':''}">${pc(x)} o más</button>`).join('');
+ $('#thr').innerHTML=th(thr,'thr');$('#cthr').innerHTML=th(cthr,'cthr');
+ const NP=ms().length,SS=flat(false).filter(x=>x.b.p>=thr).length;
+ $('#rs').innerHTML=(liveOn?'En vivo: ':(dn(day)==='Hoy'?'Hoy: ':dn(day)+': '))+'<b>'+NP+'</b> '+(NP===1?'partido':'partidos')+' · <button data-go="valor">'+V.length+' con buena cuota</button> · <button data-go="seg">'+SS+' con '+pc(thr)+' o más</button> · <button data-go="corn">'+C.length+' córners</button>';
+ const fa=[];if(sel.size!==favSet().size||[...sel].some(k=>!favSet().has(k)))fa.push(lgLabel());if(type!=='all')fa.push(TYPES.find(t=>t[0]===type)[1]);if(liveOn)fa.push('En vivo');
+ $('#actl').classList.toggle('on',fa.length>0&&view!=='mis');$('#actt').innerHTML='Filtrando: <b>'+fa.join(' · ')+'</b>';
  const M=ms();
  $('#l-par').innerHTML=M.length?LN+M.map(m=>{const n=m.bets.filter(b=>b.p>=.28&&val(b)!=null&&val(b)>=.05).length;return`<div class="card" data-m="${m.id}" style="cursor:pointer">${head(m)}<span class="chipv ${n?'p':'n'}">${n?n+' apuestas de valor · ver todas ›':'Sin apuestas de valor · ver partido ›'}</span></div>`}).join(''):'<div class="empty">No hay partidos este día.</div>';
+}
+let autoThr=false;
+function moved(){
+ $('#note').classList.remove('on');if(autoThr){thr=.75;autoThr=false;render()}
+ if(view!=='valor'&&view!=='seg')return;
+ const F=flat(false),has=t=>F.some(x=>x.b.p>=t),V=F.some(x=>x.b.p>=.28&&val(x.b)!=null&&val(x.b)>=.05);
+ if(view==='valor'&&!V){if(has(thr)){const w=type==='all'?'apuestas de valor':'apuestas de valor de ese tipo';setView('seg');const n=$('#note');n.textContent='Te llevé a Más probables: en Valor no hay '+w+' con este filtro.';n.classList.add('on');return}
+  const l=[.65,.51].find(t=>t<thr&&has(t));if(l){thr=l;autoThr=true;setView('seg');const n=$('#note');n.textContent='Te llevé a Más probables y bajé el mínimo a '+pc(l)+'. Con este filtro no hay apuestas de valor ni con más probabilidad.';n.classList.add('on')}return}
+ if(view==='seg'&&!has(thr)){if(V){setView('valor');const n=$('#note');n.textContent='Te llevé a Valor: en Más probables no hay apuestas con '+pc(thr)+' o más con este filtro.';n.classList.add('on');return}
+  const l=[.65,.51].find(t=>t<thr&&has(t));if(l){const o=thr;thr=l;autoThr=true;render();const n=$('#note');n.textContent='Bajé el mínimo a '+pc(l)+': con '+pc(o)+' o más no había apuestas con este filtro.';n.classList.add('on')}}
 }
 function stamp(){const el=$('#demo');if(!REAL){el.innerHTML='<b>No se pudieron cargar los datos reales.</b> Estás viendo partidos de ejemplo.';return}
  const h=(Date.now()-new Date(REAL.generated))/36e5;const t=h<1?'hace menos de 1 hora':h<24?'hace '+Math.round(h)+' h':'hace '+Math.round(h/24)+' días';
  el.style.cssText+=h>9?';color:#ff8a8a;border-color:#7a2a2a;background:#2a0f0f':';color:var(--mu);border-color:var(--ln2);background:none';
  el.innerHTML='Datos actualizados <b>'+t+'</b>'+(h>9?'. Pueden estar atrasados.':'.')+(DATA.length?'':' Hoy no hay partidos cargados de tus ligas.')}
-function setView(v){view=v;document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('on',b.dataset.v===v));document.querySelectorAll('.view').forEach(e=>e.classList.toggle('on',e.id==='v-'+v));$('#filters').style.display=v==='mis'?'none':'';$('#demo').style.display=v==='mis'?'none':'';if(v==='mis')renderMis();$('#det').classList.remove('on');document.documentElement.classList.remove('lock');scrollTo(0,0)}
+function setView(v){view=v;document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('on',b.dataset.v===v));document.querySelectorAll('.view').forEach(e=>e.classList.toggle('on',e.id==='v-'+v));$('#filters').style.display=v==='mis'?'none':'';$('#demo').style.display=v==='mis'?'none':'';$('#rs').style.display=v==='mis'?'none':'';$('#actl').style.display=v==='mis'?'none':'';$('#note').classList.remove('on');$('#ft').style.display=v==='corn'?'none':'';document.querySelector('.sel').style.gridTemplateColumns=v==='corn'?'1fr':'1fr 1fr';if(v==='mis')renderMis();else render();$('#det').classList.remove('on');document.documentElement.classList.remove('lock');scrollTo(0,0)}
 function openDet(id){cur=DATA.find(m=>m.id===id);custom={};drawDet();$('#det').classList.add('on');document.documentElement.classList.add('lock');$('#det').scrollTop=0}
 function drawDet(){const m=cur;let h=`<div class="meta">${m.leagueName} · ${dn(m.date)} ${m.time}</div><div class="tm" style="font-size:21px">${m.home} vs ${m.away}</div><p style="color:var(--mu);font-size:13px;margin:0 0 4px">Escribe la cuota de tu casa y el valor se recalcula.</p>`;
  const sec=[['Resultado',['win']],['Goles',['o15','o25','o35','btts']],['Primer tiempo',['g1t']],['Córners',['corn']]];
@@ -202,15 +221,18 @@ function renderMis(){const done=bets.filter(b=>b.res!=='p'),w=done.filter(b=>b.r
  $('#sum').innerHTML=`<div><b class="${pr>=0?'pos':'neg'}">${pr>=0?'+':''}${pr.toFixed(2)}</b>Ganancia</div><div><b>${done.length?Math.round(w.length/done.length*100)+'%':'—'}</b>Aciertos</div><div><b>${bets.length-done.length}</b>Pendientes</div>`;
  $('#l-mis').innerHTML=bets.length?bets.map(b=>`<div class="card ${b.res==='w'?'v':''}"><div class="meta">${b.date} · Monto ${b.stake}</div><div class="tm" style="margin-bottom:4px">${b.match}</div><div class="lab" style="font-size:15px;margin-bottom:6px">${b.label} <span style="color:var(--mu);font-weight:600">@ ${(+b.odd).toFixed(2)} · prob. ${pc(b.p)}</span></div><div class="act" style="margin-top:0"><button class="btn ${b.res==='w'?'':'g'}" data-r="w|${b.id}">Ganada</button><button class="btn ${b.res==='l'?'':'g'}" data-r="l|${b.id}" ${b.res==='l'?'style="background:#e0334f;box-shadow:none"':''}>Perdida</button><button class="btn g" data-r="x|${b.id}">Borrar</button></div></div>`).join(''):'<div class="empty">Todavía no guardas apuestas.<br>En cualquier apuesta toca “Guardar”.</div>'}
 document.addEventListener('click',e=>{const t=e.target;
- const d=t.closest('.day');if(d){if(d.id==='lv'){liveOn=!liveOn}else{liveOn=false;day=d.dataset.d}render();return}
+ const d=t.closest('.day');if(d){if(d.id==='lv'){liveOn=!liveOn}else{liveOn=false;day=d.dataset.d}render();moved();return}
+ const tb=t.closest('[data-thr],[data-cthr]');if(tb){autoThr=false;if(tb.dataset.thr)thr=parseFloat(tb.dataset.thr);else cthr=parseFloat(tb.dataset.cthr);$('#note').classList.remove('on');render();return}
+ const go=t.closest('[data-go]');if(go){setView(go.dataset.go);return}
+ if(t.closest('#clr')){sel=favSet().size?favSet():new Set(LGS.map(x=>x[0]));LS.set('gm_lg',[...sel]);type='all';liveOn=false;$('#ft').value='all';drawLg();render();moved();return}
  const n=t.closest('nav button');if(n){setView(n.dataset.v);return}
  const sv=t.closest('[data-sv]');if(sv){const[a,b]=sv.dataset.sv.split('|');askSave(a,+b);return}
  const r=t.closest('[data-r]');if(r){const[k,id]=r.dataset.r.split('|');if(k==='x')bets=bets.filter(b=>b.id!=id);else bets.find(b=>b.id==id).res=k;LS.set('gm_bets',bets);renderMis();return}
  const mm=t.closest('[data-m]');if(mm){openDet(mm.dataset.m)}
 });
-$('#fl').onclick=()=>{drawLm();$('#lm').classList.add('on')};$('#ll').onchange=e=>{const k=e.target.dataset.k;e.target.checked?sel.add(k):sel.delete(k);saveLg()};$('#la').onclick=()=>{sel=new Set(LGS.map(x=>x[0]));drawLm();saveLg()};$('#ln').onclick=()=>{sel=new Set();drawLm();saveLg()};$('#lf').onclick=()=>{sel=favSet().size?favSet():new Set(LGS.map(x=>x[0]));drawLm();saveLg()};$('#lok').onclick=()=>$('#lm').classList.remove('on');$('#ft').onchange=e=>{type=e.target.value;render()};
+$('#fl').onclick=()=>{drawLm();$('#lm').classList.add('on')};$('#ll').onchange=e=>{const k=e.target.dataset.k;e.target.checked?sel.add(k):sel.delete(k);saveLg()};$('#la').onclick=()=>{sel=new Set(LGS.map(x=>x[0]));drawLm();saveLg()};$('#ln').onclick=()=>{sel=new Set();drawLm();saveLg()};$('#lf').onclick=()=>{sel=favSet().size?favSet():new Set(LGS.map(x=>x[0]));drawLm();saveLg()};$('#lok').onclick=()=>{$('#lm').classList.remove('on');moved()};$('#ft').onchange=e=>{type=e.target.value;render();moved()};
 $('#bk').onclick=()=>{$('#det').classList.remove('on');document.documentElement.classList.remove('lock')};$('#hb').onclick=()=>$('#hm').classList.add('on');
-setView('valor');stamp();render();
+setView('valor');stamp();render();moved();
 setInterval(()=>{if(view!=='mis'&&!$('#det').classList.contains('on')&&!$('#lm').classList.contains('on'))render()},60000);
 }
 boot();
