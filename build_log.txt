@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-28T17:39:47.453368+00:00",
+ "generated": "2026-10-28T17:40:32.796516+00:00",
  "leagues": {
   "ENG": {
    "name": "Championship",
@@ -8,15 +8,26 @@
    "has_corners": 696,
    "has_half": 696,
    "fixtures_fd": 0,
-   "unmatched_names": [
-    "Queens Park Rangers",
-    "Wolverhampton Wanderers",
-    "Queens Park Rangers",
-    "Wolverhampton Wanderers"
-   ],
-   "fixtures_espn": 20,
-   "espn_unmatched": 4,
-   "matches": 20
+   "name_map": {
+    "Lincoln City": "Lincoln",
+    "Birmingham City": "Birmingham",
+    "Norwich City": "Norwich",
+    "Stoke City": "Stoke",
+    "Preston North End": "Preston",
+    "Bolton Wanderers": "Bolton",
+    "Charlton Athletic": "Charlton",
+    "Derby County": "Derby",
+    "Queens Park Rangers": "QPR",
+    "Swansea City": "Swansea",
+    "Blackburn Rovers": "Blackburn",
+    "West Ham United": "West Ham",
+    "West Bromwich Albion": "West Brom",
+    "Wolverhampton Wanderers": "Wolves",
+    "Cardiff City": "Cardiff"
+   },
+   "fixtures_espn": 24,
+   "espn_unmatched": 0,
+   "matches": 24
   },
   "GER": {
    "name": "2. Bundesliga",
@@ -25,6 +36,24 @@
    "has_corners": 387,
    "has_half": 387,
    "fixtures_fd": 0,
+   "name_map": {
+    "Arminia Bielefeld": "Bielefeld",
+    "TSV Eintracht Braunschweig": "Braunschweig",
+    "Energie Cottbus": "Cottbus",
+    "VfL Bochum": "Bochum",
+    "Hertha Berlin": "Hertha",
+    "SV Darmstadt 98": "Darmstadt",
+    "1. FC Magdeburg": "Magdeburg",
+    "VfL Wolfsburg": "Wolfsburg",
+    "VfL Osnabruck": "Osnabruck",
+    "Karlsruher SC": "Karlsruhe",
+    "1. FC Heidenheim 1846": "Heidenheim",
+    "Hannover 96": "Hannover",
+    "Dynamo Dresden": "Dresden",
+    "SpVgg Greuther Fürth": "Greuther Furth",
+    "St. Pauli": "St Pauli",
+    "1. FC Nürnberg": "Nurnberg"
+   },
    "fixtures_espn": 9,
    "espn_unmatched": 0,
    "matches": 9
@@ -36,12 +65,11 @@
    "has_corners": 288,
    "has_half": 288,
    "fixtures_fd": 6,
-   "unmatched_names": [
-    "Heart of Midlothian",
-    "Heart of Midlothian"
-   ],
-   "fixtures_espn": 8,
-   "espn_unmatched": 2,
+   "name_map": {
+    "Heart of Midlothian": "Hearts"
+   },
+   "fixtures_espn": 9,
+   "espn_unmatched": 0,
    "matches": 9
   },
   "SUI": {
@@ -62,6 +90,17 @@
    "has_corners": 0,
    "has_half": 0,
    "fixtures_fd": 10,
+   "name_map": {
+    "Red Bull Bragantino": "Bragantino",
+    "Chapecoense": "Chapecoense-SC",
+    "São Paulo": "Sao Paulo",
+    "Botafogo": "Botafogo RJ",
+    "Atlético-MG": "Atletico-MG",
+    "Vasco da Gama": "Vasco",
+    "Flamengo": "Flamengo RJ",
+    "Grêmio": "Gremio",
+    "Vitória": "Vitoria"
+   },
    "fixtures_espn": 17,
    "espn_unmatched": 0,
    "matches": 17
@@ -69,4 +108,4 @@
  },
  "errors": []
 }
-partidos: 55
+partidos: 59
