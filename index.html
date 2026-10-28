@@ -2,7 +2,7 @@
 <html lang="es"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
-<meta name="gm-v" content="20261028212320"><meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="gm-v" content="20261028214640"><meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Golmetría"><link rel="apple-touch-icon" href="icon-180.png"><link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#0a0b14"><meta name="color-scheme" content="dark">
 <title>Golmetría</title>
@@ -73,6 +73,14 @@ nav button.on{color:var(--bl)}nav button.on svg{filter:drop-shadow(0 0 6px rgba(
 .sum div{background:linear-gradient(180deg,#121521,#0c0e15);border:1px solid var(--ln2);border-radius:14px;padding:12px 8px;text-align:center;font:700 11px Barlow;letter-spacing:1px;text-transform:uppercase;color:var(--mu)}
 .sum b{display:block;font:italic 800 36px/1 var(--f1);letter-spacing:0;color:var(--tx);margin-bottom:3px}
 .pos{color:var(--ok)!important}.neg{color:#ff5d73!important}
+.seg2{display:grid;grid-template-columns:1fr 1fr;gap:6px;background:var(--card);border:1px solid var(--ln2);border-radius:14px;padding:5px;margin:12px 0}.seg2 button{border:0;background:none;color:var(--mu);border-radius:10px;padding:10px 8px;font:italic 800 17px var(--f1);text-transform:uppercase;cursor:pointer}.seg2 button small{font:600 11px Barlow;text-transform:none;margin-left:4px}.seg2 button.on{background:linear-gradient(135deg,#1f7bff,#2ec5ff);color:#fff}
+.card.l:before{background:linear-gradient(180deg,#e0334f,#a01830)}
+.leg{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;padding:10px 0;border-top:1px solid var(--ln2)}.leg b{font:italic 800 17px var(--f1);text-transform:uppercase;display:block}.leg small{color:var(--mu);font-size:12px}
+.xb{flex:none;border:0;background:var(--card2);color:var(--tx);width:32px;height:32px;border-radius:8px;font-size:14px;cursor:pointer}
+.pcb{display:flex;align-items:baseline;gap:10px;margin:6px 0 4px}.pcb strong{font:italic 800 38px/1 var(--f1);color:var(--bl)}.pcb span{font-size:13px;color:var(--mu)}
+.warn{border:1px solid #5a4a1d;background:#1d170a;border-radius:12px;padding:9px 12px;font-size:13px;line-height:1.45;color:#ffd98a;margin:8px 0}
+.st{display:inline-block;border-radius:8px;padding:3px 9px;font:italic 800 13px var(--f1);letter-spacing:.8px;text-transform:uppercase;white-space:nowrap}.st.w{background:rgba(182,255,59,.12);color:var(--ok);border:1px solid rgba(182,255,59,.4)}.st.l{background:rgba(224,51,79,.14);color:#ff7d92;border:1px solid rgba(224,51,79,.45)}.st.p{background:var(--card2);color:var(--mu);border:1px solid var(--ln2)}
+.slip{position:fixed;left:0;right:0;bottom:calc(66px + env(safe-area-inset-bottom,0px));display:none;justify-content:center;padding:0 16px;z-index:5}.slip.on{display:flex}.slip button{width:100%;max-width:720px;display:flex;justify-content:space-between;align-items:center;gap:10px;background:#0e1118;border:1px solid var(--bl);border-radius:16px;padding:12px 14px;color:var(--tx);font:700 14px Barlow;box-shadow:0 10px 30px rgba(0,0,0,.6);cursor:pointer;text-align:left}.slip b{color:var(--bl)}.slip em{font-style:normal;color:var(--bl);font:italic 800 16px var(--f1);text-transform:uppercase;white-space:nowrap}
 .modal{position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:20;display:none;align-items:flex-end}.modal.on{display:flex}
 .sheet{background:var(--card);border-top:1px solid var(--ln2);width:100%;border-radius:22px 22px 0 0;padding:22px 20px max(24px,env(safe-area-inset-bottom));max-width:720px;margin:0 auto}
 .sheet h3{margin:0 0 10px;font:italic 800 28px var(--f1);text-transform:uppercase}.sheet p{margin:0 0 12px;color:var(--mu);font-size:14px;line-height:1.5}
@@ -91,12 +99,14 @@ nav button.on{color:var(--bl)}nav button.on svg{filter:drop-shadow(0 0 6px rgba(
 <section class="view" id="v-seg"><div class="intro"><h2>Más <em>probables</em></h2><p>Las que más veces ocurren. Ninguna es segura: pueden perder y pueden no tener valor.</p></div><div class="thr" id="thr"></div><div id="l-seg"></div></section>
 <section class="view" id="v-corn"><div class="intro"><h2><em>Córners</em></h2><p>Totales y por equipo, de mayor a menor probabilidad. No hay cuota gratis de córners: escribe la de tu casa en “Ver partido” y la app te dice si hay valor.</p></div><div class="thr" id="cthr"></div><div id="l-corn"></div></section>
 <section class="view" id="v-par"><div class="intro"><h2>Partidos del <em>día</em></h2><p>Toca un partido para ver todas sus apuestas.</p></div><div id="l-par"></div></section>
-<section class="view" id="v-mis"><div class="intro"><h2>Mis <em>apuestas</em></h2><p>Las apuestas que guardas. Cuando el partido termina, la app las marca sola como ganadas o perdidas.</p></div><div class="sum" id="sum"></div><div id="l-mis"></div></section>
+<section class="view" id="v-mis"><div class="intro"><h2>Mis <em>apuestas</em></h2><p>Las apuestas que guardas. Cuando el partido termina, la app las marca sola como ganadas o perdidas.</p></div><div class="seg2" id="seg"></div><div class="sum" id="sum"></div><div id="l-mis"></div></section>
 </div>
 <div class="over" id="det"><div class="wrap"><button class="back" id="bk">‹ Volver</button><div id="dc"></div></div></div>
 <div class="modal" id="hm"><div class="sheet"><h3>¿Qué significa cada cosa?</h3><p><b style="color:var(--bl)">Probabilidad:</b> qué tan seguido pasa. 70% = 7 de cada 10 veces. Si es 75% o más sale en dorado.</p><p><b style="color:var(--ok)">Valor:</b> la casa paga más de lo justo. +15% significa que, a largo plazo, ganarías 15 centavos por cada dólar. Una apuesta puede ser muy probable y no tener valor.</p><p><b>Cuota justa:</b> la cuota mínima a la que conviene apostar.</p><button class="btn" style="width:100%" onclick="$('#hm').classList.remove('on')">Entendido</button></div></div>
 <div class="modal" id="lm"><div class="sheet"><h3>Mis ligas</h3><p>Marca las ligas que quieres ver.</p><div class="lbt"><button class="btn g" id="la">Todas</button><button class="btn g" id="ln">Ninguna</button><button class="btn g" id="lf">Mis favoritas</button></div><div id="ll"></div><button class="btn" id="lok" style="width:100%">Listo</button></div></div>
-<div class="modal" id="sm"><div class="sheet"><h3 id="sh">Guardar apuesta</h3><p id="sp"></p><p style="font-size:13px">Se guarda sin dinero. Cuando el partido termine, la app la marca sola como ganada o perdida.</p><button class="btn" id="ss" style="width:100%">Guardar en Mis apuestas</button><button class="btn g" style="width:100%;margin-top:8px" onclick="$('#sm').classList.remove('on')">Cancelar</button></div></div>
+<div class="modal" id="sm"><div class="sheet"><h3 id="sh">Guardar apuesta</h3><p id="sp"></p><p style="font-size:13px">Se guarda sin dinero. Cuando el partido termine, la app la marca sola como ganada o perdida.</p><button class="btn" id="ss" style="width:100%">Guardar sola</button><button class="btn g" id="sc" style="width:100%;margin-top:8px">Añadir a combinada</button><button class="btn g" style="width:100%;margin-top:8px" onclick="$('#sm').classList.remove('on')">Cancelar</button></div></div>
+<div class="modal" id="cm"><div class="sheet"><h3>Tu combinada</h3><p>Estas apuestas tienen que salir todas para ganar.</p><div id="legs"></div><div id="calc"></div><button class="btn" id="csv" style="width:100%;margin-top:10px">Guardar combinada</button><button class="btn g" id="ccl" style="width:100%;margin-top:8px">Vaciar boleto</button><button class="btn g" id="cck" style="width:100%;margin-top:8px">Seguir eligiendo</button></div></div>
+<div class="slip" id="slip"><button id="slipb" type="button"><span id="slipt"></span><em>Ver boleto ›</em></button></div>
 <nav>
 <button data-v="valor" class="on"><svg viewBox="0 0 24 24"><path d="M6.5 3.5h11l4 5.5L12 20.5 2.5 9z"/><path d="M2.5 9h19M9 3.5L7.5 9 12 20.5 16.5 9 15 3.5"/></svg>Valor</button>
 <button data-v="seg"><svg viewBox="0 0 24 24"><path d="M3 17.5l5.5-5.5 4 4L21 7"/><path d="M15 7h6v6"/></svg>Más probables</button>
@@ -142,7 +152,7 @@ function init(){
 /* ===== ESTADO ===== */
 const TYPES=[['all','Todas las apuestas'],['o15','Más de 1.5 goles'],['o25','Más de 2.5 goles'],['o35','Más de 3.5 goles'],['btts','Ambos marcan'],['g1t','Gol en 1er tiempo'],['win','Ganador / Doble op.']];
 let days=[...new Set(DATA.map(m=>m.date))].sort();if(!days.length)days=[loc(new Date())];
-let day=days.includes(loc(new Date()))?loc(new Date()):days[0],type='all',thr=.75,cthr=.51,view='valor',bets=LS.get('gm_bets',[]),cur=null,custom={},pend=null;
+let day=days.includes(loc(new Date()))?loc(new Date()):days[0],type='all',thr=.75,cthr=.51,view='valor',bets=LS.get('gm_bets',[]),cur=null,custom={},pend=null,slip=[],mode='simple',askDel=null;
 const dn=d=>{const t=loc(new Date()),tm=loc(new Date(Date.now()+864e5));return d===t?'Hoy':d===tm?'Mañana':new Date(d+'T12:00').toLocaleDateString('es',{weekday:'short'})};
 const dd=d=>new Date(d+'T12:00').toLocaleDateString('es',{day:'numeric',month:'short'});
 const pc=x=>Math.round(x*100)+'%',val=b=>b.odd?b.p*b.odd-1:null,fmt=v=>v==null?'—':(v>=0?'+':'')+Math.round(v*100)+'%';
@@ -209,7 +219,7 @@ function stamp(){const el=$('#demo');if(!REAL){el.innerHTML='<b>No se pudieron c
  const h=(Date.now()-new Date(REAL.generated))/36e5;const t=h<1?'hace menos de 1 hora':h<24?'hace '+Math.round(h)+' h':'hace '+Math.round(h/24)+' días';
  el.style.cssText+=h>9?';color:#ff8a8a;border-color:#7a2a2a;background:#2a0f0f':';color:var(--mu);border-color:var(--ln2);background:none';
  el.innerHTML='Datos actualizados <b>'+t+'</b>'+(h>9?'. Pueden estar atrasados.':'.')+(DATA.length?'':' Hoy no hay partidos cargados de tus ligas.')}
-function setView(v){view=v;document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('on',b.dataset.v===v));document.querySelectorAll('.view').forEach(e=>e.classList.toggle('on',e.id==='v-'+v));$('#filters').style.display=v==='mis'?'none':'';$('#demo').style.display=v==='mis'?'none':'';$('#rs').style.display=v==='mis'?'none':'';$('#actl').style.display=v==='mis'?'none':'';$('#note').classList.remove('on');$('#ft').style.display=v==='corn'?'none':'';document.querySelector('.sel').style.gridTemplateColumns=v==='corn'?'1fr':'1fr 1fr';if(v==='mis')renderMis();else render();$('#det').classList.remove('on');document.documentElement.classList.remove('lock');scrollTo(0,0)}
+function setView(v){view=v;document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('on',b.dataset.v===v));document.querySelectorAll('.view').forEach(e=>e.classList.toggle('on',e.id==='v-'+v));$('#filters').style.display=v==='mis'?'none':'';$('#demo').style.display=v==='mis'?'none':'';$('#rs').style.display=v==='mis'?'none':'';$('#actl').style.display=v==='mis'?'none':'';$('#note').classList.remove('on');$('#ft').style.display=v==='corn'?'none':'';document.querySelector('.sel').style.gridTemplateColumns=v==='corn'?'1fr':'1fr 1fr';if(v==='mis')renderMis();else render();$('#det').classList.remove('on');document.documentElement.classList.remove('lock');scrollTo(0,0);slipBar()}
 function openDet(id){cur=DATA.find(m=>m.id===id);custom={};drawDet();$('#det').classList.add('on');document.documentElement.classList.add('lock');$('#det').scrollTop=0}
 function drawDet(){const m=cur;let h=`<div class="meta">${m.leagueName} · ${dn(m.date)} ${m.time}</div><div class="tm" style="font-size:21px">${m.home} vs ${m.away}</div><p style="color:var(--mu);font-size:13px;margin:0 0 4px">Escribe la cuota de tu casa y el valor se recalcula.</p>`;
  const sec=[['Resultado',['win']],['Goles',['o15','o25','o35','btts']],['Primer tiempo',['g1t']],['Córners',['corn']]];
@@ -217,7 +227,24 @@ function drawDet(){const m=cur;let h=`<div class="meta">${m.leagueName} · ${dn(
  $('#dc').innerHTML=h}
 $('#dc').addEventListener('input',e=>{const i=e.target.dataset.i;if(i==null)return;const o=pn(e.target.value);if(!(o>1))return;custom[i]=o;const v=cur.bets[i].p*o-1,el=$('#cv'+i);el.className='chipv '+(v>=.05?'p':'n');el.textContent=(v>=.05?'Valor ':'Sin valor ')+fmt(v)});
 function askSave(id,i){const m=DATA.find(x=>x.id===id),b=m.bets[i],o=(cur&&cur.id===id&&custom[i])||b.odd||null;pend={m,b,o};$('#sp').textContent=`${m.home} vs ${m.away} — ${b.label}`+(o?` @ ${(+o).toFixed(2)}`:'');$('#sm').classList.add('on')}
-$('#ss').onclick=()=>{bets.unshift({id:Date.now(),matchId:pend.m.id,league:pend.m.league,home:pend.m.home,away:pend.m.away,utc:pend.m.utc,match:pend.m.home+' vs '+pend.m.away,label:pend.b.label,btype:pend.b.type,odd:pend.o,p:pend.b.p,res:'p',date:pend.m.date});LS.set('gm_bets',bets);$('#sm').classList.remove('on')};
+const mkBet=()=>({id:Date.now()+Math.random(),matchId:pend.m.id,league:pend.m.league,home:pend.m.home,away:pend.m.away,utc:pend.m.utc,match:pend.m.home+' vs '+pend.m.away,label:pend.b.label,btype:pend.b.type,odd:pend.o,p:pend.b.p,res:'p',date:pend.m.date});
+const pcx=x=>{x*=100;return x<10?x.toFixed(1):Math.round(x)};
+const prodp=a=>a.reduce((x,y)=>x*y.p,1);
+function slipBar(){const n=slip.length;$('#slip').classList.toggle('on',n>0&&view!=='mis');$('#slipt').innerHTML=`<b>Combinada · ${n} ${n===1?'apuesta':'apuestas'}</b>`+(n>1?` · ${pcx(prodp(slip))}% de que salgan todas`:' · añade una más')}
+function openSlip(){if(!slip.length){$('#cm').classList.remove('on');slipBar();return}
+ $('#legs').innerHTML=slip.map((x,i)=>`<div class="leg"><div style="flex:1;min-width:0"><b>${x.label}</b><small>${x.match} · prob. ${pcx(x.p)}%</small></div><button class="xb" data-rm="${i}" aria-label="Quitar">✕</button></div>`).join('');
+ const n=slip.length,p=prodp(slip);let h='';
+ if(n>1){h=`<div class="pcb"><strong>${pcx(p)}%</strong><span>probabilidad de que salgan todas</span></div><div class="hint" style="font-size:13px;color:var(--mu)">Sale aproximadamente 1 de cada ${Math.max(1,Math.round(1/p))} veces.</div>`;
+  if(p<.25)h+='<div class="warn">Es difícil: con una sola apuesta que falle, se pierde la combinada entera.</div>';
+  if(new Set(slip.map(x=>x.matchId)).size<n)h+='<div class="warn">Dos apuestas son del mismo partido. Están relacionadas, así que la probabilidad real puede ser distinta.</div>';
+  h+='<div style="font-size:13px;color:var(--mu);margin-top:6px">Es una estimación: multiplica la probabilidad de cada apuesta. No es una garantía.</div>'}
+ else h='<div style="font-size:13px;color:var(--mu)">Añade al menos 2 apuestas para armar la combinada.</div>';
+ $('#calc').innerHTML=h;$('#csv').disabled=n<2;$('#csv').style.opacity=n<2?.45:1;$('#cm').classList.add('on');slipBar()}
+$('#ss').onclick=()=>{bets.unshift(mkBet());LS.set('gm_bets',bets);$('#sm').classList.remove('on')};
+$('#sc').onclick=()=>{slip.push(mkBet());$('#sm').classList.remove('on');slipBar()};
+$('#slipb').onclick=openSlip;$('#cck').onclick=()=>$('#cm').classList.remove('on');
+$('#ccl').onclick=()=>{slip=[];$('#cm').classList.remove('on');slipBar()};
+$('#csv').onclick=()=>{if(slip.length<2)return;const c='c'+Date.now();slip.forEach(x=>{x.cb=c;bets.unshift(x)});slip=[];LS.set('gm_bets',bets);$('#cm').classList.remove('on');mode='combo';setView('mis')};
 /* ===== RESULTADOS: marca solas las apuestas guardadas ===== */
 function findRes(b){if(!b.utc)return null;const t=Date.parse(b.utc);return RES.find(r=>r.l===b.league&&r.h===b.home&&r.a===b.away&&Math.abs(Date.parse(r.d+'T12:00:00Z')-t)<=40*36e5)||null}
 function evalBet(b,r){const L=b.label,hg=r.hg,ag=r.ag,t=hg+ag;
@@ -228,9 +255,14 @@ function evalBet(b,r){const L=b.label,hg=r.hg,ag=r.ag,t=hg+ag;
  if(b.btype==='corn'){if(r.hc==null||r.ac==null)return null;let m=L.match(/^Córners de (.+) más de ([\d.]+)$/);if(m){const x=parseFloat(m[2]);return m[1]===b.home?r.hc>x:m[1]===b.away?r.ac>x:null}m=L.match(/^Córners más de ([\d.]+)$/);return m?(r.hc+r.ac)>parseFloat(m[1]):null}
  return null}
 function settle(){let ch=false;bets.forEach(b=>{if(b.res!=='p'||!b.btype)return;const r=findRes(b);if(!r)return;const v=evalBet(b,r);if(v===null)return;b.res=v?'w':'l';b.auto=true;ch=true});if(ch)LS.set('gm_bets',bets)}
-function renderMis(){settle();const done=bets.filter(b=>b.res!=='p'),w=done.filter(b=>b.res==='w'),l=done.filter(b=>b.res==='l');
- $('#sum').innerHTML=`<div><b>${done.length?Math.round(w.length/done.length*100)+'%':'—'}</b>Aciertos</div><div><b>${w.length} · ${l.length}</b>Ganadas · Perdidas</div><div><b>${bets.length-done.length}</b>Pendientes</div>`;
- $('#l-mis').innerHTML=bets.length?bets.map(b=>`<div class="card ${b.res==='w'?'v':''}"><div class="meta">${b.date} · ${b.res==='w'?'Ganada':b.res==='l'?'Perdida':'Pendiente'}${b.auto?' · marcada sola':''}</div><div class="tm" style="margin-bottom:4px">${b.match}</div><div class="lab" style="font-size:15px;margin-bottom:6px">${b.label} <span style="color:var(--mu);font-weight:600">${b.odd?'@ '+(+b.odd).toFixed(2)+' · ':''}prob. ${pc(b.p)}</span></div><div class="act" style="margin-top:0"><button class="btn ${b.res==='w'?'':'g'}" data-r="w|${b.id}">Ganada</button><button class="btn ${b.res==='l'?'':'g'}" data-r="l|${b.id}" ${b.res==='l'?'style="background:#e0334f;box-shadow:none"':''}>Perdida</button><button class="btn g" data-r="x|${b.id}">Borrar</button></div></div>`).join(''):'<div class="empty">Todavía no guardas apuestas.<br>En cualquier apuesta toca “Guardar apuesta”. Cuando el partido termine, la app la marca sola.</div>'}
+const stl=r=>`<span class="st ${r}">${r==='w'?'Ganada':r==='l'?'Perdida':'Pendiente'}</span>`;
+const askRow=(k,txt)=>askDel===k?`<div class="warn" style="margin:12px 0 0 4px">¿Borrar ${txt}? No se puede deshacer.<div class="act" style="margin:10px 0 0"><button class="btn" style="background:#e0334f;box-shadow:none" data-del="${k}">Sí, borrar</button><button class="btn g" data-nodel="1">No</button></div></div>`:null;
+function combosOf(){const o={};bets.forEach(b=>{if(b.cb)(o[b.cb]=o[b.cb]||[]).push(b)});return Object.keys(o).map(k=>{const l=o[k];return{id:k,legs:l,res:l.some(a=>a.res==='l')?'l':l.every(a=>a.res==='w')?'w':'p',p:prodp(l)}})}
+function renderMis(){settle();const sim=bets.filter(b=>!b.cb),cs=combosOf(),items=mode==='simple'?sim:cs,done=items.filter(b=>b.res!=='p'),w=done.filter(b=>b.res==='w');
+ $('#seg').innerHTML=`<button class="${mode==='simple'?'on':''}" data-mode="simple">Simples<small>${sim.length}</small></button><button class="${mode==='combo'?'on':''}" data-mode="combo">Combinadas<small>${cs.length}</small></button>`;
+ $('#sum').innerHTML=`<div><b>${done.length?Math.round(w.length/done.length*100)+'%':'—'}</b>Aciertos</div><div><b>${w.length} · ${done.length-w.length}</b>Ganadas · Perdidas</div><div><b>${items.length-done.length}</b>Pendientes</div>`;
+ if(mode==='simple')$('#l-mis').innerHTML=sim.length?sim.map(b=>`<div class="card ${b.res==='w'?'v':b.res==='l'?'l':''}"><div class="meta">${b.date} · ${b.res==='w'?'Ganada':b.res==='l'?'Perdida':'Pendiente'}${b.auto?' · marcada sola':''}</div><div class="tm" style="margin-bottom:4px">${b.match}</div><div class="lab" style="font-size:15px;margin-bottom:6px">${b.label} <span style="color:var(--mu);font-weight:600">${b.odd?'@ '+(+b.odd).toFixed(2)+' · ':''}prob. ${pc(b.p)}</span></div>`+(askRow('s'+b.id,'esta apuesta')||`<div class="act" style="margin-top:0"><button class="btn ${b.res==='w'?'':'g'}" data-r="w|${b.id}">Ganada</button><button class="btn ${b.res==='l'?'':'g'}" data-r="l|${b.id}" ${b.res==='l'?'style="background:#e0334f;box-shadow:none"':''}>Perdida</button><button class="btn g" data-ask="s${b.id}">Borrar</button></div>`)+'</div>').join(''):'<div class="empty">Todavía no guardas apuestas simples.<br>En cualquier apuesta toca “Guardar apuesta”. Cuando el partido termine, la app la marca sola.</div>';
+ else $('#l-mis').innerHTML=cs.length?cs.map(c=>{const pend=c.legs.filter(a=>a.res==='p').length;return `<div class="card ${c.res==='w'?'v':c.res==='l'?'l':''}"><div class="meta">Combinada de ${c.legs.length} apuestas · ${stl(c.res)}</div><div class="pcb"><strong>${pcx(c.p)}%</strong><span>probabilidad de que salgan todas</span></div><div style="font-size:13px;color:var(--mu)">${c.res==='l'?'Perdida: una apuesta falló.':c.res==='w'?'Ganada: todas acertaron.':'Pendiente: faltan '+pend+' por terminar.'}</div>`+c.legs.map(a=>`<div class="leg"><div style="flex:1;min-width:0"><b>${a.label}</b><small>${a.match}</small></div>${stl(a.res)}</div>`).join('')+(askRow('c'+c.id,'esta combinada completa')||`<div class="act" style="margin-left:0"><button class="btn g" data-split="${c.id}">Separar</button><button class="btn g" data-ask="c${c.id}">Borrar combinada</button></div>`)+'</div>'}).join(''):'<div class="empty">Todavía no guardas combinadas.<br>En Valor, toca “Guardar apuesta” y elige “Añadir a combinada”.</div>';}
 document.addEventListener('click',e=>{const t=e.target;
  const d=t.closest('.day');if(d){if(d.id==='lv'){liveOn=!liveOn}else{liveOn=false;day=d.dataset.d}render();moved();return}
  const tb=t.closest('[data-thr],[data-cthr]');if(tb){autoThr=false;if(tb.dataset.thr)thr=parseFloat(tb.dataset.thr);else cthr=parseFloat(tb.dataset.cthr);$('#note').classList.remove('on');render();return}
@@ -238,7 +270,13 @@ document.addEventListener('click',e=>{const t=e.target;
  if(t.closest('#clr')){sel=favSet().size?favSet():new Set(LGS.map(x=>x[0]));LS.set('gm_lg',[...sel]);type='all';liveOn=false;$('#ft').value='all';drawLg();render();moved();return}
  const n=t.closest('nav button');if(n){setView(n.dataset.v);return}
  const sv=t.closest('[data-sv]');if(sv){const[a,b]=sv.dataset.sv.split('|');askSave(a,+b);return}
- const r=t.closest('[data-r]');if(r){const[k,id]=r.dataset.r.split('|');if(k==='x')bets=bets.filter(b=>b.id!=id);else bets.find(b=>b.id==id).res=k;LS.set('gm_bets',bets);renderMis();return}
+ const rm=t.closest('[data-rm]');if(rm){slip.splice(+rm.dataset.rm,1);openSlip();return}
+ const md=t.closest('[data-mode]');if(md){mode=md.dataset.mode;askDel=null;renderMis();return}
+ const ak=t.closest('[data-ask]');if(ak){askDel=ak.dataset.ask;renderMis();return}
+ if(t.closest('[data-nodel]')){askDel=null;renderMis();return}
+ const dl=t.closest('[data-del]');if(dl){const k=dl.dataset.del;bets=k[0]==='s'?bets.filter(b=>'s'+b.id!==k):bets.filter(b=>'c'+b.cb!==k);askDel=null;LS.set('gm_bets',bets);renderMis();return}
+ const sp=t.closest('[data-split]');if(sp){bets.forEach(b=>{if(b.cb===sp.dataset.split)delete b.cb});LS.set('gm_bets',bets);mode='simple';renderMis();return}
+ const r=t.closest('[data-r]');if(r){const[k,id]=r.dataset.r.split('|');bets.find(b=>b.id==id).res=k;LS.set('gm_bets',bets);renderMis();return}
  const mm=t.closest('[data-m]');if(mm){openDet(mm.dataset.m)}
 });
 $('#fl').onclick=()=>{drawLm();$('#lm').classList.add('on')};$('#ll').onchange=e=>{const k=e.target.dataset.k;e.target.checked?sel.add(k):sel.delete(k);saveLg()};$('#la').onclick=()=>{sel=new Set(LGS.map(x=>x[0]));drawLm();saveLg()};$('#ln').onclick=()=>{sel=new Set();drawLm();saveLg()};$('#lf').onclick=()=>{sel=favSet().size?favSet():new Set(LGS.map(x=>x[0]));drawLm();saveLg()};$('#lok').onclick=()=>{$('#lm').classList.remove('on');moved()};$('#ft').onchange=e=>{type=e.target.value;render();moved()};
