@@ -37,7 +37,7 @@ córners espn SWE Goteborg Djurgarden 5 5
 córners espn SWE AIK Elfsborg 2 10
 resultados: 713
 {
- "generated": "2026-10-28T22:49:54.325168+00:00",
+ "generated": "2026-10-28T23:09:10.342458+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -185,4 +185,4 @@ resultados: 713
     "Rotherham",
     "Sheffield Weds",
     "Stevenag
-partidos: 326
+partidos: 325
