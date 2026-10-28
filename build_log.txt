@@ -1,43 +1,76 @@
-córners espn EL1 Leicester Wigan 7 3
-córners espn EL1 Luton Doncaster 5 5
-córners espn EL1 Milton Keynes Dons Bromley 7 5
-córners espn EL1 Oxford Stockport 3 7
-córners espn EL1 Sheffield Weds Cambridge 6 11
-córners espn EL2 Barnet York 4 4
-córners espn SCO Aberdeen Falkirk 5 4
-córners espn SCO Celtic Dundee United 13 5
-córners espn SCO Dundee Kilmarnock 7 5
-córners espn SCO St Johnstone Motherwell 2 8
-córners espn SCO St Mirren Hibernian 3 5
-córners espn SCO Hearts Rangers 4 4
-córners espn SA Milan Bologna 2 3
-córners espn SA Parma Udinese 3 6
-córners espn SA Venezia Inter 3 6
-córners espn SA Genoa Juventus 6 9
-córners espn SA Monza Napoli 2 2
-córners espn SA Sassuolo Lazio 2 1
-córners espn SA Roma Cagliari 7 8
-córners espn SA Torino Como 5 6
-córners espn SB Pisa Palermo 5 3
-córners espn SB Carrarese Arezzo 4 1
-córners espn SB Juve Stabia Verona 5 8
-córners espn SB Benevento Catanzaro 5 5
-córners espn SB Ascoli Sampdoria 9 4
-córners espn SB Cesena Empoli 7 5
-córners espn SB Mantova Cremonese 5 2
-córners espn SB Padova Sudtirol 3 6
-córners espn SB Vicenza Modena 5 4
-córners espn SB Virtus Entella Avellino 1 4
-córners espn L1 Paris FC Lyon 7 4
-córners espn ARG Argentinos Jrs Independiente 9 3
-córners espn SWE Degerfors Vasteras SK 3 9
-córners espn SWE Halmstad Malmo FF 6 5
-córners espn SWE Brommapojkarna Hacken 5 12
-córners espn SWE Goteborg Djurgarden 5 5
-córners espn SWE AIK Elfsborg 2 10
+ Milton Keynes Dons Bromley 7 5
+shotsOnTarget espn EL1 Milton Keynes Dons Bromley 5 3
+wonCorners espn EL1 Oxford Stockport 3 7
+shotsOnTarget espn EL1 Oxford Stockport 5 3
+wonCorners espn EL1 Sheffield Weds Cambridge 6 11
+shotsOnTarget espn EL1 Sheffield Weds Cambridge 5 9
+wonCorners espn EL2 Barnet York 4 4
+shotsOnTarget espn EL2 Barnet York 6 2
+wonCorners espn SCO Aberdeen Falkirk 5 4
+shotsOnTarget espn SCO Aberdeen Falkirk 5 4
+wonCorners espn SCO Celtic Dundee United 13 5
+shotsOnTarget espn SCO Celtic Dundee United 8 5
+wonCorners espn SCO Dundee Kilmarnock 7 5
+shotsOnTarget espn SCO Dundee Kilmarnock 5 3
+wonCorners espn SCO St Johnstone Motherwell 2 8
+shotsOnTarget espn SCO St Johnstone Motherwell 3 9
+wonCorners espn SCO St Mirren Hibernian 3 5
+shotsOnTarget espn SCO St Mirren Hibernian 3 1
+wonCorners espn SCO Hearts Rangers 4 4
+shotsOnTarget espn SCO Hearts Rangers 6 6
+wonCorners espn SA Milan Bologna 2 3
+shotsOnTarget espn SA Milan Bologna 3 5
+wonCorners espn SA Parma Udinese 3 6
+shotsOnTarget espn SA Parma Udinese 2 5
+wonCorners espn SA Venezia Inter 3 6
+shotsOnTarget espn SA Venezia Inter 4 2
+wonCorners espn SA Genoa Juventus 6 9
+shotsOnTarget espn SA Genoa Juventus 2 4
+wonCorners espn SA Monza Napoli 2 2
+shotsOnTarget espn SA Monza Napoli 5 7
+wonCorners espn SA Sassuolo Lazio 2 1
+shotsOnTarget espn SA Sassuolo Lazio 1 8
+wonCorners espn SA Roma Cagliari 7 8
+shotsOnTarget espn SA Roma Cagliari 8 8
+wonCorners espn SA Torino Como 5 6
+shotsOnTarget espn SA Torino Como 5 5
+wonCorners espn SB Pisa Palermo 5 3
+shotsOnTarget espn SB Pisa Palermo 6 5
+wonCorners espn SB Carrarese Arezzo 4 1
+shotsOnTarget espn SB Carrarese Arezzo 3 2
+wonCorners espn SB Juve Stabia Verona 5 8
+shotsOnTarget espn SB Juve Stabia Verona 3 4
+wonCorners espn SB Benevento Catanzaro 5 5
+shotsOnTarget espn SB Benevento Catanzaro 3 2
+wonCorners espn SB Ascoli Sampdoria 9 4
+shotsOnTarget espn SB Ascoli Sampdoria 5 6
+wonCorners espn SB Cesena Empoli 7 5
+shotsOnTarget espn SB Cesena Empoli 3 5
+wonCorners espn SB Mantova Cremonese 5 2
+shotsOnTarget espn SB Mantova Cremonese 9 5
+wonCorners espn SB Padova Sudtirol 3 6
+shotsOnTarget espn SB Padova Sudtirol 5 5
+wonCorners espn SB Vicenza Modena 5 4
+shotsOnTarget espn SB Vicenza Modena 2 3
+wonCorners espn SB Virtus Entella Avellino 1 4
+shotsOnTarget espn SB Virtus Entella Avellino 5 2
+wonCorners espn L1 Paris FC Lyon 7 4
+shotsOnTarget espn L1 Paris FC Lyon 10 5
+wonCorners espn ARG Argentinos Jrs Independiente 9 3
+shotsOnTarget espn ARG Argentinos Jrs Independiente 6 3
+wonCorners espn SWE Degerfors Vasteras SK 3 9
+shotsOnTarget espn SWE Degerfors Vasteras SK 2 8
+wonCorners espn SWE Halmstad Malmo FF 6 5
+shotsOnTarget espn SWE Halmstad Malmo FF 5 4
+wonCorners espn SWE Brommapojkarna Hacken 5 12
+shotsOnTarget espn SWE Brommapojkarna Hacken 6 4
+wonCorners espn SWE Goteborg Djurgarden 5 5
+shotsOnTarget espn SWE Goteborg Djurgarden 5 2
+wonCorners espn SWE AIK Elfsborg 2 10
+shotsOnTarget espn SWE AIK Elfsborg 4 5
 resultados: 713
 {
- "generated": "2026-10-28T23:09:10.342458+00:00",
+ "generated": "2026-10-28T23:33:00.701409+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
