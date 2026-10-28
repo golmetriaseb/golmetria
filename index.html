@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="es"><head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Golmetría"><link rel="apple-touch-icon" href="icon-180.png"><link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#0a0b14"><meta name="color-scheme" content="dark">
@@ -10,7 +10,7 @@
 <style>
 :root{--bg:#06070a;--card:#0e1017;--card2:#141722;--tx:#f4f6fb;--mu:#8a92ab;--bl:#2ec5ff;--blbg:#0b2230;--ok:#b6ff3b;--okbg:#14210a;--go:#ffb21f;--gobg:#2a1d05;--ln:#1d2130;--ln2:#2a3046;--ac:#2ec5ff;--f1:'Barlow Condensed',sans-serif}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-body{margin:0;background:radial-gradient(700px 320px at 85% -80px,rgba(46,197,255,.16),transparent 70%),radial-gradient(600px 300px at 0% 0,rgba(182,255,59,.07),transparent 70%),var(--bg);background-attachment:fixed;color:var(--tx);font:500 15px Barlow,system-ui,sans-serif;padding-bottom:92px;-webkit-font-smoothing:antialiased}
+html,body{touch-action:manipulation;-webkit-text-size-adjust:100%}body{margin:0;background:radial-gradient(700px 320px at 85% -80px,rgba(46,197,255,.16),transparent 70%),radial-gradient(600px 300px at 0% 0,rgba(182,255,59,.07),transparent 70%),var(--bg);background-attachment:fixed;color:var(--tx);font:500 15px Barlow,system-ui,sans-serif;padding-bottom:92px;-webkit-font-smoothing:antialiased}
 .wrap{max-width:720px;margin:0 auto;padding:0 16px}
 .bar{background:rgba(6,7,10,.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--ln);position:sticky;top:0;z-index:4}
 .bar .wrap{padding-top:max(12px,env(safe-area-inset-top));padding-bottom:12px}
@@ -129,6 +129,7 @@ let REAL=null,DATA=[];
 const loc=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
 function prep(m){const d=new Date(m.utc);m.date=loc(d);m.time=String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0');return m}
 async function boot(){try{const r=await fetch('data.json?'+Date.now(),{cache:'no-store'});if(!r.ok)throw 0;const j=await r.json();REAL=j;DATA=j.matches.map(prep)}catch(e){REAL=null;DATA=demo()}init()}
+document.addEventListener('gesturestart',e=>e.preventDefault());document.addEventListener('gesturechange',e=>e.preventDefault());
 function init(){
 /* ===== ESTADO ===== */
 const TYPES=[['all','Todas las apuestas'],['o15','Más de 1.5 goles'],['o25','Más de 2.5 goles'],['o35','Más de 3.5 goles'],['btts','Ambos marcan'],['corn','Córners'],['g1t','Gol en 1er tiempo'],['win','Ganador / Doble op.']];
