@@ -16,13 +16,24 @@ RHO = -0.06
 MIN_GAMES = 6
 HORIZON = 8           # dias hacia adelante
 
-LEAGUES = [
-    dict(code='ENG', name='Championship',   kind='main', div='E1',  espn='eng.2'),
-    dict(code='GER', name='2. Bundesliga',  kind='main', div='D2',  espn='ger.2'),
-    dict(code='SCO', name='Premiership',    kind='main', div='SC0', espn='sco.1'),
-    dict(code='SUI', name='Super League',   kind='new',  file='SWZ', country='Switzerland', espn='sui.1'),
-    dict(code='BRA', name='Brasileirão',    kind='new',  file='BRA', country='Brazil', espn='bra.1'),
-]
+FAV = {'ENG', 'GER', 'SCO', 'SUI', 'BRA'}
+_main = [('EPL', 'E0', 'Premier League', 'eng.1'), ('ENG', 'E1', 'Championship', 'eng.2'), ('EL1', 'E2', 'League One', 'eng.3'),
+         ('EL2', 'E3', 'League Two', 'eng.4'), ('ECO', 'EC', 'National League', 'eng.5'), ('SCO', 'SC0', 'Premiership', 'sco.1'),
+         ('SC1', 'SC1', 'Championship (Escocia)', 'sco.2'), ('GB1', 'D1', 'Bundesliga', 'ger.1'), ('GER', 'D2', '2. Bundesliga', 'ger.2'),
+         ('SA', 'I1', 'Serie A', 'ita.1'), ('SB', 'I2', 'Serie B', 'ita.2'), ('LL', 'SP1', 'La Liga', 'esp.1'), ('LL2', 'SP2', 'La Liga 2', 'esp.2'),
+         ('L1', 'F1', 'Ligue 1', 'fra.1'), ('L2', 'F2', 'Ligue 2', 'fra.2'), ('ERE', 'N1', 'Eredivisie', 'ned.1'),
+         ('BEL', 'B1', 'Pro League (Bélgica)', 'bel.1'), ('POR', 'P1', 'Primeira Liga', 'por.1'), ('TUR', 'T1', 'Süper Lig', 'tur.1'),
+         ('GRE', 'G1', 'Super League (Grecia)', 'gre.1')]
+_new = [('SUI', 'SWZ', 'Switzerland', 'Super League (Suiza)', 'sui.1'), ('BRA', 'BRA', 'Brazil', 'Brasileirão', 'bra.1'),
+        ('ARG', 'ARG', 'Argentina', 'Liga Profesional', 'arg.1'), ('AUT', 'AUT', 'Austria', 'Bundesliga (Austria)', 'aut.1'),
+        ('DNK', 'DNK', 'Denmark', 'Superliga (Dinamarca)', 'den.1'), ('FIN', 'FIN', 'Finland', 'Veikkausliiga', 'fin.1'),
+        ('IRL', 'IRL', 'Ireland', 'Premier Division (Irlanda)', 'irl.1'), ('JPN', 'JPN', 'Japan', 'J1 League', 'jpn.1'),
+        ('MEX', 'MEX', 'Mexico', 'Liga MX', 'mex.1'), ('NOR', 'NOR', 'Norway', 'Eliteserien', 'nor.1'),
+        ('POL', 'POL', 'Poland', 'Ekstraklasa', 'pol.1'), ('ROU', 'ROU', 'Romania', 'Liga 1 (Rumanía)', 'rou.1'),
+        ('RUS', 'RUS', 'Russia', 'Premier Liga (Rusia)', 'rus.1'), ('SWE', 'SWE', 'Sweden', 'Allsvenskan', 'swe.1'),
+        ('USA', 'USA', 'USA', 'MLS', 'usa.1'), ('CHN', 'CHN', 'China', 'Super League (China)', 'chn.1')]
+LEAGUES = [dict(code=c, name=n, kind='main', div=d, espn=e, fav=c in FAV) for c, d, n, e in _main] + \
+          [dict(code=c, name=n, kind='new', file=f, country=co, espn=e, fav=c in FAV, flt=('Serie A' if c == 'BRA' else None)) for c, f, co, n, e in _new]
 status = {'generated': NOW.isoformat(), 'leagues': {}, 'errors': []}
 
 def log(*a):
@@ -273,7 +284,7 @@ def load_fixtures():
             for l in LEAGUES:
                 if l['kind'] == 'new' and (r.get('Country') or '').strip() == l['country']:
                     lgname = (r.get('League') or '').strip()
-                    if l['code'] == 'BRA' and lgname and lgname != 'Serie A':
+                    if l.get('flt') and lgname and lgname != l['flt']:
                         continue
                     d = pdate(r.get('Date'))
                     if d and r.get('Home'):
@@ -339,7 +350,9 @@ def espn_fixtures(l, teams):
         try:
             j = json.loads(fetch(f"https://site.api.espn.com/apis/site/v2/sports/soccer/{l['espn']}/scoreboard?dates={d:%Y%m%d}", tries=2))
         except Exception as e:
-            status['errors'].append(f"espn {l['code']} {d}: {str(e)[:100]}"); continue
+            st = status['leagues'][l['code']]
+            st['espn_fail'] = st.get('espn_fail', 0) + 1
+            continue
         for ev in j.get('events', []):
             try:
                 comp = ev['competitions'][0]['competitors']
@@ -403,7 +416,7 @@ def main():
         st['has_half'] = sum(1 for m in hist if m['h1'] is not None)
         teams = sorted({m['h'] for m in hist} | {m['a'] for m in hist})
         lf = fx.get(code, [])
-        st['fixtures_fd'] = len(lf)
+        st['fixtures_fd'] = len(lf); st['fav'] = l['fav']
         try:
             ef, miss = espn_fixtures(l, teams)
         except Exception as e:
@@ -422,7 +435,7 @@ def main():
             if not M:
                 st['skipped'] = st.get('skipped', 0) + 1; continue
             matches.append(dict(id=f"{code}-{f['k']:%Y%m%d}-{slug(f['h'])}-{slug(f['a'])}", league=code, leagueName=l['name'],
-                                utc=f['k'].strftime('%Y-%m-%dT%H:%M:%SZ'), home=f['h'], away=f['a'], src=f['src'], oddsFrom=('promedio de casas' if f['src']=='fd' else ('DraftKings' if any(f['odds'].values()) else None)),
+                                utc=f['k'].strftime('%Y-%m-%dT%H:%M:%SZ'), home=f['h'], away=f['a'], src=f['src'], fav=l['fav'], oddsFrom=('promedio de casas' if f['src']=='fd' else ('DraftKings' if any(f['odds'].values()) else None)),
                                 lh=round(M['lh'], 2), la=round(M['la'], 2), bets=bets_for(M, f['h'], f['a'], f['odds'])))
             done += 1
         st['matches'] = done

@@ -132,14 +132,15 @@ function init(){
 /* ===== ESTADO ===== */
 const TYPES=[['all','Todas las apuestas'],['o15','Más de 1.5 goles'],['o25','Más de 2.5 goles'],['o35','Más de 3.5 goles'],['btts','Ambos marcan'],['corn','Córners'],['g1t','Gol en 1er tiempo'],['win','Ganador / Doble op.']];
 let days=[...new Set(DATA.map(m=>m.date))].sort();if(!days.length)days=[loc(new Date())];
-let day=days.includes(loc(new Date()))?loc(new Date()):days[0],type='all',lg='all',view='valor',bets=LS.get('gm_bets',[]),cur=null,custom={},pend=null;
+let day=days.includes(loc(new Date()))?loc(new Date()):days[0],type='all',lg='fav',view='valor',bets=LS.get('gm_bets',[]),cur=null,custom={},pend=null;
 const dn=d=>{const t=loc(new Date()),tm=loc(new Date(Date.now()+864e5));return d===t?'Hoy':d===tm?'Mañana':new Date(d+'T12:00').toLocaleDateString('es',{weekday:'short'})};
 const dd=d=>new Date(d+'T12:00').toLocaleDateString('es',{day:'numeric',month:'short'});
 const pc=x=>Math.round(x*100)+'%',val=b=>b.odd?b.p*b.odd-1:null,fmt=v=>v==null?'—':(v>=0?'+':'')+Math.round(v*100)+'%';
 $('#days').innerHTML=days.map(d=>`<button class="day" data-d="${d}">${dn(d)}<small>${dd(d)}</small></button>`).join('');
-$('#fl').innerHTML='<option value="all">Todas las ligas</option>'+[...new Map(DATA.map(m=>[m.league,m.leagueName]))].map(([k,n])=>`<option value="${k}">${n}</option>`).join('');
+const hasFav=DATA.some(m=>m.fav);if(!hasFav)lg='all';
+$('#fl').innerHTML=(hasFav?'<option value="fav">Mis ligas favoritas</option>':'')+'<option value="all">Todas las ligas</option>'+[...new Map(DATA.map(m=>[m.league,m.leagueName]))].map(([k,n])=>`<option value="${k}">${n}</option>`).join('');
 $('#ft').innerHTML=TYPES.map(t=>`<option value="${t[0]}">${t[1]}</option>`).join('');
-function ms(){return DATA.filter(m=>m.date===day&&(lg==='all'||m.league===lg))}
+function ms(){return DATA.filter(m=>m.date===day&&(lg==='all'||(lg==='fav'?m.fav:m.league===lg)))}
 function flat(){const o=[];ms().forEach(m=>m.bets.forEach(b=>{if(type==='all'||b.type===type)o.push({m,b})}));return o}
 const LC={ENG:'#6ea0ff',GER:'#ff7a7a',SCO:'#7ad7ff',SUI:'#ff9ac2',BRA:'#4fe0a0'};
 const ini=n=>n.replace(/[^A-Za-zÁÉÍÓÚÑáéíóúñ ]/g,'').split(' ').filter(Boolean).slice(0,2).map(w=>w[0]).join('').toUpperCase()||n.slice(0,2).toUpperCase();
@@ -150,7 +151,7 @@ function bcard(x,cls){const{m,b}=x,v=val(b),hi=b.p>=.75,ok=v!=null&&v>=.05,rv=v!
 <div class="tile"><small>CUOTA</small><strong>${b.odd?b.odd.toFixed(2):'—'}</strong><em>${b.odd?'Cuota justa: '+(1/b.p).toFixed(2):'Sin cuota de la casa. Cuota justa: '+(1/b.p).toFixed(2)}</em></div>
 <div class="tile ${rv?'tr':ok?'tv':'tn'}"><small>${rv?'VALOR · REVISAR':'VALOR'}</small><strong>${fmt(v)}</strong><em>${v==null?'Escribe tu cuota en “Ver partido”':rv?'Muy alto: revisa, puede ser un error del modelo':ok?'Conviene: la casa paga de más':'No conviene: paga poco'}</em></div></div>
 <div class="act"><button class="btn" data-sv="${m.id}|${m.bets.indexOf(b)}">Guardar apuesta</button><button class="btn g" data-m="${m.id}">Ver partido</button></div></div>`}
-function emptyMsg(kind){const L=lg==='all'?'todas las ligas':DATA.find(m=>m.league===lg).leagueName,T=type==='all'?'todas las apuestas':TYPES.find(t=>t[0]===type)[1],D=dn(day).toLowerCase();
+function emptyMsg(kind){const L=lg==='all'?'todas las ligas':lg==='fav'?'tus ligas favoritas':DATA.find(m=>m.league===lg).leagueName,T=type==='all'?'todas las apuestas':TYPES.find(t=>t[0]===type)[1],D=dn(day).toLowerCase();
  const what=kind==='v'?'apuestas de valor':'apuestas con 75% de probabilidad o más';
  const tip=(lg!=='all'||type!=='all')?'Quita un filtro o prueba otro día.':'Prueba otro día.';
  return`<div class="empty"><b style="display:block;color:var(--tx);font:italic 800 20px var(--f1);text-transform:uppercase;margin-bottom:6px">Sin ${what}</b>${D==='hoy'?'Hoy':'El '+D} no hay ${what} en ${L} · ${T}.<br>${kind==='v'?'Eso también es información: hoy no conviene apostar aquí.':'Ninguna apuesta llega a ese nivel de probabilidad.'}<br><span style="color:var(--bl)">${tip}</span></div>`}
