@@ -1,111 +1,267 @@
-{
- "generated": "2026-10-28T17:40:32.796516+00:00",
- "leagues": {
-  "ENG": {
-   "name": "Championship",
-   "hist": 696,
-   "last_result": "2026-10-24",
-   "has_corners": 696,
-   "has_half": 696,
-   "fixtures_fd": 0,
-   "name_map": {
-    "Lincoln City": "Lincoln",
-    "Birmingham City": "Birmingham",
-    "Norwich City": "Norwich",
-    "Stoke City": "Stoke",
-    "Preston North End": "Preston",
-    "Bolton Wanderers": "Bolton",
-    "Charlton Athletic": "Charlton",
-    "Derby County": "Derby",
-    "Queens Park Rangers": "QPR",
-    "Swansea City": "Swansea",
-    "Blackburn Rovers": "Blackburn",
-    "West Ham United": "West Ham",
-    "West Bromwich Albion": "West Brom",
-    "Wolverhampton Wanderers": "Wolves",
-    "Cardiff City": "Cardiff"
-   },
-   "fixtures_espn": 24,
-   "espn_unmatched": 0,
-   "matches": 24
-  },
-  "GER": {
-   "name": "2. Bundesliga",
-   "hist": 387,
-   "last_result": "2026-10-25",
-   "has_corners": 387,
-   "has_half": 387,
-   "fixtures_fd": 0,
-   "name_map": {
-    "Arminia Bielefeld": "Bielefeld",
-    "TSV Eintracht Braunschweig": "Braunschweig",
-    "Energie Cottbus": "Cottbus",
-    "VfL Bochum": "Bochum",
-    "Hertha Berlin": "Hertha",
-    "SV Darmstadt 98": "Darmstadt",
-    "1. FC Magdeburg": "Magdeburg",
-    "VfL Wolfsburg": "Wolfsburg",
-    "VfL Osnabruck": "Osnabruck",
-    "Karlsruher SC": "Karlsruhe",
-    "1. FC Heidenheim 1846": "Heidenheim",
-    "Hannover 96": "Hannover",
-    "Dynamo Dresden": "Dresden",
-    "SpVgg Greuther Fürth": "Greuther Furth",
-    "St. Pauli": "St Pauli",
-    "1. FC Nürnberg": "Nurnberg"
-   },
-   "fixtures_espn": 9,
-   "espn_unmatched": 0,
-   "matches": 9
-  },
-  "SCO": {
-   "name": "Premiership",
-   "hist": 288,
-   "last_result": "2026-10-25",
-   "has_corners": 288,
-   "has_half": 288,
-   "fixtures_fd": 6,
-   "name_map": {
-    "Heart of Midlothian": "Hearts"
-   },
-   "fixtures_espn": 9,
-   "espn_unmatched": 0,
-   "matches": 9
-  },
-  "SUI": {
-   "name": "Super League",
-   "hist": 2741,
-   "last_result": "2026-10-25",
+"last_result": "2026-10-25",
    "has_corners": 0,
    "has_half": 0,
    "fixtures_fd": 0,
+   "fav": false,
+   "name_map": {
+    "TSV Hartberg": "Hartberg",
+    "SC Rheindorf Altach": "Altach",
+    "SV Josko Ried": "Ried",
+    "LASK Linz": "LASK",
+    "WSG Swarovski Tirol": "Tirol",
+    "RB Salzburg": "Salzburg",
+    "Austria Lustenau": "A. Lustenau",
+    "Wolfsberger": "Wolfsberger AC",
+    "SK Sturm Graz": "Sturm Graz"
+   },
+   "unmatched_names": [
+    "Rapid Vienna"
+   ],
+   "fixtures_espn": 5,
+   "espn_unmatched": 1,
+   "matches": 5
+  },
+  "DNK": {
+   "name": "Superliga (Dinamarca)",
+   "hist": 3024,
+   "last_result": "2026-10-26",
+   "has_corners": 0,
+   "has_half": 0,
+   "fixtures_fd": 0,
+   "fav": false,
+   "name_map": {
+    "Lyngby Boldklub": "Lyngby",
+    "Odense Boldklub": "Odense",
+    "Silkeborg IF": "Silkeborg",
+    "Viborg FF": "Viborg",
+    "AC Horsens": "Horsens",
+    "FC Nordsjælland": "Nordsjaelland",
+    "FC Midtjylland": "Midtjylland"
+   },
+   "unmatched_names": [
+    "AGF",
+    "Sønderjyske Fodbold",
+    "F.C. København"
+   ],
+   "fixtures_espn": 4,
+   "espn_unmatched": 2,
+   "matches": 4
+  },
+  "FIN": {
+   "name": "Veikkausliiga",
+   "hist": 2714,
+   "last_result": "2026-10-25",
+   "has_corners": 0,
+   "has_half": 0,
+   "fixtures_fd": 3,
+   "fav": false,
+   "fixtures_espn": 0,
+   "espn_unmatched": 0,
+   "matches": 3
+  },
+  "IRL": {
+   "name": "Premier Division (Irlanda)",
+   "hist": 2738,
+   "last_result": "2026-10-23",
+   "has_corners": 0,
+   "has_half": 0,
+   "fixtures_fd": 0,
+   "fav": false,
    "fixtures_espn": 0,
    "espn_unmatched": 0,
    "matches": 0
   },
-  "BRA": {
-   "name": "Brasileirão",
-   "hist": 5638,
+  "JPN": {
+   "name": "J1 League",
+   "hist": 4643,
+   "last_result": "2026-10-25",
+   "has_corners": 0,
+   "has_half": 0,
+   "fixtures_fd": 0,
+   "fav": false,
+   "name_map": {
+    "Fagiano Okayama": "Okayama",
+    "Kyoto Sanga": "Kyoto",
+    "Mito Hollyhock": "Mito",
+    "JEF United Ichihara-Chiba": "Chiba",
+    "Tokyo Verdy 1969": "FC Tokyo",
+    "Machida Zelvia": "Machida"
+   },
+   "unmatched_names": [
+    "Urawa Red Diamonds"
+   ],
+   "fixtures_espn": 9,
+   "espn_unmatched": 1,
+   "matches": 9
+  },
+  "MEX": {
+   "name": "Liga MX",
+   "hist": 4779,
    "last_result": "2026-10-26",
    "has_corners": 0,
    "has_half": 0,
-   "fixtures_fd": 10,
+   "fixtures_fd": 1,
+   "fav": false,
    "name_map": {
-    "Red Bull Bragantino": "Bragantino",
-    "Chapecoense": "Chapecoense-SC",
-    "São Paulo": "Sao Paulo",
-    "Botafogo": "Botafogo RJ",
-    "Atlético-MG": "Atletico-MG",
-    "Vasco da Gama": "Vasco",
-    "Flamengo": "Flamengo RJ",
-    "Grêmio": "Gremio",
-    "Vitória": "Vitoria"
+    "América": "Club America",
+    "Tijuana": "Club Tijuana",
+    "Atlético de San Luis": "Atl. San Luis",
+    "FC Juárez": "Juarez",
+    "Querétaro": "Queretaro",
+    "Guadalajara": "Guadalajara Chivas",
+    "Santos": "Santos Laguna",
+    "León": "Club Leon"
    },
-   "fixtures_espn": 17,
+   "unmatched_names": [
+    "Pumas UNAM"
+   ],
+   "fixtures_espn": 9,
+   "espn_unmatched": 1,
+   "matches": 9
+  },
+  "NOR": {
+   "name": "Eliteserien",
+   "hist": 3574,
+   "last_result": "2026-10-25",
+   "has_corners": 0,
+   "has_half": 0,
+   "fixtures_fd": 0,
+   "fav": false,
+   "name_map": {
+    "Viking FK": "Viking",
+    "SK Brann": "Brann",
+    "IK Start": "Start",
+    "Sarpsborg FK": "Sarpsborg 08",
+    "Kristiansund BK": "Kristiansund",
+    "Vålerenga": "Valerenga"
+   },
+   "unmatched_names": [
+    "Hamarkameratene"
+   ],
+   "fixtures_espn": 7,
+   "espn_unmatched": 1,
+   "matches": 7
+  },
+  "POL": {
+   "name": "Ekstraklasa",
+   "hist": 4188,
+   "last_result": "2026-10-25",
+   "has_corners": 0,
+   "has_half": 0,
+   "fixtures_fd": 0,
+   "fav": false,
+   "espn_fail": 8,
+   "fixtures_espn": 0,
    "espn_unmatched": 0,
-   "matches": 17
+   "matches": 0
+  },
+  "ROU": {
+   "name": "Liga 1 (Rumanía)",
+   "hist": 4286,
+   "last_result": "2026-10-26",
+   "has_corners": 0,
+   "has_half": 0,
+   "fixtures_fd": 0,
+   "fav": false,
+   "fixtures_espn": 0,
+   "espn_unmatched": 0,
+   "matches": 0
+  },
+  "RUS": {
+   "name": "Premier Liga (Rusia)",
+   "hist": 3416,
+   "last_result": "2026-08-02",
+   "has_corners": 0,
+   "has_half": 0,
+   "fixtures_fd": 0,
+   "fav": false,
+   "name_map": {
+    "Dinamo Moscow": "Dynamo Moscow",
+    "Gazovik Orenburg": "Orenburg",
+    "Rostov": "FK Rostov",
+    "FC Baltika Kaliningrad": "Baltika",
+    "Akron Tolyatti": "Akron Togliatti",
+    "Krylia Sovetov": "Krylya Sovetov",
+    "Zenit St Petersburg": "Zenit"
+   },
+   "fixtures_espn": 8,
+   "espn_unmatched": 0,
+   "skipped": 2,
+   "matches": 6
+  },
+  "SWE": {
+   "name": "Allsvenskan",
+   "hist": 3584,
+   "last_result": "2026-10-25",
+   "has_corners": 0,
+   "has_half": 0,
+   "fixtures_fd": 8,
+   "fav": false,
+   "name_map": {
+    "Degerfors IF": "Degerfors",
+    "Västerås SK": "Vasteras SK",
+    "Halmstads BK": "Halmstad",
+    "Malmö FF": "Malmo FF",
+    "IF Brommapojkarna": "Brommapojkarna",
+    "BK Häcken": "Hacken",
+    "IFK Göteborg": "Goteborg",
+    "Djurgården": "Djurgarden",
+    "Hammarby IF": "Hammarby",
+    "IK Sirius": "Sirius",
+    "Kalmar FF": "Kalmar",
+    "Örgryte IS": "Orgryte",
+    "Mjällby AIF": "Mjallby",
+    "IF Elfsborg": "Elfsborg"
+   },
+   "fixtures_espn": 15,
+   "espn_unmatched": 0,
+   "matches": 15
+  },
+  "USA": {
+   "name": "MLS",
+   "hist": 6282,
+   "last_result": "2026-10-26",
+   "has_corners": 0,
+   "has_half": 0,
+   "fixtures_fd": 14,
+   "fav": false,
+   "name_map": {
+    "Charlotte FC": "Charlotte",
+    "CF Montréal": "CF Montreal",
+    "Inter Miami CF": "Inter Miami",
+    "New York City FC": "New York City",
+    "Atlanta United FC": "Atlanta Utd",
+    "D.C. United": "DC United",
+    "Chicago Fire FC": "Chicago Fire",
+    "Orlando City SC": "Orlando City",
+    "Minnesota United FC": "Minnesota United",
+    "St. Louis CITY SC": "St. Louis City",
+    "Seattle Sounders FC": "Seattle Sounders",
+    "Houston Dynamo FC": "Houston Dynamo"
+   },
+   "unmatched_names": [
+    "Red Bull New York",
+    "LA Galaxy",
+    "Red Bull New York",
+    "LAFC"
+   ],
+   "fixtures_espn": 25,
+   "espn_unmatched": 4,
+   "matches": 26
+  },
+  "CHN": {
+   "name": "Super League (China)",
+   "hist": 3040,
+   "last_result": "2026-10-24",
+   "has_corners": 0,
+   "has_half": 0,
+   "fixtures_fd": 0,
+   "fav": false,
+   "fixtures_espn": 0,
+   "espn_unmatched": 0,
+   "matches": 0
   }
  },
  "errors": []
 }
-partidos: 59
+partidos: 325
