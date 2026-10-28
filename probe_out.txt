@@ -1,20 +1,13 @@
-fixtures.csv 200 13560
-Div counts {'E2': 5, 'E3': 1, 'EC': 12, 'I1': 10, 'I2': 10, 'SC0': 6, 'SC1': 1, 'SC2': 1}
-E1 fechas []
-D2 fechas []
-SC0 fechas ['28/10/2026']
-cols ['Div', 'Date', 'Time', 'HomeTeam', 'AwayTeam', 'Referee', 'B365H', 'B365D', 'B365A', 'BFDH', 'BFDD', 'BFDA', 'BVH', 'BVD', 'BVA', 'BWH', 'BWD', 'BWA', 'PPH', 'PPD']
-new_league_fixtures 200
-{('Argentina', 'Liga Profesional'): 1, ('Brazil', 'Serie A'): 10, ('Finland', 'Veikkausliiga'): 3, ('Mexico', 'Liga MX'): 1, ('Sweden', 'Allsvenskan'): 8, ('USA', 'MLS'): 14}
-cols ['Country', 'League', 'Date', 'Time', 'Home', 'Away', 'PSH', 'PSD', 'PSA', 'MaxH', 'MaxD', 'MaxA', 'AvgH', 'AvgD', 'AvgA', 'BFEH', 'BFED', 'BFEA', 'B365H', 'B365D', 'B365A']
-ESPN https://site.api.espn.com/apis/site/v2/sports/soccer/eng.2/scoreboard? 200 {"leagues":[{"id":"3914","uid":"s:600~l:3914","name":"English League Championship","abbreviation":"E
-ESPN https://site.web.api.espn.com/apis/site/v2/sports/soccer/eng.2/scorebo 200 {"leagues":[{"id":"3914","uid":"s:600~l:3914","name":"English League Championship","abbreviation":"E
-ESPN https://site.api.espn.com/apis/site/v2/sports/soccer/eng.2/scoreboard 200 {"leagues":[{"id":"3914","uid":"s:600~l:3914","name":"English League Championship","abbreviation":"E
-TSDB ENG 4329 ERR 0 
-TSDB GER2 4399 ERR 0 
-TSDB SCO 4330 ERR 0 
-TSDB BRA 4351 ERR 0 
-TSDB SUI 4413 ERR 0 
-TSDB swiss leagues ERR HTTP Error 403: Forbidden
-OpenLiga bl2/2026 200 339089
-[('2026-10-30T17:30:00Z', 'DSC Arminia Bielefeld', 'Eintracht Braunschweig'), ('2026-10-30T17:30:00Z', 'Energie Cottbus', 'VfL Bochum'), ('2026-10-31T12:00:00Z', 'VfL Wolfsburg', 'VfL Osnabrück')]
+eng.2 total 24 {'2026-10-28': 0, '2026-10-29': 0, '2026-10-30': 1, '2026-10-31': 11, '2026-11-01': 0, '2026-11-02': 0, '2026-11-03': 9, '2026-11-04': 3}
+  ejemplo 2026-10-30T20:00Z [('home', 'Sheffield United'), ('away', 'Wrexham')] status STATUS_SCHEDULED
+  odds [{"overUnder": 2.5, "link": {"language": "en-US", "rel": ["game", "desktop", "bets"], "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34895401", "text": "Game", "shortText": "Game", "isExternal": true, "isPremium": false, "isHidden": false}, "provider": {"id": "100", "name": "DraftKings", "priority": 1, "displayName": "DraftKings", "logos": [{"href": "https://a.espncdn.com/i/betting/Draftkings_Light.svg", "rel": ["light"]}, {"hre
+ger.2 total 9 {'2026-10-28': 0, '2026-10-29': 0, '2026-10-30': 2, '2026-10-31': 4, '2026-11-01': 3, '2026-11-02': 0, '2026-11-03': 0, '2026-11-04': 0}
+  ejemplo 2026-10-30T17:30Z [('home', 'Arminia Bielefeld'), ('away', 'TSV Eintracht Braunschweig')] status STATUS_SCHEDULED
+  odds [{"overUnder": 2.5, "link": {"language": "en-US", "rel": ["game", "desktop", "bets"], "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34899216", "text": "Game", "shortText": "Game", "isExternal": true, "isPremium": false, "isHidden": false}, "provider": {"id": "100", "name": "DraftKings", "priority": 1, "displayName": "DraftKings", "logos": [{"href": "https://a.espncdn.com/i/betting/Draftkings_Light.svg", "rel": ["light"]}, {"hre
+sco.1 total 10 {'2026-10-28': 6, '2026-10-29': 0, '2026-10-30': 0, '2026-10-31': 3, '2026-11-01': 1, '2026-11-02': 0, '2026-11-03': 0, '2026-11-04': 0}
+  ejemplo 2026-10-28T19:45Z [('home', 'Aberdeen'), ('away', 'Falkirk')] status STATUS_SCHEDULED
+  odds [{"overUnder": 2.5, "link": {"language": "en-US", "rel": ["game", "desktop", "bets"], "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34894696", "text": "Game", "shortText": "Game", "isExternal": true, "isPremium": false, "isHidden": false}, "provider": {"id": "100", "name": "DraftKings", "priority": 1, "displayName": "DraftKings", "logos": [{"href": "https://a.espncdn.com/i/betting/Draftkings_Light.svg", "rel": ["light"]}, {"hre
+sui.1 total 0 {'2026-10-28': 0, '2026-10-29': 0, '2026-10-30': 0, '2026-10-31': 0, '2026-11-01': 0, '2026-11-02': 0, '2026-11-03': 0, '2026-11-04': 0}
+bra.1 total 17 {'2026-10-28': 5, '2026-10-29': 3, '2026-10-30': 1, '2026-10-31': 1, '2026-11-01': 0, '2026-11-02': 1, '2026-11-03': 2, '2026-11-04': 4}
+  ejemplo 2026-10-28T22:30Z [('home', 'Fluminense'), ('away', 'Internacional')] status STATUS_SCHEDULED
+  odds [{"overUnder": 2.5, "link": {"language": "en-US", "rel": ["game", "desktop", "bets"], "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34897280", "text": "Game", "shortText": "Game", "isExternal": true, "isPremium": false, "isHidden": false}, "provider": {"id": "100", "name": "DraftKings", "priority": 1, "displayName": "DraftKings", "logos": [{"href": "https://a.espncdn.com/i/betting/Draftkings_Light.svg", "rel": ["light"]}, {"hre
