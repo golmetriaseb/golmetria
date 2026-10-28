@@ -4,25 +4,12 @@ córners espn EL1 Milton Keynes Dons Bromley 7 5
 córners espn EL1 Oxford Stockport 3 7
 córners espn EL1 Sheffield Weds Cambridge 6 11
 córners espn EL2 Barnet York 4 4
-córners espn ECO Carlisle Harrogate 0 0
-córners espn ECO Forest Green Eastleigh 0 0
-córners espn ECO Sutton Aldershot 0 0
-córners espn ECO Fylde Hartlepool 0 0
-córners espn ECO Hornchurch Yeovil 0 0
-córners espn ECO Altrincham Kidderminster 0 0
-córners espn ECO Boston Utd Gateshead 0 0
-córners espn ECO Halifax Barrow 0 0
-córners espn ECO Tamworth Scunthorpe 0 0
-córners espn ECO Wealdstone Solihull 0 0
-córners espn ECO Woking Boreham Wood 0 0
-córners espn ECO Worthing Southend 0 0
 córners espn SCO Aberdeen Falkirk 5 4
 córners espn SCO Celtic Dundee United 13 5
 córners espn SCO Dundee Kilmarnock 7 5
 córners espn SCO St Johnstone Motherwell 2 8
 córners espn SCO St Mirren Hibernian 3 5
 córners espn SCO Hearts Rangers 4 4
-córners espn SC1 Stenhousemuir Dunfermline 0 0
 córners espn SA Milan Bologna 2 3
 córners espn SA Parma Udinese 3 6
 córners espn SA Venezia Inter 3 6
@@ -50,7 +37,7 @@ córners espn SWE Goteborg Djurgarden 5 5
 córners espn SWE AIK Elfsborg 2 10
 resultados: 713
 {
- "generated": "2026-10-28T22:02:13.105339+00:00",
+ "generated": "2026-10-28T22:07:31.326822+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
