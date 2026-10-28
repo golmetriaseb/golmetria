@@ -207,6 +207,7 @@ def markets(hist, h, a, ref):
     lh, la = lam
     G = grid(lh, la)
     H = D = V = o15 = o25 = o35 = bt = 0.0
+    th, ta = [0.0] * 4, [0.0] * 4  # P(goles del equipo >= k), k=1..3
     for i, r in enumerate(G):
         for j, p in enumerate(r):
             if i > j: H += p
@@ -217,7 +218,12 @@ def markets(hist, h, a, ref):
             if t > 2: o25 += p
             if t > 3: o35 += p
             if i and j: bt += p
+            for k in (1, 2, 3):
+                if i >= k: th[k] += p
+                if j >= k: ta[k] += p
     out = {'1': H, 'X': D, '2': V, '1X': H + D, 'X2': V + D, 'o15': o15, 'o25': o25, 'o35': o35, 'btts': bt, 'lh': lh, 'la': la}
+    for k in (1, 2, 3):
+        out[f'gh{k}'], out[f'ga{k}'] = th[k], ta[k]
     F1 = fit(hist, 'g1', ref)
     l1 = lambdas(F1, h, a)
     out['g1t'] = 1 - math.exp(-(l1[0] + l1[1])) if l1 else None
@@ -247,6 +253,9 @@ def bets_for(M, home, away, odds):
     add('o35', 'Más de 3.5 goles', M['o35'])
     add('btts', 'Ambos marcan', M['btts'])
     add('g1t', 'Gol en el 1er tiempo', M.get('g1t'))
+    for k, L in ((1, '0.5'), (2, '1.5'), (3, '2.5')):
+        add('tg', f'Goles de {home} más de {L}', M[f'gh{k}'])
+        add('tg', f'Goles de {away} más de {L}', M[f'ga{k}'])
     if 'ch35' in M:
         for L in (35, 45, 55, 65):
             add('corn', f'Córners de {home} más de {L / 10}', M[f'ch{L}'])
@@ -394,7 +403,7 @@ def slug(s):
     return '-'.join(norm(s))
 
 # ---------- backtest ----------
-BT_KEYS = ('1', 'X', '2', 'o15', 'o25', 'o35', 'btts', 'g1t', 'c85', 'c95', 'c105', 'ct35', 'ct45', 'ct55', 'ct65')
+BT_KEYS = ('1', 'X', '2', 'o15', 'o25', 'o35', 'btts', 'g1t', 'c85', 'c95', 'c105', 'ct35', 'ct45', 'ct55', 'ct65', 'tg1', 'tg2', 'tg3')
 
 def backtest(hist, days=120):
     recs = {k: [] for k in BT_KEYS}
@@ -413,6 +422,9 @@ def backtest(hist, days=120):
             res['c85'], res['c95'], res['c105'] = c > 8.5, c > 9.5, c > 10.5
         for k, v in res.items():
             recs[k].append((M[k], 1 if v else 0))
+        for k in (1, 2, 3):
+            recs[f'tg{k}'].append((M[f'gh{k}'], 1 if m['hg'] >= k else 0))
+            recs[f'tg{k}'].append((M[f'ga{k}'], 1 if m['ag'] >= k else 0))
         if m['hc'] is not None and m['ac'] is not None and 'ch35' in M:
             for L in (35, 45, 55, 65):
                 recs[f'ct{L}'].append((M[f'ch{L}'], 1 if m['hc'] > L / 10 else 0))
@@ -435,7 +447,7 @@ def summarize(recs):
                       avg_pred=round(sum(r[0] for r in v) / len(v), 3), real=round(base, 3), bins=bins)
     return out
 
-CAL_KEYS = ('o15', 'o25', 'o35', 'btts', 'g1t', 'c85', 'c95', 'c105', 'ct35', 'ct45', 'ct55', 'ct65')
+CAL_KEYS = ('o15', 'o25', 'o35', 'btts', 'g1t', 'c85', 'c95', 'c105', 'ct35', 'ct45', 'ct55', 'ct65', 'tg1', 'tg2', 'tg3')
 
 def make_calibration(summary):
     """Corrige el sesgo del modelo con lo que paso en partidos reales (por mercado, con interpolacion y encogimiento)."""
@@ -591,6 +603,9 @@ def main():
                 M[k] = apply_cal(cal, k, M[k])
             for k, ck in (('c85', 'c85'), ('c95', 'c95'), ('c105', 'c105')):
                 if k in M: M[k] = apply_cal(cal, ck, M[k])
+            for k in (1, 2, 3):
+                for pre in ('gh', 'ga'):
+                    M[f'{pre}{k}'] = apply_cal(cal, f'tg{k}', M[f'{pre}{k}'])
             for L in (35, 45, 55, 65):
                 for pre in ('ch', 'ca'):
                     if f'{pre}{L}' in M: M[f'{pre}{L}'] = apply_cal(cal, f'ct{L}', M[f'{pre}{L}'])
