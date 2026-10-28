@@ -70,7 +70,7 @@ wonCorners espn SWE AIK Elfsborg 2 10
 shotsOnTarget espn SWE AIK Elfsborg 4 5
 resultados: 713
 {
- "generated": "2026-10-28T23:33:00.701409+00:00",
+ "generated": "2026-10-28T23:45:33.453091+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
