@@ -1,4 +1,4 @@
-ermannstadt",
+adt",
     "FC Rapid Bucuresti",
     "FC Voluntari",
     "FCSB",
@@ -203,6 +203,7 @@ ermannstadt",
     "Charlotte FC": "Charlotte",
     "CF Montréal": "CF Montreal",
     "Inter Miami CF": "Inter Miami",
+    "Red Bull New York": "New York Red Bulls",
     "New York City FC": "New York City",
     "Atlanta United FC": "Atlanta Utd",
     "D.C. United": "DC United",
@@ -211,17 +212,13 @@ ermannstadt",
     "Minnesota United FC": "Minnesota United",
     "St. Louis CITY SC": "St. Louis City",
     "Seattle Sounders FC": "Seattle Sounders",
-    "Houston Dynamo FC": "Houston Dynamo"
+    "Houston Dynamo FC": "Houston Dynamo",
+    "LA Galaxy": "Los Angeles Galaxy",
+    "LAFC": "Los Angeles FC"
    },
-   "unmatched_names": [
-    "Red Bull New York",
-    "LA Galaxy",
-    "Red Bull New York",
-    "LAFC"
-   ],
-   "fixtures_espn": 25,
-   "espn_unmatched": 4,
-   "matches": 26
+   "fixtures_espn": 29,
+   "espn_unmatched": 0,
+   "matches": 29
   },
   "CHN": {
    "name": "Super League (China)",
@@ -285,4 +282,4 @@ ermannstadt",
  },
  "errors": []
 }
-partidos: 325
+partidos: 347
