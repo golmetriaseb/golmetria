@@ -1,13 +1,88 @@
-eng.2 total 24 {'2026-10-28': 0, '2026-10-29': 0, '2026-10-30': 1, '2026-10-31': 11, '2026-11-01': 0, '2026-11-02': 0, '2026-11-03': 9, '2026-11-04': 3}
-  ejemplo 2026-10-30T20:00Z [('home', 'Sheffield United'), ('away', 'Wrexham')] status STATUS_SCHEDULED
-  odds [{"overUnder": 2.5, "link": {"language": "en-US", "rel": ["game", "desktop", "bets"], "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34895401", "text": "Game", "shortText": "Game", "isExternal": true, "isPremium": false, "isHidden": false}, "provider": {"id": "100", "name": "DraftKings", "priority": 1, "displayName": "DraftKings", "logos": [{"href": "https://a.espncdn.com/i/betting/Draftkings_Light.svg", "rel": ["light"]}, {"hre
-ger.2 total 9 {'2026-10-28': 0, '2026-10-29': 0, '2026-10-30': 2, '2026-10-31': 4, '2026-11-01': 3, '2026-11-02': 0, '2026-11-03': 0, '2026-11-04': 0}
-  ejemplo 2026-10-30T17:30Z [('home', 'Arminia Bielefeld'), ('away', 'TSV Eintracht Braunschweig')] status STATUS_SCHEDULED
-  odds [{"overUnder": 2.5, "link": {"language": "en-US", "rel": ["game", "desktop", "bets"], "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34899216", "text": "Game", "shortText": "Game", "isExternal": true, "isPremium": false, "isHidden": false}, "provider": {"id": "100", "name": "DraftKings", "priority": 1, "displayName": "DraftKings", "logos": [{"href": "https://a.espncdn.com/i/betting/Draftkings_Light.svg", "rel": ["light"]}, {"hre
-sco.1 total 10 {'2026-10-28': 6, '2026-10-29': 0, '2026-10-30': 0, '2026-10-31': 3, '2026-11-01': 1, '2026-11-02': 0, '2026-11-03': 0, '2026-11-04': 0}
-  ejemplo 2026-10-28T19:45Z [('home', 'Aberdeen'), ('away', 'Falkirk')] status STATUS_SCHEDULED
-  odds [{"overUnder": 2.5, "link": {"language": "en-US", "rel": ["game", "desktop", "bets"], "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34894696", "text": "Game", "shortText": "Game", "isExternal": true, "isPremium": false, "isHidden": false}, "provider": {"id": "100", "name": "DraftKings", "priority": 1, "displayName": "DraftKings", "logos": [{"href": "https://a.espncdn.com/i/betting/Draftkings_Light.svg", "rel": ["light"]}, {"hre
-sui.1 total 0 {'2026-10-28': 0, '2026-10-29': 0, '2026-10-30': 0, '2026-10-31': 0, '2026-11-01': 0, '2026-11-02': 0, '2026-11-03': 0, '2026-11-04': 0}
-bra.1 total 17 {'2026-10-28': 5, '2026-10-29': 3, '2026-10-30': 1, '2026-10-31': 1, '2026-11-01': 0, '2026-11-02': 1, '2026-11-03': 2, '2026-11-04': 4}
-  ejemplo 2026-10-28T22:30Z [('home', 'Fluminense'), ('away', 'Internacional')] status STATUS_SCHEDULED
-  odds [{"overUnder": 2.5, "link": {"language": "en-US", "rel": ["game", "desktop", "bets"], "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34897280", "text": "Game", "shortText": "Game", "isExternal": true, "isPremium": false, "isHidden": false}, "provider": {"id": "100", "name": "DraftKings", "priority": 1, "displayName": "DraftKings", "logos": [{"href": "https://a.espncdn.com/i/betting/Draftkings_Light.svg", "rel": ["light"]}, {"hre
+[
+{
+"overUnder": 2.5,
+"drawOdds": {
+"moneyLine": 250
+},
+"total": {
+"displayName": "Total",
+"shortDisplayName": "Total",
+"over": {
+"open": {
+"line": "o2.5",
+"odds": "-115"
+},
+"close": {
+"line": "o2.5",
+"odds": "-110"
+}
+},
+"under": {
+"open": {
+"line": "u2.5",
+"odds": "-120"
+},
+"close": {
+"line": "u2.5",
+"odds": "-115"
+}
+}
+},
+"pointSpread": {
+"displayName": "Spread",
+"shortDisplayName": "Spread",
+"home": {
+"open": {
+"line": "+0.5",
+"odds": "-150"
+},
+"close": {
+"line": "+0.5",
+"odds": "-145"
+}
+},
+"away": {
+"open": {
+"line": "-0.5",
+"odds": "-105"
+},
+"close": {
+"line": "-0.5",
+"odds": "+105"
+}
+}
+},
+"moneyline": {
+"displayName": "Moneyline",
+"shortDisplayName": "ML",
+"home": {
+"open": {
+"odds": "+240"
+},
+"close": {
+"odds": "+235"
+}
+},
+"away": {
+"open": {
+"odds": "+110"
+},
+"close": {
+"odds": "+115"
+}
+},
+"draw": {
+"open": {
+"odds": "+240"
+},
+"close": {
+"odds": "+250"
+}
+}
+},
+"details": "BIR +115"
+}
+]
+sui.1 Swiss Super League eventos 3 calendar 2025-06-01T04:00Z
+swz.1 {'err': 'HTTP Error 400: Bad Request'} eventos 0 calendar 
+sui.super_league {'err': 'HTTP Error 400: Bad Request'} eventos 0 calendar 
