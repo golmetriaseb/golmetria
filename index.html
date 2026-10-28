@@ -2,7 +2,7 @@
 <html lang="es"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
-<meta name="gm-v" content="20261028201152"><meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="gm-v" content="20261028202009"><meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Golmetría"><link rel="apple-touch-icon" href="icon-180.png"><link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#0a0b14"><meta name="color-scheme" content="dark">
 <title>Golmetría</title>
@@ -176,7 +176,9 @@ function render(){
  const nv=M0=>M0.filter(m=>m.bets.some(b=>b.p>=.28&&val(b)!=null&&val(b)>=.05)).length;const LM=liveOn?ms():[];const LN=liveOn?'<div class="lvnote"><b>● En vivo: '+LM.length+(LM.length===1?' partido en juego':' partidos en juego')+' · '+nv(LM)+' con apuestas de valor.</b> Las probabilidades y cuotas son de antes del partido. La cuota real en vivo es otra: escribe la tuya para ver si aún hay valor.</div>':'';
  const F=flat();
  const V=F.filter(x=>x.b.p>=.28&&val(x.b)!=null&&val(x.b)>=.05).sort((a,b)=>((val(a.b)>.35)-(val(b.b)>.35))||(val(b.b)-val(a.b))).slice(0,40);
- $('#l-valor').innerHTML=V.length?LN+V.map(x=>bcard(x,'v')).join(''):emptyMsg('v');
+ const CS=F.filter(x=>x.b.type==='corn'&&!x.b.odd&&x.b.p>.51).sort((a,b)=>b.b.p-a.b.p).slice(0,40);
+ const CH=CS.length?'<div class="lgh" style="margin-top:18px">Córners · solo probabilidad</div><p style="color:var(--mu);font-size:13px;line-height:1.45;margin:0 0 12px">No hay cuota gratuita de córners, así que no puedo calcular el valor. Son las de más de 51%. Si tu casa tiene cuota, abre "Ver partido" y escríbela.</p>'+CS.map(x=>bcard(x,'s')).join(''):'';
+ $('#l-valor').innerHTML=(V.length?LN+V.map(x=>bcard(x,'v')).join(''):emptyMsg('v'))+CH;
  const S=F.filter(x=>x.b.p>=.75).sort((a,b)=>b.b.p-a.b.p).slice(0,40);
  $('#l-seg').innerHTML=S.length?LN+S.map(x=>bcard(x,'s')).join(''):emptyMsg('s');
  const M=ms();

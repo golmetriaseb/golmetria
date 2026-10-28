@@ -227,6 +227,9 @@ def markets(hist, h, a, ref):
         mu = lc[0] + lc[1]
         out['c85'], out['c95'], out['c105'] = nb_tail(mu, 9), nb_tail(mu, 10), nb_tail(mu, 11)
         out['cmu'] = mu
+        for L in (35, 45, 55, 65):
+            k = L // 10 + 1
+            out[f'ch{L}'], out[f'ca{L}'] = nb_tail(lc[0], k), nb_tail(lc[1], k)
     return out
 
 def bets_for(M, home, away, odds):
@@ -244,6 +247,10 @@ def bets_for(M, home, away, odds):
     add('o35', 'Más de 3.5 goles', M['o35'])
     add('btts', 'Ambos marcan', M['btts'])
     add('g1t', 'Gol en el 1er tiempo', M.get('g1t'))
+    if 'ch35' in M:
+        for L in (35, 45, 55, 65):
+            add('corn', f'Córners de {home} más de {L / 10}', M[f'ch{L}'])
+            add('corn', f'Córners de {away} más de {L / 10}', M[f'ca{L}'])
     if 'c85' in M:
         add('corn', 'Córners más de 8.5', M['c85'])
         add('corn', 'Córners más de 9.5', M['c95'])
@@ -387,7 +394,7 @@ def slug(s):
     return '-'.join(norm(s))
 
 # ---------- backtest ----------
-BT_KEYS = ('1', 'X', '2', 'o15', 'o25', 'o35', 'btts', 'g1t', 'c85', 'c95', 'c105')
+BT_KEYS = ('1', 'X', '2', 'o15', 'o25', 'o35', 'btts', 'g1t', 'c85', 'c95', 'c105', 'ct35', 'ct45', 'ct55', 'ct65')
 
 def backtest(hist, days=120):
     recs = {k: [] for k in BT_KEYS}
@@ -406,6 +413,10 @@ def backtest(hist, days=120):
             res['c85'], res['c95'], res['c105'] = c > 8.5, c > 9.5, c > 10.5
         for k, v in res.items():
             recs[k].append((M[k], 1 if v else 0))
+        if m['hc'] is not None and m['ac'] is not None and 'ch35' in M:
+            for L in (35, 45, 55, 65):
+                recs[f'ct{L}'].append((M[f'ch{L}'], 1 if m['hc'] > L / 10 else 0))
+                recs[f'ct{L}'].append((M[f'ca{L}'], 1 if m['ac'] > L / 10 else 0))
     return recs
 
 def summarize(recs):
@@ -424,7 +435,7 @@ def summarize(recs):
                       avg_pred=round(sum(r[0] for r in v) / len(v), 3), real=round(base, 3), bins=bins)
     return out
 
-CAL_KEYS = ('o15', 'o25', 'o35', 'btts', 'g1t', 'c85', 'c95', 'c105')
+CAL_KEYS = ('o15', 'o25', 'o35', 'btts', 'g1t', 'c85', 'c95', 'c105', 'ct35', 'ct45', 'ct55', 'ct65')
 
 def make_calibration(summary):
     """Corrige el sesgo del modelo con lo que paso en partidos reales (por mercado, con interpolacion y encogimiento)."""
@@ -509,6 +520,9 @@ def main():
                 M[k] = apply_cal(cal, k, M[k])
             for k, ck in (('c85', 'c85'), ('c95', 'c95'), ('c105', 'c105')):
                 if k in M: M[k] = apply_cal(cal, ck, M[k])
+            for L in (35, 45, 55, 65):
+                for pre in ('ch', 'ca'):
+                    if f'{pre}{L}' in M: M[f'{pre}{L}'] = apply_cal(cal, f'ct{L}', M[f'{pre}{L}'])
             matches.append(dict(id=f"{code}-{f['k']:%Y%m%d}-{slug(f['h'])}-{slug(f['a'])}", league=code, leagueName=l['name'],
                                 utc=f['k'].strftime('%Y-%m-%dT%H:%M:%SZ'), home=f['h'], away=f['a'], src=f['src'], fav=l['fav'],
                                 oddsFrom=('promedio de casas' if f['src'] == 'fd' else ('DraftKings' if any(f['odds'].values()) else None)),
