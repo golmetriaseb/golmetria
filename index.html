@@ -59,7 +59,7 @@ nav button{flex:1;border:0;background:none;color:var(--mu);font:italic 800 13px 
 nav svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 nav button.on{color:var(--bl)}nav button.on svg{filter:drop-shadow(0 0 6px rgba(46,197,255,.7))}nav button.on:before{content:"";position:absolute;top:-9px;width:34px;height:3px;border-radius:2px;background:linear-gradient(90deg,var(--bl),var(--ok));transform:skewX(-20deg)}
 .view{display:none}.view.on{display:block}
-.over{position:fixed;inset:0;background:var(--bg);z-index:10;overflow:auto;display:none;padding-bottom:40px}.over.on{display:block}
+.over{position:fixed;top:0;left:0;right:0;bottom:0;height:100%;background:var(--bg);z-index:10;overflow-y:scroll;overflow-x:hidden;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;touch-action:pan-y;display:none;padding-bottom:60px}html.lock,html.lock body{overflow:hidden;height:100%}.over.on{display:block}
 .back{border:0;background:none;color:var(--bl);font:italic 800 17px var(--f1);text-transform:uppercase;padding:16px 0 10px}
 .gt{font:italic 800 20px var(--f1);text-transform:uppercase;letter-spacing:.8px;color:var(--tx);margin:24px 0 9px;display:flex;align-items:center;gap:10px}.gt:before{content:"";width:5px;height:20px;background:linear-gradient(180deg,var(--bl),var(--ok));transform:skewX(-20deg);border-radius:2px}
 .row{background:linear-gradient(180deg,#121521,#0c0e15);border:1px solid var(--ln2);border-radius:14px;padding:13px 14px;margin-bottom:9px}
@@ -169,8 +169,8 @@ function stamp(){const el=$('#demo');if(!REAL){el.innerHTML='<b>No se pudieron c
  const h=(Date.now()-new Date(REAL.generated))/36e5;const t=h<1?'hace menos de 1 hora':h<24?'hace '+Math.round(h)+' h':'hace '+Math.round(h/24)+' días';
  el.style.cssText+=h>9?';color:#ff8a8a;border-color:#7a2a2a;background:#2a0f0f':';color:var(--mu);border-color:var(--ln2);background:none';
  el.innerHTML='Datos actualizados <b>'+t+'</b>'+(h>9?'. Pueden estar atrasados.':'.')+(DATA.length?'':' Hoy no hay partidos cargados de tus ligas.')}
-function setView(v){view=v;document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('on',b.dataset.v===v));document.querySelectorAll('.view').forEach(e=>e.classList.toggle('on',e.id==='v-'+v));$('#filters').style.display=v==='mis'?'none':'';$('#demo').style.display=v==='mis'?'none':'';if(v==='mis')renderMis();$('#det').classList.remove('on');scrollTo(0,0)}
-function openDet(id){cur=DATA.find(m=>m.id===id);custom={};drawDet();$('#det').classList.add('on');scrollTo(0,0)}
+function setView(v){view=v;document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('on',b.dataset.v===v));document.querySelectorAll('.view').forEach(e=>e.classList.toggle('on',e.id==='v-'+v));$('#filters').style.display=v==='mis'?'none':'';$('#demo').style.display=v==='mis'?'none':'';if(v==='mis')renderMis();$('#det').classList.remove('on');document.documentElement.classList.remove('lock');scrollTo(0,0)}
+function openDet(id){cur=DATA.find(m=>m.id===id);custom={};drawDet();$('#det').classList.add('on');document.documentElement.classList.add('lock');$('#det').scrollTop=0}
 function drawDet(){const m=cur;let h=`<div class="meta">${m.leagueName} · ${dn(m.date)} ${m.time}</div><div class="tm" style="font-size:21px">${m.home} vs ${m.away}</div><p style="color:var(--mu);font-size:13px;margin:0 0 4px">Escribe la cuota de tu casa y el valor se recalcula.</p>`;
  const sec=[['Resultado',['win']],['Goles',['o15','o25','o35','btts']],['Primer tiempo',['g1t']],['Córners',['corn']]];
  sec.forEach(([t,ty])=>{h+=`<div class="gt">${t}</div>`;m.bets.forEach((b,i)=>{if(!ty.includes(b.type))return;const o=custom[i]??b.odd,v=o?b.p*o-1:null,hi=b.p>=.75;h+=`<div class="row"><div class="rt"><span>${b.label}</span><span style="color:${hi?'var(--go)':'var(--bl)'}">${pc(b.p)}</span></div><div class="bar2"><i class="${hi?'hi':''}" style="width:${Math.round(b.p*100)}%"></i></div><div class="rr"><span>Cuota</span><input type="number" step="0.01" inputmode="decimal" value="${o||''}" placeholder="tu cuota" data-i="${i}"><span class="chipv ${v!=null&&v>=.05?'p':'n'}" id="cv${i}">${v==null?'Pon tu cuota':(v>=.05?'Valor ':'Sin valor ')+fmt(v)}</span><span class="sp"></span><button class="btn" data-sv="${m.id}|${i}">Guardar</button></div></div>`})});
@@ -189,7 +189,7 @@ document.addEventListener('click',e=>{const t=e.target;
  const mm=t.closest('[data-m]');if(mm){openDet(mm.dataset.m)}
 });
 $('#fl').onchange=e=>{lg=e.target.value;render()};$('#ft').onchange=e=>{type=e.target.value;render()};
-$('#bk').onclick=()=>$('#det').classList.remove('on');$('#hb').onclick=()=>$('#hm').classList.add('on');
+$('#bk').onclick=()=>{$('#det').classList.remove('on');document.documentElement.classList.remove('lock')};$('#hb').onclick=()=>$('#hm').classList.add('on');
 setView('valor');stamp();render();
 }
 boot();
