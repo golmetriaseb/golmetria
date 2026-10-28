@@ -2,7 +2,7 @@
 <html lang="es"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
-<meta name="gm-v" content="20261028222219"><meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="gm-v" content="20261028222630"><meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Golmetría"><link rel="apple-touch-icon" href="icon-180.png"><link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#0a0b14"><meta name="color-scheme" content="dark">
 <title>Golmetría</title>
@@ -105,7 +105,7 @@ nav button.on{color:var(--bl)}nav button.on svg{filter:drop-shadow(0 0 6px rgba(
 </div>
 <div class="over" id="det"><div class="wrap"><button class="back" id="bk">‹ Volver</button><div id="dc"></div></div></div>
 <div class="modal" id="hm"><div class="sheet"><h3>¿Qué significa cada cosa?</h3><p><b style="color:var(--bl)">Probabilidad:</b> qué tan seguido pasa. 70% = 7 de cada 10 veces. Si es 75% o más sale en dorado.</p><p><b style="color:var(--ok)">Valor:</b> la casa paga más de lo justo. +15% significa que, a largo plazo, ganarías 15 centavos por cada dólar. Una apuesta puede ser muy probable y no tener valor.</p><p><b>Cuota justa:</b> la cuota mínima a la que conviene apostar.</p><button class="btn" style="width:100%" onclick="$('#hm').classList.remove('on')">Entendido</button></div></div>
-<div class="modal" id="lm"><div class="sheet"><h3>Mis ligas</h3><p>Marca las ligas que quieres ver.</p><div class="lbt"><button class="btn g" id="la">Todas</button><button class="btn g" id="ln">Ninguna</button><button class="btn g" id="lf">Mis favoritas</button></div><div id="ll"></div><button class="btn" id="lok" style="width:100%">Listo</button></div></div>
+<div class="modal" id="lm"><div class="sheet"><h3>Mis ligas</h3><p>Marca las ligas que quieres ver.</p><div class="lbt"><button class="btn g" id="la">Todas</button><button class="btn g" id="ln">Ninguna</button><button class="btn g" id="lf">Mis favoritas</button></div><button class="btn g" id="lsv" style="width:100%;margin:0 0 10px">Guardar selección como mis favoritas</button><div id="ll"></div><button class="btn" id="lok" style="width:100%">Listo</button></div></div>
 <div class="modal" id="sm"><div class="sheet"><h3 id="sh">Guardar apuesta</h3><p id="sp"></p><p style="font-size:13px">Se guarda sin dinero. Cuando el partido termine, la app la marca sola como ganada o perdida.</p><div id="sx" style="font-size:13px;color:var(--mu);line-height:1.5;margin-bottom:10px"></div><button class="btn" id="ss" style="width:100%">Guardar sola</button><button class="btn g" id="sc" style="width:100%;margin-top:8px">Añadir a combinada</button><button class="btn g" style="width:100%;margin-top:8px" onclick="$('#sm').classList.remove('on')">Cancelar</button></div></div>
 <div class="modal" id="cm"><div class="sheet"><h3>Tu combinada</h3><p>Estas apuestas tienen que salir todas para ganar.</p><div id="legs"></div><div id="calc"></div><button class="btn" id="csv" style="width:100%;margin-top:10px">Guardar combinada</button><button class="btn g" id="ccl" style="width:100%;margin-top:8px">Vaciar boleto</button><button class="btn g" id="cck" style="width:100%;margin-top:8px">Seguir eligiendo</button></div></div>
 <div id="ptr"></div><div id="toast"></div><div class="slip" id="slip"><button id="slipb" type="button"><span id="slipt"></span><em>Ver boleto ›</em></button></div>
@@ -162,10 +162,13 @@ function drawDays(){$('#days').innerHTML='<button class="day lv" id="lv">● En 
 const TOP=['EPL','LL','GB1','SA','L1','ERE','POR','BEL','TUR','BRA','USA','MEX','ARG'];
 const LGS=[...new Map(DATA.map(m=>[m.league,m.leagueName]))].sort((a,b)=>{const i=TOP.indexOf(a[0]),j=TOP.indexOf(b[0]);return i>=0&&j>=0?i-j:i>=0?-1:j>=0?1:a[1].localeCompare(b[1])});
 const favSet=()=>new Set(DATA.filter(m=>m.fav).map(m=>m.league));
-let sel=new Set(LS.get('gm_lg',null)||(favSet().size?[...favSet()]:LGS.map(x=>x[0])));
+const myFav=()=>{const sv=LS.get('gm_fav',null),ok=new Set(LGS.map(x=>x[0]));const a=(sv||[...favSet()]).filter(k=>ok.has(k));return new Set(a)};
+let sel=new Set(LS.get('gm_lg',null)||(myFav().size?[...myFav()]:LGS.map(x=>x[0])));
 function lgLabel(){const n=LGS.filter(x=>sel.has(x[0])).length;return n===LGS.length?'Todas las ligas':n===0?'Ninguna liga':n===1?LGS.find(x=>sel.has(x[0]))[1]:n+' ligas elegidas'}
 function drawLg(){$('#fl').textContent=lgLabel()}
-function drawLm(){const c={};DATA.filter(m=>m.date===day&&!over(m)).forEach(m=>c[m.league]=(c[m.league]||0)+1);$('#ll').innerHTML=LGS.map(([k,n],ix)=>(ix===0?'<div class="lgh">Ligas principales</div>':'')+(ix===LGS.filter(x=>TOP.includes(x[0])).length?'<div class="lgh">Otras ligas</div>':'')+`<label class="lrow"><input type="checkbox" data-k="${k}"${sel.has(k)?' checked':''}>${n}<small>${c[k]||0} hoy</small></label>`).join('')}
+function drawLm(){const c={},fv=myFav(),row=([k,n])=>`<label class="lrow"><input type="checkbox" data-k="${k}"${sel.has(k)?' checked':''}>${n}<small>${c[k]||0} hoy</small></label>`;DATA.filter(m=>m.date===day&&!over(m)).forEach(m=>c[m.league]=(c[m.league]||0)+1);
+ const fl=LGS.filter(x=>fv.has(x[0])),tp=LGS.filter(x=>!fv.has(x[0])&&TOP.includes(x[0])),ot=LGS.filter(x=>!fv.has(x[0])&&!TOP.includes(x[0]));
+ $('#ll').innerHTML=(fl.length?'<div class="lgh">Mis ligas favoritas</div>'+fl.map(row).join(''):'')+(tp.length?'<div class="lgh">Ligas principales</div>'+tp.map(row).join(''):'')+(ot.length?'<div class="lgh">Otras ligas</div>'+ot.map(row).join(''):'')}
 function saveLg(){LS.set('gm_lg',[...sel]);drawLg();render()}
 drawLg();
 $('#ft').innerHTML=TYPES.map(t=>`<option value="${t[0]}">${t[1]}</option>`).join('');
@@ -202,7 +205,7 @@ function render(){
  $('#thr').innerHTML=th(thr,'thr');$('#cthr').innerHTML=th(cthr,'cthr');
  const NP=ms().length,SS=flat(false).filter(x=>x.b.p>=thr).length;
  $('#rs').innerHTML=(liveOn?'En vivo: ':(dn(day)==='Hoy'?'Hoy: ':dn(day)+': '))+'<b>'+NP+'</b> '+(NP===1?'partido':'partidos')+' · <button data-go="valor">'+V.length+' con buena cuota</button> · <button data-go="seg">'+SS+' con '+pc(thr)+' o más</button> · <button data-go="corn">'+C.length+' córners</button>';
- const fa=[];if(sel.size!==favSet().size||[...sel].some(k=>!favSet().has(k)))fa.push(lgLabel());if(type!=='all')fa.push(TYPES.find(t=>t[0]===type)[1]);if(liveOn)fa.push('En vivo');
+ const fa=[];if(sel.size!==myFav().size||[...sel].some(k=>!myFav().has(k)))fa.push(lgLabel());if(type!=='all')fa.push(TYPES.find(t=>t[0]===type)[1]);if(liveOn)fa.push('En vivo');
  $('#actl').classList.toggle('on',fa.length>0&&view!=='mis');$('#actt').innerHTML='Filtrando: <b>'+fa.join(' · ')+'</b>';
  const M=ms();
  $('#l-par').innerHTML=M.length?LN+M.map(m=>{const n=m.bets.filter(b=>b.p>=.28&&val(b)!=null&&val(b)>=.05).length;return`<div class="card" data-m="${m.id}" style="cursor:pointer">${head(m)}<span class="chipv ${n?'p':'n'}">${n?n+' apuestas de valor · ver todas ›':'Sin apuestas de valor · ver partido ›'}</span></div>`}).join(''):'<div class="empty">No hay partidos este día.</div>';
@@ -273,7 +276,7 @@ document.addEventListener('click',e=>{const t=e.target;
  const d=t.closest('.day');if(d){if(d.id==='lv'){liveOn=!liveOn}else{liveOn=false;day=d.dataset.d}render();moved();return}
  const tb=t.closest('[data-thr],[data-cthr]');if(tb){autoThr=false;if(tb.dataset.thr)thr=parseFloat(tb.dataset.thr);else cthr=parseFloat(tb.dataset.cthr);$('#note').classList.remove('on');render();return}
  const go=t.closest('[data-go]');if(go){setView(go.dataset.go);return}
- if(t.closest('#clr')){sel=favSet().size?favSet():new Set(LGS.map(x=>x[0]));LS.set('gm_lg',[...sel]);type='all';liveOn=false;$('#ft').value='all';drawLg();render();moved();return}
+ if(t.closest('#clr')){sel=myFav().size?myFav():new Set(LGS.map(x=>x[0]));LS.set('gm_lg',[...sel]);type='all';liveOn=false;$('#ft').value='all';drawLg();render();moved();return}
  const n=t.closest('nav button');if(n){setView(n.dataset.v);return}
  const sv=t.closest('[data-sv]');if(sv){const[a,b]=sv.dataset.sv.split('|');askSave(a,+b);return}
  const mk=t.closest('[data-mk]');if(mk){askMk=mk.dataset.mk;renderMis();return}
@@ -289,7 +292,7 @@ document.addEventListener('click',e=>{const t=e.target;
  const r=t.closest('[data-r]');if(r){const[k,id]=r.dataset.r.split('|');bets.find(b=>b.id==id).res=k;LS.set('gm_bets',bets);renderMis();return}
  const mm=t.closest('[data-m]');if(mm){openDet(mm.dataset.m)}
 });
-$('#fl').onclick=()=>{drawLm();$('#lm').classList.add('on')};$('#ll').onchange=e=>{const k=e.target.dataset.k;e.target.checked?sel.add(k):sel.delete(k);saveLg()};$('#la').onclick=()=>{sel=new Set(LGS.map(x=>x[0]));drawLm();saveLg()};$('#ln').onclick=()=>{sel=new Set();drawLm();saveLg()};$('#lf').onclick=()=>{sel=favSet().size?favSet():new Set(LGS.map(x=>x[0]));drawLm();saveLg()};$('#lok').onclick=()=>{$('#lm').classList.remove('on');moved()};$('#ft').onchange=e=>{type=e.target.value;render();moved()};
+$('#fl').onclick=()=>{drawLm();$('#lm').classList.add('on')};$('#ll').onchange=e=>{const k=e.target.dataset.k;e.target.checked?sel.add(k):sel.delete(k);saveLg()};$('#la').onclick=()=>{sel=new Set(LGS.map(x=>x[0]));drawLm();saveLg()};$('#ln').onclick=()=>{sel=new Set();drawLm();saveLg()};$('#lf').onclick=()=>{sel=myFav().size?new Set(myFav()):new Set(LGS.map(x=>x[0]));drawLm();saveLg();toast('✓ Ligas favoritas aplicadas')};$('#lsv').onclick=()=>{if(!sel.size){toast('Marca al menos una liga');return}LS.set('gm_fav',[...sel]);drawLm();toast('✓ Guardadas '+sel.size+(sel.size===1?' liga favorita':' ligas favoritas'))};$('#lok').onclick=()=>{$('#lm').classList.remove('on');moved()};$('#ft').onchange=e=>{type=e.target.value;render();moved()};
 $('#bk').onclick=()=>{$('#det').classList.remove('on');document.documentElement.classList.remove('lock')};$('#hb').onclick=()=>$('#hm').classList.add('on');
 /* ===== DESLIZAR PARA ACTUALIZAR (solo app de pantalla de inicio) ===== */
 const STANDALONE=navigator.standalone===true||matchMedia('(display-mode: standalone)').matches;
