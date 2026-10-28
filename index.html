@@ -2,7 +2,7 @@
 <html lang="es"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
-<meta name="gm-v" content="20261028221752"><meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="gm-v" content="20261028222219"><meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Golmetría"><link rel="apple-touch-icon" href="icon-180.png"><link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#0a0b14"><meta name="color-scheme" content="dark">
 <title>Golmetría</title>
@@ -80,7 +80,7 @@ nav button.on{color:var(--bl)}nav button.on svg{filter:drop-shadow(0 0 6px rgba(
 .pcb{display:flex;align-items:baseline;gap:10px;margin:6px 0 4px}.pcb strong{font:italic 800 38px/1 var(--f1);color:var(--bl)}.pcb span{font-size:13px;color:var(--mu)}
 .warn{border:1px solid #5a4a1d;background:#1d170a;border-radius:12px;padding:9px 12px;font-size:13px;line-height:1.45;color:#ffd98a;margin:8px 0}
 .st{display:inline-block;border-radius:8px;padding:3px 9px;font:italic 800 13px var(--f1);letter-spacing:.8px;text-transform:uppercase;white-space:nowrap}.st.w{background:rgba(182,255,59,.12);color:var(--ok);border:1px solid rgba(182,255,59,.4)}.st.l{background:rgba(224,51,79,.14);color:#ff7d92;border:1px solid rgba(224,51,79,.45)}.st.p{background:var(--card2);color:var(--mu);border:1px solid var(--ln2)}
-#ptr{position:fixed;top:max(8px,env(safe-area-inset-top));left:50%;margin-left:-110px;width:220px;text-align:center;background:#0e1118;border:1px solid var(--bl);border-radius:999px;padding:8px 14px;font:700 13px Barlow;color:var(--tx);z-index:40;opacity:0;pointer-events:none;transform:translateY(-56px)}#ptr.on{opacity:1}
+#ptr{position:fixed;top:max(8px,env(safe-area-inset-top));left:50%;margin-left:-130px;width:260px;text-align:center;background:#0e1118;border:1.5px solid var(--bl);border-radius:999px;padding:14px 18px;font:700 15px Barlow;box-shadow:0 8px 24px rgba(0,0,0,.55);transition:transform .22s ease,opacity .2s;color:var(--tx);z-index:40;opacity:0;pointer-events:none;transform:translateY(-90px)}#ptr.on{opacity:1}
 #toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(150px + env(safe-area-inset-bottom,0px));background:#0e1118;border:1px solid var(--ok);color:var(--tx);border-radius:12px;padding:10px 16px;font:700 14px Barlow;z-index:30;opacity:0;pointer-events:none;transition:opacity .2s;max-width:90%;text-align:center}#toast.on{opacity:1}
 .slip{position:fixed;left:0;right:0;bottom:calc(76px + env(safe-area-inset-bottom,0px));display:none;justify-content:center;padding:0 16px;z-index:5}.slip.on{display:flex}.slip button{width:100%;max-width:720px;display:flex;justify-content:space-between;align-items:center;gap:10px;background:#0e1118;border:1.5px solid var(--bl);border-radius:16px;padding:14px 16px;color:var(--tx);font:700 14px Barlow;box-shadow:0 10px 30px rgba(0,0,0,.6);cursor:pointer;text-align:left}.slip b{color:var(--bl)}.slip em{font-style:normal;color:var(--bl);font:italic 800 16px var(--f1);text-transform:uppercase;white-space:nowrap}
 .modal{position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:20;display:none;align-items:flex-end}.modal.on{display:flex}
@@ -294,16 +294,17 @@ $('#bk').onclick=()=>{$('#det').classList.remove('on');document.documentElement.
 /* ===== DESLIZAR PARA ACTUALIZAR (solo app de pantalla de inicio) ===== */
 const STANDALONE=navigator.standalone===true||matchMedia('(display-mode: standalone)').matches;
 let ptrBusy=false;
-async function refresh(){if(ptrBusy)return;ptrBusy=true;const p=$('#ptr');p.textContent='Actualizando…';p.classList.add('on');p.style.transform='translateY(0)';
+async function refresh(){if(ptrBusy)return;ptrBusy=true;const p=$('#ptr');p.textContent='Actualizando…';p.classList.add('on');p.style.transform='translateY(26px)';const t0=Date.now();
  try{const r=await fetch('data.json?'+Date.now(),{cache:'no-store'});if(!r.ok)throw 0;const j=await r.json();let rs=RES;try{const q=await fetch('results.json?'+Date.now(),{cache:'no-store'});if(q.ok)rs=(await q.json()).results||[]}catch(e){}
   REAL=j;DATA=j.matches.map(prep);RES=rs;days=[...new Set(DATA.map(m=>m.date))].sort();if(!days.length)days=[loc(new Date())];if(!days.includes(day))day=days.includes(loc(new Date()))?loc(new Date()):days[0];
   drawDays();stamp();view==='mis'?renderMis():render();const g=new Date(j.generated);toast('✓ Actualizado · datos de las '+String(g.getHours()).padStart(2,'0')+':'+String(g.getMinutes()).padStart(2,'0'))}
  catch(e){toast('No se pudo actualizar. Revisa tu conexión.')}
+ const w=700-(Date.now()-t0);if(w>0)await new Promise(r=>setTimeout(r,w));
  p.classList.remove('on');p.style.transform='';ptrBusy=false}
 if(STANDALONE){let y0=null,dy=0;const p=$('#ptr'),free=()=>!ptrBusy&&scrollY<=0&&!$('#det').classList.contains('on')&&!document.querySelector('.modal.on');
  document.addEventListener('touchstart',e=>{y0=free()&&e.touches.length===1?e.touches[0].clientY:null;dy=0},{passive:true});
- document.addEventListener('touchmove',e=>{if(y0===null)return;dy=e.touches[0].clientY-y0;if(dy<=0||scrollY>0){p.classList.remove('on');p.style.transform='';return}if(e.cancelable)e.preventDefault();const h=Math.min(dy*.5,70);p.textContent=dy>110?'Suelta para actualizar':'Desliza para actualizar';p.classList.add('on');p.style.transform=`translateY(${h-56}px)`},{passive:false});
- document.addEventListener('touchend',()=>{if(y0===null)return;const go=dy>110;y0=null;if(go)refresh();else{p.classList.remove('on');p.style.transform=''}},{passive:true})}
+ document.addEventListener('touchmove',e=>{if(y0===null)return;dy=e.touches[0].clientY-y0;if(dy<=0||scrollY>0){p.classList.remove('on');p.style.transform='';return}if(e.cancelable)e.preventDefault();const h=Math.min(dy*.75,125);p.textContent=dy>100?'Suelta para actualizar':'Desliza para actualizar';p.classList.add('on');p.style.transform=`translateY(${h-90}px)`},{passive:false});
+ document.addEventListener('touchend',()=>{if(y0===null)return;const go=dy>100;y0=null;if(go)refresh();else{p.classList.remove('on');p.style.transform=''}},{passive:true})}
 setView('valor');stamp();render();moved();
 setInterval(()=>{if(view!=='mis'&&!$('#det').classList.contains('on')&&!$('#lm').classList.contains('on'))render()},60000);
 }
