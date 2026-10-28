@@ -1,0 +1,20 @@
+fixtures.csv 200 13560
+Div counts {'E2': 5, 'E3': 1, 'EC': 12, 'I1': 10, 'I2': 10, 'SC0': 6, 'SC1': 1, 'SC2': 1}
+E1 fechas []
+D2 fechas []
+SC0 fechas ['28/10/2026']
+cols ['Div', 'Date', 'Time', 'HomeTeam', 'AwayTeam', 'Referee', 'B365H', 'B365D', 'B365A', 'BFDH', 'BFDD', 'BFDA', 'BVH', 'BVD', 'BVA', 'BWH', 'BWD', 'BWA', 'PPH', 'PPD']
+new_league_fixtures 200
+{('Argentina', 'Liga Profesional'): 1, ('Brazil', 'Serie A'): 10, ('Finland', 'Veikkausliiga'): 3, ('Mexico', 'Liga MX'): 1, ('Sweden', 'Allsvenskan'): 8, ('USA', 'MLS'): 14}
+cols ['Country', 'League', 'Date', 'Time', 'Home', 'Away', 'PSH', 'PSD', 'PSA', 'MaxH', 'MaxD', 'MaxA', 'AvgH', 'AvgD', 'AvgA', 'BFEH', 'BFED', 'BFEA', 'B365H', 'B365D', 'B365A']
+ESPN https://site.api.espn.com/apis/site/v2/sports/soccer/eng.2/scoreboard? 200 {"leagues":[{"id":"3914","uid":"s:600~l:3914","name":"English League Championship","abbreviation":"E
+ESPN https://site.web.api.espn.com/apis/site/v2/sports/soccer/eng.2/scorebo 200 {"leagues":[{"id":"3914","uid":"s:600~l:3914","name":"English League Championship","abbreviation":"E
+ESPN https://site.api.espn.com/apis/site/v2/sports/soccer/eng.2/scoreboard 200 {"leagues":[{"id":"3914","uid":"s:600~l:3914","name":"English League Championship","abbreviation":"E
+TSDB ENG 4329 ERR 0 
+TSDB GER2 4399 ERR 0 
+TSDB SCO 4330 ERR 0 
+TSDB BRA 4351 ERR 0 
+TSDB SUI 4413 ERR 0 
+TSDB swiss leagues ERR HTTP Error 403: Forbidden
+OpenLiga bl2/2026 200 339089
+[('2026-10-30T17:30:00Z', 'DSC Arminia Bielefeld', 'Eintracht Braunschweig'), ('2026-10-30T17:30:00Z', 'Energie Cottbus', 'VfL Bochum'), ('2026-10-31T12:00:00Z', 'VfL Wolfsburg', 'VfL Osnabrück')]
