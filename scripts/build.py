@@ -381,31 +381,46 @@ def slug(s):
     return '-'.join(norm(s))
 
 # ---------- backtest ----------
+BT_KEYS = ('1', 'X', '2', 'o15', 'o25', 'o35', 'btts', 'g1t', 'c85', 'c95', 'c105')
+
 def backtest(hist, days=120):
-    recs = {k: [] for k in ('1', 'X', '2', 'o15', 'o25', 'btts')}
+    recs = {k: [] for k in BT_KEYS}
     start = TODAY - timedelta(days=days)
     test = [m for m in hist if start <= m['d'] < TODAY]
     for m in test:
         M = markets(hist, m['h'], m['a'], m['d'])
         if not M: continue
         t = m['hg'] + m['ag']
-        res = {'1': m['hg'] > m['ag'], 'X': m['hg'] == m['ag'], '2': m['hg'] < m['ag'], 'o15': t > 1, 'o25': t > 2, 'btts': m['hg'] > 0 and m['ag'] > 0}
-        for k in recs: recs[k].append((M[k], 1 if res[k] else 0))
+        res = {'1': m['hg'] > m['ag'], 'X': m['hg'] == m['ag'], '2': m['hg'] < m['ag'], 'o15': t > 1, 'o25': t > 2, 'o35': t > 3,
+               'btts': m['hg'] > 0 and m['ag'] > 0}
+        if m['h1'] is not None and m['a1'] is not None and M.get('g1t') is not None:
+            res['g1t'] = (m['h1'] + m['a1']) > 0
+        if m['hc'] is not None and m['ac'] is not None and 'c85' in M:
+            c = m['hc'] + m['ac']
+            res['c85'], res['c95'], res['c105'] = c > 8.5, c > 9.5, c > 10.5
+        for k, v in res.items():
+            recs[k].append((M[k], 1 if v else 0))
+    return recs
+
+def summarize(recs):
     out = {}
     for k, v in recs.items():
         if not v: continue
         bins = []
         edges = [0, .3, .4, .5, .6, .7, .8, 1.01]
         for lo, hi in zip(edges, edges[1:]):
-            s = [x for x in v if lo <= x[0] < hi]
-            if s:
-                bins.append(dict(lo=lo, hi=min(hi, 1), n=len(s), pred=round(sum(x[0] for x in s) / len(s), 3), real=round(sum(x[1] for x in s) / len(s), 3)))
-        out[k] = dict(n=len(v), brier=round(sum((p - y) ** 2 for p, y in v) / len(v), 4), bins=bins)
+            x = [r for r in v if lo <= r[0] < hi]
+            if x:
+                bins.append(dict(lo=lo, hi=min(hi, 1), n=len(x), pred=round(sum(r[0] for r in x) / len(x), 3), real=round(sum(r[1] for r in x) / len(x), 3)))
+        base = sum(r[1] for r in v) / len(v)
+        out[k] = dict(n=len(v), brier=round(sum((p - y) ** 2 for p, y in v) / len(v), 4),
+                      brier_base=round(sum((base - y) ** 2 for p, y in v) / len(v), 4),
+                      avg_pred=round(sum(r[0] for r in v) / len(v), 3), real=round(base, 3), bins=bins)
     return out
 
 def main():
     fx = load_fixtures()
-    matches, bt = [], {}
+    matches, bt, pooled = [], {}, {'ALL': {k: [] for k in BT_KEYS}, 'FAV': {k: [] for k in BT_KEYS}}
     for l in LEAGUES:
         code = l['code']
         st = status['leagues'][code] = dict(name=l['name'])
@@ -415,6 +430,7 @@ def main():
         st['has_corners'] = sum(1 for m in hist if m['hc'] is not None)
         st['has_half'] = sum(1 for m in hist if m['h1'] is not None)
         teams = sorted({m['h'] for m in hist} | {m['a'] for m in hist})
+        st['teams'] = teams
         lf = fx.get(code, [])
         st['fixtures_fd'] = len(lf); st['fav'] = l['fav']
         try:
@@ -440,11 +456,16 @@ def main():
             done += 1
         st['matches'] = done
         try:
-            bt[code] = backtest(hist)
+            r = backtest(hist)
+            bt[code] = summarize(r)
+            for k in BT_KEYS:
+                pooled['ALL'][k] += r[k]
+                if l['fav']: pooled['FAV'][k] += r[k]
         except Exception as e:
             status['errors'].append(f'backtest {code}: {e}')
     matches.sort(key=lambda m: m['utc'])
     json.dump(dict(generated=NOW.strftime('%Y-%m-%dT%H:%M:%SZ'), matches=matches, status=status), open('data.json', 'w'), ensure_ascii=False, separators=(',', ':'))
+    bt['ALL'] = summarize(pooled['ALL']); bt['FAV'] = summarize(pooled['FAV'])
     json.dump(dict(generated=NOW.strftime('%Y-%m-%dT%H:%M:%SZ'), leagues=bt), open('backtest.json', 'w'), ensure_ascii=False, indent=1)
     log(json.dumps(status, indent=1, ensure_ascii=False)); log('partidos:', len(matches))
 
