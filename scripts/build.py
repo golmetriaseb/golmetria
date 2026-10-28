@@ -4,7 +4,7 @@ import csv, io, json, math, re, sys, time, unicodedata, difflib, urllib.request
 from datetime import datetime, timedelta, timezone, date
 from zoneinfo import ZoneInfo
 
-UA = {'User-Agent': 'Mozilla/5.0 (Golmetria data robot)'}
+UA = {'User-Agent': 'Mozilla/5.0 (iPad; CPU OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1', 'Accept': '*/*'}
 BASE = 'https://www.football-data.co.uk/'
 LONDON = ZoneInfo('Europe/London')
 NOW = datetime.now(timezone.utc)
@@ -298,6 +298,34 @@ def match_team(name, teams):
         if r > br: best, br = t, r
     return best if br >= 0.72 else None
 
+def am2dec(x):
+    try:
+        v = float(str(x).replace('+', ''))
+    except Exception:
+        return None
+    if v == 0: return None
+    d = 1 + v / 100 if v > 0 else 1 + 100 / abs(v)
+    return round(d, 2) if d > 1.01 else None
+
+def espn_odds(ev):
+    o = {}
+    try:
+        od = ev['competitions'][0].get('odds') or []
+        if not od: return o
+        od = od[0]
+        ml = od.get('moneyline') or {}
+        def side(k):
+            x = (ml.get(k) or {})
+            return am2dec(((x.get('close') or x.get('open') or {}).get('odds')))
+        o['1'], o['X'], o['2'] = side('home'), side('draw'), side('away')
+        tot = od.get('total') or {}
+        ov = (tot.get('over') or {}).get('close') or (tot.get('over') or {}).get('open') or {}
+        if str(ov.get('line', '')).lower().replace('o', '') == '2.5':
+            o['o25'] = am2dec(ov.get('odds'))
+    except Exception:
+        pass
+    return o
+
 def espn_fixtures(l, teams):
     out, miss = [], 0
     for i in range(HORIZON):
@@ -317,7 +345,12 @@ def espn_fixtures(l, teams):
             th, ta = match_team(h, teams), match_team(a, teams)
             if not th or not ta:
                 miss += 1; continue
-            out.append(dict(k=k, h=th, a=ta, odds={}, src='espn'))
+            try:
+                if ev['status']['type']['name'] != 'STATUS_SCHEDULED':
+                    continue
+            except Exception:
+                pass
+            out.append(dict(k=k, h=th, a=ta, odds=espn_odds(ev), src='espn'))
     return out, miss
 
 def slug(s):
@@ -378,7 +411,7 @@ def main():
             if not M:
                 st['skipped'] = st.get('skipped', 0) + 1; continue
             matches.append(dict(id=f"{code}-{f['k']:%Y%m%d}-{slug(f['h'])}-{slug(f['a'])}", league=code, leagueName=l['name'],
-                                utc=f['k'].strftime('%Y-%m-%dT%H:%M:%SZ'), home=f['h'], away=f['a'], src=f['src'],
+                                utc=f['k'].strftime('%Y-%m-%dT%H:%M:%SZ'), home=f['h'], away=f['a'], src=f['src'], oddsFrom=('promedio de casas' if f['src']=='fd' else ('DraftKings' if any(f['odds'].values()) else None)),
                                 lh=round(M['lh'], 2), la=round(M['la'], 2), bets=bets_for(M, f['h'], f['a'], f['odds'])))
             done += 1
         st['matches'] = done
