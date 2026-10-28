@@ -98,7 +98,7 @@ def load_history(lg):
                     continue
                 out.append(dict(d=d, h=r['HomeTeam'].strip(), a=r['AwayTeam'].strip(), hg=hg, ag=ag,
                                 h1=num(r.get('HTHG')), a1=num(r.get('HTAG')),
-                                hc=num(r.get('HC')), ac=num(r.get('AC'))))
+                                hc=num(r.get('HC')), ac=num(r.get('AC')), hst=num(r.get('HST')), ast=num(r.get('AST'))))
     else:
         try:
             t = fetch(f"{BASE}new/{lg['file']}.csv")
@@ -109,7 +109,7 @@ def load_history(lg):
             hg, ag = num(r.get('HG')), num(r.get('AG'))
             if not d or hg is None or ag is None or not r.get('Home'):
                 continue
-            out.append(dict(d=d, h=r['Home'].strip(), a=r['Away'].strip(), hg=hg, ag=ag, h1=None, a1=None, hc=None, ac=None))
+            out.append(dict(d=d, h=r['Home'].strip(), a=r['Away'].strip(), hg=hg, ag=ag, h1=None, a1=None, hc=None, ac=None, hst=None, ast=None))
     out.sort(key=lambda m: m['d'])
     return out
 
@@ -119,6 +119,8 @@ def chan_vals(m, chan):
         return m['hg'], m['ag']
     if chan == 'g1':
         return (m['h1'], m['a1']) if m['h1'] is not None and m['a1'] is not None else (None, None)
+    if chan == 'st':
+        return (m['hst'], m['ast']) if m.get('hst') is not None and m.get('ast') is not None else (None, None)
     return (m['hc'], m['ac']) if m['hc'] is not None and m['ac'] is not None else (None, None)
 
 def fit(hist, chan, ref):
@@ -227,6 +229,13 @@ def markets(hist, h, a, ref):
     F1 = fit(hist, 'g1', ref)
     l1 = lambdas(F1, h, a)
     out['g1t'] = 1 - math.exp(-(l1[0] + l1[1])) if l1 else None
+    out['g2t'] = (1 - math.exp(-max(lh + la - l1[0] - l1[1], 0.05))) if l1 else None
+    Fs = fit(hist, 'st', ref)
+    ls = lambdas(Fs, h, a)
+    if ls:
+        for L in (25, 35, 45, 55):
+            k = L // 10 + 1
+            out[f'sh{L}'], out[f'sa{L}'] = nb_tail(ls[0], k), nb_tail(ls[1], k)
     Fc = fit(hist, 'c', ref)
     lc = lambdas(Fc, h, a)
     if lc:
@@ -253,6 +262,11 @@ def bets_for(M, home, away, odds):
     add('o35', 'Más de 3.5 goles', M['o35'])
     add('btts', 'Ambos marcan', M['btts'])
     add('g1t', 'Gol en el 1er tiempo', M.get('g1t'))
+    add('g2t', 'Gol en el 2.º tiempo', M.get('g2t'))
+    if 'sh25' in M:
+        for L in (25, 35, 45, 55):
+            add('st', f'Remates al arco de {home} más de {L / 10}', M[f'sh{L}'])
+            add('st', f'Remates al arco de {away} más de {L / 10}', M[f'sa{L}'])
     for k, L in ((1, '0.5'), (2, '1.5'), (3, '2.5')):
         add('tg', f'Goles de {home} más de {L}', M[f'gh{k}'])
         add('tg', f'Goles de {away} más de {L}', M[f'ga{k}'])
@@ -403,7 +417,7 @@ def slug(s):
     return '-'.join(norm(s))
 
 # ---------- backtest ----------
-BT_KEYS = ('1', 'X', '2', 'o15', 'o25', 'o35', 'btts', 'g1t', 'c85', 'c95', 'c105', 'ct35', 'ct45', 'ct55', 'ct65', 'tg1', 'tg2', 'tg3')
+BT_KEYS = ('1', 'X', '2', 'o15', 'o25', 'o35', 'btts', 'g1t', 'c85', 'c95', 'c105', 'ct35', 'ct45', 'ct55', 'ct65', 'tg1', 'tg2', 'tg3', 'g2t', 'st25', 'st35', 'st45', 'st55')
 
 def backtest(hist, days=120):
     recs = {k: [] for k in BT_KEYS}
@@ -422,6 +436,12 @@ def backtest(hist, days=120):
             res['c85'], res['c95'], res['c105'] = c > 8.5, c > 9.5, c > 10.5
         for k, v in res.items():
             recs[k].append((M[k], 1 if v else 0))
+        if m['h1'] is not None and m['a1'] is not None and M.get('g2t') is not None:
+            recs['g2t'].append((M['g2t'], 1 if (m['hg'] - m['h1']) + (m['ag'] - m['a1']) > 0 else 0))
+        if m.get('hst') is not None and m.get('ast') is not None and 'sh25' in M:
+            for L in (25, 35, 45, 55):
+                recs[f'st{L}'].append((M[f'sh{L}'], 1 if m['hst'] > L / 10 else 0))
+                recs[f'st{L}'].append((M[f'sa{L}'], 1 if m['ast'] > L / 10 else 0))
         for k in (1, 2, 3):
             recs[f'tg{k}'].append((M[f'gh{k}'], 1 if m['hg'] >= k else 0))
             recs[f'tg{k}'].append((M[f'ga{k}'], 1 if m['ag'] >= k else 0))
@@ -447,7 +467,7 @@ def summarize(recs):
                       avg_pred=round(sum(r[0] for r in v) / len(v), 3), real=round(base, 3), bins=bins)
     return out
 
-CAL_KEYS = ('o15', 'o25', 'o35', 'btts', 'g1t', 'c85', 'c95', 'c105', 'ct35', 'ct45', 'ct55', 'ct65', 'tg1', 'tg2', 'tg3')
+CAL_KEYS = ('o15', 'o25', 'o35', 'btts', 'g1t', 'c85', 'c95', 'c105', 'ct35', 'ct45', 'ct55', 'ct65', 'tg1', 'tg2', 'tg3', 'g2t', 'st25', 'st35', 'st45', 'st55')
 
 def make_calibration(summary):
     """Corrige el sesgo del modelo con lo que paso en partidos reales (por mercado, con interpolacion y encogimiento)."""
@@ -508,23 +528,28 @@ def espn_results(l, teams):
             except Exception:
                 h1 = a1 = None
             if th and ta:
-                out.append(dict(l=l['code'], h=th, a=ta, d=k.date().isoformat(), hg=hg, ag=ag, h1=h1, a1=a1, hc=None, ac=None, _id=ev.get('id'), _hid=ch['team'].get('id'), _aid=ca['team'].get('id')))
+                out.append(dict(l=l['code'], h=th, a=ta, d=k.date().isoformat(), hg=hg, ag=ag, h1=h1, a1=a1, hc=None, ac=None, hst=None, ast=None, _id=ev.get('id'), _hid=ch['team'].get('id'), _aid=ca['team'].get('id')))
     return out
 
 def espn_corners(l, e):
-    """Córners desde el detalle del partido en ESPN. Si no hay dato, queda en None. Nunca rompe el proceso."""
+    """Córners y remates al arco desde el detalle del partido en ESPN. Si no hay dato, queda en None. Nunca rompe el proceso."""
     try:
         j = json.loads(fetch(f"https://site.api.espn.com/apis/site/v2/sports/soccer/{l['espn']}/summary?event={e['_id']}", tries=2))
-        got = {}
+        got = {'wonCorners': {}, 'shotsOnTarget': {}}
         for t in j['boxscore']['teams']:
             for st in t.get('statistics', []):
-                if st.get('name') == 'wonCorners':
-                    got[str(t['team']['id'])] = int(float(st['displayValue']))
-        if e['_hid'] in got and e['_aid'] in got and got[e['_hid']] + got[e['_aid']] > 0:  # 0-0 = ESPN no tiene el dato
-            e['hc'], e['ac'] = got[e['_hid']], got[e['_aid']]
-            log('córners espn', l['code'], e['h'], e['a'], e['hc'], e['ac'])
+                if st.get('name') in got:
+                    try:
+                        got[st['name']][str(t['team']['id'])] = int(float(st['displayValue']))
+                    except Exception:
+                        pass
+        for name, kh, ka in (('wonCorners', 'hc', 'ac'), ('shotsOnTarget', 'hst', 'ast')):
+            g = got[name]
+            if e['_hid'] in g and e['_aid'] in g and g[e['_hid']] + g[e['_aid']] > 0:  # 0-0 = ESPN no tiene el dato
+                e[kh], e[ka] = g[e['_hid']], g[e['_aid']]
+                log(name, 'espn', l['code'], e['h'], e['a'], e[kh], e[ka])
     except Exception as ex:
-        log('córners espn sin dato', l['code'], str(ex)[:60])
+        log('detalle espn sin dato', l['code'], str(ex)[:60])
 
 def build_results(H):
     res, cut = [], TODAY - timedelta(days=14)
@@ -535,7 +560,8 @@ def build_results(H):
             if m['d'] >= cut:
                 got.append(dict(l=code, h=m['h'], a=m['a'], d=m['d'].isoformat(), hg=int(m['hg']), ag=int(m['ag']),
                                 h1=None if m['h1'] is None else int(m['h1']), a1=None if m['a1'] is None else int(m['a1']),
-                                hc=None if m['hc'] is None else int(m['hc']), ac=None if m['ac'] is None else int(m['ac'])))
+                                hc=None if m['hc'] is None else int(m['hc']), ac=None if m['ac'] is None else int(m['ac']),
+                                hst=None if m.get('hst') is None else int(m['hst']), ast=None if m.get('ast') is None else int(m['ast'])))
         try:
             for e in espn_results(l, status['leagues'][code].get('teams', [])):
                 dup = any(g['h'] == e['h'] and g['a'] == e['a'] and abs((date.fromisoformat(g['d']) - date.fromisoformat(e['d'])).days) <= 1 for g in got)
@@ -599,6 +625,10 @@ def main():
             if not M:
                 st['skipped'] = st.get('skipped', 0) + 1; continue
             M['g1t'] = apply_cal(cal, 'g1t', M.get('g1t'))
+            M['g2t'] = apply_cal(cal, 'g2t', M.get('g2t'))
+            for L in (25, 35, 45, 55):
+                for pre in ('sh', 'sa'):
+                    if f'{pre}{L}' in M: M[f'{pre}{L}'] = apply_cal(cal, f'st{L}', M[f'{pre}{L}'])
             for k in ('o15', 'o25', 'o35', 'btts'):
                 M[k] = apply_cal(cal, k, M[k])
             for k, ck in (('c85', 'c85'), ('c95', 'c95'), ('c105', 'c105')):
