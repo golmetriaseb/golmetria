@@ -508,7 +508,7 @@ def espn_corners(l, e):
             for st in t.get('statistics', []):
                 if st.get('name') == 'wonCorners':
                     got[str(t['team']['id'])] = int(float(st['displayValue']))
-        if e['_hid'] in got and e['_aid'] in got:
+        if e['_hid'] in got and e['_aid'] in got and got[e['_hid']] + got[e['_aid']] > 0:  # 0-0 = ESPN no tiene el dato
             e['hc'], e['ac'] = got[e['_hid']], got[e['_aid']]
             log('córners espn', l['code'], e['h'], e['a'], e['hc'], e['ac'])
     except Exception as ex:
