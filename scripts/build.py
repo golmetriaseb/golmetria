@@ -287,7 +287,13 @@ def norm(s):
     s = re.sub(r'\b(fc|afc|sc|cf|fk|sv|vfl|vfb|1\.|club|de|sport|esporte|clube)\b', ' ', s)
     return re.sub(r'[^a-z0-9 ]', ' ', s).split()
 
+ALIAS = {'queens park rangers': 'qpr', 'wolverhampton wanderers': 'wolves', 'heart of midlothian': 'hearts'}
+
 def match_team(name, teams):
+    name = ALIAS.get(name.strip().lower(), name)
+    for t in teams:
+        if t.lower() == name.lower():
+            return t
     n = ' '.join(norm(name))
     best, br = None, 0
     for t in teams:
@@ -352,6 +358,9 @@ def espn_fixtures(l, teams):
                     continue
             except Exception:
                 pass
+            nm = status['leagues'][l['code']].setdefault('name_map', {})
+            for x, y in ((h, th), (a, ta)):
+                if x != y: nm[x] = y
             out.append(dict(k=k, h=th, a=ta, odds=espn_odds(ev), src='espn'))
     return out, miss
 
