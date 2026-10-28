@@ -344,7 +344,9 @@ def espn_fixtures(l, teams):
                 continue
             th, ta = match_team(h, teams), match_team(a, teams)
             if not th or not ta:
-                miss += 1; continue
+                miss += 1
+                status['leagues'][l['code']].setdefault('unmatched_names', []).extend([n for n, t in ((h, th), (a, ta)) if not t])
+                continue
             try:
                 if ev['status']['type']['name'] != 'STATUS_SCHEDULED':
                     continue
