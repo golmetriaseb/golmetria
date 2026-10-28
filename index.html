@@ -129,6 +129,7 @@ let REAL=null,DATA=[];
 const loc=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
 function prep(m){const d=new Date(m.utc);m.date=loc(d);m.time=String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0');return m}
 async function boot(){try{const r=await fetch('data.json?'+Date.now(),{cache:'no-store'});if(!r.ok)throw 0;const j=await r.json();REAL=j;DATA=j.matches.map(prep)}catch(e){REAL=null;DATA=demo()}init()}
+let _lt=0;document.addEventListener('touchend',e=>{const n=Date.now();if(n-_lt<350&&e.cancelable)e.preventDefault();_lt=n},{passive:false});document.addEventListener('dblclick',e=>e.preventDefault());
 document.addEventListener('gesturestart',e=>e.preventDefault());document.addEventListener('gesturechange',e=>e.preventDefault());
 function init(){
 /* ===== ESTADO ===== */
