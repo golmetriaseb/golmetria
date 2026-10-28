@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-28T18:09:14.654745+00:00",
+ "generated": "2026-10-28T19:01:54.917176+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -147,4 +147,4 @@
     "Rotherham",
     "Sheffield Weds",
     "Stevenag
-partidos: 347
+partidos: 346
