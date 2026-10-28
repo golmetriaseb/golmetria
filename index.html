@@ -2,7 +2,7 @@
 <html lang="es"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
-<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="gm-v" content="20261028201152"><meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Golmetría"><link rel="apple-touch-icon" href="icon-180.png"><link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#0a0b14"><meta name="color-scheme" content="dark">
 <title>Golmetría</title>
@@ -130,6 +130,8 @@ const loc=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+Stri
 function prep(m){const d=new Date(m.utc);m.date=loc(d);m.time=String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0');return m}
 async function boot(){try{const r=await fetch('data.json?'+Date.now(),{cache:'no-store'});if(!r.ok)throw 0;const j=await r.json();REAL=j;DATA=j.matches.map(prep)}catch(e){REAL=null;DATA=demo()}init()}
 let _lt=0;document.addEventListener('touchend',e=>{const n=Date.now();if(n-_lt<350&&e.cancelable)e.preventDefault();_lt=n},{passive:false});document.addEventListener('dblclick',e=>e.preventDefault());
+async function chkV(){try{const cur=document.querySelector('meta[name=gm-v]').content;const r=await fetch('index.html?'+Date.now(),{cache:'no-store'});if(!r.ok)return;const m=(await r.text()).match(/name="gm-v" content="([^"]+)"/);if(m&&m[1]!==cur&&m[1]!=='0')location.replace(location.pathname+'?v='+m[1])}catch(e){}}
+chkV();document.addEventListener('visibilitychange',()=>{if(!document.hidden)chkV()});
 document.addEventListener('gesturestart',e=>e.preventDefault());document.addEventListener('gesturechange',e=>e.preventDefault());
 function init(){
 /* ===== ESTADO ===== */
@@ -165,13 +167,13 @@ function bcard(x,cls){const{m,b}=x,v=val(b),hi=b.p>=.75,ok=v!=null&&v>=.05,rv=v!
 <div class="tile"><small>CUOTA</small><strong>${b.odd?b.odd.toFixed(2):'—'}</strong><em>${b.odd?'Cuota justa: '+(1/b.p).toFixed(2):'Sin cuota de la casa. Cuota justa: '+(1/b.p).toFixed(2)}</em></div>
 <div class="tile ${rv?'tr':ok?'tv':'tn'}"><small>${rv?'VALOR · REVISAR':'VALOR'}</small><strong>${fmt(v)}</strong><em>${v==null?'Escribe tu cuota en “Ver partido”':rv?'Muy alto: revisa, puede ser un error del modelo':ok?'Conviene: la casa paga de más':'No conviene: paga poco'}</em></div></div>
 <div class="act"><button class="btn" data-sv="${m.id}|${m.bets.indexOf(b)}">Guardar apuesta</button><button class="btn g" data-m="${m.id}">Ver partido</button></div></div>`}
-function emptyMsg(kind){if(liveOn)return`<div class="empty"><b style="display:block;color:var(--tx);font:italic 800 20px var(--f1);text-transform:uppercase;margin-bottom:6px">Ningún partido en juego</b>Ahora mismo no hay partidos en juego en ${lgLabel().toLowerCase()}.<br>Cuando empiece alguno, aparecerá aquí.</div>`;const L=lgLabel().toLowerCase(),T=type==='all'?'todas las apuestas':TYPES.find(t=>t[0]===type)[1],D=dn(day).toLowerCase();
+function emptyMsg(kind){if(liveOn&&ms().length)return`<div class="empty"><b style="display:block;color:var(--tx);font:italic 800 20px var(--f1);text-transform:uppercase;margin-bottom:6px">Sin ${kind==='v'?'apuestas de valor':'apuestas con 75% o más'}</b>Hay ${ms().length} partido(s) en juego, pero ninguno tiene ${kind==='v'?'apuestas de valor':'apuestas con 75% o más'}.<br>Mira la pestaña <b>Partidos</b> para verlos todos.</div>`;if(liveOn)return`<div class="empty"><b style="display:block;color:var(--tx);font:italic 800 20px var(--f1);text-transform:uppercase;margin-bottom:6px">Ningún partido en juego</b>Ahora mismo no hay partidos en juego en ${lgLabel().toLowerCase()}.<br>Cuando empiece alguno, aparecerá aquí.</div>`;const L=lgLabel().toLowerCase(),T=type==='all'?'todas las apuestas':TYPES.find(t=>t[0]===type)[1],D=dn(day).toLowerCase();
  const what=kind==='v'?'apuestas de valor':'apuestas con 75% de probabilidad o más';
  const tip=(sel.size<LGS.length||type!=='all')?'Quita un filtro o prueba otro día.':'Prueba otro día.';
  return`<div class="empty"><b style="display:block;color:var(--tx);font:italic 800 20px var(--f1);text-transform:uppercase;margin-bottom:6px">Sin ${what}</b>${D==='hoy'?'Hoy':'El '+D} no hay ${what} en ${L} · ${T}.<br>${kind==='v'?'Eso también es información: hoy no conviene apostar aquí.':'Ninguna apuesta llega a ese nivel de probabilidad.'}<br><span style="color:var(--bl)">${tip}</span></div>`}
 function render(){
  document.querySelectorAll('.day').forEach(e=>e.classList.toggle('on',liveOn?e.id==='lv':e.dataset.d===day));const nl=DATA.filter(m=>isLive(m)&&sel.has(m.league)).length;$('#lvn').textContent=nl;$('#lv').classList.toggle('zero',!nl);
- const LN=liveOn?'<div class="lvnote"><b>● En vivo.</b> Estas probabilidades y cuotas son de antes del partido. La cuota real en vivo es otra: escribe la tuya para ver si aún hay valor.</div>':'';
+ const nv=M0=>M0.filter(m=>m.bets.some(b=>b.p>=.28&&val(b)!=null&&val(b)>=.05)).length;const LM=liveOn?ms():[];const LN=liveOn?'<div class="lvnote"><b>● En vivo: '+LM.length+(LM.length===1?' partido en juego':' partidos en juego')+' · '+nv(LM)+' con apuestas de valor.</b> Las probabilidades y cuotas son de antes del partido. La cuota real en vivo es otra: escribe la tuya para ver si aún hay valor.</div>':'';
  const F=flat();
  const V=F.filter(x=>x.b.p>=.28&&val(x.b)!=null&&val(x.b)>=.05).sort((a,b)=>((val(a.b)>.35)-(val(b.b)>.35))||(val(b.b)-val(a.b))).slice(0,40);
  $('#l-valor').innerHTML=V.length?LN+V.map(x=>bcard(x,'v')).join(''):emptyMsg('v');
