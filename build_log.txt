@@ -1,5 +1,5 @@
-inone Lecce 10 3
-shotsOnTarget espn SA Frosinone Lecce 9 6
+Atalanta 8 2
+shotsOnTarget espn SA Fiorentina Atalanta 4 5
 wonCorners espn BRA Fluminense Internacional 8 5
 shotsOnTarget espn BRA Fluminense Internacional 6 5
 wonCorners espn BRA Bragantino Chapecoense-SC 7 4
@@ -58,9 +58,9 @@ wonCorners espn USA Seattle Sounders Houston Dynamo 10 1
 shotsOnTarget espn USA Seattle Sounders Houston Dynamo 5 1
 wonCorners espn USA Vancouver Whitecaps San Diego FC 8 3
 shotsOnTarget espn USA Vancouver Whitecaps San Diego FC 10 7
-resultados: 731
+resultados: 732
 {
- "generated": "2026-10-29T20:53:59.842072+00:00",
+ "generated": "2026-10-29T21:53:11.284138+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -208,4 +208,4 @@ resultados: 731
     "Rotherham",
     "Sheffield Weds",
     "Stevenag
-partidos: 303
+partidos: 301
