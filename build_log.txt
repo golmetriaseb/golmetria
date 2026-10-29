@@ -1,3 +1,5 @@
+inone Lecce 10 3
+shotsOnTarget espn SA Frosinone Lecce 9 6
 wonCorners espn BRA Fluminense Internacional 8 5
 shotsOnTarget espn BRA Fluminense Internacional 6 5
 wonCorners espn BRA Bragantino Chapecoense-SC 7 4
@@ -12,6 +14,12 @@ wonCorners espn ARG Argentinos Jrs Independiente 9 3
 shotsOnTarget espn ARG Argentinos Jrs Independiente 6 3
 wonCorners espn MEX Club America Club Tijuana 9 2
 shotsOnTarget espn MEX Club America Club Tijuana 8 2
+wonCorners espn SWE Hammarby Sirius 10 7
+shotsOnTarget espn SWE Hammarby Sirius 4 5
+wonCorners espn SWE Kalmar GAIS 6 5
+shotsOnTarget espn SWE Kalmar GAIS 4 4
+wonCorners espn SWE Orgryte Mjallby 3 3
+shotsOnTarget espn SWE Orgryte Mjallby 3 5
 wonCorners espn SWE Degerfors Vasteras SK 3 9
 shotsOnTarget espn SWE Degerfors Vasteras SK 2 8
 wonCorners espn SWE Halmstad Malmo FF 6 5
@@ -50,9 +58,9 @@ wonCorners espn USA Seattle Sounders Houston Dynamo 10 1
 shotsOnTarget espn USA Seattle Sounders Houston Dynamo 5 1
 wonCorners espn USA Vancouver Whitecaps San Diego FC 8 3
 shotsOnTarget espn USA Vancouver Whitecaps San Diego FC 10 7
-resultados: 727
+resultados: 731
 {
- "generated": "2026-10-29T19:00:51.743704+00:00",
+ "generated": "2026-10-29T19:56:38.534981+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
