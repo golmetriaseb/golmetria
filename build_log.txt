@@ -1,25 +1,4 @@
- Hibernian 3 5
-shotsOnTarget espn SCO St Mirren Hibernian 3 1
-wonCorners espn SCO Hearts Rangers 4 4
-shotsOnTarget espn SCO Hearts Rangers 6 6
-wonCorners espn SA Milan Bologna 2 3
-shotsOnTarget espn SA Milan Bologna 3 5
-wonCorners espn SA Parma Udinese 3 6
-shotsOnTarget espn SA Parma Udinese 2 5
-wonCorners espn SA Venezia Inter 3 6
-shotsOnTarget espn SA Venezia Inter 4 2
-wonCorners espn SA Genoa Juventus 6 9
-shotsOnTarget espn SA Genoa Juventus 2 4
-wonCorners espn SA Monza Napoli 2 2
-shotsOnTarget espn SA Monza Napoli 5 7
-wonCorners espn SA Sassuolo Lazio 2 1
-shotsOnTarget espn SA Sassuolo Lazio 1 8
-wonCorners espn SA Roma Cagliari 7 8
-shotsOnTarget espn SA Roma Cagliari 8 8
-wonCorners espn SA Torino Como 5 6
-shotsOnTarget espn SA Torino Como 5 5
-wonCorners espn SB Pisa Palermo 5 3
-shotsOnTarget espn SB Pisa Palermo 6 5
+ 5
 wonCorners espn SB Carrarese Arezzo 4 1
 shotsOnTarget espn SB Carrarese Arezzo 3 2
 wonCorners espn SB Juve Stabia Verona 5 8
@@ -44,6 +23,10 @@ wonCorners espn BRA Bragantino Chapecoense-SC 7 4
 shotsOnTarget espn BRA Bragantino Chapecoense-SC 11 3
 wonCorners espn BRA Santos Palmeiras 1 3
 shotsOnTarget espn BRA Santos Palmeiras 5 5
+wonCorners espn BRA Bahia Sao Paulo 7 11
+shotsOnTarget espn BRA Bahia Sao Paulo 4 6
+wonCorners espn BRA Remo Botafogo RJ 3 8
+shotsOnTarget espn BRA Remo Botafogo RJ 4 2
 wonCorners espn ARG Argentinos Jrs Independiente 9 3
 shotsOnTarget espn ARG Argentinos Jrs Independiente 6 3
 wonCorners espn SWE Degerfors Vasteras SK 3 9
@@ -66,9 +49,21 @@ wonCorners espn USA New York City Atlanta Utd 3 3
 shotsOnTarget espn USA New York City Atlanta Utd 6 6
 wonCorners espn USA Toronto FC DC United 5 7
 shotsOnTarget espn USA Toronto FC DC United 2 2
-resultados: 715
+wonCorners espn USA Austin FC Real Salt Lake 8 7
+shotsOnTarget espn USA Austin FC Real Salt Lake 5 4
+wonCorners espn USA Chicago Fire Orlando City 8 3
+shotsOnTarget espn USA Chicago Fire Orlando City 5 5
+wonCorners espn USA FC Dallas Columbus Crew 9 3
+shotsOnTarget espn USA FC Dallas Columbus Crew 5 3
+wonCorners espn USA Minnesota United Sporting Kansas City 8 4
+shotsOnTarget espn USA Minnesota United Sporting Kansas City 8 2
+wonCorners espn USA Nashville SC Philadelphia Union 2 8
+shotsOnTarget espn USA Nashville SC Philadelphia Union 1 2
+wonCorners espn USA St. Louis City Portland Timbers 5 4
+shotsOnTarget espn USA St. Louis City Portland Timbers 6 6
+resultados: 723
 {
- "generated": "2026-10-29T02:03:35.899027+00:00",
+ "generated": "2026-10-29T02:56:38.271883+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -216,4 +211,4 @@ resultados: 715
     "Rotherham",
     "Sheffield Weds",
     "Stevenag
-partidos: 324
+partidos: 319
