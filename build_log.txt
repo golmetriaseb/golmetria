@@ -63,7 +63,7 @@ wonCorners espn USA St. Louis City Portland Timbers 5 4
 shotsOnTarget espn USA St. Louis City Portland Timbers 6 6
 resultados: 723
 {
- "generated": "2026-10-29T02:56:38.271883+00:00",
+ "generated": "2026-10-29T03:56:07.872039+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -211,4 +211,4 @@ resultados: 723
     "Rotherham",
     "Sheffield Weds",
     "Stevenag
-partidos: 319
+partidos: 311
