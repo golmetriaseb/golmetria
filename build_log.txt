@@ -1,5 +1,3 @@
-Atalanta 8 2
-shotsOnTarget espn SA Fiorentina Atalanta 4 5
 wonCorners espn BRA Fluminense Internacional 8 5
 shotsOnTarget espn BRA Fluminense Internacional 6 5
 wonCorners espn BRA Bragantino Chapecoense-SC 7 4
@@ -60,7 +58,7 @@ wonCorners espn USA Vancouver Whitecaps San Diego FC 8 3
 shotsOnTarget espn USA Vancouver Whitecaps San Diego FC 10 7
 resultados: 732
 {
- "generated": "2026-10-29T21:53:11.284138+00:00",
+ "generated": "2026-10-29T22:51:04.870327+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -208,4 +206,4 @@ resultados: 732
     "Rotherham",
     "Sheffield Weds",
     "Stevenag
-partidos: 301
+partidos: 300
