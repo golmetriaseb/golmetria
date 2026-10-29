@@ -52,7 +52,7 @@ wonCorners espn USA Vancouver Whitecaps San Diego FC 8 3
 shotsOnTarget espn USA Vancouver Whitecaps San Diego FC 10 7
 resultados: 727
 {
- "generated": "2026-10-29T17:01:58.469406+00:00",
+ "generated": "2026-10-29T17:56:49.697724+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
