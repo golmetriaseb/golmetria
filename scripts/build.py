@@ -260,6 +260,9 @@ def bets_for(M, home, away, odds):
     add('o15', 'Más de 1.5 goles', M['o15'])
     add('o25', 'Más de 2.5 goles', M['o25'], odds.get('o25'))
     add('o35', 'Más de 3.5 goles', M['o35'])
+    add('under', 'Menos de 1.5 goles', 1 - M['o15'])
+    add('under', 'Menos de 2.5 goles', 1 - M['o25'], odds.get('u25'))
+    add('under', 'Menos de 3.5 goles', 1 - M['o35'])
     add('btts', 'Ambos marcan', M['btts'])
     add('g1t', 'Gol en el 1er tiempo', M.get('g1t'))
     add('g2t', 'Gol en el 2.º tiempo', M.get('g2t'))
@@ -296,7 +299,7 @@ def kickoff(d, tm):
 
 def odds_from(r):
     return {'1': first(r, ['AvgH', 'B365H', 'PH', 'MaxH']), 'X': first(r, ['AvgD', 'B365D', 'PD', 'MaxD']),
-            '2': first(r, ['AvgA', 'B365A', 'PA', 'MaxA']), 'o25': first(r, ['Avg>2.5', 'B365>2.5', 'P>2.5'])}
+            '2': first(r, ['AvgA', 'B365A', 'PA', 'MaxA']), 'o25': first(r, ['Avg>2.5', 'B365>2.5', 'P>2.5']), 'u25': first(r, ['Avg<2.5', 'B365<2.5', 'P<2.5'])}
 
 def load_fixtures():
     fx = {l['code']: [] for l in LEAGUES}
@@ -375,6 +378,9 @@ def espn_odds(ev):
         ov = (tot.get('over') or {}).get('close') or (tot.get('over') or {}).get('open') or {}
         if str(ov.get('line', '')).lower().replace('o', '') == '2.5':
             o['o25'] = am2dec(ov.get('odds'))
+        un = (tot.get('under') or {}).get('close') or (tot.get('under') or {}).get('open') or {}
+        if str(un.get('line', '')).lower().replace('u', '') == '2.5':
+            o['u25'] = am2dec(un.get('odds'))
     except Exception:
         pass
     return o
