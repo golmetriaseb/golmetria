@@ -2,7 +2,7 @@
 <html lang="es"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
-<meta name="gm-v" content="20261029024549"><meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="gm-v" content="20261029140654"><meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Golmetría"><link rel="apple-touch-icon" href="icon-180.png"><link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#0a0b14"><meta name="color-scheme" content="dark">
 <title>Golmetría</title>
@@ -59,7 +59,7 @@ html,body{touch-action:pan-x pan-y;-webkit-text-size-adjust:100%}body{margin:0;b
 .btn.g{background:var(--card2);border:1px solid var(--ln2);color:var(--tx);box-shadow:none}
 .empty{text-align:center;color:var(--mu);padding:34px 14px;line-height:1.5}
 nav{position:fixed;left:0;right:0;bottom:0;background:rgba(6,7,10,.95);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--ln2);display:flex;padding:8px 8px max(10px,env(safe-area-inset-bottom));z-index:6}
-nav button{flex:1;border:0;background:none;color:var(--mu);font:italic 800 13px var(--f1);text-transform:uppercase;letter-spacing:.6px;display:flex;flex-direction:column;align-items:center;gap:4px;padding:4px;position:relative}
+nav button{flex:1;min-width:0;white-space:nowrap;border:0;background:none;color:var(--mu);font:italic 800 13px var(--f1);text-transform:uppercase;letter-spacing:.6px;display:flex;flex-direction:column;align-items:center;gap:4px;padding:4px;position:relative}
 nav svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 nav button.on{color:var(--bl)}nav button.on svg{filter:drop-shadow(0 0 6px rgba(46,197,255,.7))}nav button.on:before{content:"";position:absolute;top:-9px;width:34px;height:3px;border-radius:2px;background:linear-gradient(90deg,var(--bl),var(--ok));transform:skewX(-20deg)}
 .view{display:none}.view.on{display:block}
@@ -103,7 +103,6 @@ nav button.on{color:var(--bl)}nav button.on svg{filter:drop-shadow(0 0 6px rgba(
 <div class="demo" id="demo"><b>Datos de ejemplo.</b> Así se verá la app. Con los partidos reales la conectamos después.</div>
 <section class="view on" id="v-valor"><div class="intro"><h2>Apuestas de <em>valor</em></h2><p>La casa paga más de lo que debería. Ordenadas de mayor a menor valor.</p></div><div id="l-valor"></div></section>
 <section class="view" id="v-seg"><div class="intro"><h2>Más <em>probables</em></h2><p>Las que más veces ocurren. Ninguna es segura: pueden perder y pueden no tener valor.</p></div><div class="thr" id="thr"></div><div id="l-seg"></div></section>
-<section class="view" id="v-corn"><div class="intro"><h2><em>Córners</em></h2><p>Totales y por equipo, de mayor a menor probabilidad. No hay cuota gratis de córners: escribe la de tu casa en “Ver partido” y la app te dice si hay valor.</p></div><div class="thr" id="cthr"></div><div id="l-corn"></div></section>
 <section class="view" id="v-par"><div class="intro"><h2>Partidos del <em>día</em></h2><p>Toca un partido para ver todas sus apuestas.</p></div><div id="l-par"></div></section>
 <section class="view" id="v-mis"><div class="intro"><h2>Mis <em>apuestas</em></h2><p>Las apuestas que guardas. Cuando el partido termina, la app las marca sola como ganadas o perdidas.</p></div><div class="seg2" id="seg"></div><div class="sum" id="sum"></div><div id="l-mis"></div></section>
 </div>
@@ -117,7 +116,6 @@ nav button.on{color:var(--bl)}nav button.on svg{filter:drop-shadow(0 0 6px rgba(
 <nav>
 <button data-v="valor" class="on"><svg viewBox="0 0 24 24"><path d="M6.5 3.5h11l4 5.5L12 20.5 2.5 9z"/><path d="M2.5 9h19M9 3.5L7.5 9 12 20.5 16.5 9 15 3.5"/></svg>Valor</button>
 <button data-v="seg"><svg viewBox="0 0 24 24"><path d="M3 17.5l5.5-5.5 4 4L21 7"/><path d="M15 7h6v6"/></svg>Más probables</button>
-<button data-v="corn"><svg viewBox="0 0 24 24"><path d="M5 21V4"/><path d="M5 4.5h12l-3 4 3 4H5"/></svg>Córners</button>
 <button data-v="par"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/><circle cx="12" cy="15.5" r="2"/></svg>Partidos</button>
 <button data-v="mis"><svg viewBox="0 0 24 24"><path d="M4 8a2 2 0 012-2h12a2 2 0 012 2v2.2a2 2 0 000 3.6V16a2 2 0 01-2 2H6a2 2 0 01-2-2v-2.2a2 2 0 000-3.6z"/><path d="M14.5 6v12" stroke-dasharray="1.5 2.5"/></svg>Mis apuestas</button>
 </nav>
@@ -157,7 +155,7 @@ document.addEventListener('gesturestart',e=>e.preventDefault());document.addEven
 const pn=v=>parseFloat(String(v).trim().replace(',','.'));
 function init(){
 /* ===== ESTADO ===== */
-const TYPES=[['all','Todas las apuestas'],['o15','Más de 1.5 goles'],['o25','Más de 2.5 goles'],['o35','Más de 3.5 goles'],['btts','Ambos marcan'],['under','Menos de goles'],['g1t','Gol en 1er tiempo'],['tg','Goles de equipo'],['st','Remates al arco'],['g2t','Gol en 2.º tiempo'],['win','Ganador / Doble op.']];
+const TYPES=[['all','Todas las apuestas'],['o15','Más de 1.5 goles'],['o25','Más de 2.5 goles'],['o35','Más de 3.5 goles'],['btts','Ambos marcan'],['under','Menos de goles'],['g1t','Gol en 1er tiempo'],['corn','Córners'],['tg','Goles de equipo'],['st','Remates al arco'],['g2t','Gol en 2.º tiempo'],['win','Ganador / Doble op.']];
 let days=[...new Set(DATA.map(m=>m.date))].sort();if(!days.length)days=[loc(new Date())];
 let day=days.includes(loc(new Date()))?loc(new Date()):days[0],type='all',thr=.75,cthr=.51,view='valor',bets=LS.get('gm_bets',[]),cur=null,custom={},pend=null,slip=[],mode='simple',askDel=null;let askMk=null;
 const dn=d=>{const t=loc(new Date()),tm=loc(new Date(Date.now()+864e5));return d===t?'Hoy':d===tm?'Mañana':new Date(d+'T12:00').toLocaleDateString('es',{weekday:'short'})};
@@ -182,7 +180,7 @@ let liveOn=false;
 function isLive(m){const e=Date.now()-new Date(m.utc);return e>=0&&e<=130*6e4}
 function over(m){return Date.now()-new Date(m.utc)>130*6e4}
 function ms(){return liveOn?DATA.filter(m=>isLive(m)&&sel.has(m.league)):DATA.filter(m=>m.date===day&&!over(m)&&sel.has(m.league))}
-function flat(c){const o=[];ms().forEach(m=>m.bets.forEach(b=>{if(c?b.type==='corn':(b.type!=='corn'&&(type==='all'||b.type===type)))o.push({m,b})}));return o}
+function flat(){const o=[];ms().forEach(m=>m.bets.forEach(b=>{if(type==='all'||b.type===type)o.push({m,b})}));return o}
 const LC={ENG:'#6ea0ff',GER:'#ff7a7a',SCO:'#7ad7ff',SUI:'#ff9ac2',BRA:'#4fe0a0'};
 const ini=n=>n.replace(/[^A-Za-zÁÉÍÓÚÑáéíóúñ ]/g,'').split(' ').filter(Boolean).slice(0,2).map(w=>w[0]).join('').toUpperCase()||n.slice(0,2).toUpperCase();
 function st(m){const e=Date.now()-new Date(m.utc);if(!(e>=0))return`<span class="tpill">${dn(m.date)} · ${m.time}</span>`;return e<115*6e4?`<span class="tpill live">● EN JUEGO · empezó ${m.time}</span>`:`<span class="tpill end">TERMINADO · ${m.time}</span>`}
@@ -200,18 +198,16 @@ function emptyMsg(kind){if(liveOn&&ms().length)return`<div class="empty"><b styl
 function render(){
  document.querySelectorAll('.day').forEach(e=>e.classList.toggle('on',liveOn?e.id==='lv':e.dataset.d===day));const nl=DATA.filter(m=>isLive(m)&&sel.has(m.league)).length;$('#lvn').textContent=nl;$('#lv').classList.toggle('zero',!nl);
  const nv=M0=>M0.filter(m=>m.bets.some(b=>b.p>=.28&&val(b)!=null&&val(b)>=.05)).length;const LM=liveOn?ms():[];const LN=liveOn?'<div class="lvnote"><b>● En vivo: '+LM.length+(LM.length===1?' partido en juego':' partidos en juego')+' · '+nv(LM)+' con apuestas de valor.</b> Las probabilidades y cuotas son de antes del partido. La cuota real en vivo es otra: escribe la tuya para ver si aún hay valor.</div>':'';
- const F=flat(false);
+ const F=flat();
  const V=F.filter(x=>x.b.p>=.28&&val(x.b)!=null&&val(x.b)>=.05).sort((a,b)=>((val(a.b)>.35)-(val(b.b)>.35))||(val(b.b)-val(a.b))).slice(0,40);
  $('#l-valor').innerHTML=V.length?LN+V.map(x=>bcard(x,'v')).join(''):emptyMsg('v');
  const S=F.filter(x=>x.b.p>=thr).sort((a,b)=>b.b.p-a.b.p),GM=new Map();S.forEach(x=>{if(!GM.has(x.m.id))GM.set(x.m.id,[]);GM.get(x.m.id).push(x)});
  const SG=[...GM.values()].slice(0,60);
  $('#l-seg').innerHTML=SG.length?LN+SG.map(g=>{const rest=g.slice(1),id=g[0].m.id,op=openEx.has(id);const ex=rest.length?`<div class="exb"><button type="button" data-ex="${id}">${op?'Ocultar':'+'+rest.length+' más de este partido'} <span>${op?'▴':'▾'}</span></button>`+(op?rest.map(y=>`<div class="exr"><div><b>${y.b.label}</b><small>${y.b.odd?'Cuota '+y.b.odd.toFixed(2)+' · ':''}Cuota justa ${(1/y.b.p).toFixed(2)}</small></div><strong style="color:${y.b.p>=.75?'var(--go)':'var(--bl)'}">${pc(y.b.p)}</strong><button class="btn g" data-sv="${y.m.id}|${y.m.bets.indexOf(y.b)}">${inSlip(y.m.id,y.b.label)?'En el boleto ✓':'Guardar'}</button></div>`).join(''):'')+'</div>':'';return bcard(g[0],'s',ex)}).join(''):emptyMsg('s');
- const C=flat(true).filter(x=>x.b.p>=cthr).sort((a,b)=>b.b.p-a.b.p).slice(0,60);
- $('#l-corn').innerHTML=C.length?LN+C.map(x=>bcard(x,x.b.p>=.75?'s':'')).join(''):emptyMsg('c');
  const th=(a,k)=>'<span>Desde</span>'+[.95,.80,.75,.65,.51].map(x=>`<button data-${k}="${x}" class="${a===x?'on':''}">${pc(x)} o más</button>`).join('');
- $('#thr').innerHTML=th(thr,'thr');$('#cthr').innerHTML=th(cthr,'cthr');
- const NP=ms().length,SS=flat(false).filter(x=>x.b.p>=thr).length;
- $('#rs').innerHTML=(liveOn?'En vivo: ':(dn(day)==='Hoy'?'Hoy: ':dn(day)+': '))+'<b>'+NP+'</b> '+(NP===1?'partido':'partidos')+' · <button data-go="valor">'+V.length+' con buena cuota</button> · <button data-go="seg">'+SS+' con '+pc(thr)+' o más</button> · <button data-go="corn">'+C.length+' córners</button>';
+ $('#thr').innerHTML=th(thr,'thr');
+ const NP=ms().length,SS=flat().filter(x=>x.b.p>=thr).length;
+ $('#rs').innerHTML=(liveOn?'En vivo: ':(dn(day)==='Hoy'?'Hoy: ':dn(day)+': '))+'<b>'+NP+'</b> '+(NP===1?'partido':'partidos')+' · <button data-go="valor">'+V.length+' con buena cuota</button> · <button data-go="seg">'+SS+' con '+pc(thr)+' o más</button>';
  const fa=[];if(sel.size!==LGS.length)fa.push(lgLabel());if(type!=='all')fa.push(TYPES.find(t=>t[0]===type)[1]);if(liveOn)fa.push('En vivo');
  $('#actl').classList.toggle('on',fa.length>0&&view!=='mis');$('#actt').innerHTML='Filtrando: <b>'+fa.join(' · ')+'</b>';
  const M=ms();
@@ -221,7 +217,7 @@ let autoThr=false;const openEx=new Set();
 function moved(){
  $('#note').classList.remove('on');if(autoThr){thr=.75;autoThr=false;render()}
  if(view!=='valor'&&view!=='seg')return;
- const F=flat(false),has=t=>F.some(x=>x.b.p>=t),V=F.some(x=>x.b.p>=.28&&val(x.b)!=null&&val(x.b)>=.05);
+ const F=flat(),has=t=>F.some(x=>x.b.p>=t),V=F.some(x=>x.b.p>=.28&&val(x.b)!=null&&val(x.b)>=.05);
  if(view==='valor'&&!V){if(has(thr)){const w=type==='all'?'apuestas de valor':'apuestas de valor de ese tipo';setView('seg');const n=$('#note');n.textContent='Te llevé a Más probables: en Valor no hay '+w+' con este filtro.';n.classList.add('on');return}
   const l=[.80,.75,.65,.51].find(t=>t<thr&&has(t));if(l){thr=l;autoThr=true;setView('seg');const n=$('#note');n.textContent='Te llevé a Más probables y bajé el mínimo a '+pc(l)+'. Con este filtro no hay apuestas de valor ni con más probabilidad.';n.classList.add('on')}return}
  if(view==='seg'&&!has(thr)){if(V){setView('valor');const n=$('#note');n.textContent='Te llevé a Valor: en Más probables no hay apuestas con '+pc(thr)+' o más con este filtro.';n.classList.add('on');return}
@@ -231,7 +227,7 @@ function stamp(){const el=$('#demo');if(!REAL){el.innerHTML='<b>No se pudieron c
  const h=(Date.now()-new Date(REAL.generated))/36e5;const t=h<1?'hace menos de 1 hora':h<24?'hace '+Math.round(h)+' h':'hace '+Math.round(h/24)+' días';
  el.style.cssText+=h>9?';color:#ff8a8a;border-color:#7a2a2a;background:#2a0f0f':';color:var(--mu);border-color:var(--ln2);background:none';
  el.innerHTML='Datos actualizados <b>'+t+'</b>'+(h>9?'. Pueden estar atrasados.':'.')+(DATA.length?'':' Hoy no hay partidos cargados de tus ligas.')}
-function setView(v){view=v;document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('on',b.dataset.v===v));document.querySelectorAll('.view').forEach(e=>e.classList.toggle('on',e.id==='v-'+v));$('#filters').style.display=v==='mis'?'none':'';$('#demo').style.display=v==='mis'?'none':'';$('#rs').style.display=v==='mis'?'none':'';$('#actl').style.display=v==='mis'?'none':'';$('#note').classList.remove('on');$('#ft').style.display=v==='corn'?'none':'';document.querySelector('.sel').style.gridTemplateColumns=v==='corn'?'1fr':'1fr 1fr';if(v==='mis')renderMis();else render();$('#det').classList.remove('on');document.documentElement.classList.remove('lock');scrollTo(0,0);slipBar()}
+function setView(v){view=v;document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('on',b.dataset.v===v));document.querySelectorAll('.view').forEach(e=>e.classList.toggle('on',e.id==='v-'+v));$('#filters').style.display=v==='mis'?'none':'';$('#demo').style.display=v==='mis'?'none':'';$('#rs').style.display=v==='mis'?'none':'';$('#actl').style.display=v==='mis'?'none':'';$('#note').classList.remove('on');if(v==='mis')renderMis();else render();$('#det').classList.remove('on');document.documentElement.classList.remove('lock');scrollTo(0,0);slipBar()}
 function openDet(id){cur=DATA.find(m=>m.id===id);custom={};drawDet();$('#det').classList.add('on');document.documentElement.classList.add('lock');$('#det').scrollTop=0}
 function drawDet(){const m=cur;let h=`<div class="meta">${m.leagueName} · ${dn(m.date)} ${m.time}</div><div class="tm" style="font-size:21px">${m.home} vs ${m.away}</div><p style="color:var(--mu);font-size:13px;margin:0 0 4px">Escribe la cuota de tu casa y el valor se recalcula.</p>`;
  const sec=[['Resultado',['win']],['Goles',['o15','o25','o35','under','btts']],['Goles de equipo',['tg']],['Primer tiempo',['g1t']],['Segundo tiempo',['g2t']],['Remates al arco',['st']],['Córners',['corn']]];
