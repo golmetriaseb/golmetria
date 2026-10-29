@@ -1,10 +1,3 @@
-shotsOnTarget espn SB Mantova Cremonese 9 5
-wonCorners espn SB Padova Sudtirol 3 6
-shotsOnTarget espn SB Padova Sudtirol 5 5
-wonCorners espn SB Vicenza Modena 5 4
-shotsOnTarget espn SB Vicenza Modena 2 3
-wonCorners espn SB Virtus Entella Avellino 1 4
-shotsOnTarget espn SB Virtus Entella Avellino 5 2
 wonCorners espn BRA Fluminense Internacional 8 5
 shotsOnTarget espn BRA Fluminense Internacional 6 5
 wonCorners espn BRA Bragantino Chapecoense-SC 7 4
@@ -59,7 +52,7 @@ wonCorners espn USA Vancouver Whitecaps San Diego FC 8 3
 shotsOnTarget espn USA Vancouver Whitecaps San Diego FC 10 7
 resultados: 727
 {
- "generated": "2026-10-29T10:56:33.119009+00:00",
+ "generated": "2026-10-29T11:53:37.690548+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -174,10 +167,10 @@ resultados: 727
   },
   "EL1": {
    "name": "League One",
-   "hist": 690,
-   "last_result": "2026-10-24",
-   "has_corners": 690,
-   "has_half": 690,
+   "hist": 695,
+   "last_result": "2026-10-27",
+   "has_corners": 695,
+   "has_half": 695,
    "teams": [
     "AFC Wimbledon",
     "Barnsley",
