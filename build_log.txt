@@ -14,7 +14,7 @@ wonCorners espn ARG Argentinos Jrs Independiente 9 3
 shotsOnTarget espn ARG Argentinos Jrs Independiente 6 3
 wonCorners espn MEX Club America Club Tijuana 9 2
 shotsOnTarget espn MEX Club America Club Tijuana 8 2
-wonCorners espn SWE Hammarby Sirius 10 7
+wonCorners espn SWE Hammarby Sirius 10 8
 shotsOnTarget espn SWE Hammarby Sirius 4 5
 wonCorners espn SWE Kalmar GAIS 6 5
 shotsOnTarget espn SWE Kalmar GAIS 4 4
@@ -60,7 +60,7 @@ wonCorners espn USA Vancouver Whitecaps San Diego FC 8 3
 shotsOnTarget espn USA Vancouver Whitecaps San Diego FC 10 7
 resultados: 731
 {
- "generated": "2026-10-29T19:56:38.534981+00:00",
+ "generated": "2026-10-29T20:53:59.842072+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -208,4 +208,4 @@ resultados: 731
     "Rotherham",
     "Sheffield Weds",
     "Stevenag
-partidos: 306
+partidos: 303
