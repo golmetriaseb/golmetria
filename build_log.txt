@@ -1,10 +1,4 @@
-n Doncaster 5 5
-shotsOnTarget espn EL1 Luton Doncaster 7 2
-wonCorners espn EL1 Milton Keynes Dons Bromley 7 5
-shotsOnTarget espn EL1 Milton Keynes Dons Bromley 5 3
-wonCorners espn EL1 Oxford Stockport 3 7
-shotsOnTarget espn EL1 Oxford Stockport 5 3
-wonCorners espn EL1 Sheffield Weds Cambridge 6 11
+dge 6 11
 shotsOnTarget espn EL1 Sheffield Weds Cambridge 5 9
 wonCorners espn EL2 Barnet York 4 4
 shotsOnTarget espn EL2 Barnet York 6 2
@@ -56,6 +50,12 @@ wonCorners espn SB Vicenza Modena 5 4
 shotsOnTarget espn SB Vicenza Modena 2 3
 wonCorners espn SB Virtus Entella Avellino 1 4
 shotsOnTarget espn SB Virtus Entella Avellino 5 2
+wonCorners espn BRA Fluminense Internacional 8 5
+shotsOnTarget espn BRA Fluminense Internacional 6 5
+wonCorners espn BRA Bragantino Chapecoense-SC 7 4
+shotsOnTarget espn BRA Bragantino Chapecoense-SC 11 3
+wonCorners espn BRA Santos Palmeiras 1 3
+shotsOnTarget espn BRA Santos Palmeiras 5 5
 wonCorners espn ARG Argentinos Jrs Independiente 9 3
 shotsOnTarget espn ARG Argentinos Jrs Independiente 6 3
 wonCorners espn SWE Degerfors Vasteras SK 3 9
@@ -68,9 +68,9 @@ wonCorners espn SWE Goteborg Djurgarden 5 5
 shotsOnTarget espn SWE Goteborg Djurgarden 5 2
 wonCorners espn SWE AIK Elfsborg 2 10
 shotsOnTarget espn SWE AIK Elfsborg 4 5
-resultados: 707
+resultados: 710
 {
- "generated": "2026-10-29T00:21:18.352420+00:00",
+ "generated": "2026-10-29T01:07:32.230629+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -218,4 +218,4 @@ resultados: 707
     "Rotherham",
     "Sheffield Weds",
     "Stevenag
-partidos: 326
+partidos: 327
