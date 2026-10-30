@@ -58,7 +58,7 @@ wonCorners espn USA Vancouver Whitecaps San Diego FC 8 3
 shotsOnTarget espn USA Vancouver Whitecaps San Diego FC 10 7
 resultados: 716
 {
- "generated": "2026-10-30T01:10:04.498811+00:00",
+ "generated": "2026-10-30T02:05:52.055456+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -206,4 +206,4 @@ resultados: 716
     "Rotherham",
     "Sheffield Weds",
     "Stevenag
-partidos: 328
+partidos: 326
