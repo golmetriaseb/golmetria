@@ -2,7 +2,7 @@
 <html lang="es"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
-<meta name="gm-v" content="20261030204306"><meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="gm-v" content="20261030204718"><meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Golmetría"><link rel="apple-touch-icon" href="icon-180.png"><link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#0a0b14"><meta name="color-scheme" content="dark">
 <title>Golmetría</title>
@@ -85,7 +85,7 @@ nav button.on{color:var(--bl)}nav button.on svg{filter:drop-shadow(0 0 6px rgba(
 .warn{border:1px solid #5a4a1d;background:#1d170a;border-radius:12px;padding:9px 12px;font-size:13px;line-height:1.45;color:#ffd98a;margin:8px 0}
 .st{display:inline-block;border-radius:8px;padding:3px 9px;font:italic 800 13px var(--f1);letter-spacing:.8px;text-transform:uppercase;white-space:nowrap}.st.w{background:rgba(182,255,59,.12);color:var(--ok);border:1px solid rgba(182,255,59,.4)}.st.l{background:rgba(224,51,79,.14);color:#ff7d92;border:1px solid rgba(224,51,79,.45)}.st.p{background:var(--card2);color:var(--mu);border:1px solid var(--ln2)}
 .kc{font-size:12px;color:var(--mu);margin:0 0 6px;line-height:1.5}
-.kctl{display:flex;margin:0 0 10px}.ksw{display:flex;align-items:center;gap:9px;border:1px solid var(--ln2);background:var(--card);border-radius:12px;padding:9px 12px;color:var(--tx);font:700 13px Barlow;cursor:pointer}.ksw i{width:34px;height:20px;border-radius:999px;background:var(--card2);border:1px solid var(--ln2);position:relative;flex:none}.ksw i:after{content:"";position:absolute;top:2px;left:2px;width:14px;height:14px;border-radius:50%;background:var(--mu);transition:.15s}.ksw.on i{background:rgba(46,197,255,.25);border-color:var(--bl)}.ksw.on i:after{left:16px;background:var(--bl)}
+.kctl{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 10px}.kseg{display:flex;gap:4px;background:var(--card);border:1px solid var(--ln2);border-radius:12px;padding:4px}.kseg button{border:0;background:none;color:var(--mu);border-radius:9px;padding:7px 12px;font:italic 800 14px var(--f1);text-transform:uppercase;cursor:pointer}.kseg button.on{background:linear-gradient(135deg,#1f7bff,#2ec5ff);color:#fff}.kt small.lvt{color:#ff9fb0;font-weight:800}.ksw{display:flex;align-items:center;gap:9px;border:1px solid var(--ln2);background:var(--card);border-radius:12px;padding:9px 12px;color:var(--tx);font:700 13px Barlow;cursor:pointer}.ksw i{width:34px;height:20px;border-radius:999px;background:var(--card2);border:1px solid var(--ln2);position:relative;flex:none}.ksw i:after{content:"";position:absolute;top:2px;left:2px;width:14px;height:14px;border-radius:50%;background:var(--mu);transition:.15s}.ksw.on i{background:rgba(46,197,255,.25);border-color:var(--bl)}.ksw.on i:after{left:16px;background:var(--bl)}
 .ksl{display:flex;align-items:center;gap:10px;padding:16px 2px 8px}.ksl b{font:italic 800 20px var(--f1);color:#c4b5fd;background:rgba(167,139,250,.14);border:1px solid rgba(167,139,250,.45);border-radius:10px;padding:5px 11px 4px;letter-spacing:.5px;line-height:1}.ksl span{font-size:12px;color:var(--mu)}.ksl:after{content:"";flex:1;height:1px;background:linear-gradient(90deg,rgba(167,139,250,.4),transparent);order:3}.ksl.lv b{color:#ff9fb0;background:rgba(255,77,109,.14);border-color:rgba(255,77,109,.55)}.ksl.lv:after{background:linear-gradient(90deg,rgba(255,77,109,.45),transparent)}
 .klive{border:1px solid #6b2a1d;background:rgba(255,106,61,.08);border-radius:12px;padding:9px 12px;font-size:12.5px;line-height:1.45;color:#ffb59c;margin:0 0 10px}
 .kgh{width:100%;display:flex;align-items:center;justify-content:space-between;gap:10px;border:0;background:none;color:var(--bl);font:italic 800 14px var(--f1);letter-spacing:1px;text-transform:uppercase;padding:14px 4px 6px;cursor:pointer;text-align:left}.kgh small{font:600 12px Barlow;letter-spacing:0;text-transform:none;color:var(--mu)}
@@ -224,7 +224,7 @@ function render(){
  const V=F.filter(x=>x.b.p>=.28&&val(x.b)!=null&&val(x.b)>=.05).sort((a,b)=>((val(a.b)>.35)-(val(b.b)>.35))||(val(b.b)-val(a.b))).slice(0,40);
  $('#l-valor').innerHTML=V.length?LN+V.map(x=>bcard(x,'v')).join(''):emptyMsg('v');
  const S=F.filter(x=>x.b.p>=thr).sort((a,b)=>b.b.p-a.b.p),GM=new Map();S.forEach(x=>{if(!GM.has(x.m.id))GM.set(x.m.id,[]);GM.get(x.m.id).push(x)});
- const SG=[...GM.values()].sort((a,b)=>(a[0].m.utc<b[0].m.utc?-1:a[0].m.utc>b[0].m.utc?1:b[0].b.p-a[0].b.p));
+ const SG=[...GM.values()].sort(sortM==='p'?(a,b)=>b[0].b.p-a[0].b.p:(a,b)=>(a[0].m.utc<b[0].m.utc?-1:a[0].m.utc>b[0].m.utc?1:b[0].b.p-a[0].b.p));
  $('#l-seg').innerHTML=SG.length?LN+segHtml(SG):emptyMsg('s');
  const th=(a,k)=>'<span>Desde</span>'+[.95,.80,.75,.65].map(x=>`<button data-${k}="${x}" class="${a===x?'on':''}">${pc(x)} o más</button>`).join('');
  $('#thr').innerHTML=th(thr,'thr');
@@ -235,17 +235,18 @@ function render(){
  const M=ms();
  $('#l-par').innerHTML=M.length?LN+M.map(m=>{const n=m.bets.filter(b=>b.p>=.28&&val(b)!=null&&val(b)>=.05).length;return`<div class="card" data-m="${m.id}" style="cursor:pointer">${head(m)}<span class="chipv ${n?'p':'n'}">${n?n+' apuestas de valor · ver todas ›':'Sin apuestas de valor · ver partido ›'}</span></div>`}).join(''):'<div class="empty">No hay partidos este día.</div>';
 }
-let autoThr=false;const openEx=new Set(),closedLg=new Set();let grpLg=LS.get('gm_grp',false)===true;
+let autoThr=false;const openEx=new Set(),closedLg=new Set();let grpLg=LS.get('gm_grp',false)===true,sortM=LS.get('gm_sort','h')==='p'?'p':'h';
 function kRow(g){const m=g[0].m,t=g[0].b,rest=g.slice(1),id=m.id,o=openEx.has(id),hi=t.p>=.75;
  const rw=(y,top)=>`<div class="kdr"><div>${top?'<small class="k">LA MÁS PROBABLE</small>':''}<b>${y.b.label}</b><small>${y.b.odd?'Cuota '+y.b.odd.toFixed(2)+' · ':''}Cuota justa ${(1/y.b.p).toFixed(2)}</small></div><span class="p${y.b.p>=.75?' hi':''}">${pc(y.b.p)}</span><button class="ksv" type="button" data-sv="${m.id}|${m.bets.indexOf(y.b)}">${inSlip(m.id,y.b.label)?'En el boleto ✓':'Guardar'}</button></div>`;
- return `<div class="km${o?' open':''}"><button class="kr" type="button" data-ex="${id}" aria-expanded="${o}"><div class="kt">${m.time}<small>${dn(m.date)}</small></div><div class="ktt">${grpLg?'':`<div class="klg">${m.leagueName}</div>`}<div class="ktn">${m.home} vs ${m.away}</div><div class="kb"><b>${t.label}</b>${rest.length?' · +'+rest.length+' más':''}</div></div><div class="kpc${hi?' hi':''}">${pc(t.p)}<small>cuota justa ${(1/t.p).toFixed(2)}</small></div><i class="kcv"></i></button><div class="kdet"><div class="ktop">${rw(g[0],true)}</div>${rest.length?`<div class="kmore">Más de este partido (${rest.length})</div>`+rest.map(y=>rw(y,false)).join(''):''}<button class="kgo" type="button" data-m="${m.id}">Ver partido</button></div></div>`}
+ return `<div class="km${o?' open':''}"><button class="kr" type="button" data-ex="${id}" aria-expanded="${o}"><div class="kt">${m.time}<small${isLive(m)?' class="lvt"':''}>${isLive(m)?'En vivo':dn(m.date)}</small></div><div class="ktt">${grpLg?'':`<div class="klg">${m.leagueName}</div>`}<div class="ktn">${m.home} vs ${m.away}</div><div class="kb"><b>${t.label}</b>${rest.length?' · +'+rest.length+' más':''}</div></div><div class="kpc${hi?' hi':''}">${pc(t.p)}<small>cuota justa ${(1/t.p).toFixed(2)}</small></div><i class="kcv"></i></button><div class="kdet"><div class="ktop">${rw(g[0],true)}</div>${rest.length?`<div class="kmore">Más de este partido (${rest.length})</div>`+rest.map(y=>rw(y,false)).join(''):''}<button class="kgo" type="button" data-m="${m.id}">Ver partido</button></div></div>`}
 function kSlots(arr){let out='',last='';const lv=arr.filter(g=>isLive(g[0].m)),nx=arr.filter(g=>!isLive(g[0].m));
  if(lv.length)out+=`<div class="ksl lv"><b>● En vivo</b><span>${lv.length} ${lv.length===1?'partido en juego':'partidos en juego'}</span></div>`+lv.map(kRow).join('');
  nx.forEach(g=>{const m=g[0].m,key=m.date+m.time;if(key!==last){last=key;const n=nx.filter(x=>x[0].m.date+x[0].m.time===key).length;out+=`<div class="ksl"><b>${m.time}</b><span>${n} ${n===1?'partido':'partidos'}</span></div>`}out+=kRow(g)});return out}
-function segHtml(SG){const n=SG.length;let h=`<div class="kc">${n} ${n===1?'partido':'partidos'} con ${pc(thr)} o más · en vivo primero, luego por hora; en cada hora, de mayor a menor probabilidad.</div><div class="kctl"><button class="ksw${grpLg?' on':''}" type="button" data-grp="1"><i></i>Agrupar por liga</button></div>`;
- if(!grpLg)return h+kSlots(SG);
+function segHtml(SG){const n=SG.length;let h=`<div class="kc">${n} ${n===1?'partido':'partidos'} con ${pc(thr)} o más · ${sortM==='p'?'de mayor a menor probabilidad.':'en vivo primero, luego por hora; en cada hora, de mayor a menor probabilidad.'}</div><div class="kctl"><div class="kseg"><button type="button" data-sort="h" class="${sortM==='h'?'on':''}">Por hora</button><button type="button" data-sort="p" class="${sortM==='p'?'on':''}">Más probables</button></div><button class="ksw${grpLg?' on':''}" type="button" data-grp="1"><i></i>Agrupar por liga</button></div>`;
+ const body=a=>sortM==='p'?a.map(kRow).join(''):kSlots(a);
+ if(!grpLg)return h+body(SG);
  const G=new Map();SG.forEach(g=>{const l=g[0].m.leagueName;if(!G.has(l))G.set(l,[]);G.get(l).push(g)});
- G.forEach((arr,l)=>{const c=closedLg.has(l),best=Math.max(...arr.map(g=>g[0].b.p));h+=`<button class="kgh" type="button" data-lgc="${l.replace(/"/g,'&quot;')}" aria-expanded="${!c}"><span>${c?'▸':'▾'} ${l}</span><small>${arr.length} ${arr.length===1?'partido':'partidos'} · mejor ${pc(best)}</small></button>`+(c?'':kSlots(arr))});return h}
+ G.forEach((arr,l)=>{const c=closedLg.has(l),best=Math.max(...arr.map(g=>g[0].b.p));h+=`<button class="kgh" type="button" data-lgc="${l.replace(/"/g,'&quot;')}" aria-expanded="${!c}"><span>${c?'▸':'▾'} ${l}</span><small>${arr.length} ${arr.length===1?'partido':'partidos'} · mejor ${pc(best)}</small></button>`+(c?'':body(arr))});return h}
 
 function moved(){
  $('#note').classList.remove('on');if(autoThr){thr=.75;autoThr=false;render()}
@@ -319,6 +320,7 @@ document.addEventListener('click',e=>{const t=e.target;
  if(t.closest('#clr')){sel=new Set(LGS.map(x=>x[0]));LS.set('gm_lg',[...sel]);type='all';liveOn=false;$('#ft').value='all';drawLg();render();moved();return}
  const n=t.closest('nav button');if(n){setView(n.dataset.v);return}
  const sv=t.closest('[data-sv]');if(sv){const[a,b]=sv.dataset.sv.split('|');askSave(a,+b);return}
+ const so=t.closest('[data-sort]');if(so){sortM=so.dataset.sort;LS.set('gm_sort',sortM);render();return}
  const gp=t.closest('[data-grp]');if(gp){grpLg=!grpLg;LS.set('gm_grp',grpLg);render();return}
  const gl=t.closest('[data-lgc]');if(gl){const k=gl.dataset.lgc;closedLg.has(k)?closedLg.delete(k):closedLg.add(k);render();return}
  const ex=t.closest('[data-ex]');if(ex){const k=ex.dataset.ex;openEx.has(k)?openEx.delete(k):openEx.add(k);render();return}
