@@ -1,6 +1,6 @@
 resultados: 722
 {
- "generated": "2026-10-30T09:01:43.860734+00:00",
+ "generated": "2026-10-30T09:59:07.541579+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -34,7 +34,7 @@ resultados: 722
     "Wolves"
    ],
    "fav": false,
-   "fixtures_fd": 0,
+   "fixtures_fd": 10,
    "name_map": {
     "Manchester United": "Man United",
     "AFC Bournemouth": "Bournemouth",
@@ -91,7 +91,7 @@ resultados: 722
     "Wrexham"
    ],
    "fav": true,
-   "fixtures_fd": 0,
+   "fixtures_fd": 12,
    "name_map": {
     "Lincoln City": "Lincoln",
     "Birmingham City": "Birmingham",
@@ -147,5 +147,5 @@ resultados: 722
     "Reading",
     "Rotherham",
     "Sheffield Weds",
-    "Stevenag
-partidos: 360
+    "Steven
+partidos: 361
