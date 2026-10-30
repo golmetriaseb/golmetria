@@ -6,13 +6,21 @@ wonCorners espn L1 Le Havre Paris FC 5 3
 shotsOnTarget espn L1 Le Havre Paris FC 5 10
 wonCorners espn L1 Nice Rennes 4 7
 shotsOnTarget espn L1 Nice Rennes 8 9
+wonCorners espn L2 Nantes Clermont 4 4
+shotsOnTarget espn L2 Nantes Clermont 3 1
+wonCorners espn L2 Rodez Dunkerque 5 4
+shotsOnTarget espn L2 Rodez Dunkerque 6 2
+wonCorners espn L2 Laval Boulogne 3 4
+shotsOnTarget espn L2 Laval Boulogne 2 2
 wonCorners espn TUR Konyaspor Galatasaray 3 9
 shotsOnTarget espn TUR Konyaspor Galatasaray 1 8
 wonCorners espn DNK Lyngby Randers FC 3 4
 shotsOnTarget espn DNK Lyngby Randers FC 8 4
-resultados: 728
+wonCorners espn NOR Bodo/Glimt Viking 5 3
+shotsOnTarget espn NOR Bodo/Glimt Viking 3 5
+resultados: 733
 {
- "generated": "2026-10-30T19:53:47.501251+00:00",
+ "generated": "2026-10-30T20:51:25.221327+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -121,7 +129,7 @@ resultados: 728
     "Wolverhampton Wanderers": "Wolves",
     "Cardiff City": "Cardiff"
    },
-   "fixtures_espn": 25,
+   "fixtures_espn": 24,
    "espn_unmatched": 0,
    "matches": 25
   },
@@ -160,4 +168,4 @@ resultados: 728
     "Rotherham",
     "Sheffield Weds",
     "Steven
-partidos: 360
+partidos: 356
