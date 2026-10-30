@@ -2,7 +2,7 @@
 <html lang="es"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
-<meta name="gm-v" content="20261030194634"><meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="gm-v" content="20261030204306"><meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Golmetría"><link rel="apple-touch-icon" href="icon-180.png"><link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#0a0b14"><meta name="color-scheme" content="dark">
 <title>Golmetría</title>
@@ -226,7 +226,7 @@ function render(){
  const S=F.filter(x=>x.b.p>=thr).sort((a,b)=>b.b.p-a.b.p),GM=new Map();S.forEach(x=>{if(!GM.has(x.m.id))GM.set(x.m.id,[]);GM.get(x.m.id).push(x)});
  const SG=[...GM.values()].sort((a,b)=>(a[0].m.utc<b[0].m.utc?-1:a[0].m.utc>b[0].m.utc?1:b[0].b.p-a[0].b.p));
  $('#l-seg').innerHTML=SG.length?LN+segHtml(SG):emptyMsg('s');
- const th=(a,k)=>'<span>Desde</span>'+[.95,.80,.75,.65,.51].map(x=>`<button data-${k}="${x}" class="${a===x?'on':''}">${pc(x)} o más</button>`).join('');
+ const th=(a,k)=>'<span>Desde</span>'+[.95,.80,.75,.65].map(x=>`<button data-${k}="${x}" class="${a===x?'on':''}">${pc(x)} o más</button>`).join('');
  $('#thr').innerHTML=th(thr,'thr');
  const NP=ms().length,SS=new Set(flat().filter(x=>x.b.p>=thr).map(x=>x.m.id)).size;
  $('#rs').innerHTML=(liveOn?'En vivo: ':(dn(day)==='Hoy'?'Hoy: ':dn(day)+': '))+'<b>'+NP+'</b> '+(NP===1?'partido':'partidos')+' · <button data-go="valor">'+V.length+' con buena cuota</button> · <button data-go="seg">'+SS+' con '+pc(thr)+' o más</button>';
@@ -252,9 +252,9 @@ function moved(){
  if(view!=='valor'&&view!=='seg')return;
  const F=flat(),has=t=>F.some(x=>x.b.p>=t),V=F.some(x=>x.b.p>=.28&&val(x.b)!=null&&val(x.b)>=.05);
  if(view==='valor'&&!V){if(has(thr)){const w=type==='all'?'apuestas de valor':'apuestas de valor de ese tipo';setView('seg');const n=$('#note');n.textContent='Te llevé a Más probables: en Valor no hay '+w+' con este filtro.';n.classList.add('on');return}
-  const l=[.80,.75,.65,.51].find(t=>t<thr&&has(t));if(l){thr=l;autoThr=true;setView('seg');const n=$('#note');n.textContent='Te llevé a Más probables y bajé el mínimo a '+pc(l)+'. Con este filtro no hay apuestas de valor ni con más probabilidad.';n.classList.add('on')}return}
+  const l=[.80,.75,.65].find(t=>t<thr&&has(t));if(l){thr=l;autoThr=true;setView('seg');const n=$('#note');n.textContent='Te llevé a Más probables y bajé el mínimo a '+pc(l)+'. Con este filtro no hay apuestas de valor ni con más probabilidad.';n.classList.add('on')}return}
  if(view==='seg'&&!has(thr)){if(V){setView('valor');const n=$('#note');n.textContent='Te llevé a Valor: en Más probables no hay apuestas con '+pc(thr)+' o más con este filtro.';n.classList.add('on');return}
-  const l=[.80,.75,.65,.51].find(t=>t<thr&&has(t));if(l){const o=thr;thr=l;autoThr=true;render();const n=$('#note');n.textContent='Bajé el mínimo a '+pc(l)+': con '+pc(o)+' o más no había apuestas con este filtro.';n.classList.add('on')}}
+  const l=[.80,.75,.65].find(t=>t<thr&&has(t));if(l){const o=thr;thr=l;autoThr=true;render();const n=$('#note');n.textContent='Bajé el mínimo a '+pc(l)+': con '+pc(o)+' o más no había apuestas con este filtro.';n.classList.add('on')}}
 }
 function stamp(){const el=$('#demo');if(!REAL){el.innerHTML='<b>No se pudieron cargar los datos reales.</b> Estás viendo partidos de ejemplo.';return}
  const h=(Date.now()-new Date(REAL.generated))/36e5;const t=h<1?'hace menos de 1 hora':h<24?'hace '+Math.round(h)+' h':'hace '+Math.round(h/24)+' días';
