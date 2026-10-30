@@ -1,3 +1,7 @@
+wonCorners espn BRA Atletico-MG Cruzeiro 7 2
+shotsOnTarget espn BRA Atletico-MG Cruzeiro 2 6
+wonCorners espn BRA Vasco Flamengo RJ 6 4
+shotsOnTarget espn BRA Vasco Flamengo RJ 2 6
 wonCorners espn BRA Fluminense Internacional 8 5
 shotsOnTarget espn BRA Fluminense Internacional 6 5
 wonCorners espn BRA Bragantino Chapecoense-SC 7 4
@@ -8,8 +12,6 @@ wonCorners espn BRA Bahia Sao Paulo 7 11
 shotsOnTarget espn BRA Bahia Sao Paulo 4 6
 wonCorners espn BRA Remo Botafogo RJ 3 8
 shotsOnTarget espn BRA Remo Botafogo RJ 4 2
-wonCorners espn ARG Argentinos Jrs Independiente 9 3
-shotsOnTarget espn ARG Argentinos Jrs Independiente 6 3
 wonCorners espn MEX Club America Club Tijuana 9 2
 shotsOnTarget espn MEX Club America Club Tijuana 8 2
 wonCorners espn SWE Hammarby Sirius 10 8
@@ -26,8 +28,6 @@ wonCorners espn SWE Brommapojkarna Hacken 5 12
 shotsOnTarget espn SWE Brommapojkarna Hacken 6 4
 wonCorners espn SWE Goteborg Djurgarden 5 5
 shotsOnTarget espn SWE Goteborg Djurgarden 5 2
-wonCorners espn SWE AIK Elfsborg 2 10
-shotsOnTarget espn SWE AIK Elfsborg 4 5
 wonCorners espn USA Charlotte CF Montreal 8 6
 shotsOnTarget espn USA Charlotte CF Montreal 7 1
 wonCorners espn USA Inter Miami FC Cincinnati 4 3
@@ -56,9 +56,9 @@ wonCorners espn USA Seattle Sounders Houston Dynamo 10 1
 shotsOnTarget espn USA Seattle Sounders Houston Dynamo 5 1
 wonCorners espn USA Vancouver Whitecaps San Diego FC 8 3
 shotsOnTarget espn USA Vancouver Whitecaps San Diego FC 10 7
-resultados: 732
+resultados: 716
 {
- "generated": "2026-10-29T23:47:16.910533+00:00",
+ "generated": "2026-10-30T01:10:04.498811+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -106,9 +106,9 @@ resultados: 732
     "Tottenham Hotspur": "Tottenham",
     "Newcastle United": "Newcastle"
    },
-   "fixtures_espn": 10,
+   "fixtures_espn": 11,
    "espn_unmatched": 0,
-   "matches": 10
+   "matches": 11
   },
   "ENG": {
    "name": "Championship",
@@ -167,9 +167,9 @@ resultados: 732
     "Wolverhampton Wanderers": "Wolves",
     "Cardiff City": "Cardiff"
    },
-   "fixtures_espn": 24,
+   "fixtures_espn": 25,
    "espn_unmatched": 0,
-   "matches": 24
+   "matches": 25
   },
   "EL1": {
    "name": "League One",
@@ -206,4 +206,4 @@ resultados: 732
     "Rotherham",
     "Sheffield Weds",
     "Stevenag
-partidos: 300
+partidos: 328
