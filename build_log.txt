@@ -1,7 +1,9 @@
-wonCorners espn BRA Atletico-MG Cruzeiro 7 2
+ico-MG Cruzeiro 7 2
 shotsOnTarget espn BRA Atletico-MG Cruzeiro 2 6
 wonCorners espn BRA Vasco Flamengo RJ 6 4
 shotsOnTarget espn BRA Vasco Flamengo RJ 2 6
+wonCorners espn BRA Gremio Athletico-PR 6 8
+shotsOnTarget espn BRA Gremio Athletico-PR 5 4
 wonCorners espn BRA Fluminense Internacional 8 5
 shotsOnTarget espn BRA Fluminense Internacional 6 5
 wonCorners espn BRA Bragantino Chapecoense-SC 7 4
@@ -56,9 +58,9 @@ wonCorners espn USA Seattle Sounders Houston Dynamo 10 1
 shotsOnTarget espn USA Seattle Sounders Houston Dynamo 5 1
 wonCorners espn USA Vancouver Whitecaps San Diego FC 8 3
 shotsOnTarget espn USA Vancouver Whitecaps San Diego FC 10 7
-resultados: 716
+resultados: 717
 {
- "generated": "2026-10-30T02:05:52.055456+00:00",
+ "generated": "2026-10-30T02:57:27.639536+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
