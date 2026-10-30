@@ -1,66 +1,6 @@
-ico-MG Cruzeiro 7 2
-shotsOnTarget espn BRA Atletico-MG Cruzeiro 2 6
-wonCorners espn BRA Vasco Flamengo RJ 6 4
-shotsOnTarget espn BRA Vasco Flamengo RJ 2 6
-wonCorners espn BRA Gremio Athletico-PR 6 8
-shotsOnTarget espn BRA Gremio Athletico-PR 5 4
-wonCorners espn BRA Fluminense Internacional 8 5
-shotsOnTarget espn BRA Fluminense Internacional 6 5
-wonCorners espn BRA Bragantino Chapecoense-SC 7 4
-shotsOnTarget espn BRA Bragantino Chapecoense-SC 11 3
-wonCorners espn BRA Santos Palmeiras 1 3
-shotsOnTarget espn BRA Santos Palmeiras 5 5
-wonCorners espn BRA Bahia Sao Paulo 7 11
-shotsOnTarget espn BRA Bahia Sao Paulo 4 6
-wonCorners espn BRA Remo Botafogo RJ 3 8
-shotsOnTarget espn BRA Remo Botafogo RJ 4 2
-wonCorners espn MEX Club America Club Tijuana 9 2
-shotsOnTarget espn MEX Club America Club Tijuana 8 2
-wonCorners espn SWE Hammarby Sirius 10 8
-shotsOnTarget espn SWE Hammarby Sirius 4 5
-wonCorners espn SWE Kalmar GAIS 6 5
-shotsOnTarget espn SWE Kalmar GAIS 4 4
-wonCorners espn SWE Orgryte Mjallby 3 3
-shotsOnTarget espn SWE Orgryte Mjallby 3 5
-wonCorners espn SWE Degerfors Vasteras SK 3 9
-shotsOnTarget espn SWE Degerfors Vasteras SK 2 8
-wonCorners espn SWE Halmstad Malmo FF 6 5
-shotsOnTarget espn SWE Halmstad Malmo FF 5 4
-wonCorners espn SWE Brommapojkarna Hacken 5 12
-shotsOnTarget espn SWE Brommapojkarna Hacken 6 4
-wonCorners espn SWE Goteborg Djurgarden 5 5
-shotsOnTarget espn SWE Goteborg Djurgarden 5 2
-wonCorners espn USA Charlotte CF Montreal 8 6
-shotsOnTarget espn USA Charlotte CF Montreal 7 1
-wonCorners espn USA Inter Miami FC Cincinnati 4 3
-shotsOnTarget espn USA Inter Miami FC Cincinnati 4 3
-wonCorners espn USA New England Revolution New York Red Bulls 2 6
-shotsOnTarget espn USA New England Revolution New York Red Bulls 4 11
-wonCorners espn USA New York City Atlanta Utd 3 3
-shotsOnTarget espn USA New York City Atlanta Utd 6 6
-wonCorners espn USA Toronto FC DC United 5 7
-shotsOnTarget espn USA Toronto FC DC United 2 2
-wonCorners espn USA Austin FC Real Salt Lake 8 7
-shotsOnTarget espn USA Austin FC Real Salt Lake 5 4
-wonCorners espn USA Chicago Fire Orlando City 8 3
-shotsOnTarget espn USA Chicago Fire Orlando City 5 5
-wonCorners espn USA FC Dallas Columbus Crew 9 3
-shotsOnTarget espn USA FC Dallas Columbus Crew 5 3
-wonCorners espn USA Minnesota United Sporting Kansas City 8 4
-shotsOnTarget espn USA Minnesota United Sporting Kansas City 8 2
-wonCorners espn USA Nashville SC Philadelphia Union 2 8
-shotsOnTarget espn USA Nashville SC Philadelphia Union 1 2
-wonCorners espn USA St. Louis City Portland Timbers 5 4
-shotsOnTarget espn USA St. Louis City Portland Timbers 6 6
-wonCorners espn USA San Jose Earthquakes Colorado Rapids 11 5
-shotsOnTarget espn USA San Jose Earthquakes Colorado Rapids 8 3
-wonCorners espn USA Seattle Sounders Houston Dynamo 10 1
-shotsOnTarget espn USA Seattle Sounders Houston Dynamo 5 1
-wonCorners espn USA Vancouver Whitecaps San Diego FC 8 3
-shotsOnTarget espn USA Vancouver Whitecaps San Diego FC 10 7
-resultados: 717
+resultados: 722
 {
- "generated": "2026-10-30T07:07:48.071801+00:00",
+ "generated": "2026-10-30T08:10:28.294919+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
