@@ -1,6 +1,6 @@
 resultados: 722
 {
- "generated": "2026-10-30T08:10:28.294919+00:00",
+ "generated": "2026-10-30T09:01:43.860734+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -148,4 +148,4 @@ resultados: 722
     "Rotherham",
     "Sheffield Weds",
     "Stevenag
-partidos: 327
+partidos: 360
