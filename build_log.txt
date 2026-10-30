@@ -1,6 +1,8 @@
-resultados: 722
+wonCorners espn TUR Konyaspor Galatasaray 3 9
+shotsOnTarget espn TUR Konyaspor Galatasaray 1 8
+resultados: 723
 {
- "generated": "2026-10-30T17:51:30.939681+00:00",
+ "generated": "2026-10-30T18:56:22.666882+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -148,4 +150,4 @@ resultados: 722
     "Rotherham",
     "Sheffield Weds",
     "Steven
-partidos: 361
+partidos: 360
