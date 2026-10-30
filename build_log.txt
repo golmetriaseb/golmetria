@@ -1,3 +1,7 @@
+wonCorners espn EL2 Newport County Chesterfield 6 4
+shotsOnTarget espn EL2 Newport County Chesterfield 5 3
+wonCorners espn GB1 Elversberg Mainz 5 11
+shotsOnTarget espn GB1 Elversberg Mainz 6 2
 wonCorners espn GER Bielefeld Braunschweig 3 4
 shotsOnTarget espn GER Bielefeld Braunschweig 6 2
 wonCorners espn GER Cottbus Bochum 5 4
@@ -6,21 +10,27 @@ wonCorners espn L1 Le Havre Paris FC 5 3
 shotsOnTarget espn L1 Le Havre Paris FC 5 10
 wonCorners espn L1 Nice Rennes 4 7
 shotsOnTarget espn L1 Nice Rennes 8 9
+wonCorners espn L2 Grenoble Dijon 7 2
+shotsOnTarget espn L2 Grenoble Dijon 8 4
+wonCorners espn L2 Metz Pau FC 8 4
+shotsOnTarget espn L2 Metz Pau FC 5 5
 wonCorners espn L2 Nantes Clermont 4 4
-shotsOnTarget espn L2 Nantes Clermont 3 1
+shotsOnTarget espn L2 Nantes Clermont 5 1
 wonCorners espn L2 Rodez Dunkerque 5 4
 shotsOnTarget espn L2 Rodez Dunkerque 6 2
 wonCorners espn L2 Laval Boulogne 3 4
 shotsOnTarget espn L2 Laval Boulogne 2 2
+wonCorners espn BEL Waregem Club Brugge 2 14
+shotsOnTarget espn BEL Waregem Club Brugge 3 8
 wonCorners espn TUR Konyaspor Galatasaray 3 9
 shotsOnTarget espn TUR Konyaspor Galatasaray 1 8
 wonCorners espn DNK Lyngby Randers FC 3 4
 shotsOnTarget espn DNK Lyngby Randers FC 8 4
 wonCorners espn NOR Bodo/Glimt Viking 5 3
 shotsOnTarget espn NOR Bodo/Glimt Viking 3 5
-resultados: 733
+resultados: 740
 {
- "generated": "2026-10-30T20:51:25.221327+00:00",
+ "generated": "2026-10-30T21:47:13.787914+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -168,4 +178,4 @@ resultados: 733
     "Rotherham",
     "Sheffield Weds",
     "Steven
-partidos: 356
+partidos: 350
