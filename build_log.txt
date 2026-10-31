@@ -32,13 +32,19 @@ wonCorners espn POR Casa Pia Sp Lisbon 3 4
 shotsOnTarget espn POR Casa Pia Sp Lisbon 2 11
 wonCorners espn TUR Konyaspor Galatasaray 3 9
 shotsOnTarget espn TUR Konyaspor Galatasaray 1 8
+wonCorners espn BRA Corinthians Mirassol 4 2
+shotsOnTarget espn BRA Corinthians Mirassol 8 0
+wonCorners espn ARG Estudiantes Rio Cuarto Gimnasia L.P. 5 4
+shotsOnTarget espn ARG Estudiantes Rio Cuarto Gimnasia L.P. 2 3
+wonCorners espn ARG Huracan Tigre 9 2
+shotsOnTarget espn ARG Huracan Tigre 2 4
 wonCorners espn DNK Lyngby Randers FC 3 4
 shotsOnTarget espn DNK Lyngby Randers FC 8 4
 wonCorners espn NOR Bodo/Glimt Viking 5 3
 shotsOnTarget espn NOR Bodo/Glimt Viking 3 5
-resultados: 744
+resultados: 716
 {
- "generated": "2026-10-30T23:45:23.285313+00:00",
+ "generated": "2026-10-31T01:07:57.881071+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -86,9 +92,9 @@ resultados: 744
     "Tottenham Hotspur": "Tottenham",
     "Newcastle United": "Newcastle"
    },
-   "fixtures_espn": 11,
+   "fixtures_espn": 15,
    "espn_unmatched": 0,
-   "matches": 11
+   "matches": 15
   },
   "ENG": {
    "name": "Championship",
@@ -147,9 +153,9 @@ resultados: 744
     "Wolverhampton Wanderers": "Wolves",
     "Cardiff City": "Cardiff"
    },
-   "fixtures_espn": 24,
+   "fixtures_espn": 35,
    "espn_unmatched": 0,
-   "matches": 24
+   "matches": 35
   },
   "EL1": {
    "name": "League One",
@@ -186,4 +192,4 @@ resultados: 744
     "Rotherham",
     "Sheffield Weds",
     "Steven
-partidos: 330
+partidos: 432
