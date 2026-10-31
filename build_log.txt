@@ -48,11 +48,13 @@ wonCorners espn MEX Atl. San Luis Atlas 7 4
 shotsOnTarget espn MEX Atl. San Luis Atlas 4 1
 wonCorners espn MEX Juarez Queretaro 2 10
 shotsOnTarget espn MEX Juarez Queretaro 5 6
+wonCorners espn MEX Puebla UNAM Pumas 7 3
+shotsOnTarget espn MEX Puebla UNAM Pumas 6 5
 wonCorners espn NOR Bodo/Glimt Viking 5 3
 shotsOnTarget espn NOR Bodo/Glimt Viking 3 5
-resultados: 720
+resultados: 721
 {
- "generated": "2026-10-31T04:53:33.421172+00:00",
+ "generated": "2026-10-31T05:50:21.249129+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
