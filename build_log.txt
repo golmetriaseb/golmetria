@@ -1,13 +1,6 @@
-rmont 4 4
-shotsOnTarget espn L2 Nantes Clermont 5 1
-wonCorners espn L2 Rodez Dunkerque 5 4
-shotsOnTarget espn L2 Rodez Dunkerque 6 2
-wonCorners espn L2 Laval Boulogne 3 4
-shotsOnTarget espn L2 Laval Boulogne 2 2
-wonCorners espn ERE Feyenoord For Sittard 6 2
-shotsOnTarget espn ERE Feyenoord For Sittard 6 3
-wonCorners espn BEL Mechelen Genk 3 8
-shotsOnTarget espn BEL Mechelen Genk 3 5
+L Mechelen Genk 3 5
+wonCorners espn BEL Standard Kortrijk 10 4
+shotsOnTarget espn BEL Standard Kortrijk 6 6
 wonCorners espn BEL Waregem Club Brugge 2 14
 shotsOnTarget espn BEL Waregem Club Brugge 3 8
 wonCorners espn POR Moreirense Estrela 3 3
@@ -22,6 +15,8 @@ wonCorners espn TUR Fenerbahce Goztep 5 8
 shotsOnTarget espn TUR Fenerbahce Goztep 6 6
 wonCorners espn TUR Konyaspor Galatasaray 3 9
 shotsOnTarget espn TUR Konyaspor Galatasaray 1 8
+wonCorners espn GRE Kifisia Olympiakos 10 6
+shotsOnTarget espn GRE Kifisia Olympiakos 8 5
 wonCorners espn BRA Corinthians Mirassol 4 2
 shotsOnTarget espn BRA Corinthians Mirassol 8 0
 wonCorners espn ARG Estudiantes Rio Cuarto Gimnasia L.P. 5 4
@@ -54,6 +49,8 @@ wonCorners espn MEX Puebla UNAM Pumas 7 3
 shotsOnTarget espn MEX Puebla UNAM Pumas 6 5
 wonCorners espn NOR Fredrikstad Rosenborg 4 4
 shotsOnTarget espn NOR Fredrikstad Rosenborg 5 4
+wonCorners espn NOR Aalesund Sandefjord 7 7
+shotsOnTarget espn NOR Aalesund Sandefjord 5 9
 wonCorners espn NOR Bodo/Glimt Viking 5 3
 shotsOnTarget espn NOR Bodo/Glimt Viking 3 5
 wonCorners espn RUS Rubin Kazan Fakel Voronezh 2 4
@@ -62,9 +59,11 @@ wonCorners espn RUS Dynamo Moscow Akhmat Grozny 3 3
 shotsOnTarget espn RUS Dynamo Moscow Akhmat Grozny 12 1
 wonCorners espn RUS Rodina Moscow Krasnodar 1 1
 shotsOnTarget espn RUS Rodina Moscow Krasnodar 4 5
-resultados: 812
+wonCorners espn USA Charlotte Orlando City 4 4
+shotsOnTarget espn USA Charlotte Orlando City 6 8
+resultados: 823
 {
- "generated": "2026-10-31T18:53:31.690247+00:00",
+ "generated": "2026-10-31T19:46:00.272312+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -216,4 +215,4 @@ resultados: 812
    "fixtures_fd": 12,
    "name_map": {
     "Sheffield Wednesday": "Sheffield We
-partidos: 338
+partidos: 334
