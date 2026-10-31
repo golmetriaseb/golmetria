@@ -52,6 +52,8 @@ wonCorners espn JPN Mito Sanfrecce Hiroshima 0 7
 shotsOnTarget espn JPN Mito Sanfrecce Hiroshima 0 7
 wonCorners espn JPN Kashima Antlers Cerezo Osaka 10 2
 shotsOnTarget espn JPN Kashima Antlers Cerezo Osaka 7 3
+wonCorners espn JPN Vissel Kobe Nagoya Grampus 8 6
+shotsOnTarget espn JPN Vissel Kobe Nagoya Grampus 4 4
 wonCorners espn MEX Atl. San Luis Atlas 7 4
 shotsOnTarget espn MEX Atl. San Luis Atlas 4 1
 wonCorners espn MEX Juarez Queretaro 2 10
@@ -60,9 +62,9 @@ wonCorners espn MEX Puebla UNAM Pumas 7 3
 shotsOnTarget espn MEX Puebla UNAM Pumas 6 5
 wonCorners espn NOR Bodo/Glimt Viking 5 3
 shotsOnTarget espn NOR Bodo/Glimt Viking 3 5
-resultados: 725
+resultados: 726
 {
- "generated": "2026-10-31T07:58:19.753199+00:00",
+ "generated": "2026-10-31T08:52:20.829979+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -210,4 +212,4 @@ resultados: 725
     "Rotherham",
     "Sheffield Weds",
     "Steven
-partidos: 426
+partidos: 423
