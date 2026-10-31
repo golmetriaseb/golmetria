@@ -44,7 +44,7 @@ wonCorners espn NOR Bodo/Glimt Viking 5 3
 shotsOnTarget espn NOR Bodo/Glimt Viking 3 5
 resultados: 716
 {
- "generated": "2026-10-31T01:07:57.881071+00:00",
+ "generated": "2026-10-31T02:04:02.723578+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -192,4 +192,4 @@ resultados: 716
     "Rotherham",
     "Sheffield Weds",
     "Steven
-partidos: 432
+partidos: 431
