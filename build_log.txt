@@ -1,12 +1,4 @@
-shotsOnTarget espn LL2 Sociedad B Girona 5 3
-wonCorners espn L1 Le Havre Paris FC 5 3
-shotsOnTarget espn L1 Le Havre Paris FC 5 10
-wonCorners espn L1 Nice Rennes 4 7
-shotsOnTarget espn L1 Nice Rennes 8 9
-wonCorners espn L1 Lille Lens 10 2
-shotsOnTarget espn L1 Lille Lens 7 3
-wonCorners espn L2 Annecy Montpellier 6 2
-shotsOnTarget espn L2 Annecy Montpellier 9 5
+ 9 5
 wonCorners espn L2 Grenoble Dijon 7 2
 shotsOnTarget espn L2 Grenoble Dijon 8 4
 wonCorners espn L2 Metz Pau FC 8 4
@@ -17,8 +9,14 @@ wonCorners espn L2 Rodez Dunkerque 5 4
 shotsOnTarget espn L2 Rodez Dunkerque 6 2
 wonCorners espn L2 Laval Boulogne 3 4
 shotsOnTarget espn L2 Laval Boulogne 2 2
+wonCorners espn ERE Feyenoord For Sittard 6 2
+shotsOnTarget espn ERE Feyenoord For Sittard 6 3
+wonCorners espn BEL Mechelen Genk 3 8
+shotsOnTarget espn BEL Mechelen Genk 3 5
 wonCorners espn BEL Waregem Club Brugge 2 14
 shotsOnTarget espn BEL Waregem Club Brugge 3 8
+wonCorners espn POR Moreirense Estrela 3 3
+shotsOnTarget espn POR Moreirense Estrela 4 1
 wonCorners espn POR Casa Pia Sp Lisbon 3 4
 shotsOnTarget espn POR Casa Pia Sp Lisbon 2 11
 wonCorners espn TUR Erzurumspor Corum 8 0
@@ -57,15 +55,17 @@ wonCorners espn MEX Juarez Queretaro 2 10
 shotsOnTarget espn MEX Juarez Queretaro 5 6
 wonCorners espn MEX Puebla UNAM Pumas 7 3
 shotsOnTarget espn MEX Puebla UNAM Pumas 6 5
+wonCorners espn NOR Fredrikstad Rosenborg 4 4
+shotsOnTarget espn NOR Fredrikstad Rosenborg 5 4
 wonCorners espn NOR Bodo/Glimt Viking 5 3
 shotsOnTarget espn NOR Bodo/Glimt Viking 3 5
 wonCorners espn RUS Rubin Kazan Fakel Voronezh 2 4
 shotsOnTarget espn RUS Rubin Kazan Fakel Voronezh 3 2
 wonCorners espn RUS Dynamo Moscow Akhmat Grozny 3 3
 shotsOnTarget espn RUS Dynamo Moscow Akhmat Grozny 12 1
-resultados: 758
+resultados: 807
 {
- "generated": "2026-10-31T16:45:41.238555+00:00",
+ "generated": "2026-10-31T17:41:42.359938+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -101,15 +101,15 @@ resultados: 758
    "fav": false,
    "fixtures_fd": 10,
    "name_map": {
-    "Tottenham Hotspur": "Tottenham",
     "Newcastle United": "Newcastle",
     "Coventry City": "Coventry",
     "Leeds United": "Leeds",
+    "Tottenham Hotspur": "Tottenham",
     "Hull City": "Hull",
     "Nottingham Forest": "Nott'm Forest",
     "Manchester City": "Man City"
    },
-   "fixtures_espn": 9,
+   "fixtures_espn": 8,
    "espn_unmatched": 0,
    "matches": 14
   },
@@ -217,4 +217,4 @@ resultados: 758
    "fixtures_fd": 12,
    "name_map": {
     "Sheffield Wednesday": "Sheffield W
-partidos: 398
+partidos: 388
