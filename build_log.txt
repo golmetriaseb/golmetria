@@ -50,6 +50,8 @@ wonCorners espn JPN Kyoto Shimizu S-Pulse 6 6
 shotsOnTarget espn JPN Kyoto Shimizu S-Pulse 7 0
 wonCorners espn JPN Mito Sanfrecce Hiroshima 0 7
 shotsOnTarget espn JPN Mito Sanfrecce Hiroshima 0 7
+wonCorners espn JPN Kashima Antlers Cerezo Osaka 10 2
+shotsOnTarget espn JPN Kashima Antlers Cerezo Osaka 7 3
 wonCorners espn MEX Atl. San Luis Atlas 7 4
 shotsOnTarget espn MEX Atl. San Luis Atlas 4 1
 wonCorners espn MEX Juarez Queretaro 2 10
@@ -58,9 +60,9 @@ wonCorners espn MEX Puebla UNAM Pumas 7 3
 shotsOnTarget espn MEX Puebla UNAM Pumas 6 5
 wonCorners espn NOR Bodo/Glimt Viking 5 3
 shotsOnTarget espn NOR Bodo/Glimt Viking 3 5
-resultados: 724
+resultados: 725
 {
- "generated": "2026-10-31T07:01:43.639753+00:00",
+ "generated": "2026-10-31T07:58:19.753199+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
