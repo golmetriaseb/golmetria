@@ -1,6 +1,4 @@
-ed Wrexham 7 0
-shotsOnTarget espn ENG Sheffield United Wrexham 4 1
-wonCorners espn EL2 Newport County Chesterfield 6 4
+Newport County Chesterfield 6 4
 shotsOnTarget espn EL2 Newport County Chesterfield 5 3
 wonCorners espn GB1 Elversberg Mainz 5 11
 shotsOnTarget espn GB1 Elversberg Mainz 6 2
@@ -30,6 +28,8 @@ wonCorners espn BEL Waregem Club Brugge 2 14
 shotsOnTarget espn BEL Waregem Club Brugge 3 8
 wonCorners espn POR Casa Pia Sp Lisbon 3 4
 shotsOnTarget espn POR Casa Pia Sp Lisbon 2 11
+wonCorners espn TUR Erzurumspor Corum 8 0
+shotsOnTarget espn TUR Erzurumspor Corum 3 3
 wonCorners espn TUR Konyaspor Galatasaray 3 9
 shotsOnTarget espn TUR Konyaspor Galatasaray 1 8
 wonCorners espn BRA Corinthians Mirassol 4 2
@@ -64,9 +64,9 @@ wonCorners espn MEX Puebla UNAM Pumas 7 3
 shotsOnTarget espn MEX Puebla UNAM Pumas 6 5
 wonCorners espn NOR Bodo/Glimt Viking 5 3
 shotsOnTarget espn NOR Bodo/Glimt Viking 3 5
-resultados: 727
+resultados: 728
 {
- "generated": "2026-10-31T11:44:45.341725+00:00",
+ "generated": "2026-10-31T12:57:48.419192+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -102,7 +102,6 @@ resultados: 727
    "fav": false,
    "fixtures_fd": 10,
    "name_map": {
-    "Manchester United": "Man United",
     "AFC Bournemouth": "Bournemouth",
     "Leeds United": "Leeds",
     "Nottingham Forest": "Nott'm Forest",
@@ -114,7 +113,6 @@ resultados: 727
     "Tottenham Hotspur": "Tottenham",
     "Newcastle United": "Newcastle"
    },
-   "espn_fail": 1,
    "fixtures_espn": 14,
    "espn_unmatched": 0,
    "matches": 15
@@ -160,11 +158,6 @@ resultados: 727
    "fav": true,
    "fixtures_fd": 12,
    "name_map": {
-    "Lincoln City": "Lincoln",
-    "Birmingham City": "Birmingham",
-    "Norwich City": "Norwich",
-    "Stoke City": "Stoke",
-    "Preston North End": "Preston",
     "Bolton Wanderers": "Bolton",
     "Charlton Athletic": "Charlton",
     "Derby County": "Derby",
@@ -174,9 +167,14 @@ resultados: 727
     "West Ham United": "West Ham",
     "West Bromwich Albion": "West Brom",
     "Wolverhampton Wanderers": "Wolves",
-    "Cardiff City": "Cardiff"
+    "Cardiff City": "Cardiff",
+    "Stoke City": "Stoke",
+    "Norwich City": "Norwich",
+    "Preston North End": "Preston",
+    "Lincoln City": "Lincoln",
+    "Birmingham City": "Birmingham"
    },
-   "fixtures_espn": 35,
+   "fixtures_espn": 32,
    "espn_unmatched": 0,
    "matches": 35
   },
@@ -213,5 +211,9 @@ resultados: 727
     "Port Vale",
     "Reading",
     "Rotherham",
-    "Sheffield
+    "Sheffield Weds",
+    "Stevenage",
+    "Stockport",
+    "Wigan",
+   
 partidos: 420
