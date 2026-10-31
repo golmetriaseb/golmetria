@@ -1,4 +1,4 @@
-wonCorners espn ENG Sheffield United Wrexham 7 0
+ed Wrexham 7 0
 shotsOnTarget espn ENG Sheffield United Wrexham 4 1
 wonCorners espn EL2 Newport County Chesterfield 6 4
 shotsOnTarget espn EL2 Newport County Chesterfield 5 3
@@ -54,6 +54,8 @@ wonCorners espn JPN Kashima Antlers Cerezo Osaka 10 2
 shotsOnTarget espn JPN Kashima Antlers Cerezo Osaka 7 3
 wonCorners espn JPN Vissel Kobe Nagoya Grampus 8 6
 shotsOnTarget espn JPN Vissel Kobe Nagoya Grampus 4 4
+wonCorners espn JPN Kashiwa Reysol Urawa Reds 5 6
+shotsOnTarget espn JPN Kashiwa Reysol Urawa Reds 9 1
 wonCorners espn MEX Atl. San Luis Atlas 7 4
 shotsOnTarget espn MEX Atl. San Luis Atlas 4 1
 wonCorners espn MEX Juarez Queretaro 2 10
@@ -62,9 +64,9 @@ wonCorners espn MEX Puebla UNAM Pumas 7 3
 shotsOnTarget espn MEX Puebla UNAM Pumas 6 5
 wonCorners espn NOR Bodo/Glimt Viking 5 3
 shotsOnTarget espn NOR Bodo/Glimt Viking 3 5
-resultados: 726
+resultados: 727
 {
- "generated": "2026-10-31T08:52:20.829979+00:00",
+ "generated": "2026-10-31T09:49:34.170308+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -212,4 +214,4 @@ resultados: 726
     "Rotherham",
     "Sheffield Weds",
     "Steven
-partidos: 423
+partidos: 421
