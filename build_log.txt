@@ -1,9 +1,4 @@
- 9 5
-wonCorners espn L2 Grenoble Dijon 7 2
-shotsOnTarget espn L2 Grenoble Dijon 8 4
-wonCorners espn L2 Metz Pau FC 8 4
-shotsOnTarget espn L2 Metz Pau FC 5 5
-wonCorners espn L2 Nantes Clermont 4 4
+rmont 4 4
 shotsOnTarget espn L2 Nantes Clermont 5 1
 wonCorners espn L2 Rodez Dunkerque 5 4
 shotsOnTarget espn L2 Rodez Dunkerque 6 2
@@ -23,6 +18,8 @@ wonCorners espn TUR Erzurumspor Corum 8 0
 shotsOnTarget espn TUR Erzurumspor Corum 3 3
 wonCorners espn TUR Kocaelispor Rizespor 7 4
 shotsOnTarget espn TUR Kocaelispor Rizespor 4 4
+wonCorners espn TUR Fenerbahce Goztep 5 8
+shotsOnTarget espn TUR Fenerbahce Goztep 6 6
 wonCorners espn TUR Konyaspor Galatasaray 3 9
 shotsOnTarget espn TUR Konyaspor Galatasaray 1 8
 wonCorners espn BRA Corinthians Mirassol 4 2
@@ -63,9 +60,11 @@ wonCorners espn RUS Rubin Kazan Fakel Voronezh 2 4
 shotsOnTarget espn RUS Rubin Kazan Fakel Voronezh 3 2
 wonCorners espn RUS Dynamo Moscow Akhmat Grozny 3 3
 shotsOnTarget espn RUS Dynamo Moscow Akhmat Grozny 12 1
-resultados: 807
+wonCorners espn RUS Rodina Moscow Krasnodar 1 1
+shotsOnTarget espn RUS Rodina Moscow Krasnodar 4 5
+resultados: 812
 {
- "generated": "2026-10-31T17:41:42.359938+00:00",
+ "generated": "2026-10-31T18:53:31.690247+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -111,7 +110,7 @@ resultados: 807
    },
    "fixtures_espn": 8,
    "espn_unmatched": 0,
-   "matches": 14
+   "matches": 9
   },
   "ENG": {
    "name": "Championship",
@@ -172,7 +171,7 @@ resultados: 807
    },
    "fixtures_espn": 24,
    "espn_unmatched": 0,
-   "matches": 32
+   "matches": 24
   },
   "EL1": {
    "name": "League One",
@@ -216,5 +215,5 @@ resultados: 807
    "fav": false,
    "fixtures_fd": 12,
    "name_map": {
-    "Sheffield Wednesday": "Sheffield W
-partidos: 388
+    "Sheffield Wednesday": "Sheffield We
+partidos: 338
