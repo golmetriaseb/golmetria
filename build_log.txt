@@ -1,17 +1,15 @@
-fsburg Osnabruck 9 3
-shotsOnTarget espn GER Wolfsburg Osnabruck 7 4
-wonCorners espn GER Bielefeld Braunschweig 3 4
-shotsOnTarget espn GER Bielefeld Braunschweig 6 2
-wonCorners espn GER Cottbus Bochum 5 4
-shotsOnTarget espn GER Cottbus Bochum 5 4
-wonCorners espn LL Villarreal Espanol 7 3
+llarreal Espanol 7 3
 shotsOnTarget espn LL Villarreal Espanol 4 3
+wonCorners espn LL2 Sociedad B Girona 3 1
+shotsOnTarget espn LL2 Sociedad B Girona 5 3
 wonCorners espn L1 Le Havre Paris FC 5 3
 shotsOnTarget espn L1 Le Havre Paris FC 5 10
 wonCorners espn L1 Nice Rennes 4 7
 shotsOnTarget espn L1 Nice Rennes 8 9
 wonCorners espn L1 Lille Lens 10 2
 shotsOnTarget espn L1 Lille Lens 7 3
+wonCorners espn L2 Annecy Montpellier 6 2
+shotsOnTarget espn L2 Annecy Montpellier 9 5
 wonCorners espn L2 Grenoble Dijon 7 2
 shotsOnTarget espn L2 Grenoble Dijon 8 4
 wonCorners espn L2 Metz Pau FC 8 4
@@ -28,6 +26,8 @@ wonCorners espn POR Casa Pia Sp Lisbon 3 4
 shotsOnTarget espn POR Casa Pia Sp Lisbon 2 11
 wonCorners espn TUR Erzurumspor Corum 8 0
 shotsOnTarget espn TUR Erzurumspor Corum 3 3
+wonCorners espn TUR Kocaelispor Rizespor 7 4
+shotsOnTarget espn TUR Kocaelispor Rizespor 4 4
 wonCorners espn TUR Konyaspor Galatasaray 3 9
 shotsOnTarget espn TUR Konyaspor Galatasaray 1 8
 wonCorners espn BRA Corinthians Mirassol 4 2
@@ -64,9 +64,9 @@ wonCorners espn NOR Bodo/Glimt Viking 5 3
 shotsOnTarget espn NOR Bodo/Glimt Viking 3 5
 wonCorners espn RUS Rubin Kazan Fakel Voronezh 2 4
 shotsOnTarget espn RUS Rubin Kazan Fakel Voronezh 3 2
-resultados: 743
+resultados: 747
 {
- "generated": "2026-10-31T14:45:14.593305+00:00",
+ "generated": "2026-10-31T15:44:33.509142+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -102,20 +102,17 @@ resultados: 743
    "fav": false,
    "fixtures_fd": 10,
    "name_map": {
-    "AFC Bournemouth": "Bournemouth",
-    "Leeds United": "Leeds",
-    "Nottingham Forest": "Nott'm Forest",
-    "Coventry City": "Coventry",
-    "Hull City": "Hull",
-    "Ipswich Town": "Ipswich",
-    "Manchester City": "Man City",
-    "Brighton & Hove Albion": "Brighton",
     "Tottenham Hotspur": "Tottenham",
-    "Newcastle United": "Newcastle"
+    "Newcastle United": "Newcastle",
+    "Coventry City": "Coventry",
+    "Leeds United": "Leeds",
+    "Hull City": "Hull",
+    "Nottingham Forest": "Nott'm Forest",
+    "Manchester City": "Man City"
    },
-   "fixtures_espn": 14,
+   "fixtures_espn": 9,
    "espn_unmatched": 0,
-   "matches": 15
+   "matches": 14
   },
   "ENG": {
    "name": "Championship",
@@ -158,25 +155,25 @@ resultados: 743
    "fav": true,
    "fixtures_fd": 12,
    "name_map": {
-    "Bolton Wanderers": "Bolton",
-    "Charlton Athletic": "Charlton",
-    "Derby County": "Derby",
-    "Queens Park Rangers": "QPR",
-    "Swansea City": "Swansea",
     "Blackburn Rovers": "Blackburn",
-    "West Ham United": "West Ham",
-    "West Bromwich Albion": "West Brom",
-    "Wolverhampton Wanderers": "Wolves",
-    "Cardiff City": "Cardiff",
     "Stoke City": "Stoke",
+    "Charlton Athletic": "Charlton",
+    "Bolton Wanderers": "Bolton",
+    "Derby County": "Derby",
     "Norwich City": "Norwich",
+    "Swansea City": "Swansea",
     "Preston North End": "Preston",
+    "Queens Park Rangers": "QPR",
     "Lincoln City": "Lincoln",
-    "Birmingham City": "Birmingham"
+    "Birmingham City": "Birmingham",
+    "West Bromwich Albion": "West Brom",
+    "Cardiff City": "Cardiff",
+    "West Ham United": "West Ham",
+    "Wolverhampton Wanderers": "Wolves"
    },
-   "fixtures_espn": 32,
+   "fixtures_espn": 24,
    "espn_unmatched": 0,
-   "matches": 35
+   "matches": 32
   },
   "EL1": {
    "name": "League One",
@@ -215,5 +212,10 @@ resultados: 743
     "Stevenage",
     "Stockport",
     "Wigan",
-   
-partidos: 417
+    "Wycombe"
+   ],
+   "fav": false,
+   "fixtures_fd": 12,
+   "name_map": {
+    "Sheffield Wednesday": "Sheffield W
+partidos: 403
