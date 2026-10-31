@@ -1,11 +1,4 @@
-L Mechelen Genk 3 5
-wonCorners espn BEL Standard Kortrijk 10 4
-shotsOnTarget espn BEL Standard Kortrijk 6 6
-wonCorners espn BEL Waregem Club Brugge 2 14
-shotsOnTarget espn BEL Waregem Club Brugge 3 8
-wonCorners espn POR Moreirense Estrela 3 3
-shotsOnTarget espn POR Moreirense Estrela 4 1
-wonCorners espn POR Casa Pia Sp Lisbon 3 4
+ Lisbon 3 4
 shotsOnTarget espn POR Casa Pia Sp Lisbon 2 11
 wonCorners espn TUR Erzurumspor Corum 8 0
 shotsOnTarget espn TUR Erzurumspor Corum 3 3
@@ -61,9 +54,15 @@ wonCorners espn RUS Rodina Moscow Krasnodar 1 1
 shotsOnTarget espn RUS Rodina Moscow Krasnodar 4 5
 wonCorners espn USA Charlotte Orlando City 4 4
 shotsOnTarget espn USA Charlotte Orlando City 6 8
-resultados: 823
+wonCorners espn USA Columbus Crew DC United 3 4
+shotsOnTarget espn USA Columbus Crew DC United 4 4
+wonCorners espn USA FC Cincinnati Philadelphia Union 3 12
+shotsOnTarget espn USA FC Cincinnati Philadelphia Union 2 6
+wonCorners espn USA New York City CF Montreal 3 4
+shotsOnTarget espn USA New York City CF Montreal 4 2
+resultados: 828
 {
- "generated": "2026-10-31T19:46:00.272312+00:00",
+ "generated": "2026-10-31T20:45:16.110771+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -107,9 +106,9 @@ resultados: 823
     "Nottingham Forest": "Nott'm Forest",
     "Manchester City": "Man City"
    },
-   "fixtures_espn": 8,
+   "fixtures_espn": 7,
    "espn_unmatched": 0,
-   "matches": 9
+   "matches": 8
   },
   "ENG": {
    "name": "Championship",
@@ -215,4 +214,4 @@ resultados: 823
    "fixtures_fd": 12,
    "name_map": {
     "Sheffield Wednesday": "Sheffield We
-partidos: 334
+partidos: 319
