@@ -1,15 +1,10 @@
- Lisbon 3 4
-shotsOnTarget espn POR Casa Pia Sp Lisbon 2 11
-wonCorners espn TUR Erzurumspor Corum 8 0
-shotsOnTarget espn TUR Erzurumspor Corum 3 3
-wonCorners espn TUR Kocaelispor Rizespor 7 4
-shotsOnTarget espn TUR Kocaelispor Rizespor 4 4
-wonCorners espn TUR Fenerbahce Goztep 5 8
-shotsOnTarget espn TUR Fenerbahce Goztep 6 6
+enerbahce Goztep 6 6
 wonCorners espn TUR Konyaspor Galatasaray 3 9
 shotsOnTarget espn TUR Konyaspor Galatasaray 1 8
 wonCorners espn GRE Kifisia Olympiakos 10 6
 shotsOnTarget espn GRE Kifisia Olympiakos 8 5
+wonCorners espn BRA Coritiba Vitoria 7 5
+shotsOnTarget espn BRA Coritiba Vitoria 7 1
 wonCorners espn BRA Corinthians Mirassol 4 2
 shotsOnTarget espn BRA Corinthians Mirassol 8 0
 wonCorners espn ARG Estudiantes Rio Cuarto Gimnasia L.P. 5 4
@@ -60,9 +55,13 @@ wonCorners espn USA FC Cincinnati Philadelphia Union 3 12
 shotsOnTarget espn USA FC Cincinnati Philadelphia Union 2 6
 wonCorners espn USA New York City CF Montreal 3 4
 shotsOnTarget espn USA New York City CF Montreal 4 2
-resultados: 828
+wonCorners espn USA Sporting Kansas City FC Dallas 3 7
+shotsOnTarget espn USA Sporting Kansas City FC Dallas 4 2
+wonCorners espn USA St. Louis City San Diego FC 3 4
+shotsOnTarget espn USA St. Louis City San Diego FC 7 2
+resultados: 837
 {
- "generated": "2026-10-31T20:45:16.110771+00:00",
+ "generated": "2026-10-31T21:44:04.839715+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -214,4 +213,4 @@ resultados: 828
    "fixtures_fd": 12,
    "name_map": {
     "Sheffield Wednesday": "Sheffield We
-partidos: 319
+partidos: 314
