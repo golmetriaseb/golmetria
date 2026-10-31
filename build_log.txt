@@ -66,7 +66,7 @@ wonCorners espn NOR Bodo/Glimt Viking 5 3
 shotsOnTarget espn NOR Bodo/Glimt Viking 3 5
 resultados: 727
 {
- "generated": "2026-10-31T10:45:37.220644+00:00",
+ "generated": "2026-10-31T11:44:45.341725+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -114,7 +114,8 @@ resultados: 727
     "Tottenham Hotspur": "Tottenham",
     "Newcastle United": "Newcastle"
    },
-   "fixtures_espn": 15,
+   "espn_fail": 1,
+   "fixtures_espn": 14,
    "espn_unmatched": 0,
    "matches": 15
   },
@@ -212,6 +213,5 @@ resultados: 727
     "Port Vale",
     "Reading",
     "Rotherham",
-    "Sheffield Weds",
-    "Steven
+    "Sheffield
 partidos: 420
