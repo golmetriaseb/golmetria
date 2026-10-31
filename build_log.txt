@@ -1,7 +1,7 @@
-Newport County Chesterfield 6 4
-shotsOnTarget espn EL2 Newport County Chesterfield 5 3
-wonCorners espn GB1 Elversberg Mainz 5 11
+orners espn GB1 Elversberg Mainz 5 11
 shotsOnTarget espn GB1 Elversberg Mainz 6 2
+wonCorners espn GER Wolfsburg Osnabruck 9 3
+shotsOnTarget espn GER Wolfsburg Osnabruck 7 4
 wonCorners espn GER Bielefeld Braunschweig 3 4
 shotsOnTarget espn GER Bielefeld Braunschweig 6 2
 wonCorners espn GER Cottbus Bochum 5 4
@@ -64,9 +64,9 @@ wonCorners espn MEX Puebla UNAM Pumas 7 3
 shotsOnTarget espn MEX Puebla UNAM Pumas 6 5
 wonCorners espn NOR Bodo/Glimt Viking 5 3
 shotsOnTarget espn NOR Bodo/Glimt Viking 3 5
-resultados: 728
+resultados: 729
 {
- "generated": "2026-10-31T12:57:48.419192+00:00",
+ "generated": "2026-10-31T13:51:57.481594+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -216,4 +216,4 @@ resultados: 728
     "Stockport",
     "Wigan",
    
-partidos: 420
+partidos: 419
