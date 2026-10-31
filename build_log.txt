@@ -1,12 +1,12 @@
-enerbahce Goztep 6 6
-wonCorners espn TUR Konyaspor Galatasaray 3 9
-shotsOnTarget espn TUR Konyaspor Galatasaray 1 8
+ 1 8
 wonCorners espn GRE Kifisia Olympiakos 10 6
 shotsOnTarget espn GRE Kifisia Olympiakos 8 5
 wonCorners espn BRA Coritiba Vitoria 7 5
 shotsOnTarget espn BRA Coritiba Vitoria 7 1
 wonCorners espn BRA Corinthians Mirassol 4 2
 shotsOnTarget espn BRA Corinthians Mirassol 8 0
+wonCorners espn ARG Dep. Riestra Talleres Cordoba 8 4
+shotsOnTarget espn ARG Dep. Riestra Talleres Cordoba 5 5
 wonCorners espn ARG Estudiantes Rio Cuarto Gimnasia L.P. 5 4
 shotsOnTarget espn ARG Estudiantes Rio Cuarto Gimnasia L.P. 2 3
 wonCorners espn ARG Huracan Tigre 9 2
@@ -59,9 +59,9 @@ wonCorners espn USA Sporting Kansas City FC Dallas 3 7
 shotsOnTarget espn USA Sporting Kansas City FC Dallas 4 2
 wonCorners espn USA St. Louis City San Diego FC 3 4
 shotsOnTarget espn USA St. Louis City San Diego FC 7 2
-resultados: 837
+resultados: 843
 {
- "generated": "2026-10-31T21:44:04.839715+00:00",
+ "generated": "2026-10-31T22:43:59.350664+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -213,4 +213,4 @@ resultados: 837
    "fixtures_fd": 12,
    "name_map": {
     "Sheffield Wednesday": "Sheffield We
-partidos: 314
+partidos: 307
