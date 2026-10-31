@@ -38,13 +38,19 @@ wonCorners espn ARG Estudiantes Rio Cuarto Gimnasia L.P. 5 4
 shotsOnTarget espn ARG Estudiantes Rio Cuarto Gimnasia L.P. 2 3
 wonCorners espn ARG Huracan Tigre 9 2
 shotsOnTarget espn ARG Huracan Tigre 2 4
+wonCorners espn ARG Racing Club Aldosivi 0 6
+shotsOnTarget espn ARG Racing Club Aldosivi 6 2
+wonCorners espn ARG Sarmiento Junin Rosario Central 2 13
+shotsOnTarget espn ARG Sarmiento Junin Rosario Central 2 6
 wonCorners espn DNK Lyngby Randers FC 3 4
 shotsOnTarget espn DNK Lyngby Randers FC 8 4
+wonCorners espn MEX Juarez Queretaro 2 10
+shotsOnTarget espn MEX Juarez Queretaro 5 6
 wonCorners espn NOR Bodo/Glimt Viking 5 3
 shotsOnTarget espn NOR Bodo/Glimt Viking 3 5
-resultados: 716
+resultados: 719
 {
- "generated": "2026-10-31T02:04:02.723578+00:00",
+ "generated": "2026-10-31T02:56:12.633604+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
