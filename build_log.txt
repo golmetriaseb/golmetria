@@ -1,29 +1,4 @@
- 1 8
-wonCorners espn GRE Kifisia Olympiakos 10 6
-shotsOnTarget espn GRE Kifisia Olympiakos 8 5
-wonCorners espn BRA Coritiba Vitoria 7 5
-shotsOnTarget espn BRA Coritiba Vitoria 7 1
-wonCorners espn BRA Corinthians Mirassol 4 2
-shotsOnTarget espn BRA Corinthians Mirassol 8 0
-wonCorners espn ARG Dep. Riestra Talleres Cordoba 8 4
-shotsOnTarget espn ARG Dep. Riestra Talleres Cordoba 5 5
-wonCorners espn ARG Estudiantes Rio Cuarto Gimnasia L.P. 5 4
-shotsOnTarget espn ARG Estudiantes Rio Cuarto Gimnasia L.P. 2 3
-wonCorners espn ARG Huracan Tigre 9 2
-shotsOnTarget espn ARG Huracan Tigre 2 4
-wonCorners espn ARG Racing Club Aldosivi 0 6
-shotsOnTarget espn ARG Racing Club Aldosivi 6 2
-wonCorners espn ARG Sarmiento Junin Rosario Central 2 13
-shotsOnTarget espn ARG Sarmiento Junin Rosario Central 2 6
-wonCorners espn DNK Lyngby Randers FC 3 4
-shotsOnTarget espn DNK Lyngby Randers FC 8 4
-wonCorners espn JPN Okayama FC Tokyo 8 5
-shotsOnTarget espn JPN Okayama FC Tokyo 4 8
-wonCorners espn JPN Kyoto Shimizu S-Pulse 6 6
-shotsOnTarget espn JPN Kyoto Shimizu S-Pulse 7 0
-wonCorners espn JPN Mito Sanfrecce Hiroshima 0 7
-shotsOnTarget espn JPN Mito Sanfrecce Hiroshima 0 7
-wonCorners espn JPN Kashima Antlers Cerezo Osaka 10 2
+zo Osaka 10 2
 shotsOnTarget espn JPN Kashima Antlers Cerezo Osaka 7 3
 wonCorners espn JPN Vissel Kobe Nagoya Grampus 8 6
 shotsOnTarget espn JPN Vissel Kobe Nagoya Grampus 4 4
@@ -59,9 +34,13 @@ wonCorners espn USA Sporting Kansas City FC Dallas 3 7
 shotsOnTarget espn USA Sporting Kansas City FC Dallas 4 2
 wonCorners espn USA St. Louis City San Diego FC 3 4
 shotsOnTarget espn USA St. Louis City San Diego FC 7 2
-resultados: 843
+wonCorners espn USA Los Angeles Galaxy Austin FC 7 5
+shotsOnTarget espn USA Los Angeles Galaxy Austin FC 10 2
+wonCorners espn USA San Jose Earthquakes Real Salt Lake 5 5
+shotsOnTarget espn USA San Jose Earthquakes Real Salt Lake 5 5
+resultados: 846
 {
- "generated": "2026-10-31T22:43:59.350664+00:00",
+ "generated": "2026-10-31T23:40:17.313625+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -107,7 +86,7 @@ resultados: 843
    },
    "fixtures_espn": 7,
    "espn_unmatched": 0,
-   "matches": 8
+   "matches": 7
   },
   "ENG": {
    "name": "Championship",
@@ -213,4 +192,22 @@ resultados: 843
    "fixtures_fd": 12,
    "name_map": {
     "Sheffield Wednesday": "Sheffield We
-partidos: 307
+partidos: 296
+DIAG BRA.csv filas: 5647 columnas: ['Country', 'League', 'Season', 'Date', 'Time', 'Home', 'Away', 'HG', 'AG', 'Res', 'PSCH', 'PSCD', 'PSCA', 'MaxCH', 'MaxCD', 'MaxCA', 'AvgCH', 'AvgCD', 'AvgCA', 'BFECH']
+DIAG liga/temporada ('Serie A', '2012') 380
+DIAG liga/temporada ('Serie A', '2013') 380
+DIAG liga/temporada ('Serie A', '2014') 380
+DIAG liga/temporada ('Serie A', '2015') 380
+DIAG liga/temporada ('Serie A', '2016') 380
+DIAG liga/temporada ('Serie A', '2017') 380
+DIAG liga/temporada ('Serie A', '2018') 380
+DIAG liga/temporada ('Serie A', '2019') 380
+DIAG liga/temporada ('Serie A', '2020') 380
+DIAG liga/temporada ('Serie A', '2021') 380
+DIAG liga/temporada ('Serie A', '2022') 380
+DIAG liga/temporada ('Serie A', '2023') 380
+DIAG liga/temporada ('Serie A', '2024') 380
+DIAG liga/temporada ('Serie A', '2025') 380
+DIAG liga/temporada ('Serie A', '2026') 327
+DIAG fixtures Brasil: {('Brazil', 'Serie A'): 3}
+DIAG ESPN bra.2 ultimos 21 dias: eventos 34 terminados 33
