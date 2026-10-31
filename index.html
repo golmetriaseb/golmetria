@@ -2,7 +2,7 @@
 <html lang="es"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
-<meta name="gm-v" content="20261031014420"><meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="gm-v" content="20261031235922"><meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Golmetría"><link rel="apple-touch-icon" href="icon-180.png"><link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#0a0b14"><meta name="color-scheme" content="dark">
 <title>Golmetría</title>
@@ -123,7 +123,7 @@ nav button.on{color:var(--bl)}nav button.on svg{filter:drop-shadow(0 0 6px rgba(
 <div class="wrap">
 <div class="actl" id="actl"><span id="actt"></span><button id="clr" type="button">Quitar filtros ✕</button></div><div class="note" id="note"></div><div class="rs" id="rs"></div>
 <div class="demo" id="demo"><b>Datos de ejemplo.</b> Así se verá la app. Con los partidos reales la conectamos después.</div>
-<section class="view on" id="v-seg"><div class="intro"><h2>Más <em>probables</em></h2><p>Las que más veces ocurren. Ninguna es segura: pueden perder y pueden no tener valor.</p></div><div class="thr" id="thr"></div><div id="l-seg"></div></section>
+<section class="view on" id="v-seg"><div class="intro"><h2>Más <em>probables</em></h2><p>Las que más veces ocurren. Ninguna es segura: pueden perder y pueden no tener valor.</p></div><div class="kctl" id="zn"></div><div class="thr" id="thr"></div><div id="l-seg"></div></section>
 <section class="view" id="v-par"><div class="intro"><h2>Partidos del <em>día</em></h2><p>Toca un partido para ver todas sus apuestas.</p></div><div id="l-par"></div></section>
 <section class="view" id="v-mis"><div class="intro"><h2>Mis <em>apuestas</em></h2><p>Las apuestas que guardas. Cuando el partido termina, la app las marca sola como ganadas o perdidas.</p></div><div class="seg2" id="seg"></div><div class="sum" id="sum"></div><div id="l-mis"></div></section>
 </div>
@@ -219,26 +219,28 @@ function render(){
  document.querySelectorAll('.day').forEach(e=>e.classList.toggle('on',liveOn?e.id==='lv':e.dataset.d===day));const nl=DATA.filter(m=>isLive(m)&&sel.has(m.league)).length;$('#lvn').textContent=nl;$('#lv').classList.toggle('zero',!nl);
  const nv=M0=>M0.filter(m=>m.bets.some(b=>b.p>=.28&&val(b)!=null&&val(b)>=.05)).length;const LM=liveOn?ms():[];const LN=liveOn?'<div class="lvnote"><b>● En vivo: '+LM.length+(LM.length===1?' partido en juego':' partidos en juego')+'.</b> Las probabilidades son de antes del partido y no cambian con el marcador.</div>':'';
  const F=flat();
- const S=F.filter(x=>x.b.p>=thr).sort((a,b)=>b.b.p-a.b.p),GM=new Map();S.forEach(x=>{if(!GM.has(x.m.id))GM.set(x.m.id,[]);GM.get(x.m.id).push(x)});
+ const S=F.filter(x=>zone==='mid'?(x.b.p>=ZLO&&x.b.p<ZHI):x.b.p>=thr).sort((a,b)=>b.b.p-a.b.p),GM=new Map();S.forEach(x=>{if(!GM.has(x.m.id))GM.set(x.m.id,[]);GM.get(x.m.id).push(x)});
  const SG=[...GM.values()].sort(sortM==='p'?(a,b)=>b[0].b.p-a[0].b.p:(a,b)=>(a[0].m.utc<b[0].m.utc?-1:a[0].m.utc>b[0].m.utc?1:b[0].b.p-a[0].b.p));
- $('#l-seg').innerHTML=SG.length?LN+segHtml(SG):emptyMsg('s');
+ $('#l-seg').innerHTML=SG.length?LN+segHtml(SG):(zone==='mid'?'<div class="empty"><b style="display:block;color:var(--tx);font:italic 800 20px var(--f1);text-transform:uppercase;margin-bottom:6px">Sin apuestas entre '+pc(ZLO)+' y '+pc(ZHI)+'</b>Con este filtro no hay apuestas en esa zona. Quita un filtro o prueba otro día.</div>':emptyMsg('s'));
+ $('#zn').innerHTML='<div class="kseg"><button type="button" data-zone="top" class="'+(zone==='top'?'on':'')+'">Muy probables</button><button type="button" data-zone="mid" class="'+(zone==='mid'?'on':'')+'">Cuota decente</button></div>';
+ document.querySelector('#thr').style.display=zone==='mid'?'none':'';
  const th=(a,k)=>'<span>Desde</span>'+[.95,.80,.75,.65].map(x=>`<button data-${k}="${x}" class="${a===x?'on':''}">${pc(x)} o más</button>`).join('');
  $('#thr').innerHTML=th(thr,'thr');
- const NP=ms().length,SS=new Set(flat().filter(x=>x.b.p>=thr).map(x=>x.m.id)).size;
- $('#rs').innerHTML=(liveOn?'En vivo: ':(dn(day)==='Hoy'?'Hoy: ':dn(day)+': '))+'<b>'+NP+'</b> '+(NP===1?'partido':'partidos')+' · <b>'+SS+'</b> con '+pc(thr)+' o más';
+ const NP=ms().length,SS=new Set(flat().filter(x=>zone==='mid'?(x.b.p>=ZLO&&x.b.p<ZHI):x.b.p>=thr).map(x=>x.m.id)).size;
+ $('#rs').innerHTML=(liveOn?'En vivo: ':(dn(day)==='Hoy'?'Hoy: ':dn(day)+': '))+'<b>'+NP+'</b> '+(NP===1?'partido':'partidos')+' · <b>'+SS+'</b> con '+(zone==='mid'?pc(ZLO)+' a '+pc(ZHI):pc(thr)+' o más');
  const fa=[];if(sel.size!==LGS.length)fa.push(lgLabel());if(type!=='all')fa.push(TYPES.find(t=>t[0]===type)[1]);if(liveOn)fa.push('En vivo');
  $('#actl').classList.toggle('on',fa.length>0&&view!=='mis');$('#actt').innerHTML='Filtrando: <b>'+fa.join(' · ')+'</b>';
  const M=ms();
  $('#l-par').innerHTML=M.length?LN+M.map(m=>{const n=m.bets.filter(b=>b.p>=thr).length;return`<div class="card" data-m="${m.id}" style="cursor:pointer">${head(m)}<span class="chipv ${n?'p':'n'}">${n?n+(n===1?' apuesta':' apuestas')+' con '+pc(thr)+' o más · ver todas ›':'Ninguna con '+pc(thr)+' o más · ver partido ›'}</span></div>`}).join(''):'<div class="empty">No hay partidos este día.</div>';
 }
-let autoThr=false;const openEx=new Set(),closedLg=new Set();let grpLg=LS.get('gm_grp',false)===true,sortM=LS.get('gm_sort','h')==='p'?'p':'h';
+let zone=LS.get('gm_zone','top')==='mid'?'mid':'top';const ZLO=.60,ZHI=.75;let autoThr=false;const openEx=new Set(),closedLg=new Set();let grpLg=LS.get('gm_grp',false)===true,sortM=LS.get('gm_sort','h')==='p'?'p':'h';
 function kRow(g){const m=g[0].m,t=g[0].b,rest=g.slice(1),id=m.id,o=openEx.has(id),hi=t.p>=.75;
  const rw=(y,top)=>`<div class="kdr"><div>${top?'<small class="k">LA MÁS PROBABLE</small>':''}<b>${y.b.label}</b><small>${y.b.odd?'Cuota '+y.b.odd.toFixed(2)+' · ':''}Cuota justa ${(1/y.b.p).toFixed(2)}</small></div><span class="p${y.b.p>=.75?' hi':''}">${pc(y.b.p)}</span><button class="ksv" type="button" data-sv="${m.id}|${m.bets.indexOf(y.b)}">${inSlip(m.id,y.b.label)?'En el boleto ✓':'Guardar'}</button></div>`;
  return `<div class="km${o?' open':''}"><button class="kr" type="button" data-ex="${id}" aria-expanded="${o}"><div class="kt">${m.time}<small${isLive(m)?' class="lvt"':''}>${isLive(m)?'En vivo':dn(m.date)}</small></div><div class="ktt">${grpLg?'':`<div class="klg">${m.leagueName}</div>`}<div class="ktn">${m.home} vs ${m.away}</div><div class="kb"><b>${t.label}</b>${rest.length?' · +'+rest.length+' más':''}</div></div><div class="kpc${hi?' hi':''}">${pc(t.p)}<small>cuota justa ${(1/t.p).toFixed(2)}</small></div><i class="kcv"></i></button><div class="kdet"><div class="ktop">${rw(g[0],true)}</div>${rest.length?`<div class="kmore">Más de este partido (${rest.length})</div>`+rest.map(y=>rw(y,false)).join(''):''}<button class="kgo" type="button" data-m="${m.id}">Ver partido</button></div></div>`}
 function kSlots(arr){let out='',last='';const lv=arr.filter(g=>isLive(g[0].m)),nx=arr.filter(g=>!isLive(g[0].m));
  if(lv.length)out+=`<div class="ksl lv"><b>● En vivo</b><span>${lv.length} ${lv.length===1?'partido en juego':'partidos en juego'}</span></div>`+lv.map(kRow).join('');
  nx.forEach(g=>{const m=g[0].m,key=m.date+m.time;if(key!==last){last=key;const n=nx.filter(x=>x[0].m.date+x[0].m.time===key).length;out+=`<div class="ksl"><b>${m.time}</b><span>${n} ${n===1?'partido':'partidos'}</span></div>`}out+=kRow(g)});return out}
-function segHtml(SG){const n=SG.length;let h=`<div class="kc">${n} ${n===1?'partido':'partidos'} con ${pc(thr)} o más · ${sortM==='p'?'de mayor a menor probabilidad.':'en vivo primero, luego por hora; en cada hora, de mayor a menor probabilidad.'}</div><div class="kctl"><div class="kseg"><button type="button" data-sort="h" class="${sortM==='h'?'on':''}">Por hora</button><button type="button" data-sort="p" class="${sortM==='p'?'on':''}">Más probables</button></div><button class="ksw${grpLg?' on':''}" type="button" data-grp="1"><i></i>Agrupar por liga</button></div>`;
+function segHtml(SG){const n=SG.length;let h=(zone==='mid'?`<div class="kc" style="margin-bottom:10px"><b style="color:var(--tx)">Probables, pero que pagan algo.</b> Entre ${pc(ZLO)} y ${pc(ZHI)}: la cuota justa queda entre ${(1/ZHI).toFixed(2)} y ${(1/ZLO).toFixed(2)}. Mira la cuota de tu casa: si paga igual o más que la cuota justa, vale la pena; si paga menos, déjala.</div>`:'')+`<div class="kc">${n} ${n===1?'partido':'partidos'} con ${zone==='mid'?pc(ZLO)+' a '+pc(ZHI):pc(thr)+' o más'} · ${sortM==='p'?'de mayor a menor probabilidad.':'en vivo primero, luego por hora; en cada hora, de mayor a menor probabilidad.'}</div><div class="kctl"><div class="kseg"><button type="button" data-sort="h" class="${sortM==='h'?'on':''}">Por hora</button><button type="button" data-sort="p" class="${sortM==='p'?'on':''}">Más probables</button></div><button class="ksw${grpLg?' on':''}" type="button" data-grp="1"><i></i>Agrupar por liga</button></div>`;
  const body=a=>sortM==='p'?a.map(kRow).join(''):kSlots(a);
  if(!grpLg)return h+body(SG);
  const G=new Map();SG.forEach(g=>{const l=g[0].m.leagueName;if(!G.has(l))G.set(l,[]);G.get(l).push(g)});
@@ -246,7 +248,7 @@ function segHtml(SG){const n=SG.length;let h=`<div class="kc">${n} ${n===1?'part
 
 function moved(){
  $('#note').classList.remove('on');if(autoThr){thr=.75;autoThr=false;render()}
- if(view!=='seg')return;
+ if(view!=='seg'||zone==='mid')return;
  const F=flat(),has=t=>F.some(x=>x.b.p>=t);
  if(!has(thr)){const l=[.80,.75,.65].find(t=>t<thr&&has(t));if(l){const o=thr;thr=l;autoThr=true;render();const n=$('#note');n.textContent='Bajé el mínimo a '+pc(l)+': con '+pc(o)+' o más no había apuestas con este filtro.';n.classList.add('on')}}
 }
@@ -313,6 +315,7 @@ document.addEventListener('click',e=>{const t=e.target;
  if(t.closest('#clr')){sel=new Set(LGS.map(x=>x[0]));LS.set('gm_lg',[...sel]);type='all';liveOn=false;$('#ft').value='all';drawLg();render();moved();return}
  const n=t.closest('nav button');if(n){setView(n.dataset.v);return}
  const sv=t.closest('[data-sv]');if(sv){const[a,b]=sv.dataset.sv.split('|');askSave(a,+b);return}
+ const zb=t.closest('[data-zone]');if(zb){zone=zb.dataset.zone==='mid'?'mid':'top';LS.set('gm_zone',zone);render();return}
  const so=t.closest('[data-sort]');if(so){sortM=so.dataset.sort;LS.set('gm_sort',sortM);render();return}
  const gp=t.closest('[data-grp]');if(gp){grpLg=!grpLg;LS.set('gm_grp',grpLg);render();return}
  const gl=t.closest('[data-lgc]');if(gl){const k=gl.dataset.lgc;closedLg.has(k)?closedLg.delete(k):closedLg.add(k);render();return}
