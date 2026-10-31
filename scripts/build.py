@@ -664,5 +664,36 @@ def main():
     json.dump(dict(generated=NOW.strftime('%Y-%m-%dT%H:%M:%SZ'), leagues=bt), open('backtest.json', 'w'), ensure_ascii=False, indent=1)
     log(json.dumps(status, indent=1, ensure_ascii=False)[:3000]); log('partidos:', len(matches))
 
+
+def diag_bra():
+    from collections import Counter
+    try:
+        rr = rows(fetch(f"{BASE}new/BRA.csv"))
+        c = Counter(((r.get('League') or '?').strip(), (r.get('Season') or '?').strip()) for r in rr)
+        log('DIAG BRA.csv filas:', len(rr), 'columnas:', list(rr[0].keys())[:20] if rr else None)
+        for k, v in sorted(c.items()): log('DIAG liga/temporada', k, v)
+    except Exception as e:
+        log('DIAG BRA.csv error', str(e)[:200])
+    try:
+        fr = rows(fetch(BASE + 'new_league_fixtures.csv'))
+        cc = Counter(((r.get('Country') or '').strip(), (r.get('League') or '').strip()) for r in fr if (r.get('Country') or '').strip() == 'Brazil')
+        log('DIAG fixtures Brasil:', dict(cc))
+    except Exception as e:
+        log('DIAG fixtures error', str(e)[:200])
+    try:
+        n = fin = 0
+        for i in range(0, 21):
+            d = NOW - timedelta(days=i)
+            j = json.loads(fetch(f"https://site.api.espn.com/apis/site/v2/sports/soccer/bra.2/scoreboard?dates={d:%Y%m%d}", tries=2))
+            ev = j.get('events') or []
+            n += len(ev); fin += sum(1 for e in ev if e.get('status', {}).get('type', {}).get('completed'))
+        log('DIAG ESPN bra.2 ultimos 21 dias: eventos', n, 'terminados', fin)
+    except Exception as e:
+        log('DIAG ESPN bra.2 error', str(e)[:200])
+
 if __name__ == '__main__':
     main()
+    try:
+        diag_bra()
+    except Exception as e:
+        log('DIAG fallo', str(e)[:200])
