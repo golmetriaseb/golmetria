@@ -1,7 +1,7 @@
-entral 2 13
-shotsOnTarget espn ARG Sarmiento Junin Rosario Central 2 6
-wonCorners espn DNK Lyngby Randers FC 3 4
-shotsOnTarget espn DNK Lyngby Randers FC 8 4
+ka 4 1
+shotsOnTarget espn JPN Chiba Avispa Fukuoka 4 2
+wonCorners espn JPN V-Varen Nagasaki FC Tokyo 5 4
+shotsOnTarget espn JPN V-Varen Nagasaki FC Tokyo 4 3
 wonCorners espn JPN Okayama FC Tokyo 8 5
 shotsOnTarget espn JPN Okayama FC Tokyo 4 8
 wonCorners espn JPN Kyoto Shimizu S-Pulse 6 6
@@ -58,9 +58,9 @@ wonCorners espn USA San Jose Earthquakes Real Salt Lake 5 5
 shotsOnTarget espn USA San Jose Earthquakes Real Salt Lake 5 5
 wonCorners espn USA Colorado Rapids Chicago Fire 5 6
 shotsOnTarget espn USA Colorado Rapids Chicago Fire 4 6
-resultados: 651
+resultados: 654
 {
- "generated": "2026-11-01T05:53:46.421925+00:00",
+ "generated": "2026-11-01T07:10:03.827738+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -208,4 +208,4 @@ resultados: 651
     "Rotherham",
     "Sheffield Weds",
     "Steven
-partidos: 396
+partidos: 394
