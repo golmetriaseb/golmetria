@@ -1,5 +1,5 @@
- 9 2
-shotsOnTarget espn ARG Velez Sarsfield San Lorenzo 6 3
+o 6 2
+shotsOnTarget espn ARG Estudiantes L.P. Instituto 8 5
 wonCorners espn ARG Estudiantes Rio Cuarto Gimnasia L.P. 5 4
 shotsOnTarget espn ARG Estudiantes Rio Cuarto Gimnasia L.P. 2 3
 wonCorners espn ARG Huracan Tigre 9 2
@@ -58,9 +58,9 @@ wonCorners espn USA Los Angeles Galaxy Austin FC 7 5
 shotsOnTarget espn USA Los Angeles Galaxy Austin FC 10 2
 wonCorners espn USA San Jose Earthquakes Real Salt Lake 5 5
 shotsOnTarget espn USA San Jose Earthquakes Real Salt Lake 5 5
-resultados: 646
+resultados: 647
 {
- "generated": "2026-11-01T01:27:30.101868+00:00",
+ "generated": "2026-11-01T02:39:32.867298+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
