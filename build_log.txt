@@ -1,6 +1,4 @@
-uis Atlas 4 1
-wonCorners espn MEX Juarez Queretaro 2 10
-shotsOnTarget espn MEX Juarez Queretaro 5 6
+ Queretaro 5 6
 wonCorners espn MEX Puebla UNAM Pumas 7 3
 shotsOnTarget espn MEX Puebla UNAM Pumas 6 5
 wonCorners espn NOR Brann Molde 4 7
@@ -11,6 +9,8 @@ wonCorners espn NOR KFUM Oslo HamKam 3 6
 shotsOnTarget espn NOR KFUM Oslo HamKam 5 2
 wonCorners espn NOR Sarpsborg 08 Kristiansund 9 2
 shotsOnTarget espn NOR Sarpsborg 08 Kristiansund 7 6
+wonCorners espn NOR Valerenga Tromso 3 2
+shotsOnTarget espn NOR Valerenga Tromso 9 0
 wonCorners espn NOR Fredrikstad Rosenborg 4 4
 shotsOnTarget espn NOR Fredrikstad Rosenborg 5 4
 wonCorners espn NOR Aalesund Sandefjord 7 7
@@ -59,9 +59,9 @@ wonCorners espn USA San Jose Earthquakes Real Salt Lake 5 5
 shotsOnTarget espn USA San Jose Earthquakes Real Salt Lake 5 5
 wonCorners espn USA Colorado Rapids Chicago Fire 5 6
 shotsOnTarget espn USA Colorado Rapids Chicago Fire 4 6
-resultados: 716
+resultados: 722
 {
- "generated": "2026-11-01T19:47:50.497329+00:00",
+ "generated": "2026-11-01T20:46:10.252257+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -209,4 +209,4 @@ resultados: 716
     "Rotherham",
     "Sheffield Weds",
     "Steven
-partidos: 331
+partidos: 324
