@@ -1,5 +1,4 @@
-otsOnTarget espn ARG Racing Club Aldosivi 6 2
-wonCorners espn ARG Sarmiento Junin Rosario Central 2 13
+entral 2 13
 shotsOnTarget espn ARG Sarmiento Junin Rosario Central 2 6
 wonCorners espn DNK Lyngby Randers FC 3 4
 shotsOnTarget espn DNK Lyngby Randers FC 8 4
@@ -21,6 +20,8 @@ wonCorners espn MEX Monterrey Club Tijuana 9 2
 shotsOnTarget espn MEX Monterrey Club Tijuana 7 3
 wonCorners espn MEX Guadalajara Chivas Atlante 6 4
 shotsOnTarget espn MEX Guadalajara Chivas Atlante 7 4
+wonCorners espn MEX Club America Toluca 6 5
+shotsOnTarget espn MEX Club America Toluca 5 7
 wonCorners espn MEX Atl. San Luis Atlas 7 4
 shotsOnTarget espn MEX Atl. San Luis Atlas 4 1
 wonCorners espn MEX Juarez Queretaro 2 10
@@ -57,9 +58,9 @@ wonCorners espn USA San Jose Earthquakes Real Salt Lake 5 5
 shotsOnTarget espn USA San Jose Earthquakes Real Salt Lake 5 5
 wonCorners espn USA Colorado Rapids Chicago Fire 5 6
 shotsOnTarget espn USA Colorado Rapids Chicago Fire 4 6
-resultados: 650
+resultados: 651
 {
- "generated": "2026-11-01T04:58:18.895901+00:00",
+ "generated": "2026-11-01T05:53:46.421925+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -207,4 +208,4 @@ resultados: 650
     "Rotherham",
     "Sheffield Weds",
     "Steven
-partidos: 397
+partidos: 396
