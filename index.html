@@ -2,7 +2,7 @@
 <html lang="es"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
-<meta name="gm-v" content="20261101013217"><meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="gm-v" content="20261101013826"><meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Golmetría"><link rel="apple-touch-icon" href="icon-180.png"><link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#0a0b14"><meta name="color-scheme" content="dark">
 <title>Golmetría</title>
@@ -251,7 +251,7 @@ function kSlots(arr){let out='',last='';const lv=arr.filter(g=>isLive(g[0].m)),n
  if(lv.length)out+=`<div class="ksl lv"><b>● En vivo</b><span>${lv.length} ${lv.length===1?'partido en juego':'partidos en juego'}</span></div>`+lv.map(kRow).join('');
  nx.forEach(g=>{const m=g[0].m,key=m.date+m.time;if(key!==last){last=key;const n=nx.filter(x=>x[0].m.date+x[0].m.time===key).length;out+=`<div class="ksl"><b>${m.time}</b><span>${n} ${n===1?'partido':'partidos'}</span></div>`}out+=kRow(g)});return out}
 function segHtml(SG){const n=SG.length;let h=`<div class="kc"><b>${n} ${n===1?'partido':'partidos'}</b> con ${pc(thr)} o más · ${sortM==='p'?'de mayor a menor probabilidad':'en vivo primero, luego por hora'}</div>`;
- const T=SG.filter(g=>!isLive(g[0].m)).sort((a,b)=>b[0].b.p-a[0].b.p).slice(0,3);if(T.length){h+=`<div class="hs"><h4>Las mejores ${dn(day)==='Hoy'?'de hoy':'del día'}</h4><div class="hsr">`+T.map(g=>{const x=g[0];return `<button class="hsc" type="button" data-m="${x.m.id}"><div class="p">${pc(x.b.p)}<small>cuota justa ${(1/x.b.p).toFixed(2)}</small></div><div class="l">${x.b.label}</div><div class="m">${x.m.home} vs ${x.m.away} · ${x.m.time}</div></button>`}).join('')+`</div></div>`}
+ const T=[...SG].sort((a,b)=>b[0].b.p-a[0].b.p).slice(0,3);if(T.length){h+=`<div class="hs"><h4>Las mejores ${dn(day)==='Hoy'?'de hoy':'del día'}</h4><div class="hsr">`+T.map(g=>{const x=g[0];return `<button class="hsc" type="button" data-m="${x.m.id}"><div class="p">${pc(x.b.p)}<small>cuota justa ${(1/x.b.p).toFixed(2)}</small></div><div class="l">${x.b.label}</div><div class="m">${x.m.home} vs ${x.m.away} · ${isLive(x.m)?'<b style="color:#ff9a62">● En vivo</b>':x.m.time}</div></button>`}).join('')+`</div></div>`}
  const body=a=>sortM==='p'?a.map(kRow).join(''):kSlots(a);
  if(!grpLg)return h+body(SG);
  const G=new Map();SG.forEach(g=>{const l=g[0].m.leagueName;if(!G.has(l))G.set(l,[]);G.get(l).push(g)});
