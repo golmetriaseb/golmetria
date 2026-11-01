@@ -2,7 +2,7 @@
 <html lang="es"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
-<meta name="gm-v" content="20261101002331"><meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="gm-v" content="20261101003153"><meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Golmetría"><link rel="apple-touch-icon" href="icon-180.png"><link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#0a0b14"><meta name="color-scheme" content="dark">
 <title>Golmetría</title>
@@ -85,8 +85,8 @@ nav button.on{color:var(--bl)}nav button.on svg{filter:drop-shadow(0 0 6px rgba(
 .warn{border:1px solid #5a4a1d;background:#1d170a;border-radius:12px;padding:9px 12px;font-size:13px;line-height:1.45;color:#ffd98a;margin:8px 0}
 .st{display:inline-block;border-radius:8px;padding:3px 9px;font:italic 800 13px var(--f1);letter-spacing:.8px;text-transform:uppercase;white-space:nowrap}.st.w{background:rgba(182,255,59,.12);color:var(--ok);border:1px solid rgba(182,255,59,.4)}.st.l{background:rgba(224,51,79,.14);color:#ff7d92;border:1px solid rgba(224,51,79,.45)}.st.p{background:var(--card2);color:var(--mu);border:1px solid var(--ln2)}
 .kc{font-size:12.5px;color:var(--mu);margin:0 0 8px;line-height:1.5}.kc b{color:var(--tx)}
-.fbar{display:flex;gap:6px;overflow-x:auto;margin:0 0 10px;scrollbar-width:none;align-items:center}.fbar::-webkit-scrollbar{display:none}
-.fc{flex:none;border:1px solid var(--ln2);background:var(--card);color:var(--tx);border-radius:999px;padding:8px 11px;font:700 12.5px Barlow;display:flex;gap:5px;align-items:center;cursor:pointer;white-space:nowrap}.fc span{color:var(--mu);font-weight:600}.fc.dd:after{content:"▾";font-size:10px;color:var(--mu)}.fc.act{border-color:var(--bl)}
+.sel{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;align-items:center}.sel::-webkit-scrollbar{display:none}#fb{display:contents}.sel #fl,.sel select{flex:none;width:auto;height:34px;box-sizing:border-box;border-radius:999px;padding:8px 11px;font:700 12.5px Barlow}.sel select{padding-right:26px;background-position:right 9px center;background-size:10px}.sel #fl:after{margin:-3px 0 0 4px}
+.fc{flex:none;height:34px;box-sizing:border-box;border:1px solid var(--ln2);background:var(--card);color:var(--tx);border-radius:999px;padding:8px 11px;font:700 12.5px Barlow;display:flex;gap:5px;align-items:center;cursor:pointer;white-space:nowrap}.fc span{color:var(--mu);font-weight:600}.fc.dd:after{content:"▾";font-size:10px;color:var(--mu)}.fc.hl{border-color:var(--bl)}
 .fc i{width:28px;height:17px;border-radius:99px;background:#243047;position:relative;display:inline-block}.fc i:after{content:"";position:absolute;left:2px;top:2px;width:13px;height:13px;border-radius:50%;background:#9fb0cc;transition:.2s}.fc.on i{background:linear-gradient(135deg,#1f7bff,#2ec5ff)}.fc.on i:after{left:13px;background:#fff}
 .hs{margin:4px 0 6px}.hs h4{margin:0 0 8px;font:800 11px/1 Barlow;letter-spacing:1.6px;color:var(--go);text-transform:uppercase}
 .hsr{display:flex;gap:10px;overflow-x:auto;scrollbar-width:none;padding-bottom:4px}.hsr::-webkit-scrollbar{display:none}
@@ -127,12 +127,12 @@ nav button.on{color:var(--bl)}nav button.on svg{filter:drop-shadow(0 0 6px rgba(
 <div class="brand"><svg width="32" height="32" viewBox="0 0 40 40"><defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#2ec5ff"/><stop offset="1" stop-color="#b6ff3b"/></linearGradient></defs><circle cx="20" cy="20" r="17" fill="none" stroke="#2a3046" stroke-width="4"/><circle cx="20" cy="20" r="17" fill="none" stroke="url(#g)" stroke-width="4" stroke-linecap="round" stroke-dasharray="80 107" transform="rotate(-90 20 20)"/><circle cx="20" cy="20" r="8" fill="#fff"/><path d="M20 15l4 3-1.5 4.5h-5L16 18z" fill="#0a0a0d"/></svg><h1>GOL<span>METRÍA</span><small class="by">Created by Sebastián M</small></h1><span class="upd" id="upd"></span><button class="help" id="hb" aria-label="Ayuda"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9.5"/><path d="M9.5 9.5a2.5 2.5 0 114 2c-.9.6-1.5 1.1-1.5 2.2M12 17v.1"/></svg></button></div>
 <div id="filters">
 <div class="days" id="days"></div>
-<div class="sel"><button id="fl" type="button"></button><select id="ft"></select></div>
+<div class="sel"><button id="fl" type="button"></button><select id="ft"></select><div id="fb"></div></div>
 </div></div></div>
 <div class="wrap">
 <div class="actl" id="actl"><span id="actt"></span><button id="clr" type="button">Quitar filtros ✕</button></div><div class="note" id="note"></div><div class="rs" id="rs"></div>
 <div class="demo" id="demo"><b>Datos de ejemplo.</b> Así se verá la app. Con los partidos reales la conectamos después.</div>
-<section class="view on" id="v-seg"><div class="fbar" id="fb"></div><div id="l-seg"></div></section>
+<section class="view on" id="v-seg"><div id="l-seg"></div></section>
 <section class="view" id="v-par"><div class="intro"><h2>Partidos del <em>día</em></h2><p>Toca un partido para ver todas sus apuestas.</p></div><div id="l-par"></div></section>
 <section class="view" id="v-mis"><div class="intro"><h2>Mis <em>apuestas</em></h2><p>Las apuestas que guardas. Cuando el partido termina, la app las marca sola como ganadas o perdidas.</p></div><div class="seg2" id="seg"></div><div class="sum" id="sum"></div><div id="l-mis"></div></section>
 </div>
@@ -233,7 +233,7 @@ function render(){
  const SG=[...GM.values()].sort(sortM==='p'?(a,b)=>b[0].b.p-a[0].b.p:(a,b)=>(a[0].m.utc<b[0].m.utc?-1:a[0].m.utc>b[0].m.utc?1:b[0].b.p-a[0].b.p));
  $('#l-seg').innerHTML=SG.length?LN+segHtml(SG):emptyMsg('s');
  const th=(a,k)=>'<span>Desde</span>'+[.95,.80,.75,.65].map(x=>`<button data-${k}="${x}" class="${a===x?'on':''}">${pc(x)} o más</button>`).join('');
- $('#fb').innerHTML=`<button class="fc dd act" type="button" data-om="thr"><span>Desde</span><b>${pc(thr)}</b></button><button class="fc dd" type="button" data-om="ord"><span>Orden</span><b>${sortM==='p'?'Más probables':'Por hora'}</b></button><button class="fc${grpLg?' on':''}" type="button" data-grp="1"><i></i>Agrupar por liga</button>`;
+ $('#fb').innerHTML=`<button class="fc dd hl" type="button" data-om="thr"><span>Desde</span><b>${pc(thr)}</b></button><button class="fc dd" type="button" data-om="ord"><span>Orden</span><b>${sortM==='p'?'Más probables':'Por hora'}</b></button><button class="fc${grpLg?' on':''}" type="button" data-grp="1"><i></i>Agrupar por liga</button>`;
  const NP=ms().length,SS=new Set(flat().filter(x=>x.b.p>=thr).map(x=>x.m.id)).size;
  $('#rs').innerHTML=(liveOn?'En vivo: ':(dn(day)==='Hoy'?'Hoy: ':dn(day)+': '))+'<b>'+NP+'</b> '+(NP===1?'partido':'partidos')+' · <b>'+SS+'</b> con '+pc(thr)+' o más';
  const fa=[];if(sel.size!==LGS.length)fa.push(lgLabel());if(type!=='all')fa.push(TYPES.find(t=>t[0]===type)[1]);if(liveOn)fa.push('En vivo');
@@ -266,7 +266,7 @@ let demoBad=false;function stamp(){const el=$('#demo'),up=$('#upd');if(!REAL){de
  el.style.cssText+=h>9?';color:#ff8a8a;border-color:#7a2a2a;background:#2a0f0f':';color:var(--mu);border-color:var(--ln2);background:none';
  el.innerHTML='Datos actualizados <b>'+t+'</b>'+(h>9?'. Pueden estar atrasados.':'.')+(DATA.length?'':' Hoy no hay partidos cargados de tus ligas.');
  up.textContent='Actualizado '+t;up.className='upd'+(h>9?' old':'');demoBad=h>9||!DATA.length;el.style.display=(demoBad&&view!=='mis')?'':'none'}
-function setView(v){view=v;document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('on',b.dataset.v===v));document.querySelectorAll('.view').forEach(e=>e.classList.toggle('on',e.id==='v-'+v));$('#filters').style.display=v==='mis'?'none':'';$('#demo').style.display=(v==='mis'||!demoBad)?'none':'';$('#rs').style.display=(v==='mis'||v==='seg')?'none':'';$('#actl').style.display=v==='mis'?'none':'';$('#note').classList.remove('on');if(v==='mis')renderMis();else render();$('#det').classList.remove('on');document.documentElement.classList.remove('lock');scrollTo(0,0);slipBar()}
+function setView(v){view=v;document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('on',b.dataset.v===v));document.querySelectorAll('.view').forEach(e=>e.classList.toggle('on',e.id==='v-'+v));$('#filters').style.display=v==='mis'?'none':'';$('#fb').style.display=v==='seg'?'contents':'none';$('#demo').style.display=(v==='mis'||!demoBad)?'none':'';$('#rs').style.display=(v==='mis'||v==='seg')?'none':'';$('#actl').style.display=v==='mis'?'none':'';$('#note').classList.remove('on');if(v==='mis')renderMis();else render();$('#det').classList.remove('on');document.documentElement.classList.remove('lock');scrollTo(0,0);slipBar()}
 function openDet(id){cur=DATA.find(m=>m.id===id);custom={};drawDet();$('#det').classList.add('on');document.documentElement.classList.add('lock');$('#det').scrollTop=0}
 function drawDet(){const m=cur;let h=`<div class="meta">${m.leagueName} · ${dn(m.date)} ${m.time}</div><div class="tm" style="font-size:21px">${m.home} vs ${m.away}</div><p style="color:var(--mu);font-size:13px;margin:0 0 4px">Escribe la cuota de tu casa y el valor se recalcula.</p>`;
  const sec=[['Resultado',['win']],['Goles',['o15','o25','o35','under','btts']],['Goles de equipo',['tg']],['Primer tiempo',['g1t']],['Segundo tiempo',['g2t']],['Remates al arco',['st']],['Córners',['corn']]];
@@ -358,9 +358,9 @@ async function refresh(){if(ptrBusy)return;ptrBusy=true;const p=$('#ptr');p.text
  catch(e){toast('No se pudo actualizar. Revisa tu conexión.')}
  const w=700-(Date.now()-t0);if(w>0)await new Promise(r=>setTimeout(r,w));
  p.classList.remove('on');p.style.transform='';ptrBusy=false}
-if(STANDALONE){let y0=null,dy=0;const p=$('#ptr'),free=()=>!ptrBusy&&scrollY<=0&&!$('#det').classList.contains('on')&&!document.querySelector('.modal.on');
- document.addEventListener('touchstart',e=>{y0=free()&&e.touches.length===1?e.touches[0].clientY:null;dy=0},{passive:true});
- document.addEventListener('touchmove',e=>{if(y0===null)return;dy=e.touches[0].clientY-y0;if(dy<=0||scrollY>0){p.classList.remove('on');p.style.transform='';return}if(e.cancelable)e.preventDefault();const h=Math.min(dy*.75,125);p.textContent=dy>100?'Suelta para actualizar':'Desliza para actualizar';p.classList.add('on');p.style.transform=`translateY(${h-90}px)`},{passive:false});
+if(STANDALONE){let y0=null,x0=0,dy=0,lk=null;const p=$('#ptr'),free=()=>!ptrBusy&&scrollY<=0&&!$('#det').classList.contains('on')&&!document.querySelector('.modal.on');
+ document.addEventListener('touchstart',e=>{y0=free()&&e.touches.length===1?e.touches[0].clientY:null;x0=e.touches[0].clientX;dy=0;lk=null},{passive:true});
+ document.addEventListener('touchmove',e=>{if(y0===null)return;const ddx=e.touches[0].clientX-x0;dy=e.touches[0].clientY-y0;if(lk===null&&(Math.abs(ddx)>6||Math.abs(dy)>6))lk=(dy>0&&Math.abs(dy)>Math.abs(ddx)*1.5)?'y':'x';if(lk==='x'){y0=null;dy=0;p.classList.remove('on');p.style.transform='';return}if(lk===null)return;if(dy<=0||scrollY>0){p.classList.remove('on');p.style.transform='';return}if(e.cancelable)e.preventDefault();const h=Math.min(dy*.75,125);p.textContent=dy>100?'Suelta para actualizar':'Desliza para actualizar';p.classList.add('on');p.style.transform=`translateY(${h-90}px)`},{passive:false});
  document.addEventListener('touchend',()=>{if(y0===null)return;const go=dy>100;y0=null;if(go)refresh();else{p.classList.remove('on');p.style.transform=''}},{passive:true})}
 setView('seg');stamp();render();moved();
 setInterval(()=>{if(view!=='mis'&&!$('#det').classList.contains('on')&&!$('#lm').classList.contains('on'))render()},60000);
