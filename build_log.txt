@@ -1,7 +1,4 @@
- Queretaro 5 6
-wonCorners espn MEX Puebla UNAM Pumas 7 3
-shotsOnTarget espn MEX Puebla UNAM Pumas 6 5
-wonCorners espn NOR Brann Molde 4 7
+nn Molde 4 7
 shotsOnTarget espn NOR Brann Molde 5 4
 wonCorners espn NOR Start Lillestrom 5 5
 shotsOnTarget espn NOR Start Lillestrom 1 4
@@ -41,6 +38,8 @@ wonCorners espn SWE Elfsborg Orgryte 12 1
 shotsOnTarget espn SWE Elfsborg Orgryte 5 3
 wonCorners espn SWE Vasteras SK Brommapojkarna 5 8
 shotsOnTarget espn SWE Vasteras SK Brommapojkarna 4 7
+wonCorners espn USA Vancouver Whitecaps Seattle Sounders 2 6
+shotsOnTarget espn USA Vancouver Whitecaps Seattle Sounders 9 5
 wonCorners espn USA Charlotte Orlando City 4 4
 shotsOnTarget espn USA Charlotte Orlando City 6 8
 wonCorners espn USA Columbus Crew DC United 3 4
@@ -59,9 +58,9 @@ wonCorners espn USA San Jose Earthquakes Real Salt Lake 5 5
 shotsOnTarget espn USA San Jose Earthquakes Real Salt Lake 5 5
 wonCorners espn USA Colorado Rapids Chicago Fire 5 6
 shotsOnTarget espn USA Colorado Rapids Chicago Fire 4 6
-resultados: 724
+resultados: 727
 {
- "generated": "2026-11-01T21:45:03.850472+00:00",
+ "generated": "2026-11-01T22:44:57.702231+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
