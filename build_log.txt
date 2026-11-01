@@ -60,7 +60,7 @@ wonCorners espn USA San Jose Earthquakes Real Salt Lake 5 5
 shotsOnTarget espn USA San Jose Earthquakes Real Salt Lake 5 5
 resultados: 647
 {
- "generated": "2026-11-01T02:39:32.867298+00:00",
+ "generated": "2026-11-01T02:56:45.622721+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
