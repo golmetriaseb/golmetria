@@ -1,7 +1,7 @@
-ka 4 1
-shotsOnTarget espn JPN Chiba Avispa Fukuoka 4 2
-wonCorners espn JPN V-Varen Nagasaki FC Tokyo 5 4
+FC Tokyo 5 4
 shotsOnTarget espn JPN V-Varen Nagasaki FC Tokyo 4 3
+wonCorners espn JPN Machida Gamba Osaka 7 6
+shotsOnTarget espn JPN Machida Gamba Osaka 5 10
 wonCorners espn JPN Okayama FC Tokyo 8 5
 shotsOnTarget espn JPN Okayama FC Tokyo 4 8
 wonCorners espn JPN Kyoto Shimizu S-Pulse 6 6
@@ -58,9 +58,9 @@ wonCorners espn USA San Jose Earthquakes Real Salt Lake 5 5
 shotsOnTarget espn USA San Jose Earthquakes Real Salt Lake 5 5
 wonCorners espn USA Colorado Rapids Chicago Fire 5 6
 shotsOnTarget espn USA Colorado Rapids Chicago Fire 4 6
-resultados: 654
+resultados: 655
 {
- "generated": "2026-11-01T08:06:20.860830+00:00",
+ "generated": "2026-11-01T08:55:57.343163+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
