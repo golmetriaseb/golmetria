@@ -1,11 +1,4 @@
-o 6 2
-shotsOnTarget espn ARG Estudiantes L.P. Instituto 8 5
-wonCorners espn ARG Estudiantes Rio Cuarto Gimnasia L.P. 5 4
-shotsOnTarget espn ARG Estudiantes Rio Cuarto Gimnasia L.P. 2 3
-wonCorners espn ARG Huracan Tigre 9 2
-shotsOnTarget espn ARG Huracan Tigre 2 4
-wonCorners espn ARG Racing Club Aldosivi 0 6
-shotsOnTarget espn ARG Racing Club Aldosivi 6 2
+otsOnTarget espn ARG Racing Club Aldosivi 6 2
 wonCorners espn ARG Sarmiento Junin Rosario Central 2 13
 shotsOnTarget espn ARG Sarmiento Junin Rosario Central 2 6
 wonCorners espn DNK Lyngby Randers FC 3 4
@@ -24,6 +17,10 @@ wonCorners espn JPN Kashiwa Reysol Urawa Reds 5 6
 shotsOnTarget espn JPN Kashiwa Reysol Urawa Reds 9 1
 wonCorners espn MEX Pachuca Tigres UANL 5 4
 shotsOnTarget espn MEX Pachuca Tigres UANL 7 2
+wonCorners espn MEX Monterrey Club Tijuana 9 2
+shotsOnTarget espn MEX Monterrey Club Tijuana 7 3
+wonCorners espn MEX Guadalajara Chivas Atlante 6 4
+shotsOnTarget espn MEX Guadalajara Chivas Atlante 7 4
 wonCorners espn MEX Atl. San Luis Atlas 7 4
 shotsOnTarget espn MEX Atl. San Luis Atlas 4 1
 wonCorners espn MEX Juarez Queretaro 2 10
@@ -58,9 +55,11 @@ wonCorners espn USA Los Angeles Galaxy Austin FC 7 5
 shotsOnTarget espn USA Los Angeles Galaxy Austin FC 10 2
 wonCorners espn USA San Jose Earthquakes Real Salt Lake 5 5
 shotsOnTarget espn USA San Jose Earthquakes Real Salt Lake 5 5
-resultados: 647
+wonCorners espn USA Colorado Rapids Chicago Fire 5 6
+shotsOnTarget espn USA Colorado Rapids Chicago Fire 4 6
+resultados: 650
 {
- "generated": "2026-11-01T02:56:45.622721+00:00",
+ "generated": "2026-11-01T03:59:21.027102+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -208,4 +207,4 @@ resultados: 647
     "Rotherham",
     "Sheffield Weds",
     "Steven
-partidos: 401
+partidos: 400
