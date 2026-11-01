@@ -1,6 +1,4 @@
-N Kashima Antlers Cerezo Osaka 10 2
-shotsOnTarget espn JPN Kashima Antlers Cerezo Osaka 7 3
-wonCorners espn JPN Vissel Kobe Nagoya Grampus 8 6
+ers espn JPN Vissel Kobe Nagoya Grampus 8 6
 shotsOnTarget espn JPN Vissel Kobe Nagoya Grampus 4 4
 wonCorners espn JPN Kashiwa Reysol Urawa Reds 5 6
 shotsOnTarget espn JPN Kashiwa Reysol Urawa Reds 9 1
@@ -30,6 +28,8 @@ wonCorners espn RUS Orenburg CSKA Moscow 5 5
 shotsOnTarget espn RUS Orenburg CSKA Moscow 5 4
 wonCorners espn RUS Dynamo Makhachkala FK Rostov 2 1
 shotsOnTarget espn RUS Dynamo Makhachkala FK Rostov 1 5
+wonCorners espn RUS Baltika Akron Togliatti 6 4
+shotsOnTarget espn RUS Baltika Akron Togliatti 8 2
 wonCorners espn RUS Rubin Kazan Fakel Voronezh 2 4
 shotsOnTarget espn RUS Rubin Kazan Fakel Voronezh 3 2
 wonCorners espn RUS Dynamo Moscow Akhmat Grozny 3 3
@@ -58,9 +58,9 @@ wonCorners espn USA San Jose Earthquakes Real Salt Lake 5 5
 shotsOnTarget espn USA San Jose Earthquakes Real Salt Lake 5 5
 wonCorners espn USA Colorado Rapids Chicago Fire 5 6
 shotsOnTarget espn USA Colorado Rapids Chicago Fire 4 6
-resultados: 678
+resultados: 687
 {
- "generated": "2026-11-01T15:44:11.285786+00:00",
+ "generated": "2026-11-01T16:46:20.144813+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -108,7 +108,7 @@ resultados: 678
     "AFC Bournemouth": "Bournemouth",
     "Manchester United": "Man United"
    },
-   "fixtures_espn": 12,
+   "fixtures_espn": 11,
    "espn_unmatched": 0,
    "matches": 12
   },
@@ -208,4 +208,4 @@ resultados: 678
     "Rotherham",
     "Sheffield Weds",
     "Steven
-partidos: 381
+partidos: 364
