@@ -266,10 +266,6 @@ def bets_for(M, home, away, odds):
     add('btts', 'Ambos marcan', M['btts'])
     add('g1t', 'Gol en el 1er tiempo', M.get('g1t'))
     add('g2t', 'Gol en el 2.º tiempo', M.get('g2t'))
-    if 'sh25' in M:
-        for L in (25, 35, 45, 55):
-            add('st', f'Remates al arco de {home} más de {L / 10}', M[f'sh{L}'])
-            add('st', f'Remates al arco de {away} más de {L / 10}', M[f'sa{L}'])
     for k, L in ((1, '0.5'), (2, '1.5'), (3, '2.5')):
         add('tg', f'Goles de {home} más de {L}', M[f'gh{k}'])
         add('tg', f'Goles de {away} más de {L}', M[f'ga{k}'])

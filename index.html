@@ -2,7 +2,7 @@
 <html lang="es"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
-<meta name="gm-v" content="20261101014012"><meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="gm-v" content="20261101023921"><meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Golmetría"><link rel="apple-touch-icon" href="icon-180.png"><link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#0a0b14"><meta name="color-scheme" content="dark">
 <title>Golmetría</title>
@@ -186,7 +186,7 @@ document.addEventListener('gesturestart',e=>e.preventDefault());document.addEven
 const pn=v=>parseFloat(String(v).trim().replace(',','.'));
 function init(){
 /* ===== ESTADO ===== */
-const TYPES=[['all','Todas las apuestas'],['o15','Más de 1.5 goles'],['o25','Más de 2.5 goles'],['o35','Más de 3.5 goles'],['btts','Ambos marcan'],['under','Menos de goles'],['g1t','Gol en 1er tiempo'],['corn','Córners (total)'],['cteam','Córners de equipo'],['tg','Goles de equipo'],['st','Remates al arco'],['g2t','Gol en 2.º tiempo'],['win','Ganador / Doble op.']];
+const TYPES=[['all','Todas las apuestas'],['o15','Más de 1.5 goles'],['o25','Más de 2.5 goles'],['o35','Más de 3.5 goles'],['btts','Ambos marcan'],['under','Menos de goles'],['g1t','Gol en 1er tiempo'],['corn','Córners (total)'],['cteam','Córners de equipo'],['tg','Goles de equipo'],['g2t','Gol en 2.º tiempo'],['win','Ganador / Doble op.']];
 let days=[...new Set(DATA.map(m=>m.date))].sort();if(!days.length)days=[loc(new Date())];
 let day=days.includes(loc(new Date()))?loc(new Date()):days[0],type='all',thr=.75,cthr=.51,view='seg',bets=LS.get('gm_bets',[]),cur=null,custom={},pend=null,slip=[],mode='simple',askDel=null;let askMk=null;
 const dn=d=>{const t=loc(new Date()),tm=loc(new Date(Date.now()+864e5));return d===t?'Hoy':d===tm?'Mañana':new Date(d+'T12:00').toLocaleDateString('es',{weekday:'short'})};
@@ -194,6 +194,7 @@ const dd=d=>new Date(d+'T12:00').toLocaleDateString('es',{day:'numeric',month:'s
 const pc=x=>Math.round(x*100)+'%',val=b=>b.odd?b.p*b.odd-1:null,fmt=v=>v==null?'—':(v>=0?'+':'')+Math.round(v*100)+'%';
 function drawDays(){$('#days').innerHTML='<button class="day lv" id="lv">● En vivo <small id="lvn">0</small></button>'+days.map(d=>`<button class="day" data-d="${d}">${dn(d)}<small>${dd(d)}</small></button>`).join('')}drawDays();
 const TOP=['EPL','LL','GB1','SA','L1','ERE','POR','BEL','TUR','BRA','USA','MEX','ARG'];
+DATA.forEach(m=>{m.bets=m.bets.filter(b=>b.type!=='st')});
 const LGS=[...new Map(DATA.map(m=>[m.league,m.leagueName]))].sort((a,b)=>{const i=TOP.indexOf(a[0]),j=TOP.indexOf(b[0]);return i>=0&&j>=0?i-j:i>=0?-1:j>=0?1:a[1].localeCompare(b[1])});
 const favSet=()=>new Set(DATA.filter(m=>m.fav).map(m=>m.league));
 const myFav=()=>{const ok=new Set(LGS.map(x=>x[0]));return new Set((LS.get('gm_fav',[])||[]).filter(k=>ok.has(k)))};let lgFav=false;
@@ -277,7 +278,7 @@ let demoBad=false;function stamp(){const el=$('#demo'),up=$('#upd');if(!REAL){de
 function setView(v){view=v;document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('on',b.dataset.v===v));document.querySelectorAll('.view').forEach(e=>e.classList.toggle('on',e.id==='v-'+v));$('#filters').style.display=v==='mis'?'none':'';$('#fb').style.display=v==='seg'?'contents':'none';$('#demo').style.display=(v==='mis'||!demoBad)?'none':'';$('#rs').style.display=(v==='mis'||v==='seg')?'none':'';$('#actl').style.display=v==='mis'?'none':'';$('#note').classList.remove('on');if(v==='mis')renderMis();else render();$('#det').classList.remove('on');document.documentElement.classList.remove('lock');scrollTo(0,0);slipBar()}
 function openDet(id){cur=DATA.find(m=>m.id===id);custom={};drawDet();$('#det').classList.add('on');document.documentElement.classList.add('lock');$('#det').scrollTop=0}
 function drawDet(){const m=cur;let h=`<div class="meta">${m.leagueName} · ${dn(m.date)} ${m.time}</div><div class="tm" style="font-size:21px">${m.home} vs ${m.away}</div><p style="color:var(--mu);font-size:13px;margin:0 0 4px">Escribe la cuota de tu casa y el valor se recalcula.</p>`;
- const sec=[['Resultado',['win']],['Goles',['o15','o25','o35','under','btts']],['Goles de equipo',['tg']],['Primer tiempo',['g1t']],['Segundo tiempo',['g2t']],['Remates al arco',['st']],['Córners',['corn']]];
+ const sec=[['Resultado',['win']],['Goles',['o15','o25','o35','under','btts']],['Goles de equipo',['tg']],['Primer tiempo',['g1t']],['Segundo tiempo',['g2t']],['Córners',['corn']]];
  sec.forEach(([t,ty])=>{h+=`<div class="gt">${t}</div>`;m.bets.forEach((b,i)=>{if(!ty.includes(b.type))return;const o=custom[i]??b.odd,v=o?b.p*o-1:null,hi=b.p>=.75;h+=`<div class="row"><div class="rt"><span>${b.label}</span><span style="color:${hi?'var(--go)':'var(--bl)'}">${pc(b.p)}</span></div><div class="bar2"><i class="${hi?'hi':''}" style="width:${Math.round(b.p*100)}%"></i></div><div class="rr"><span>Cuota</span><input type="text" inputmode="decimal" autocomplete="off" value="${o||''}" placeholder="tu cuota" data-i="${i}"><span class="chipv ${v!=null&&v>=.05?'p':'n'}" id="cv${i}">${v==null?'Pon tu cuota':(v>=.05?'Valor ':'Sin valor ')+fmt(v)}</span><span class="sp"></span><button class="btn" data-sv="${m.id}|${i}">Guardar</button></div></div>`})});
  $('#dc').innerHTML=h}
 $('#dc').addEventListener('input',e=>{const i=e.target.dataset.i;if(i==null)return;const o=pn(e.target.value);if(!(o>1))return;custom[i]=o;const v=cur.bets[i].p*o-1,el=$('#cv'+i);el.className='chipv '+(v>=.05?'p':'n');el.textContent=(v>=.05?'Valor ':'Sin valor ')+fmt(v)});
