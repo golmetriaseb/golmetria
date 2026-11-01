@@ -1,20 +1,16 @@
- Reds 9 1
-wonCorners espn MEX Pachuca Tigres UANL 5 4
-shotsOnTarget espn MEX Pachuca Tigres UANL 7 2
-wonCorners espn MEX Monterrey Club Tijuana 9 2
-shotsOnTarget espn MEX Monterrey Club Tijuana 7 3
-wonCorners espn MEX Guadalajara Chivas Atlante 6 4
-shotsOnTarget espn MEX Guadalajara Chivas Atlante 7 4
-wonCorners espn MEX Club America Toluca 6 5
-shotsOnTarget espn MEX Club America Toluca 5 7
-wonCorners espn MEX Atl. San Luis Atlas 7 4
-shotsOnTarget espn MEX Atl. San Luis Atlas 4 1
+uis Atlas 4 1
 wonCorners espn MEX Juarez Queretaro 2 10
 shotsOnTarget espn MEX Juarez Queretaro 5 6
 wonCorners espn MEX Puebla UNAM Pumas 7 3
 shotsOnTarget espn MEX Puebla UNAM Pumas 6 5
 wonCorners espn NOR Brann Molde 4 7
 shotsOnTarget espn NOR Brann Molde 5 4
+wonCorners espn NOR Start Lillestrom 5 5
+shotsOnTarget espn NOR Start Lillestrom 1 4
+wonCorners espn NOR KFUM Oslo HamKam 3 6
+shotsOnTarget espn NOR KFUM Oslo HamKam 5 2
+wonCorners espn NOR Sarpsborg 08 Kristiansund 9 2
+shotsOnTarget espn NOR Sarpsborg 08 Kristiansund 7 6
 wonCorners espn NOR Fredrikstad Rosenborg 4 4
 shotsOnTarget espn NOR Fredrikstad Rosenborg 5 4
 wonCorners espn NOR Aalesund Sandefjord 7 7
@@ -27,6 +23,8 @@ wonCorners espn RUS Dynamo Makhachkala FK Rostov 2 1
 shotsOnTarget espn RUS Dynamo Makhachkala FK Rostov 1 5
 wonCorners espn RUS Baltika Akron Togliatti 6 4
 shotsOnTarget espn RUS Baltika Akron Togliatti 8 2
+wonCorners espn RUS Lokomotiv Moscow Spartak Moscow 5 6
+shotsOnTarget espn RUS Lokomotiv Moscow Spartak Moscow 4 9
 wonCorners espn RUS Rubin Kazan Fakel Voronezh 2 4
 shotsOnTarget espn RUS Rubin Kazan Fakel Voronezh 3 2
 wonCorners espn RUS Dynamo Moscow Akhmat Grozny 3 3
@@ -37,6 +35,8 @@ wonCorners espn SWE Djurgarden Degerfors 5 1
 shotsOnTarget espn SWE Djurgarden Degerfors 6 1
 wonCorners espn SWE Malmo FF Hammarby 1 5
 shotsOnTarget espn SWE Malmo FF Hammarby 5 6
+wonCorners espn SWE Hacken Goteborg 6 5
+shotsOnTarget espn SWE Hacken Goteborg 6 1
 wonCorners espn SWE Elfsborg Orgryte 12 1
 shotsOnTarget espn SWE Elfsborg Orgryte 5 3
 wonCorners espn SWE Vasteras SK Brommapojkarna 5 8
@@ -59,9 +59,9 @@ wonCorners espn USA San Jose Earthquakes Real Salt Lake 5 5
 shotsOnTarget espn USA San Jose Earthquakes Real Salt Lake 5 5
 wonCorners espn USA Colorado Rapids Chicago Fire 5 6
 shotsOnTarget espn USA Colorado Rapids Chicago Fire 4 6
-resultados: 696
+resultados: 711
 {
- "generated": "2026-11-01T17:43:02.116907+00:00",
+ "generated": "2026-11-01T18:53:33.534350+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -209,4 +209,4 @@ resultados: 696
     "Rotherham",
     "Sheffield Weds",
     "Steven
-partidos: 355
+partidos: 342
