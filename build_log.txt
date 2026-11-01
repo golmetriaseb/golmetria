@@ -58,9 +58,9 @@ wonCorners espn USA Los Angeles Galaxy Austin FC 7 5
 shotsOnTarget espn USA Los Angeles Galaxy Austin FC 10 2
 wonCorners espn USA San Jose Earthquakes Real Salt Lake 5 5
 shotsOnTarget espn USA San Jose Earthquakes Real Salt Lake 5 5
-resultados: 717
+resultados: 646
 {
- "generated": "2026-11-01T01:19:00.980257+00:00",
+ "generated": "2026-11-01T01:27:30.101868+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -208,4 +208,4 @@ resultados: 717
     "Rotherham",
     "Sheffield Weds",
     "Steven
-partidos: 402
+partidos: 401
