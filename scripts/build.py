@@ -18,7 +18,7 @@ HORIZON = 8           # dias hacia adelante
 
 FAV = {'ENG', 'GER', 'SCO', 'SUI', 'BRA'}
 _main = [('EPL', 'E0', 'Premier League', 'eng.1'), ('ENG', 'E1', 'Championship', 'eng.2'), ('EL1', 'E2', 'League One', 'eng.3'),
-         ('EL2', 'E3', 'League Two', 'eng.4'), ('ECO', 'EC', 'National League', 'eng.5'), ('SCO', 'SC0', 'Premiership', 'sco.1'),
+         ('SCO', 'SC0', 'Premiership', 'sco.1'),
          ('SC1', 'SC1', 'Championship (Escocia)', 'sco.2'), ('GB1', 'D1', 'Bundesliga', 'ger.1'), ('GER', 'D2', '2. Bundesliga', 'ger.2'),
          ('SA', 'I1', 'Serie A', 'ita.1'), ('SB', 'I2', 'Serie B', 'ita.2'), ('LL', 'SP1', 'La Liga', 'esp.1'), ('LL2', 'SP2', 'La Liga 2', 'esp.2'),
          ('L1', 'F1', 'Ligue 1', 'fra.1'), ('L2', 'F2', 'Ligue 2', 'fra.2'), ('ERE', 'N1', 'Eredivisie', 'ned.1'),
