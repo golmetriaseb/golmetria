@@ -1,6 +1,5 @@
-arget espn BRA Corinthians Mirassol 8 0
-wonCorners espn ARG Dep. Riestra Talleres Cordoba 8 4
-shotsOnTarget espn ARG Dep. Riestra Talleres Cordoba 5 5
+ 9 2
+shotsOnTarget espn ARG Velez Sarsfield San Lorenzo 6 3
 wonCorners espn ARG Estudiantes Rio Cuarto Gimnasia L.P. 5 4
 shotsOnTarget espn ARG Estudiantes Rio Cuarto Gimnasia L.P. 2 3
 wonCorners espn ARG Huracan Tigre 9 2
@@ -23,6 +22,8 @@ wonCorners espn JPN Vissel Kobe Nagoya Grampus 8 6
 shotsOnTarget espn JPN Vissel Kobe Nagoya Grampus 4 4
 wonCorners espn JPN Kashiwa Reysol Urawa Reds 5 6
 shotsOnTarget espn JPN Kashiwa Reysol Urawa Reds 9 1
+wonCorners espn MEX Pachuca Tigres UANL 5 4
+shotsOnTarget espn MEX Pachuca Tigres UANL 7 2
 wonCorners espn MEX Atl. San Luis Atlas 7 4
 shotsOnTarget espn MEX Atl. San Luis Atlas 4 1
 wonCorners espn MEX Juarez Queretaro 2 10
@@ -57,9 +58,9 @@ wonCorners espn USA Los Angeles Galaxy Austin FC 7 5
 shotsOnTarget espn USA Los Angeles Galaxy Austin FC 10 2
 wonCorners espn USA San Jose Earthquakes Real Salt Lake 5 5
 shotsOnTarget espn USA San Jose Earthquakes Real Salt Lake 5 5
-resultados: 846
+resultados: 717
 {
- "generated": "2026-10-31T23:48:34.525560+00:00",
+ "generated": "2026-11-01T01:19:00.980257+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -101,11 +102,15 @@ resultados: 846
     "Tottenham Hotspur": "Tottenham",
     "Hull City": "Hull",
     "Nottingham Forest": "Nott'm Forest",
-    "Manchester City": "Man City"
+    "Manchester City": "Man City",
+    "Brighton & Hove Albion": "Brighton",
+    "Ipswich Town": "Ipswich",
+    "AFC Bournemouth": "Bournemouth",
+    "Manchester United": "Man United"
    },
-   "fixtures_espn": 7,
+   "fixtures_espn": 12,
    "espn_unmatched": 0,
-   "matches": 7
+   "matches": 12
   },
   "ENG": {
    "name": "Championship",
@@ -202,13 +207,5 @@ resultados: 846
     "Reading",
     "Rotherham",
     "Sheffield Weds",
-    "Stevenage",
-    "Stockport",
-    "Wigan",
-    "Wycombe"
-   ],
-   "fav": false,
-   "fixtures_fd": 12,
-   "name_map": {
-    "Sheffield Wednesday": "Sheffield We
-partidos: 296
+    "Steven
+partidos: 402
