@@ -55,9 +55,9 @@ wonCorners espn USA San Jose Earthquakes Real Salt Lake 5 5
 shotsOnTarget espn USA San Jose Earthquakes Real Salt Lake 5 5
 wonCorners espn USA Colorado Rapids Chicago Fire 5 6
 shotsOnTarget espn USA Colorado Rapids Chicago Fire 4 6
-resultados: 630
+resultados: 631
 {
- "generated": "2026-11-02T18:04:32.817260+00:00",
+ "generated": "2026-11-02T19:04:59.386039+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -205,4 +205,4 @@ resultados: 630
     "Rotherham",
     "Sheffield Weds",
     "Steven
-partidos: 301
+partidos: 296
