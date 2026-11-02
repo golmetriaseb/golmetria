@@ -55,16 +55,16 @@ wonCorners espn USA San Jose Earthquakes Real Salt Lake 5 5
 shotsOnTarget espn USA San Jose Earthquakes Real Salt Lake 5 5
 wonCorners espn USA Colorado Rapids Chicago Fire 5 6
 shotsOnTarget espn USA Colorado Rapids Chicago Fire 4 6
-resultados: 609
+resultados: 626
 {
- "generated": "2026-11-02T10:23:17.875645+00:00",
+ "generated": "2026-11-02T12:00:32.662982+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
-   "hist": 460,
-   "last_result": "2026-10-25",
-   "has_corners": 460,
-   "has_half": 460,
+   "hist": 469,
+   "last_result": "2026-11-01",
+   "has_corners": 469,
+   "has_half": 469,
    "teams": [
     "Arsenal",
     "Aston Villa",
@@ -111,10 +111,10 @@ resultados: 609
   },
   "ENG": {
    "name": "Championship",
-   "hist": 696,
-   "last_result": "2026-10-24",
-   "has_corners": 696,
-   "has_half": 696,
+   "hist": 708,
+   "last_result": "2026-10-31",
+   "has_corners": 708,
+   "has_half": 708,
    "teams": [
     "Birmingham",
     "Blackburn",
@@ -172,10 +172,10 @@ resultados: 609
   },
   "EL1": {
    "name": "League One",
-   "hist": 695,
-   "last_result": "2026-10-27",
-   "has_corners": 695,
-   "has_half": 695,
+   "hist": 707,
+   "last_result": "2026-11-01",
+   "has_corners": 707,
+   "has_half": 707,
    "teams": [
     "AFC Wimbledon",
     "Barnsley",
