@@ -58,7 +58,7 @@ wonCorners espn USA Colorado Rapids Chicago Fire 5 6
 shotsOnTarget espn USA Colorado Rapids Chicago Fire 4 6
 resultados: 646
 {
- "generated": "2026-11-02T22:51:50.102515+00:00",
+ "generated": "2026-11-02T23:46:20.037392+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -108,7 +108,7 @@ resultados: 646
    },
    "fixtures_espn": 10,
    "espn_unmatched": 0,
-   "matches": 11
+   "matches": 10
   },
   "ENG": {
    "name": "Championship",
@@ -206,4 +206,4 @@ resultados: 646
     "Rotherham",
     "Sheffield Weds",
     "Steven
-partidos: 281
+partidos: 276
