@@ -1,7 +1,4 @@
-estrom 1 4
-wonCorners espn NOR KFUM Oslo HamKam 3 6
-shotsOnTarget espn NOR KFUM Oslo HamKam 5 2
-wonCorners espn NOR Sarpsborg 08 Kristiansund 9 2
+borg 08 Kristiansund 9 2
 shotsOnTarget espn NOR Sarpsborg 08 Kristiansund 7 6
 wonCorners espn NOR Valerenga Tromso 3 2
 shotsOnTarget espn NOR Valerenga Tromso 9 0
@@ -39,6 +36,8 @@ wonCorners espn USA Atlanta Utd Toronto FC 3 3
 shotsOnTarget espn USA Atlanta Utd Toronto FC 8 3
 wonCorners espn USA Nashville SC New York Red Bulls 12 3
 shotsOnTarget espn USA Nashville SC New York Red Bulls 7 4
+wonCorners espn USA New England Revolution Inter Miami 7 1
+shotsOnTarget espn USA New England Revolution Inter Miami 3 6
 wonCorners espn USA Charlotte Orlando City 4 4
 shotsOnTarget espn USA Charlotte Orlando City 6 8
 wonCorners espn USA Columbus Crew DC United 3 4
@@ -57,9 +56,9 @@ wonCorners espn USA San Jose Earthquakes Real Salt Lake 5 5
 shotsOnTarget espn USA San Jose Earthquakes Real Salt Lake 5 5
 wonCorners espn USA Colorado Rapids Chicago Fire 5 6
 shotsOnTarget espn USA Colorado Rapids Chicago Fire 4 6
-resultados: 604
+resultados: 606
 {
- "generated": "2026-11-02T01:16:50.612626+00:00",
+ "generated": "2026-11-02T02:17:29.924672+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -207,4 +206,4 @@ resultados: 604
     "Rotherham",
     "Sheffield Weds",
     "Steven
-partidos: 308
+partidos: 307
