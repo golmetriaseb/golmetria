@@ -55,9 +55,9 @@ wonCorners espn USA San Jose Earthquakes Real Salt Lake 5 5
 shotsOnTarget espn USA San Jose Earthquakes Real Salt Lake 5 5
 wonCorners espn USA Colorado Rapids Chicago Fire 5 6
 shotsOnTarget espn USA Colorado Rapids Chicago Fire 4 6
-resultados: 629
+resultados: 630
 {
- "generated": "2026-11-02T17:13:09.477434+00:00",
+ "generated": "2026-11-02T18:04:32.817260+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
