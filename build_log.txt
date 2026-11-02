@@ -1,7 +1,4 @@
-R Aalesund Sandefjord 5 9
-wonCorners espn RUS Krylya Sovetov Zenit 4 6
-shotsOnTarget espn RUS Krylya Sovetov Zenit 1 6
-wonCorners espn RUS Orenburg CSKA Moscow 5 5
+KA Moscow 5 5
 shotsOnTarget espn RUS Orenburg CSKA Moscow 5 4
 wonCorners espn RUS Dynamo Makhachkala FK Rostov 2 1
 shotsOnTarget espn RUS Dynamo Makhachkala FK Rostov 1 5
@@ -15,6 +12,10 @@ wonCorners espn RUS Dynamo Moscow Akhmat Grozny 3 3
 shotsOnTarget espn RUS Dynamo Moscow Akhmat Grozny 12 1
 wonCorners espn RUS Rodina Moscow Krasnodar 1 1
 shotsOnTarget espn RUS Rodina Moscow Krasnodar 4 5
+wonCorners espn SWE GAIS AIK 3 9
+shotsOnTarget espn SWE GAIS AIK 3 4
+wonCorners espn SWE Mjallby Kalmar 4 6
+shotsOnTarget espn SWE Mjallby Kalmar 2 4
 wonCorners espn SWE Djurgarden Degerfors 5 1
 shotsOnTarget espn SWE Djurgarden Degerfors 6 1
 wonCorners espn SWE Malmo FF Hammarby 1 5
@@ -55,9 +56,9 @@ wonCorners espn USA San Jose Earthquakes Real Salt Lake 5 5
 shotsOnTarget espn USA San Jose Earthquakes Real Salt Lake 5 5
 wonCorners espn USA Colorado Rapids Chicago Fire 5 6
 shotsOnTarget espn USA Colorado Rapids Chicago Fire 4 6
-resultados: 631
+resultados: 637
 {
- "generated": "2026-11-02T19:04:59.386039+00:00",
+ "generated": "2026-11-02T19:58:54.158791+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
