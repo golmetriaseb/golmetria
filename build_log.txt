@@ -61,7 +61,7 @@ wonCorners espn USA Portland Timbers Houston Dynamo 6 6
 shotsOnTarget espn USA Portland Timbers Houston Dynamo 6 1
 resultados: 602
 {
- "generated": "2026-11-03T02:59:09.982266+00:00",
+ "generated": "2026-11-03T03:59:43.307843+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -209,4 +209,4 @@ resultados: 602
     "Rotherham",
     "Sheffield Weds",
     "Steven
-partidos: 272
+partidos: 270
