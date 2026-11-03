@@ -18,7 +18,7 @@ wonCorners espn SWE Sirius Halmstad 5 4
 shotsOnTarget espn SWE Sirius Halmstad 4 1
 resultados: 674
 {
- "generated": "2026-11-03T19:59:56.376873+00:00",
+ "generated": "2026-11-03T20:56:39.821704+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -111,7 +111,6 @@ resultados: 674
    "fav": true,
    "fixtures_fd": 12,
    "name_map": {
-    "West Bromwich Albion": "West Brom",
     "Cardiff City": "Cardiff",
     "West Ham United": "West Ham",
     "Wolverhampton Wanderers": "Wolves",
@@ -125,9 +124,10 @@ resultados: 674
     "Charlton Athletic": "Charlton",
     "Preston North End": "Preston",
     "Queens Park Rangers": "QPR",
-    "Lincoln City": "Lincoln"
+    "Lincoln City": "Lincoln",
+    "West Bromwich Albion": "West Brom"
    },
-   "fixtures_espn": 16,
+   "fixtures_espn": 15,
    "espn_unmatched": 0,
    "skipped": 1,
    "matches": 23
