@@ -14,9 +14,11 @@ wonCorners espn RUS Baltika Akron Togliatti 6 4
 shotsOnTarget espn RUS Baltika Akron Togliatti 8 2
 wonCorners espn RUS Lokomotiv Moscow Spartak Moscow 5 6
 shotsOnTarget espn RUS Lokomotiv Moscow Spartak Moscow 4 9
-resultados: 673
+wonCorners espn SWE Sirius Halmstad 5 4
+shotsOnTarget espn SWE Sirius Halmstad 4 1
+resultados: 674
 {
- "generated": "2026-11-03T19:03:02.012194+00:00",
+ "generated": "2026-11-03T19:59:56.376873+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -109,26 +111,26 @@ resultados: 673
    "fav": true,
    "fixtures_fd": 12,
    "name_map": {
-    "Blackburn Rovers": "Blackburn",
-    "Stoke City": "Stoke",
-    "Charlton Athletic": "Charlton",
-    "Bolton Wanderers": "Bolton",
-    "Derby County": "Derby",
-    "Norwich City": "Norwich",
-    "Swansea City": "Swansea",
-    "Preston North End": "Preston",
-    "Queens Park Rangers": "QPR",
-    "Lincoln City": "Lincoln",
-    "Birmingham City": "Birmingham",
     "West Bromwich Albion": "West Brom",
     "Cardiff City": "Cardiff",
     "West Ham United": "West Ham",
-    "Wolverhampton Wanderers": "Wolves"
+    "Wolverhampton Wanderers": "Wolves",
+    "Derby County": "Derby",
+    "Bolton Wanderers": "Bolton",
+    "Norwich City": "Norwich",
+    "Stoke City": "Stoke",
+    "Birmingham City": "Birmingham",
+    "Swansea City": "Swansea",
+    "Blackburn Rovers": "Blackburn",
+    "Charlton Athletic": "Charlton",
+    "Preston North End": "Preston",
+    "Queens Park Rangers": "QPR",
+    "Lincoln City": "Lincoln"
    },
-   "fixtures_espn": 24,
+   "fixtures_espn": 16,
    "espn_unmatched": 0,
    "skipped": 1,
-   "matches": 24
+   "matches": 23
   },
   "EL1": {
    "name": "League One",
@@ -164,4 +166,4 @@ resultados: 673
     "Reading",
     "Rotherham",
     "Sheffield We
-partidos: 270
+partidos: 269
