@@ -1,3 +1,25 @@
+wonCorners espn ENG Blackburn Stoke 6 5
+shotsOnTarget espn ENG Blackburn Stoke 3 3
+wonCorners espn ENG Charlton Bolton 4 3
+shotsOnTarget espn ENG Charlton Bolton 2 3
+wonCorners espn ENG Derby Norwich 4 5
+shotsOnTarget espn ENG Derby Norwich 2 8
+wonCorners espn ENG Portsmouth Swansea 5 5
+shotsOnTarget espn ENG Portsmouth Swansea 5 3
+wonCorners espn ENG Preston Sheffield United 3 3
+shotsOnTarget espn ENG Preston Sheffield United 2 5
+wonCorners espn ENG QPR Burnley 8 1
+shotsOnTarget espn ENG QPR Burnley 5 1
+wonCorners espn ENG Watford Lincoln 7 6
+shotsOnTarget espn ENG Watford Lincoln 2 1
+wonCorners espn ENG Birmingham Millwall 6 2
+shotsOnTarget espn ENG Birmingham Millwall 8 2
+wonCorners espn ENG West Brom Southampton 3 5
+shotsOnTarget espn ENG West Brom Southampton 5 3
+wonCorners espn EL1 Huddersfield Luton 10 1
+shotsOnTarget espn EL1 Huddersfield Luton 6 4
+wonCorners espn EL1 Wigan Mansfield 5 2
+shotsOnTarget espn EL1 Wigan Mansfield 2 3
 wonCorners espn LL2 Tenerife Andorra 0 3
 shotsOnTarget espn LL2 Tenerife Andorra 2 4
 wonCorners espn ARG Independiente Banfield 6 4
@@ -16,9 +38,9 @@ wonCorners espn RUS Lokomotiv Moscow Spartak Moscow 5 6
 shotsOnTarget espn RUS Lokomotiv Moscow Spartak Moscow 4 9
 wonCorners espn SWE Sirius Halmstad 5 4
 shotsOnTarget espn SWE Sirius Halmstad 4 1
-resultados: 674
+resultados: 685
 {
- "generated": "2026-11-03T20:56:39.821704+00:00",
+ "generated": "2026-11-03T21:54:49.885776+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -166,4 +188,4 @@ resultados: 674
     "Reading",
     "Rotherham",
     "Sheffield We
-partidos: 269
+partidos: 268
