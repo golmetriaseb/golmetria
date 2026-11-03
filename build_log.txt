@@ -1,28 +1,9 @@
-hotsOnTarget espn DNK Nordsjaelland Midtjylland 12 4
-wonCorners espn DNK Brondby Aarhus 9 6
-shotsOnTarget espn DNK Brondby Aarhus 4 1
-wonCorners espn JPN Yokohama F. Marinos Kawasaki Frontale 7 4
-shotsOnTarget espn JPN Yokohama F. Marinos Kawasaki Frontale 8 4
-wonCorners espn JPN Chiba Avispa Fukuoka 4 1
-shotsOnTarget espn JPN Chiba Avispa Fukuoka 4 2
+wonCorners espn LL2 Tenerife Andorra 0 3
+shotsOnTarget espn LL2 Tenerife Andorra 2 4
+wonCorners espn ARG Independiente Banfield 6 4
+shotsOnTarget espn ARG Independiente Banfield 2 2
 wonCorners espn JPN V-Varen Nagasaki FC Tokyo 5 4
 shotsOnTarget espn JPN V-Varen Nagasaki FC Tokyo 4 3
-wonCorners espn JPN Machida Gamba Osaka 7 6
-shotsOnTarget espn JPN Machida Gamba Osaka 5 10
-wonCorners espn MEX Santos Laguna Necaxa 12 6
-shotsOnTarget espn MEX Santos Laguna Necaxa 3 8
-wonCorners espn MEX Cruz Azul Club Leon 4 6
-shotsOnTarget espn MEX Cruz Azul Club Leon 5 4
-wonCorners espn NOR Brann Molde 4 7
-shotsOnTarget espn NOR Brann Molde 5 4
-wonCorners espn NOR Start Lillestrom 5 5
-shotsOnTarget espn NOR Start Lillestrom 1 4
-wonCorners espn NOR KFUM Oslo HamKam 3 6
-shotsOnTarget espn NOR KFUM Oslo HamKam 5 2
-wonCorners espn NOR Sarpsborg 08 Kristiansund 9 2
-shotsOnTarget espn NOR Sarpsborg 08 Kristiansund 7 6
-wonCorners espn NOR Valerenga Tromso 3 2
-shotsOnTarget espn NOR Valerenga Tromso 9 0
 wonCorners espn RUS Krylya Sovetov Zenit 4 6
 shotsOnTarget espn RUS Krylya Sovetov Zenit 1 6
 wonCorners espn RUS Orenburg CSKA Moscow 5 5
@@ -33,42 +14,16 @@ wonCorners espn RUS Baltika Akron Togliatti 6 4
 shotsOnTarget espn RUS Baltika Akron Togliatti 8 2
 wonCorners espn RUS Lokomotiv Moscow Spartak Moscow 5 6
 shotsOnTarget espn RUS Lokomotiv Moscow Spartak Moscow 4 9
-wonCorners espn SWE GAIS AIK 3 9
-shotsOnTarget espn SWE GAIS AIK 3 4
-wonCorners espn SWE Mjallby Kalmar 4 6
-shotsOnTarget espn SWE Mjallby Kalmar 2 4
-wonCorners espn SWE Djurgarden Degerfors 5 1
-shotsOnTarget espn SWE Djurgarden Degerfors 6 1
-wonCorners espn SWE Malmo FF Hammarby 1 5
-shotsOnTarget espn SWE Malmo FF Hammarby 5 6
-wonCorners espn SWE Hacken Goteborg 6 5
-shotsOnTarget espn SWE Hacken Goteborg 6 1
-wonCorners espn SWE Elfsborg Orgryte 12 1
-shotsOnTarget espn SWE Elfsborg Orgryte 5 3
-wonCorners espn SWE Vasteras SK Brommapojkarna 5 8
-shotsOnTarget espn SWE Vasteras SK Brommapojkarna 4 7
-wonCorners espn USA Vancouver Whitecaps Seattle Sounders 2 6
-shotsOnTarget espn USA Vancouver Whitecaps Seattle Sounders 9 5
-wonCorners espn USA Atlanta Utd Toronto FC 3 3
-shotsOnTarget espn USA Atlanta Utd Toronto FC 8 3
-wonCorners espn USA Nashville SC New York Red Bulls 12 3
-shotsOnTarget espn USA Nashville SC New York Red Bulls 7 4
-wonCorners espn USA New England Revolution Inter Miami 7 1
-shotsOnTarget espn USA New England Revolution Inter Miami 3 6
-wonCorners espn USA Los Angeles FC Minnesota United 8 1
-shotsOnTarget espn USA Los Angeles FC Minnesota United 7 3
-wonCorners espn USA Portland Timbers Houston Dynamo 6 6
-shotsOnTarget espn USA Portland Timbers Houston Dynamo 6 1
-resultados: 602
+resultados: 673
 {
- "generated": "2026-11-03T09:00:09.020611+00:00",
+ "generated": "2026-11-03T10:02:16.742114+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
-   "hist": 469,
-   "last_result": "2026-11-01",
-   "has_corners": 469,
-   "has_half": 469,
+   "hist": 470,
+   "last_result": "2026-11-02",
+   "has_corners": 470,
+   "has_half": 470,
    "teams": [
     "Arsenal",
     "Aston Villa",
