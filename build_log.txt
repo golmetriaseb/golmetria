@@ -1,19 +1,19 @@
 espn historial SUI eventos 0 con córners en historial 0
-espn historial BRA eventos 57 con córners en historial 57
-espn historial ARG eventos 60 con córners en historial 56
-espn historial AUT eventos 53 con córners en historial 17
-espn historial DNK eventos 51 con córners en historial 51
+espn historial BRA eventos 85 con córners en historial 85
+espn historial ARG eventos 89 con córners en historial 83
+espn historial AUT eventos 80 con córners en historial 42
+espn historial DNK eventos 77 con córners en historial 77
 espn historial FIN eventos 0 con córners en historial 0
-espn historial IRL eventos 11 con córners en historial 0
-espn historial JPN eventos 65 con córners en historial 58
-espn historial MEX eventos 52 con córners en historial 52
-espn historial NOR eventos 58 con córners en historial 58
+espn historial IRL eventos 20 con córners en historial 0
+espn historial JPN eventos 99 con córners en historial 89
+espn historial MEX eventos 77 con córners en historial 77
+espn historial NOR eventos 87 con córners en historial 87
 espn historial POL eventos 0 con córners en historial 0
 espn historial ROU eventos 0 con córners en historial 0
-espn historial RUS eventos 59 con córners en historial 54
-espn historial SWE eventos 56 con córners en historial 56
-espn historial USA eventos 64 con córners en historial 64
-espn historial CHN eventos 60 con córners en historial 60
+espn historial RUS eventos 88 con córners en historial 79
+espn historial SWE eventos 83 con córners en historial 83
+espn historial USA eventos 92 con córners en historial 92
+espn historial CHN eventos 89 con córners en historial 89
 wonCorners espn ENG Blackburn Stoke 6 5
 shotsOnTarget espn ENG Blackburn Stoke 3 3
 wonCorners espn ENG Charlton Bolton 4 3
@@ -56,7 +56,7 @@ wonCorners espn SWE Sirius Halmstad 5 4
 shotsOnTarget espn SWE Sirius Halmstad 4 1
 resultados: 685
 {
- "generated": "2026-11-03T22:54:36.901500+00:00",
+ "generated": "2026-11-03T23:48:05.082670+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -167,7 +167,7 @@ resultados: 685
    },
    "fixtures_espn": 15,
    "espn_unmatched": 0,
-   "matches": 17
+   "matches": 15
   },
   "EL1": {
    "name": "League One",
@@ -204,4 +204,4 @@ resultados: 685
     "Rotherham",
     "Sheffield Weds",
     "Stevena
-partidos: 260
+partidos: 258
