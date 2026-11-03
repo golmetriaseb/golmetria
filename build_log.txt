@@ -61,7 +61,7 @@ wonCorners espn USA Portland Timbers Houston Dynamo 6 6
 shotsOnTarget espn USA Portland Timbers Houston Dynamo 6 1
 resultados: 602
 {
- "generated": "2026-11-03T06:01:51.948644+00:00",
+ "generated": "2026-11-03T07:22:44.642150+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
