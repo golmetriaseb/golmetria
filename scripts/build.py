@@ -15,6 +15,11 @@ K = 4.0               # encogimiento
 RHO = -0.06
 MIN_GAMES = 6
 HORIZON = 8           # dias hacia adelante
+CACHE_FILE = 'espn_cache.json'   # historial de córners/remates leído de ESPN (ligas que football-data no trae)
+PER_LEAGUE_REQ = 40   # peticiones a ESPN por liga y por corrida (se completa de a poco, lo más reciente primero)
+RUN_SECONDS = 600     # tope de tiempo para esa lectura en cada corrida
+CACHE = {'ev': {}, 'days': {}}
+DEADLINE = 0.0
 
 FAV = {'ENG', 'GER', 'SCO', 'SUI', 'BRA'}
 _main = [('EPL', 'E0', 'Premier League', 'eng.1'), ('ENG', 'E1', 'Championship', 'eng.2'), ('EL1', 'E2', 'League One', 'eng.3'),
@@ -82,6 +87,100 @@ def season_codes():
     prev = f'{p:02d}{p+1:02d}'
     return [prev, cur]
 
+# ---------- córners de ESPN para ligas sin ese dato ----------
+def load_cache():
+    try:
+        c = json.load(open(CACHE_FILE))
+        c.setdefault('ev', {}); c.setdefault('days', {})
+        return c
+    except Exception:
+        return {'ev': {}, 'days': {}}
+
+def save_cache():
+    try:
+        json.dump(CACHE, open(CACHE_FILE, 'w'), ensure_ascii=False, separators=(',', ':'))
+    except Exception as ex:
+        log('cache espn no guardada', str(ex)[:100])
+
+def espn_enrich(lg, out):
+    """Completa córners y remates de partidos ya jugados con el detalle de ESPN. Nunca debe romper el proceso."""
+    try:
+        code = lg['code']
+        evs = CACHE['ev'].setdefault(code, {})
+        days = set(CACHE['days'].setdefault(code, []))
+        teams = sorted({m['h'] for m in out} | {m['a'] for m in out})
+        budget = PER_LEAGUE_REQ
+        cutoff = TODAY - timedelta(days=400)
+        todo = sorted({m['d'] for m in out if cutoff <= m['d'] < TODAY and m['hc'] is None}, reverse=True)
+        for d in todo:
+            if d.isoformat() in days:
+                continue
+            if budget <= 0 or time.time() > DEADLINE:
+                break
+            budget -= 1
+            try:
+                j = json.loads(fetch(f"https://site.api.espn.com/apis/site/v2/sports/soccer/{lg['espn']}/scoreboard?dates={d:%Y%m%d}", tries=2))
+            except Exception:
+                continue
+            complete = True
+            for ev in j.get('events', []):
+                try:
+                    if not ev['status']['type'].get('completed'):
+                        continue
+                    eid = str(ev['id'])
+                    if eid in evs:
+                        continue
+                    comp = ev['competitions'][0]['competitors']
+                    ch = next(c for c in comp if c['homeAway'] == 'home')
+                    ca = next(c for c in comp if c['homeAway'] == 'away')
+                    rec = dict(d=datetime.fromisoformat(ev['date'].replace('Z', '+00:00')).date().isoformat(),
+                               h=ch['team']['displayName'], a=ca['team']['displayName'], hc=None, ac=None, hst=None, ast=None)
+                    hid, aid = str(ch['team'].get('id')), str(ca['team'].get('id'))
+                except Exception:
+                    continue
+                if budget <= 0 or time.time() > DEADLINE:
+                    complete = False
+                    break
+                budget -= 1
+                try:
+                    sj = json.loads(fetch(f"https://site.api.espn.com/apis/site/v2/sports/soccer/{lg['espn']}/summary?event={eid}", tries=2))
+                    got = {'wonCorners': {}, 'shotsOnTarget': {}}
+                    for t in sj['boxscore']['teams']:
+                        for stt in t.get('statistics', []):
+                            if stt.get('name') in got:
+                                try:
+                                    got[stt['name']][str(t['team']['id'])] = int(float(stt['displayValue']))
+                                except Exception:
+                                    pass
+                    for name, kh, ka in (('wonCorners', 'hc', 'ac'), ('shotsOnTarget', 'hst', 'ast')):
+                        g = got[name]
+                        if hid in g and aid in g and g[hid] + g[aid] > 0:
+                            rec[kh], rec[ka] = g[hid], g[aid]
+                except Exception:
+                    complete = False
+                    continue
+                evs[eid] = rec
+            if complete:
+                days.add(d.isoformat())
+        CACHE['days'][code] = sorted(days)
+        idx = {}
+        for e in evs.values():
+            th, ta = match_team(e['h'], teams), match_team(e['a'], teams)
+            if th and ta and e['hc'] is not None:
+                idx.setdefault((th, ta), []).append(e)
+        n = 0
+        for m in out:
+            if m['hc'] is not None:
+                continue
+            for e in idx.get((m['h'], m['a']), []):
+                if abs((date.fromisoformat(e['d']) - m['d']).days) <= 1:
+                    m['hc'], m['ac'], m['hst'], m['ast'] = e['hc'], e['ac'], e['hst'], e['ast']
+                    n += 1
+                    break
+        log('espn historial', code, 'eventos', len(evs), 'con córners en historial', n)
+    except Exception as ex:
+        log('espn_enrich', lg.get('code'), str(ex)[:100])
+
 # ---------- historial ----------
 def load_history(lg):
     out = []
@@ -111,6 +210,8 @@ def load_history(lg):
                 continue
             out.append(dict(d=d, h=r['Home'].strip(), a=r['Away'].strip(), hg=hg, ag=ag, h1=None, a1=None, hc=None, ac=None, hst=None, ast=None))
     out.sort(key=lambda m: m['d'])
+    if lg['kind'] == 'new' and lg.get('espn'):
+        espn_enrich(lg, out)
     return out
 
 # ---------- modelo ----------
@@ -238,7 +339,7 @@ def markets(hist, h, a, ref):
             out[f'sh{L}'], out[f'sa{L}'] = nb_tail(ls[0], k), nb_tail(ls[1], k)
     Fc = fit(hist, 'c', ref)
     lc = lambdas(Fc, h, a)
-    if lc:
+    if lc and Fc['T'].get(h, {}).get('n', 0) >= MIN_GAMES and Fc['T'].get(a, {}).get('n', 0) >= MIN_GAMES:
         mu = lc[0] + lc[1]
         out['c85'], out['c95'], out['c105'] = nb_tail(mu, 9), nb_tail(mu, 10), nb_tail(mu, 11)
         out['cmu'] = mu
@@ -597,6 +698,8 @@ def build_results(H):
     return res
 
 def main():
+    global CACHE, DEADLINE
+    CACHE = load_cache(); DEADLINE = time.time() + RUN_SECONDS
     fx = load_fixtures()
     bt, pooled, H, F = {}, {'ALL': {k: [] for k in BT_KEYS}, 'FAV': {k: [] for k in BT_KEYS}}, {}, {}
     # --- pasada 1: historial y prueba contra partidos reales
@@ -619,6 +722,7 @@ def main():
                 if l['fav']: pooled['FAV'][k] += r[k]
         except Exception as e:
             status['errors'].append(f'backtest {code}: {e}')
+    save_cache()
     allsum = summarize(pooled['ALL'])
     cal = make_calibration(allsum)
     # --- pasada 2: calendario y predicciones (con correccion)
