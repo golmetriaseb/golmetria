@@ -59,9 +59,9 @@ wonCorners espn USA Los Angeles FC Minnesota United 8 1
 shotsOnTarget espn USA Los Angeles FC Minnesota United 7 3
 wonCorners espn USA Portland Timbers Houston Dynamo 6 6
 shotsOnTarget espn USA Portland Timbers Houston Dynamo 6 1
-resultados: 600
+resultados: 601
 {
- "generated": "2026-11-03T01:14:58.670019+00:00",
+ "generated": "2026-11-03T02:12:11.774270+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -209,4 +209,4 @@ resultados: 600
     "Rotherham",
     "Sheffield Weds",
     "Steven
-partidos: 273
+partidos: 272
