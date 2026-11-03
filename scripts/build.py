@@ -529,6 +529,24 @@ def espn_results(l, teams):
                     h1 = a1 = None
             except Exception:
                 h1 = a1 = None
+            if h1 is None:  # sin linescores: se calcula con el minuto de cada gol (45'+x = 1.er tiempo)
+                try:
+                    det = [x for x in (ev['competitions'][0].get('details') or []) if x.get('scoringPlay')]
+                    if hg + ag == 0:
+                        h1 = a1 = 0
+                    elif len(det) == hg + ag and not any('own' in str((x.get('type') or {}).get('text', '')).lower() for x in det):
+                        h1 = a1 = 0
+                        for x in det:
+                            mm = re.match(r"\s*(\d+)", str((x.get('clock') or {}).get('displayValue', '')))
+                            if not mm:
+                                raise ValueError('sin minuto')
+                            if int(mm.group(1)) <= 45:
+                                tid = str((x.get('team') or {}).get('id'))
+                                if tid == str(ch['team'].get('id')): h1 += 1
+                                elif tid == str(ca['team'].get('id')): a1 += 1
+                                else: raise ValueError('equipo')
+                except Exception:
+                    h1 = a1 = None
             if th and ta:
                 out.append(dict(l=l['code'], h=th, a=ta, d=k.date().isoformat(), hg=hg, ag=ag, h1=h1, a1=a1, hc=None, ac=None, hst=None, ast=None, _id=ev.get('id'), _hid=ch['team'].get('id'), _aid=ca['team'].get('id')))
     return out
