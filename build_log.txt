@@ -16,7 +16,7 @@ wonCorners espn RUS Lokomotiv Moscow Spartak Moscow 5 6
 shotsOnTarget espn RUS Lokomotiv Moscow Spartak Moscow 4 9
 resultados: 673
 {
- "generated": "2026-11-03T18:14:20.296294+00:00",
+ "generated": "2026-11-03T19:03:02.012194+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
