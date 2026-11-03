@@ -17,12 +17,16 @@ today=dt.date.today()
 for code,name in LG.items():
     print('\n=====',name,code)
     evs=[]
+    a=today-dt.timedelta(days=DAYS)
     try:
-        a=today-dt.timedelta(days=DAYS)
-        j=get(f"https://site.api.espn.com/apis/site/v2/sports/soccer/{code}/scoreboard?dates={a:%Y%m%d}-{today:%Y%m%d}&limit=400")
-        evs=j.get('events',[])
+        evs=get(f"https://site.api.espn.com/apis/site/v2/sports/soccer/{code}/scoreboard?dates={a:%Y%m%d}-{today:%Y%m%d}")['events']
     except Exception as e:
-        print('rango falló',str(e)[:80])
+        print('rango falló, voy día por día:',str(e)[:60]); evs=[]
+        d=a
+        while d<=today:
+            try: evs+=get(f"https://site.api.espn.com/apis/site/v2/sports/soccer/{code}/scoreboard?dates={d:%Y%m%d}",1).get('events',[])
+            except Exception: pass
+            d+=dt.timedelta(days=1)
     done=[e for e in evs if e.get('status',{}).get('type',{}).get('completed')]
     print('partidos terminados en',DAYS,'días:',len(done))
     if not done: continue
