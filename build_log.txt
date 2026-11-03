@@ -16,7 +16,7 @@ wonCorners espn RUS Lokomotiv Moscow Spartak Moscow 5 6
 shotsOnTarget espn RUS Lokomotiv Moscow Spartak Moscow 4 9
 resultados: 673
 {
- "generated": "2026-11-03T10:02:16.742114+00:00",
+ "generated": "2026-11-03T11:02:32.815247+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -50,7 +50,7 @@ resultados: 673
     "Wolves"
    ],
    "fav": false,
-   "fixtures_fd": 10,
+   "fixtures_fd": 0,
    "name_map": {
     "Coventry City": "Coventry",
     "Leeds United": "Leeds",
@@ -127,6 +127,7 @@ resultados: 673
    },
    "fixtures_espn": 24,
    "espn_unmatched": 0,
+   "skipped": 1,
    "matches": 24
   },
   "EL1": {
@@ -162,6 +163,5 @@ resultados: 673
     "Port Vale",
     "Reading",
     "Rotherham",
-    "Sheffield Weds",
-    "Steven
+    "Sheffield We
 partidos: 270
