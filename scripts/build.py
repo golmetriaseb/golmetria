@@ -17,7 +17,7 @@ MIN_GAMES = 6
 HORIZON = 8           # dias hacia adelante
 CACHE_FILE = 'espn_cache.json'   # historial de córners/remates leído de ESPN (ligas que football-data no trae)
 PER_LEAGUE_REQ = 40   # peticiones a ESPN por liga y por corrida (se completa de a poco, lo más reciente primero)
-RUN_SECONDS = 600     # tope de tiempo para esa lectura en cada corrida
+RUN_SECONDS = 900     # tope de tiempo para esa lectura en cada corrida
 CACHE = {'ev': {}, 'days': {}}
 DEADLINE = 0.0
 
@@ -102,16 +102,58 @@ def save_cache():
     except Exception as ex:
         log('cache espn no guardada', str(ex)[:100])
 
+def corner_split(sj, hname, aname, hid, aid):
+    """Córners y remates del detalle de ESPN y córners del 1.er tiempo contando cada córner del relato con su minuto.
+    Los del 1.er tiempo solo se aceptan si el relato coincide EXACTO con la estadística de cada equipo."""
+    out = dict(hc=None, ac=None, hst=None, ast=None, hc1=None, ac1=None)
+    got = {'wonCorners': {}, 'shotsOnTarget': {}}
+    for t in sj['boxscore']['teams']:
+        for stt in t.get('statistics', []):
+            if stt.get('name') in got:
+                try:
+                    got[stt['name']][str(t['team']['id'])] = int(float(stt['displayValue']))
+                except Exception:
+                    pass
+    for name, kh, ka in (('wonCorners', 'hc', 'ac'), ('shotsOnTarget', 'hst', 'ast')):
+        g = got[name]
+        if hid in g and aid in g and g[hid] + g[aid] > 0:  # 0-0 = ESPN no tiene el dato
+            out[kh], out[ka] = g[hid], g[aid]
+    try:
+        if out['hc'] is not None:
+            nh, na = ' '.join(norm(hname)), ' '.join(norm(aname))
+            tot = {'h': 0, 'a': 0}; first = {'h': 0, 'a': 0}
+            for x in (sj.get('commentary') or []):
+                mt = re.match(r"\s*corner,\s*(.+?)\.\s*conceded", str(x.get('text', '')), re.I)
+                if not mt:
+                    continue
+                tn = ' '.join(norm(mt.group(1)))
+                if tn == nh: side = 'h'
+                elif tn == na: side = 'a'
+                else:
+                    ih, ia = bool(tn) and (tn in nh or nh in tn), bool(tn) and (tn in na or na in tn)
+                    side = 'h' if ih and not ia else ('a' if ia and not ih else None)
+                mm = re.match(r"\s*(\d+)", str((x.get('time') or {}).get('displayValue', '')))
+                if side is None or not mm:
+                    return out
+                tot[side] += 1
+                if int(mm.group(1)) <= 45:
+                    first[side] += 1
+            if tot['h'] == out['hc'] and tot['a'] == out['ac']:
+                out['hc1'], out['ac1'] = first['h'], first['a']
+    except Exception:
+        pass
+    return out
+
 def espn_enrich(lg, out):
     """Completa córners y remates de partidos ya jugados con el detalle de ESPN. Nunca debe romper el proceso."""
     try:
         code = lg['code']
         evs = CACHE['ev'].setdefault(code, {})
-        days = set(CACHE['days'].setdefault(code, []))
+        days = set(CACHE.setdefault('days2', {}).setdefault(code, []))
         teams = sorted({m['h'] for m in out} | {m['a'] for m in out})
         budget = PER_LEAGUE_REQ
         cutoff = TODAY - timedelta(days=400)
-        todo = sorted({m['d'] for m in out if cutoff <= m['d'] < TODAY and m['hc'] is None}, reverse=True)
+        todo = sorted({m['d'] for m in out if cutoff <= m['d'] < TODAY and m.get('hc1') is None}, reverse=True)
         for d in todo:
             if d.isoformat() in days:
                 continue
@@ -128,13 +170,13 @@ def espn_enrich(lg, out):
                     if not ev['status']['type'].get('completed'):
                         continue
                     eid = str(ev['id'])
-                    if eid in evs:
+                    if eid in evs and evs[eid].get('v') == 2:
                         continue
                     comp = ev['competitions'][0]['competitors']
                     ch = next(c for c in comp if c['homeAway'] == 'home')
                     ca = next(c for c in comp if c['homeAway'] == 'away')
                     rec = dict(d=datetime.fromisoformat(ev['date'].replace('Z', '+00:00')).date().isoformat(),
-                               h=ch['team']['displayName'], a=ca['team']['displayName'], hc=None, ac=None, hst=None, ast=None)
+                               h=ch['team']['displayName'], a=ca['team']['displayName'], hc=None, ac=None, hst=None, ast=None, hc1=None, ac1=None, v=2)
                     hid, aid = str(ch['team'].get('id')), str(ca['team'].get('id'))
                 except Exception:
                     continue
@@ -144,37 +186,29 @@ def espn_enrich(lg, out):
                 budget -= 1
                 try:
                     sj = json.loads(fetch(f"https://site.api.espn.com/apis/site/v2/sports/soccer/{lg['espn']}/summary?event={eid}", tries=2))
-                    got = {'wonCorners': {}, 'shotsOnTarget': {}}
-                    for t in sj['boxscore']['teams']:
-                        for stt in t.get('statistics', []):
-                            if stt.get('name') in got:
-                                try:
-                                    got[stt['name']][str(t['team']['id'])] = int(float(stt['displayValue']))
-                                except Exception:
-                                    pass
-                    for name, kh, ka in (('wonCorners', 'hc', 'ac'), ('shotsOnTarget', 'hst', 'ast')):
-                        g = got[name]
-                        if hid in g and aid in g and g[hid] + g[aid] > 0:
-                            rec[kh], rec[ka] = g[hid], g[aid]
+                    rec.update(corner_split(sj, rec['h'], rec['a'], hid, aid))
                 except Exception:
                     complete = False
                     continue
                 evs[eid] = rec
             if complete:
                 days.add(d.isoformat())
-        CACHE['days'][code] = sorted(days)
+        CACHE['days2'][code] = sorted(days)
         idx = {}
         for e in evs.values():
             th, ta = match_team(e['h'], teams), match_team(e['a'], teams)
-            if th and ta and e['hc'] is not None:
+            if th and ta and (e.get('hc') is not None or e.get('hc1') is not None):
                 idx.setdefault((th, ta), []).append(e)
         n = 0
         for m in out:
-            if m['hc'] is not None:
+            if m['hc'] is not None and m.get('hc1') is not None:
                 continue
             for e in idx.get((m['h'], m['a']), []):
                 if abs((date.fromisoformat(e['d']) - m['d']).days) <= 1:
-                    m['hc'], m['ac'], m['hst'], m['ast'] = e['hc'], e['ac'], e['hst'], e['ast']
+                    if m['hc'] is None and e.get('hc') is not None:
+                        m['hc'], m['ac'], m['hst'], m['ast'] = e['hc'], e['ac'], e['hst'], e['ast']
+                    if e.get('hc1') is not None:
+                        m['hc1'], m['ac1'] = e['hc1'], e['ac1']
                     n += 1
                     break
         log('espn historial', code, 'eventos', len(evs), 'con córners en historial', n)
@@ -197,7 +231,7 @@ def load_history(lg):
                     continue
                 out.append(dict(d=d, h=r['HomeTeam'].strip(), a=r['AwayTeam'].strip(), hg=hg, ag=ag,
                                 h1=num(r.get('HTHG')), a1=num(r.get('HTAG')),
-                                hc=num(r.get('HC')), ac=num(r.get('AC')), hst=num(r.get('HST')), ast=num(r.get('AST'))))
+                                hc=num(r.get('HC')), ac=num(r.get('AC')), hst=num(r.get('HST')), ast=num(r.get('AST')), hc1=None, ac1=None))
     else:
         try:
             t = fetch(f"{BASE}new/{lg['file']}.csv")
@@ -208,10 +242,8 @@ def load_history(lg):
             hg, ag = num(r.get('HG')), num(r.get('AG'))
             if not d or hg is None or ag is None or not r.get('Home'):
                 continue
-            out.append(dict(d=d, h=r['Home'].strip(), a=r['Away'].strip(), hg=hg, ag=ag, h1=None, a1=None, hc=None, ac=None, hst=None, ast=None))
+            out.append(dict(d=d, h=r['Home'].strip(), a=r['Away'].strip(), hg=hg, ag=ag, h1=None, a1=None, hc=None, ac=None, hst=None, ast=None, hc1=None, ac1=None))
     out.sort(key=lambda m: m['d'])
-    if lg['kind'] == 'new' and lg.get('espn'):
-        espn_enrich(lg, out)
     return out
 
 # ---------- modelo ----------
@@ -220,6 +252,8 @@ def chan_vals(m, chan):
         return m['hg'], m['ag']
     if chan == 'g1':
         return (m['h1'], m['a1']) if m['h1'] is not None and m['a1'] is not None else (None, None)
+    if chan == 'c1':
+        return (m['hc1'], m['ac1']) if m.get('hc1') is not None and m.get('ac1') is not None else (None, None)
     if chan == 'st':
         return (m['hst'], m['ast']) if m.get('hst') is not None and m.get('ast') is not None else (None, None)
     return (m['hc'], m['ac']) if m['hc'] is not None and m['ac'] is not None else (None, None)
@@ -346,6 +380,13 @@ def markets(hist, h, a, ref):
         for L in (35, 45, 55, 65):
             k = L // 10 + 1
             out[f'ch{L}'], out[f'ca{L}'] = nb_tail(lc[0], k), nb_tail(lc[1], k)
+    Fc1 = fit(hist, 'c1', ref)
+    l1c = lambdas(Fc1, h, a)
+    if l1c and Fc1['T'].get(h, {}).get('n', 0) >= MIN_GAMES and Fc1['T'].get(a, {}).get('n', 0) >= MIN_GAMES:
+        mu1 = l1c[0] + l1c[1]
+        out['c1t25'], out['c1t35'] = nb_tail(mu1, 3), nb_tail(mu1, 4)
+        out['c1h15'], out['c1a15'] = nb_tail(l1c[0], 2), nb_tail(l1c[1], 2)
+        out['c1h25'], out['c1a25'] = nb_tail(l1c[0], 3), nb_tail(l1c[1], 3)
     return out
 
 def bets_for(M, home, away, odds):
@@ -378,6 +419,12 @@ def bets_for(M, home, away, odds):
         add('corn', 'Córners más de 8.5', M['c85'])
         add('corn', 'Córners más de 9.5', M['c95'])
         add('corn', 'Córners más de 10.5', M['c105'])
+    if 'c1t25' in M:
+        add('c1', 'Córners en el 1er tiempo más de 2.5', M['c1t25'])
+        add('c1', 'Córners en el 1er tiempo más de 3.5', M['c1t35'])
+        for L, ky in (('1.5', '15'), ('2.5', '25')):
+            add('c1', f'Córners de {home} en el 1er tiempo más de {L}', M[f'c1h{ky}'])
+            add('c1', f'Córners de {away} en el 1er tiempo más de {L}', M[f'c1a{ky}'])
     return B
 
 # ---------- partidos futuros ----------
@@ -520,7 +567,7 @@ def slug(s):
     return '-'.join(norm(s))
 
 # ---------- backtest ----------
-BT_KEYS = ('1', 'X', '2', 'o15', 'o25', 'o35', 'btts', 'g1t', 'c85', 'c95', 'c105', 'ct35', 'ct45', 'ct55', 'ct65', 'tg1', 'tg2', 'tg3', 'g2t', 'st25', 'st35', 'st45', 'st55')
+BT_KEYS = ('c1t25', 'c1t35', 'c1m15', 'c1m25', '1', 'X', '2', 'o15', 'o25', 'o35', 'btts', 'g1t', 'c85', 'c95', 'c105', 'ct35', 'ct45', 'ct55', 'ct65', 'tg1', 'tg2', 'tg3', 'g2t', 'st25', 'st35', 'st45', 'st55')
 
 def backtest(hist, days=120):
     recs = {k: [] for k in BT_KEYS}
@@ -552,6 +599,13 @@ def backtest(hist, days=120):
             for L in (35, 45, 55, 65):
                 recs[f'ct{L}'].append((M[f'ch{L}'], 1 if m['hc'] > L / 10 else 0))
                 recs[f'ct{L}'].append((M[f'ca{L}'], 1 if m['ac'] > L / 10 else 0))
+        if m.get('hc1') is not None and m.get('ac1') is not None and 'c1t25' in M:
+            c1 = m['hc1'] + m['ac1']
+            recs['c1t25'].append((M['c1t25'], 1 if c1 > 2.5 else 0))
+            recs['c1t35'].append((M['c1t35'], 1 if c1 > 3.5 else 0))
+            for L, ky in ((1.5, '15'), (2.5, '25')):
+                recs[f'c1m{ky}'].append((M[f'c1h{ky}'], 1 if m['hc1'] > L else 0))
+                recs[f'c1m{ky}'].append((M[f'c1a{ky}'], 1 if m['ac1'] > L else 0))
     return recs
 
 def summarize(recs):
@@ -570,7 +624,7 @@ def summarize(recs):
                       avg_pred=round(sum(r[0] for r in v) / len(v), 3), real=round(base, 3), bins=bins)
     return out
 
-CAL_KEYS = ('o15', 'o25', 'o35', 'btts', 'g1t', 'c85', 'c95', 'c105', 'ct35', 'ct45', 'ct55', 'ct65', 'tg1', 'tg2', 'tg3', 'g2t', 'st25', 'st35', 'st45', 'st55')
+CAL_KEYS = ('c1t25', 'c1t35', 'c1m15', 'c1m25', 'o15', 'o25', 'o35', 'btts', 'g1t', 'c85', 'c95', 'c105', 'ct35', 'ct45', 'ct55', 'ct65', 'tg1', 'tg2', 'tg3', 'g2t', 'st25', 'st35', 'st45', 'st55')
 
 def make_calibration(summary):
     """Corrige el sesgo del modelo con lo que paso en partidos reales (por mercado, con interpolacion y encogimiento)."""
@@ -649,26 +703,19 @@ def espn_results(l, teams):
                 except Exception:
                     h1 = a1 = None
             if th and ta:
-                out.append(dict(l=l['code'], h=th, a=ta, d=k.date().isoformat(), hg=hg, ag=ag, h1=h1, a1=a1, hc=None, ac=None, hst=None, ast=None, _id=ev.get('id'), _hid=ch['team'].get('id'), _aid=ca['team'].get('id')))
+                out.append(dict(l=l['code'], h=th, a=ta, d=k.date().isoformat(), hg=hg, ag=ag, h1=h1, a1=a1, hc=None, ac=None, hst=None, ast=None, hc1=None, ac1=None, _id=ev.get('id'), _hid=str(ch['team'].get('id')), _aid=str(ca['team'].get('id')), _hn=ch['team']['displayName'], _an=ca['team']['displayName']))
     return out
 
 def espn_corners(l, e):
     """Córners y remates al arco desde el detalle del partido en ESPN. Si no hay dato, queda en None. Nunca rompe el proceso."""
     try:
         j = json.loads(fetch(f"https://site.api.espn.com/apis/site/v2/sports/soccer/{l['espn']}/summary?event={e['_id']}", tries=2))
-        got = {'wonCorners': {}, 'shotsOnTarget': {}}
-        for t in j['boxscore']['teams']:
-            for st in t.get('statistics', []):
-                if st.get('name') in got:
-                    try:
-                        got[st['name']][str(t['team']['id'])] = int(float(st['displayValue']))
-                    except Exception:
-                        pass
-        for name, kh, ka in (('wonCorners', 'hc', 'ac'), ('shotsOnTarget', 'hst', 'ast')):
-            g = got[name]
-            if e['_hid'] in g and e['_aid'] in g and g[e['_hid']] + g[e['_aid']] > 0:  # 0-0 = ESPN no tiene el dato
-                e[kh], e[ka] = g[e['_hid']], g[e['_aid']]
-                log(name, 'espn', l['code'], e['h'], e['a'], e[kh], e[ka])
+        r = corner_split(j, e.get('_hn', e['h']), e.get('_an', e['a']), e['_hid'], e['_aid'])
+        for k in ('hc', 'ac', 'hst', 'ast', 'hc1', 'ac1'):
+            if r[k] is not None:
+                e[k] = r[k]
+        if r['hc'] is not None:
+            log('corners', 'espn', l['code'], e['h'], e['a'], r['hc'], r['ac'], '1T', r['hc1'], r['ac1'])
     except Exception as ex:
         log('detalle espn sin dato', l['code'], str(ex)[:60])
 
@@ -682,7 +729,8 @@ def build_results(H):
                 got.append(dict(l=code, h=m['h'], a=m['a'], d=m['d'].isoformat(), hg=int(m['hg']), ag=int(m['ag']),
                                 h1=None if m['h1'] is None else int(m['h1']), a1=None if m['a1'] is None else int(m['a1']),
                                 hc=None if m['hc'] is None else int(m['hc']), ac=None if m['ac'] is None else int(m['ac']),
-                                hst=None if m.get('hst') is None else int(m['hst']), ast=None if m.get('ast') is None else int(m['ast'])))
+                                hst=None if m.get('hst') is None else int(m['hst']), ast=None if m.get('ast') is None else int(m['ast']),
+                                hc1=None if m.get('hc1') is None else int(m['hc1']), ac1=None if m.get('ac1') is None else int(m['ac1'])))
         try:
             for e in espn_results(l, status['leagues'][code].get('teams', [])):
                 dup = any(g['h'] == e['h'] and g['a'] == e['a'] and abs((date.fromisoformat(g['d']) - date.fromisoformat(e['d'])).days) <= 1 for g in got)
@@ -692,7 +740,7 @@ def build_results(H):
         except Exception as ex:
             log('resultados espn', code, str(ex)[:100])
         for g in got:
-            for k in ('_id', '_hid', '_aid'):
+            for k in ('_id', '_hid', '_aid', '_hn', '_an'):
                 g.pop(k, None)
         res += got
     return res
@@ -707,6 +755,8 @@ def main():
         code = l['code']
         st = status['leagues'][code] = dict(name=l['name'])
         hist = load_history(l)
+        if l.get('espn'):
+            espn_enrich(l, hist)
         H[code] = hist
         st['hist'] = len(hist)
         st['last_result'] = hist[-1]['d'].isoformat() if hist else None
@@ -755,6 +805,10 @@ def main():
                     if f'{pre}{L}' in M: M[f'{pre}{L}'] = apply_cal(cal, f'st{L}', M[f'{pre}{L}'])
             for k in ('o15', 'o25', 'o35', 'btts'):
                 M[k] = apply_cal(cal, k, M[k])
+            for k, ck in (('c1t25', 'c1t25'), ('c1t35', 'c1t35')):
+                if k in M: M[k] = apply_cal(cal, ck, M[k])
+            for k in ('c1h15', 'c1a15', 'c1h25', 'c1a25'):
+                if k in M: M[k] = apply_cal(cal, 'c1m' + k[3:], M[k])
             for k, ck in (('c85', 'c85'), ('c95', 'c95'), ('c105', 'c105')):
                 if k in M: M[k] = apply_cal(cal, ck, M[k])
             for k in (1, 2, 3):
