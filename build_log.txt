@@ -1,6 +1,6 @@
 espn historial SUI eventos 0 con córners en historial 0
 espn historial BRA eventos 457 con córners en historial 427
-espn historial ARG eventos 472 con córners en historial 439
+espn historial ARG eventos 498 con córners en historial 464
 espn historial AUT eventos 211 con córners en historial 151
 espn historial DNK eventos 210 con córners en historial 210
 espn historial FIN eventos 0 con córners en historial 0
@@ -50,7 +50,7 @@ wonCorners espn SWE Sirius Halmstad 5 4
 shotsOnTarget espn SWE Sirius Halmstad 4 1
 resultados: 667
 {
- "generated": "2026-11-04T16:01:58.490748+00:00",
+ "generated": "2026-11-04T17:04:07.476567+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
