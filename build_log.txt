@@ -1,19 +1,19 @@
 espn historial SUI eventos 0 con córners en historial 0
-espn historial BRA eventos 85 con córners en historial 85
-espn historial ARG eventos 89 con córners en historial 83
-espn historial AUT eventos 80 con córners en historial 42
-espn historial DNK eventos 77 con córners en historial 77
+espn historial BRA eventos 116 con córners en historial 116
+espn historial ARG eventos 119 con córners en historial 111
+espn historial AUT eventos 107 con córners en historial 64
+espn historial DNK eventos 105 con córners en historial 105
 espn historial FIN eventos 0 con córners en historial 0
 espn historial IRL eventos 20 con córners en historial 0
-espn historial JPN eventos 99 con córners en historial 89
-espn historial MEX eventos 77 con córners en historial 77
-espn historial NOR eventos 87 con córners en historial 87
+espn historial JPN eventos 130 con córners en historial 117
+espn historial MEX eventos 98 con córners en historial 98
+espn historial NOR eventos 117 con córners en historial 117
 espn historial POL eventos 0 con córners en historial 0
 espn historial ROU eventos 0 con córners en historial 0
-espn historial RUS eventos 88 con córners en historial 79
-espn historial SWE eventos 83 con córners en historial 83
-espn historial USA eventos 92 con córners en historial 92
-espn historial CHN eventos 89 con córners en historial 89
+espn historial RUS eventos 116 con córners en historial 103
+espn historial SWE eventos 110 con córners en historial 110
+espn historial USA eventos 123 con córners en historial 123
+espn historial CHN eventos 117 con córners en historial 117
 wonCorners espn ENG Blackburn Stoke 6 5
 shotsOnTarget espn ENG Blackburn Stoke 3 3
 wonCorners espn ENG Charlton Bolton 4 3
@@ -38,25 +38,17 @@ wonCorners espn EL1 Wigan Mansfield 5 2
 shotsOnTarget espn EL1 Wigan Mansfield 2 3
 wonCorners espn LL2 Tenerife Andorra 0 3
 shotsOnTarget espn LL2 Tenerife Andorra 2 4
+wonCorners espn BRA Chapecoense-SC Mirassol 4 5
+shotsOnTarget espn BRA Chapecoense-SC Mirassol 4 4
 wonCorners espn ARG Independiente Banfield 6 4
 shotsOnTarget espn ARG Independiente Banfield 2 2
-wonCorners espn JPN V-Varen Nagasaki FC Tokyo 5 4
-shotsOnTarget espn JPN V-Varen Nagasaki FC Tokyo 4 3
 wonCorners espn RUS Krylya Sovetov Zenit 4 6
 shotsOnTarget espn RUS Krylya Sovetov Zenit 1 6
-wonCorners espn RUS Orenburg CSKA Moscow 5 5
-shotsOnTarget espn RUS Orenburg CSKA Moscow 5 4
-wonCorners espn RUS Dynamo Makhachkala FK Rostov 2 1
-shotsOnTarget espn RUS Dynamo Makhachkala FK Rostov 1 5
-wonCorners espn RUS Baltika Akron Togliatti 6 4
-shotsOnTarget espn RUS Baltika Akron Togliatti 8 2
-wonCorners espn RUS Lokomotiv Moscow Spartak Moscow 5 6
-shotsOnTarget espn RUS Lokomotiv Moscow Spartak Moscow 4 9
 wonCorners espn SWE Sirius Halmstad 5 4
 shotsOnTarget espn SWE Sirius Halmstad 4 1
-resultados: 685
+resultados: 666
 {
- "generated": "2026-11-03T23:48:05.082670+00:00",
+ "generated": "2026-11-04T01:16:20.222597+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
