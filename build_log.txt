@@ -14,6 +14,12 @@ espn historial RUS eventos 176 con córners en historial 156
 espn historial SWE eventos 255 con córners en historial 255
 espn historial USA eventos 406 con córners en historial 405
 espn historial CHN eventos 267 con córners en historial 267
+wonCorners espn ENG Cardiff West Ham 4 6
+shotsOnTarget espn ENG Cardiff West Ham 4 10
+wonCorners espn ENG Wrexham Middlesbrough 3 2
+shotsOnTarget espn ENG Wrexham Middlesbrough 4 2
+wonCorners espn ENG Bristol City Wolves 2 5
+shotsOnTarget espn ENG Bristol City Wolves 3 8
 wonCorners espn ENG Blackburn Stoke 6 5
 shotsOnTarget espn ENG Blackburn Stoke 3 3
 wonCorners espn ENG Charlton Bolton 4 3
@@ -32,12 +38,16 @@ wonCorners espn ENG Birmingham Millwall 6 2
 shotsOnTarget espn ENG Birmingham Millwall 8 2
 wonCorners espn ENG West Brom Southampton 3 5
 shotsOnTarget espn ENG West Brom Southampton 5 3
+wonCorners espn EL1 Oxford Reading 5 8
+shotsOnTarget espn EL1 Oxford Reading 7 3
 wonCorners espn EL1 Huddersfield Luton 10 1
 shotsOnTarget espn EL1 Huddersfield Luton 6 4
 wonCorners espn EL1 Wigan Mansfield 5 2
 shotsOnTarget espn EL1 Wigan Mansfield 2 3
 wonCorners espn LL2 Tenerife Andorra 0 3
 shotsOnTarget espn LL2 Tenerife Andorra 2 4
+wonCorners espn BEL Kortrijk Mechelen 2 4
+shotsOnTarget espn BEL Kortrijk Mechelen 2 8
 wonCorners espn BRA Chapecoense-SC Mirassol 4 5
 shotsOnTarget espn BRA Chapecoense-SC Mirassol 4 4
 wonCorners espn BRA Internacional Coritiba 15 2
@@ -48,9 +58,9 @@ wonCorners espn RUS Krylya Sovetov Zenit 4 6
 shotsOnTarget espn RUS Krylya Sovetov Zenit 1 6
 wonCorners espn SWE Sirius Halmstad 5 4
 shotsOnTarget espn SWE Sirius Halmstad 4 1
-resultados: 667
+resultados: 672
 {
- "generated": "2026-11-04T20:59:56.851934+00:00",
+ "generated": "2026-11-04T21:56:12.030319+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
