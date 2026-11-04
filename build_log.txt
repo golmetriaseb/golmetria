@@ -50,7 +50,7 @@ wonCorners espn SWE Sirius Halmstad 5 4
 shotsOnTarget espn SWE Sirius Halmstad 4 1
 resultados: 667
 {
- "generated": "2026-11-04T20:05:15.975602+00:00",
+ "generated": "2026-11-04T20:59:56.851934+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
