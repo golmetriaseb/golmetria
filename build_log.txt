@@ -1,20 +1,21 @@
-34
-espn historial EL1 eventos 34 con córners en historial 34
-espn historial SCO eventos 29 con córners en historial 29
-espn historial SC1 eventos 29 con córners en historial 0
-espn historial GB1 eventos 29 con córners en historial 29
-espn historial GER eventos 30 con córners en historial 30
-espn historial SA eventos 30 con córners en historial 30
-espn historial SB eventos 32 con córners en historial 32
-espn historial LL eventos 28 con córners en historial 28
-espn historial LL2 eventos 30 con córners en historial 29
-espn historial L1 eventos 28 con córners en historial 25
-espn historial L2 eventos 29 con córners en historial 29
-espn historial ERE eventos 31 con córners en historial 31
-espn historial BEL eventos 30 con córners en historial 30
-espn historial POR eventos 27 con córners en historial 27
-espn historial TUR eventos 27 con córners en historial 27
-espn historial GRE eventos 29 con córners en historial 28
+espn historial EPL eventos 60 con córners en historial 60
+espn historial ENG eventos 67 con córners en historial 66
+espn historial EL1 eventos 68 con córners en historial 62
+espn historial SCO eventos 58 con córners en historial 58
+espn historial SC1 eventos 57 con córners en historial 13
+espn historial GB1 eventos 59 con córners en historial 59
+espn historial GER eventos 60 con córners en historial 59
+espn historial SA eventos 60 con córners en historial 60
+espn historial SB eventos 62 con córners en historial 62
+espn historial LL eventos 56 con córners en historial 56
+espn historial LL2 eventos 59 con córners en historial 58
+espn historial L1 eventos 57 con córners en historial 51
+espn historial L2 eventos 59 con córners en historial 59
+espn historial ERE eventos 59 con córners en historial 59
+espn historial BEL eventos 59 con córners en historial 54
+espn historial POR eventos 56 con córners en historial 56
+espn historial TUR eventos 55 con córners en historial 55
+espn historial GRE eventos 57 con córners en historial 51
 espn historial SUI eventos 0 con córners en historial 0
 espn historial BRA eventos 457 con córners en historial 427
 espn historial ARG eventos 574 con córners en historial 534
@@ -31,31 +32,16 @@ espn historial RUS eventos 176 con córners en historial 156
 espn historial SWE eventos 255 con córners en historial 255
 espn historial USA eventos 406 con córners en historial 405
 espn historial CHN eventos 267 con córners en historial 267
-corners espn ENG Cardiff West Ham 4 6 1T 3 1
-corners espn ENG Wrexham Middlesbrough 3 2 1T 0 2
-corners espn ENG Bristol City Wolves 2 5 1T 1 3
-corners espn ENG Blackburn Stoke 6 5 1T 5 2
-corners espn ENG Charlton Bolton 4 3 1T 0 1
-corners espn ENG Derby Norwich 4 5 1T 2 4
-corners espn ENG Portsmouth Swansea 5 5 1T 3 1
 corners espn ENG Preston Sheffield United 3 3 1T 1 0
-corners espn ENG QPR Burnley 8 1 1T 4 0
-corners espn ENG Watford Lincoln 7 6 1T 6 4
-corners espn ENG Birmingham Millwall 6 2 1T 4 0
-corners espn ENG West Brom Southampton 3 5 1T 1 0
-corners espn EL1 Oxford Reading 5 8 1T None None
-corners espn EL1 Huddersfield Luton 10 1 1T None None
-corners espn EL1 Wigan Mansfield 5 2 1T None None
 corners espn LL2 Tenerife Andorra 0 3 1T None None
-corners espn BEL Kortrijk Mechelen 2 4 1T None None
 corners espn BRA Chapecoense-SC Mirassol 4 5 1T 1 2
 corners espn BRA Internacional Coritiba 15 2 1T 5 1
 corners espn ARG Independiente Banfield 6 4 1T 5 2
 corners espn RUS Krylya Sovetov Zenit 4 6 1T None None
 corners espn SWE Sirius Halmstad 5 4 1T None None
-resultados: 672
+resultados: 673
 {
- "generated": "2026-11-04T22:13:29.774021+00:00",
+ "generated": "2026-11-04T22:56:10.934545+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -109,10 +95,10 @@ resultados: 672
   },
   "ENG": {
    "name": "Championship",
-   "hist": 708,
-   "last_result": "2026-10-31",
-   "has_corners": 708,
-   "has_half": 708,
+   "hist": 720,
+   "last_result": "2026-11-04",
+   "has_corners": 720,
+   "has_half": 720,
    "teams": [
     "Birmingham",
     "Blackburn",
@@ -135,6 +121,7 @@ resultados: 672
     "Preston",
     "QPR",
     "Sheffield United",
+    "Sheffield Utd",
     "Sheffield Weds",
     "Southampton",
     "Stoke",
@@ -166,14 +153,14 @@ resultados: 672
    },
    "fixtures_espn": 12,
    "espn_unmatched": 0,
-   "matches": 15
+   "matches": 13
   },
   "EL1": {
    "name": "League One",
-   "hist": 707,
-   "last_result": "2026-11-01",
-   "has_corners": 707,
-   "has_half": 707,
+   "hist": 710,
+   "last_result": "2026-11-04",
+   "has_corners": 710,
+   "has_half": 710,
    "teams": [
     "AFC Wimbledon",
     "Barnsley",
@@ -196,11 +183,10 @@ resultados: 672
     "Northampton",
     "Notts County",
     "Oxford",
+    "Oxford Utd",
     "Peterboro",
     "Plymouth",
     "Port Vale",
     "Reading",
-    "Rotherham",
-    "Sheffield Weds",
-    "Stevena
-partidos: 252
+    "Rotherh
+partidos: 249
