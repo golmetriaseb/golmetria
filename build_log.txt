@@ -1,6 +1,6 @@
 espn historial SUI eventos 0 con córners en historial 0
 espn historial BRA eventos 457 con córners en historial 427
-espn historial ARG eventos 557 con córners en historial 518
+espn historial ARG eventos 574 con córners en historial 534
 espn historial AUT eventos 211 con córners en historial 151
 espn historial DNK eventos 210 con córners en historial 210
 espn historial FIN eventos 0 con córners en historial 0
@@ -50,7 +50,7 @@ wonCorners espn SWE Sirius Halmstad 5 4
 shotsOnTarget espn SWE Sirius Halmstad 4 1
 resultados: 667
 {
- "generated": "2026-11-04T19:07:53.143035+00:00",
+ "generated": "2026-11-04T20:05:15.975602+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -143,23 +143,23 @@ resultados: 667
    "fav": true,
    "fixtures_fd": 12,
    "name_map": {
-    "Cardiff City": "Cardiff",
-    "West Ham United": "West Ham",
-    "Wolverhampton Wanderers": "Wolves",
     "Derby County": "Derby",
     "Bolton Wanderers": "Bolton",
     "Norwich City": "Norwich",
     "Stoke City": "Stoke",
+    "Wolverhampton Wanderers": "Wolves",
     "Birmingham City": "Birmingham",
     "Swansea City": "Swansea",
     "Blackburn Rovers": "Blackburn",
+    "West Ham United": "West Ham",
+    "Cardiff City": "Cardiff",
     "Charlton Athletic": "Charlton",
     "Preston North End": "Preston",
     "Queens Park Rangers": "QPR",
     "Lincoln City": "Lincoln",
     "West Bromwich Albion": "West Brom"
    },
-   "fixtures_espn": 15,
+   "fixtures_espn": 12,
    "espn_unmatched": 0,
    "matches": 15
   },
@@ -198,4 +198,4 @@ resultados: 667
     "Rotherham",
     "Sheffield Weds",
     "Stevena
-partidos: 254
+partidos: 252
