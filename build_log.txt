@@ -1,18 +1,18 @@
 espn historial SUI eventos 0 con córners en historial 0
-espn historial BRA eventos 266 con córners en historial 266
-espn historial ARG eventos 265 con córners en historial 247
+espn historial BRA eventos 295 con córners en historial 295
+espn historial ARG eventos 295 con córners en historial 275
 espn historial AUT eventos 211 con córners en historial 151
 espn historial DNK eventos 210 con córners en historial 210
 espn historial FIN eventos 0 con córners en historial 0
 espn historial IRL eventos 20 con córners en historial 0
 espn historial JPN eventos 190 con córners en historial 171
-espn historial MEX eventos 230 con córners en historial 230
+espn historial MEX eventos 252 con córners en historial 252
 espn historial NOR eventos 259 con córners en historial 259
 espn historial POL eventos 0 con córners en historial 0
 espn historial ROU eventos 0 con córners en historial 0
 espn historial RUS eventos 176 con córners en historial 156
-espn historial SWE eventos 252 con córners en historial 252
-espn historial USA eventos 282 con córners en historial 282
+espn historial SWE eventos 255 con córners en historial 255
+espn historial USA eventos 317 con córners en historial 317
 espn historial CHN eventos 267 con córners en historial 267
 wonCorners espn ENG Blackburn Stoke 6 5
 shotsOnTarget espn ENG Blackburn Stoke 3 3
@@ -50,7 +50,7 @@ wonCorners espn SWE Sirius Halmstad 5 4
 shotsOnTarget espn SWE Sirius Halmstad 4 1
 resultados: 667
 {
- "generated": "2026-11-04T06:08:59.346906+00:00",
+ "generated": "2026-11-04T07:27:56.144569+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
