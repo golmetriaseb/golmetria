@@ -1,21 +1,21 @@
-espn historial EPL eventos 60 con córners en historial 60
-espn historial ENG eventos 67 con córners en historial 66
-espn historial EL1 eventos 68 con córners en historial 62
-espn historial SCO eventos 58 con córners en historial 58
-espn historial SC1 eventos 57 con córners en historial 13
-espn historial GB1 eventos 59 con córners en historial 59
-espn historial GER eventos 60 con córners en historial 59
-espn historial SA eventos 60 con córners en historial 60
-espn historial SB eventos 62 con córners en historial 62
-espn historial LL eventos 56 con córners en historial 56
-espn historial LL2 eventos 59 con córners en historial 58
-espn historial L1 eventos 57 con córners en historial 51
-espn historial L2 eventos 59 con córners en historial 59
-espn historial ERE eventos 59 con córners en historial 59
-espn historial BEL eventos 59 con córners en historial 54
-espn historial POR eventos 56 con córners en historial 56
-espn historial TUR eventos 55 con córners en historial 55
-espn historial GRE eventos 57 con córners en historial 51
+espn historial EPL eventos 89 con córners en historial 89
+espn historial ENG eventos 97 con córners en historial 96
+espn historial EL1 eventos 100 con córners en historial 92
+espn historial SCO eventos 86 con córners en historial 86
+espn historial SC1 eventos 86 con córners en historial 37
+espn historial GB1 eventos 90 con córners en historial 90
+espn historial GER eventos 89 con córners en historial 87
+espn historial SA eventos 89 con córners en historial 89
+espn historial SB eventos 93 con córners en historial 93
+espn historial LL eventos 84 con córners en historial 84
+espn historial LL2 eventos 88 con córners en historial 87
+espn historial L1 eventos 87 con córners en historial 78
+espn historial L2 eventos 90 con córners en historial 90
+espn historial ERE eventos 89 con córners en historial 89
+espn historial BEL eventos 88 con córners en historial 79
+espn historial POR eventos 82 con córners en historial 82
+espn historial TUR eventos 82 con córners en historial 82
+espn historial GRE eventos 87 con córners en historial 78
 espn historial SUI eventos 0 con córners en historial 0
 espn historial BRA eventos 457 con córners en historial 427
 espn historial ARG eventos 574 con córners en historial 534
@@ -41,7 +41,7 @@ corners espn RUS Krylya Sovetov Zenit 4 6 1T None None
 corners espn SWE Sirius Halmstad 5 4 1T None None
 resultados: 673
 {
- "generated": "2026-11-04T22:56:10.934545+00:00",
+ "generated": "2026-11-04T23:51:11.137026+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -153,7 +153,7 @@ resultados: 673
    },
    "fixtures_espn": 12,
    "espn_unmatched": 0,
-   "matches": 13
+   "matches": 12
   },
   "EL1": {
    "name": "League One",
@@ -189,4 +189,4 @@ resultados: 673
     "Port Vale",
     "Reading",
     "Rotherh
-partidos: 249
+partidos: 248
