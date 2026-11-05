@@ -1,6 +1,6 @@
 espn historial EPL eventos 410 con córners en historial 410
-espn historial ENG eventos 614 con córners en historial 613
-espn historial EL1 eventos 593 con córners en historial 581
+espn historial ENG eventos 629 con córners en historial 629
+espn historial EL1 eventos 593 con córners en historial 593
 espn historial SCO eventos 260 con córners en historial 260
 espn historial SC1 eventos 205 con córners en historial 131
 espn historial GB1 eventos 333 con córners en historial 333
@@ -12,7 +12,7 @@ espn historial LL2 eventos 517 con córners en historial 516
 espn historial L1 eventos 332 con córners en historial 295
 espn historial L2 eventos 333 con córners en historial 332
 espn historial ERE eventos 341 con córners en historial 341
-espn historial BEL eventos 330 con córners en historial 289
+espn historial BEL eventos 330 con córners en historial 329
 espn historial POR eventos 333 con córners en historial 333
 espn historial TUR eventos 335 con córners en historial 335
 espn historial GRE eventos 264 con córners en historial 94
@@ -33,7 +33,6 @@ espn historial SWE eventos 255 con córners en historial 255
 espn historial USA eventos 406 con córners en historial 405
 espn historial CHN eventos 267 con córners en historial 267
 espn historial solo ECU partidos 351 con córners 275 con 1T córners 0
-corners espn ENG Preston Sheffield United 3 3 1T 1 0
 corners espn BRA Athletico-PR Vasco 7 0 1T None None
 corners espn BRA Flamengo RJ Gremio 7 4 1T 7 1
 corners espn BRA Botafogo RJ Atletico-MG 4 4 1T None None
@@ -41,9 +40,9 @@ corners espn BRA Sao Paulo Corinthians 6 8 1T 4 8
 corners espn BRA Chapecoense-SC Mirassol 4 5 1T 1 2
 corners espn BRA Internacional Coritiba 15 2 1T 5 1
 corners espn SWE Sirius Halmstad 5 4 1T None None
-resultados: 673
+resultados: 672
 {
- "generated": "2026-11-05T17:25:09.492697+00:00",
+ "generated": "2026-11-05T19:06:14.050776+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -123,7 +122,6 @@ resultados: 673
     "Preston",
     "QPR",
     "Sheffield United",
-    "Sheffield Utd",
     "Sheffield Weds",
     "Southampton",
     "Stoke",
@@ -185,10 +183,11 @@ resultados: 673
     "Northampton",
     "Notts County",
     "Oxford",
-    "Oxford Utd",
     "Peterboro",
     "Plymouth",
     "Port Vale",
     "Reading",
-    "Rotherh
-partidos: 252
+    "Rotherham",
+    "Sheffield Weds",
+    "Stevena
+partidos: 253
