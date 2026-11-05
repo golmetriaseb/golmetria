@@ -17,11 +17,12 @@ MIN_GAMES = 6
 HORIZON = 8           # dias hacia adelante
 CACHE_FILE = 'espn_cache.json'   # historial de córners/remates leído de ESPN (ligas que football-data no trae)
 PER_LEAGUE_REQ = 40   # peticiones a ESPN por liga y por corrida (se completa de a poco, lo más reciente primero)
+ONLY_REQ = 160       # peticiones por corrida para ligas que salen solo de ESPN (Ecuador)
 RUN_SECONDS = 900     # tope de tiempo para esa lectura en cada corrida
 CACHE = {'ev': {}, 'days': {}}
 DEADLINE = 0.0
 
-FAV = {'ENG', 'GER', 'SCO', 'SUI', 'BRA'}
+FAV = {'ENG', 'GER', 'SCO', 'SUI', 'BRA', 'ECU'}
 _main = [('EPL', 'E0', 'Premier League', 'eng.1'), ('ENG', 'E1', 'Championship', 'eng.2'), ('EL1', 'E2', 'League One', 'eng.3'),
          ('SCO', 'SC0', 'Premiership', 'sco.1'),
          ('SC1', 'SC1', 'Championship (Escocia)', 'sco.2'), ('GB1', 'D1', 'Bundesliga', 'ger.1'), ('GER', 'D2', '2. Bundesliga', 'ger.2'),
@@ -39,6 +40,7 @@ _new = [('SUI', 'SWZ', 'Switzerland', 'Super League (Suiza)', 'sui.1'), ('BRA', 
         ('USA', 'USA', 'USA', 'MLS', 'usa.1'), ('CHN', 'CHN', 'China', 'Super League (China)', 'chn.1')]
 LEAGUES = [dict(code=c, name=n, kind='main', div=d, espn=e, fav=c in FAV) for c, d, n, e in _main] + \
           [dict(code=c, name=n, kind='new', file=f, country=co, espn=e, fav=c in FAV, flt=('Serie A' if c == 'BRA' else None)) for c, f, co, n, e in _new]
+LEAGUES.append(dict(code='ECU', name='LigaPro (Ecuador)', kind='espn', espn='ecu.1', fav=True))   # sin datos en football-data: todo sale de ESPN
 status = {'generated': NOW.isoformat(), 'leagues': {}, 'errors': []}
 
 def log(*a):
@@ -215,9 +217,95 @@ def espn_enrich(lg, out):
     except Exception as ex:
         log('espn_enrich', lg.get('code'), str(ex)[:100])
 
+def half_from_event(ev, ch, ca, hg, ag):
+    """Goles del 1.er tiempo (h1, a1) desde linescores o, si no hay, desde el minuto de cada gol. None si no es seguro."""
+    try:
+        h1, a1 = int(float(ch['linescores'][0]['value'])), int(float(ca['linescores'][0]['value']))
+        if h1 <= hg and a1 <= ag:
+            return h1, a1
+    except Exception:
+        pass
+    try:
+        det = [x for x in (ev['competitions'][0].get('details') or []) if x.get('scoringPlay')]
+        if hg + ag == 0:
+            return 0, 0
+        if len(det) == hg + ag and not any('own' in str((x.get('type') or {}).get('text', '')).lower() for x in det):
+            h1 = a1 = 0
+            for x in det:
+                mm = re.match(r"\s*(\d+)", str((x.get('clock') or {}).get('displayValue', '')))
+                if not mm:
+                    return None, None
+                if int(mm.group(1)) <= 45:
+                    tid = str((x.get('team') or {}).get('id'))
+                    if tid == str(ch['team'].get('id')): h1 += 1
+                    elif tid == str(ca['team'].get('id')): a1 += 1
+                    else: return None, None
+            return h1, a1
+    except Exception:
+        pass
+    return None, None
+
+def espn_history(lg):
+    """Historial completo de una liga que football-data no tiene (Ecuador): marcadores, 1.er tiempo y córners desde ESPN. Se completa de a poco."""
+    code = lg['code']
+    H = CACHE.setdefault('hist', {}).setdefault(code, {'ev': {}, 'days': []})
+    evs = H['ev']; days = set(H['days'])
+    budget = ONLY_REQ
+    for back in range(0, 400):
+        d = TODAY - timedelta(days=back)
+        if back > 2 and d.isoformat() in days:
+            continue
+        if budget <= 0 or time.time() > DEADLINE:
+            break
+        budget -= 1
+        try:
+            j = json.loads(fetch(f"https://site.api.espn.com/apis/site/v2/sports/soccer/{lg['espn']}/scoreboard?dates={d:%Y%m%d}", tries=2))
+        except Exception:
+            continue
+        complete = True
+        for ev in j.get('events', []):
+            try:
+                if not ev['status']['type'].get('completed'):
+                    continue
+                eid = str(ev['id'])
+                if eid in evs and evs[eid].get('v') == 2:
+                    continue
+                comp = ev['competitions'][0]['competitors']
+                ch = next(c for c in comp if c['homeAway'] == 'home')
+                ca = next(c for c in comp if c['homeAway'] == 'away')
+                hg, ag = int(ch['score']), int(ca['score'])
+                h1, a1 = half_from_event(ev, ch, ca, hg, ag)
+                rec = dict(d=datetime.fromisoformat(ev['date'].replace('Z', '+00:00')).date().isoformat(), h=ch['team']['displayName'], a=ca['team']['displayName'],
+                           hg=hg, ag=ag, h1=h1, a1=a1, hc=None, ac=None, hst=None, ast=None, hc1=None, ac1=None, v=2)
+                hid, aid = str(ch['team'].get('id')), str(ca['team'].get('id'))
+            except Exception:
+                continue
+            if budget <= 0 or time.time() > DEADLINE:
+                complete = False
+                break
+            budget -= 1
+            try:
+                sj = json.loads(fetch(f"https://site.api.espn.com/apis/site/v2/sports/soccer/{lg['espn']}/summary?event={eid}", tries=2))
+                rec.update(corner_split(sj, rec['h'], rec['a'], hid, aid))
+            except Exception:
+                complete = False
+                continue
+            evs[eid] = rec
+        if complete and back > 2:
+            days.add(d.isoformat())
+    H['days'] = sorted(days)
+    out = [dict(e, d=date.fromisoformat(e['d'])) for e in evs.values() if date.fromisoformat(e['d']) >= TODAY - timedelta(days=WINDOW)]
+    for m in out:
+        m.pop('v', None)
+    out.sort(key=lambda m: m['d'])
+    log('espn historial solo', code, 'partidos', len(out), 'con córners', sum(1 for m in out if m['hc'] is not None), 'con 1T córners', sum(1 for m in out if m['hc1'] is not None))
+    return out
+
 # ---------- historial ----------
 def load_history(lg):
     out = []
+    if lg['kind'] == 'espn':
+        return espn_history(lg)
     if lg['kind'] == 'main':
         for sc in season_codes():
             try:
@@ -755,7 +843,7 @@ def main():
         code = l['code']
         st = status['leagues'][code] = dict(name=l['name'])
         hist = load_history(l)
-        if l.get('espn'):
+        if l.get('espn') and l['kind'] != 'espn':
             espn_enrich(l, hist)
         H[code] = hist
         st['hist'] = len(hist)
