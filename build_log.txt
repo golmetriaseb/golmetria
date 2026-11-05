@@ -1,5 +1,5 @@
 espn historial EPL eventos 410 con córners en historial 410
-espn historial ENG eventos 582 con córners en historial 581
+espn historial ENG eventos 614 con córners en historial 613
 espn historial EL1 eventos 593 con córners en historial 581
 espn historial SCO eventos 260 con córners en historial 260
 espn historial SC1 eventos 205 con córners en historial 131
@@ -43,7 +43,7 @@ corners espn BRA Internacional Coritiba 15 2 1T 5 1
 corners espn SWE Sirius Halmstad 5 4 1T None None
 resultados: 673
 {
- "generated": "2026-11-05T16:14:14.225464+00:00",
+ "generated": "2026-11-05T17:25:09.492697+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
