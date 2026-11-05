@@ -32,13 +32,16 @@ espn historial RUS eventos 176 con córners en historial 156
 espn historial SWE eventos 255 con córners en historial 255
 espn historial USA eventos 406 con córners en historial 405
 espn historial CHN eventos 267 con córners en historial 267
+espn historial solo ECU partidos 79 con córners 76 con 1T córners 0
 corners espn ENG Preston Sheffield United 3 3 1T 1 0
+corners espn BRA Athletico-PR Vasco 7 0 1T None None
+corners espn BRA Flamengo RJ Gremio 7 4 1T 7 1
 corners espn BRA Chapecoense-SC Mirassol 4 5 1T 1 2
 corners espn BRA Internacional Coritiba 15 2 1T 5 1
 corners espn SWE Sirius Halmstad 5 4 1T None None
-resultados: 653
+resultados: 671
 {
- "generated": "2026-11-05T00:13:40.110443+00:00",
+ "generated": "2026-11-05T00:24:32.868177+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -186,4 +189,4 @@ resultados: 653
     "Port Vale",
     "Reading",
     "Rotherh
-partidos: 248
+partidos: 256
