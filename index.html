@@ -2,7 +2,7 @@
 <html lang="es"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
-<meta name="gm-v" content="20261105001652"><meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="gm-v" content="20261105215256"><meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Golmetría"><link rel="apple-touch-icon" href="icon-180.png"><link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#0a0b14"><meta name="color-scheme" content="dark">
 <title>Golmetría</title>
@@ -65,6 +65,15 @@ nav button.on{color:var(--bl)}nav button.on svg{filter:drop-shadow(0 0 6px rgba(
 .view{display:none}.view.on{display:block}
 .over{position:fixed;top:0;left:0;right:0;bottom:0;height:100%;background:var(--bg);z-index:10;overflow-y:scroll;overflow-x:hidden;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;touch-action:pan-y;display:none;padding-bottom:60px}html.lock,html.lock body{overflow:hidden;height:100%}.over.on{display:block}
 .back{border:0;background:none;color:var(--bl);font:italic 800 17px var(--f1);text-transform:uppercase;padding:16px 0 10px}
+.fx{background:linear-gradient(180deg,#121521,#0c0e15);border:1px solid var(--ln2);border-radius:14px;padding:13px 12px;margin:12px 0 4px}
+.fx h4{margin:0 0 2px;font:italic 800 18px var(--f1);text-transform:uppercase;letter-spacing:.8px}.fx .sb{font-size:12px;color:var(--mu);margin-bottom:8px}
+.fxh,.fxr{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr) minmax(0,1fr);gap:6px;align-items:center;padding:9px 8px;border-radius:10px}
+.fxh{font-size:11px;color:var(--mu);text-transform:uppercase;letter-spacing:.5px;padding:4px 8px}.fxh span+span,.fxr b{text-align:center}
+.fxr{cursor:pointer;border:1px solid transparent;font-size:14px;-webkit-tap-highlight-color:transparent}.fxr+.fxr{margin-top:2px}
+.fxr.on{background:var(--blbg);border-color:var(--bl)}.fxr b{font:italic 800 17px var(--f1)}.fxr b.hi{color:var(--go)}.fxr b small{font:500 10px system-ui;color:var(--mu);margin-left:2px}
+.fxm{margin-top:10px;border-top:1px dashed var(--ln2);padding-top:10px;font-size:13px;color:var(--mu)}.fxm .ch{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.fxm .ch span{background:var(--blbg);border:1px solid var(--ln2);color:var(--tx);border-radius:999px;padding:5px 10px;font-size:12.5px}.fxm .ch span i{font-style:normal;color:var(--bl);font-weight:800;margin-left:4px}
+.fxn{font-size:11.5px;color:var(--mu);margin-top:8px}
 .gt{font:italic 800 20px var(--f1);text-transform:uppercase;letter-spacing:.8px;color:var(--tx);margin:24px 0 9px;display:flex;align-items:center;gap:10px}.gt:before{content:"";width:5px;height:20px;background:linear-gradient(180deg,var(--bl),var(--ok));transform:skewX(-20deg);border-radius:2px}
 .row{background:linear-gradient(180deg,#121521,#0c0e15);border:1px solid var(--ln2);border-radius:14px;padding:13px 14px;margin-bottom:9px}
 .rt{display:flex;justify-content:space-between;align-items:baseline;font:italic 800 22px var(--f1);text-transform:uppercase;margin-bottom:9px}.rt span:last-child{font-size:30px}
@@ -288,10 +297,29 @@ let demoBad=false;function stamp(){const el=$('#demo'),up=$('#upd');if(!REAL){de
  up.textContent='Actualizado '+t;up.className='upd'+(h>9?' old':'');demoBad=h>9||!DATA.length;el.style.display=(demoBad&&view!=='mis')?'':'none'}
 function setView(v){view=v;document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('on',b.dataset.v===v));document.querySelectorAll('.view').forEach(e=>e.classList.toggle('on',e.id==='v-'+v));$('#filters').style.display=v==='mis'?'none':'';$('#fb').style.display=v==='seg'?'contents':'none';$('#demo').style.display=(v==='mis'||!demoBad)?'none':'';$('#rs').style.display=(v==='mis'||v==='seg')?'none':'';$('#actl').style.display=v==='mis'?'none':'';$('#note').classList.remove('on');if(v==='mis')renderMis();else render();$('#det').classList.remove('on');document.documentElement.classList.remove('lock');scrollTo(0,0);slipBar()}
 function openDet(id){cur=DATA.find(m=>m.id===id);custom={};drawDet();$('#det').classList.add('on');document.documentElement.classList.add('lock');$('#det').scrollTop=0}
+
+const FXR=[['sc','Marcó gol','p'],['cn','Recibió gol','p'],['bt','Ambos marcaron','p'],['o25','Más de 2.5 goles','p'],['g1','Gol en el 1er tiempo','p'],['gf','Goles a favor','a'],['ga','Goles en contra','a'],['cf','Córners a favor','a'],['ca','Córners en contra','a'],['c1f','1T córners a favor','a'],['c1a','1T córners en contra','a']];
+let fxSel='bt';
+function fxBets(m,k){const B=m.bets,pick=(ty,re)=>{const a=B.filter(b=>b.type===ty&&re.test(b.label));return a.length?a.reduce((x,y)=>Math.abs(y.p-.6)<Math.abs(x.p-.6)?y:x):null};
+ const team=(ty,pre,post)=>[m.home,m.away].map(t=>pick(ty,new RegExp('^'+pre+t.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+post))).filter(Boolean);
+ if(k==='sc'||k==='cn'||k==='gf'||k==='ga')return team('tg','Goles de ',' más de [\\d.]+$');
+ if(k==='bt')return B.filter(b=>b.type==='btts');if(k==='o25')return B.filter(b=>b.type==='o25');if(k==='g1')return B.filter(b=>b.type==='g1t');
+ if(k==='cf'||k==='ca')return team('corn','Córners de ',' más de [\\d.]+$');
+ return team('c1','Córners de ',' en el 1er tiempo más de [\\d.]+$')}
+function fxHtml(m){const f=m.form||{},H=f.h||{},A=f.a||{};const rows=FXR.filter(r=>H[r[0]]&&A[r[0]]);if(!rows.length)return'';if(!rows.some(r=>r[0]===fxSel))fxSel=rows[0][0];
+ const cell=(x,t)=>t==='p'?`<b class="${x[0]/x[1]>=.7?'hi':''}">${x[0]}/${x[1]}</b>`:`<b>${x[0]}<small>prom.</small></b>`;
+ const sel=rows.find(r=>r[0]===fxSel),bs=fxBets(m,fxSel);
+ return `<div class="fx" id="fx"><h4>Cómo llegan al partido</h4><div class="sb">Sus últimos partidos: ${m.home} de local, ${m.away} de visitante. Toca una fila.</div>
+ <div class="fxh"><span></span><span>${m.home}</span><span>${m.away}</span></div>`+
+ rows.map(r=>`<div class="fxr${r[0]===fxSel?' on':''}" data-fx="${r[0]}"><span>${r[1]}</span>${cell(H[r[0]],r[2])}${cell(A[r[0]],r[2])}</div>`).join('')+
+ `<div class="fxm">Lo que calcula el modelo para «${sel[1]}»:<div class="ch">${bs.length?bs.map(b=>`<span>${b.label}<i>${pc(b.p)}</i></span>`).join(''):'<span>Dato informativo, sin apuesta propia</span>'}</div></div>
+ <div class="fxn">Son pocos partidos (hasta 10 por equipo): úsalo como pista, no como garantía.</div></div>`}
 function drawDet(){const m=cur;let h=`<div class="meta">${m.leagueName} · ${dn(m.date)} ${m.time}</div><div class="tm" style="font-size:21px">${m.home} vs ${m.away}</div><p style="color:var(--mu);font-size:13px;margin:0 0 4px">Escribe la cuota de tu casa y el valor se recalcula.</p>`;
+ h+=fxHtml(m);
  const sec=[['Resultado',['win']],['Goles',['o15','o25','o35','under','btts']],['Goles de equipo',['tg']],['Primer tiempo',['g1t']],['Segundo tiempo',['g2t']],['Córners',['corn']],['Córners 1er tiempo',['c1']]];
  sec.forEach(([t,ty])=>{h+=`<div class="gt">${t}</div>`;m.bets.forEach((b,i)=>{if(!ty.includes(b.type))return;const o=custom[i]??(parseFloat(ODDS[oddKey(m.id,b.label)])>1?parseFloat(ODDS[oddKey(m.id,b.label)]):null)??b.odd,v=o?b.p*o-1:null,hi=b.p>=.75;h+=`<div class="row"><div class="rt"><span>${b.label}</span><span style="color:${hi?'var(--go)':'var(--bl)'}">${pc(b.p)}</span></div><div class="bar2"><i class="${hi?'hi':''}" style="width:${Math.round(b.p*100)}%"></i></div><div class="rr"><span>Cuota</span><input type="text" inputmode="decimal" autocomplete="off" value="${o||''}" placeholder="tu cuota" data-i="${i}"><span class="chipv ${v!=null&&v>=.05?'p':'n'}" id="cv${i}">${v==null?'Pon tu cuota':(v>=.05?'Valor ':'Sin valor ')+fmt(v)}</span><span class="sp"></span><button class="btn" data-sv="${m.id}|${i}">Guardar</button></div></div>`})});
  $('#dc').innerHTML=h}
+$('#dc').addEventListener('click',e=>{const r=e.target.closest('.fxr');if(!r||!cur)return;fxSel=r.dataset.fx;$('#fx').outerHTML=fxHtml(cur)});
 $('#dc').addEventListener('input',e=>{const i=e.target.dataset.i;if(i==null)return;const o=pn(e.target.value);if(!(o>1))return;custom[i]=o;ODDS[oddKey(cur.id,cur.bets[i].label)]=String(o);LS.set('gm_odds',ODDS);const v=cur.bets[i].p*o-1,el=$('#cv'+i);el.className='chipv '+(v>=.05?'p':'n');el.textContent=(v>=.05?'Valor ':'Sin valor ')+fmt(v)});
 function askSave(id,i){const m=DATA.find(x=>x.id===id),b=m.bets[i];if(inSlip(id,b.label)){slip=slip.filter(x=>!(x.matchId===id&&x.label===b.label));toast('Quitada del boleto');slipBar();render();return}const to=parseFloat(ODDS[oddKey(id,b.label)]),o=(cur&&cur.id===id&&custom[i])||(to>1?to:null)||b.odd||null;pend={m,b,o};$('#sc').textContent=slip.length?`Añadir a tu combinada (${slip.length} ${slip.length===1?'apuesta':'apuestas'})`:'Añadir a combinada';$('#sx').innerHTML=slip.length?'<b>Ya en tu combinada:</b><br>'+slip.map(x=>'· '+x.label+' — '+x.match).join('<br>'):'';$('#sp').textContent=`${m.home} vs ${m.away} — ${b.label}`+(o?` @ ${(+o).toFixed(2)}`:'');$('#sm').classList.add('on')}
 const mkBet=()=>({id:Date.now()+Math.random(),matchId:pend.m.id,league:pend.m.league,home:pend.m.home,away:pend.m.away,utc:pend.m.utc,match:pend.m.home+' vs '+pend.m.away,label:pend.b.label,btype:pend.b.type,odd:pend.o,p:pend.b.p,res:'p',date:pend.m.date});

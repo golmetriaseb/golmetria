@@ -515,6 +515,32 @@ def bets_for(M, home, away, odds):
             add('c1', f'Córners de {away} en el 1er tiempo más de {L}', M[f'c1a{ky}'])
     return B
 
+def team_form(hist, team, home, k=10):
+    """Últimos k partidos del equipo en esa condición (local o visitante), con lo que un tipster mira. Solo se incluye lo que tiene al menos 5 partidos con dato."""
+    ms = [m for m in hist if m['d'] < TODAY and (m['h'] if home else m['a']) == team][-k:]
+    rows = []
+    for m in ms:
+        gf, ga = (m['hg'], m['ag']) if home else (m['ag'], m['hg'])
+        cf = ca = c1f = c1a = None
+        if m['hc'] is not None and m['ac'] is not None:
+            cf, ca = (m['hc'], m['ac']) if home else (m['ac'], m['hc'])
+        if m.get('hc1') is not None and m.get('ac1') is not None:
+            c1f, c1a = (m['hc1'], m['ac1']) if home else (m['ac1'], m['hc1'])
+        g1 = None if m['h1'] is None or m['a1'] is None else (m['h1'] + m['a1'] > 0)
+        rows.append(dict(sc=gf > 0, cn=ga > 0, bt=gf > 0 and ga > 0, o25=gf + ga > 2.5, g1=g1, gf=gf, ga=ga, cf=cf, ca=ca, c1f=c1f, c1a=c1a))
+    out = {'n': len(rows)}
+    if len(rows) < 5:
+        return out
+    for key in ('sc', 'cn', 'bt', 'o25', 'g1'):
+        v = [r[key] for r in rows if r[key] is not None]
+        if len(v) >= 5:
+            out[key] = [sum(1 for x in v if x), len(v)]
+    for key in ('gf', 'ga', 'cf', 'ca', 'c1f', 'c1a'):
+        v = [r[key] for r in rows if r[key] is not None]
+        if len(v) >= 5:
+            out[key] = [round(sum(v) / len(v), 1), len(v)]
+    return out
+
 # ---------- partidos futuros ----------
 def first(r, keys):
     for k in keys:
@@ -908,7 +934,8 @@ def main():
             matches.append(dict(id=f"{code}-{f['k']:%Y%m%d}-{slug(f['h'])}-{slug(f['a'])}", league=code, leagueName=l['name'],
                                 utc=f['k'].strftime('%Y-%m-%dT%H:%M:%SZ'), home=f['h'], away=f['a'], src=f['src'], fav=l['fav'],
                                 oddsFrom=('promedio de casas' if f['src'] == 'fd' else ('DraftKings' if any(f['odds'].values()) else None)),
-                                lh=round(M['lh'], 2), la=round(M['la'], 2), bets=bets_for(M, f['h'], f['a'], f['odds'])))
+                                lh=round(M['lh'], 2), la=round(M['la'], 2), form=dict(h=team_form(hist, f['h'], True), a=team_form(hist, f['a'], False)),
+                                bets=bets_for(M, f['h'], f['a'], f['odds'])))
             done += 1
         st['matches'] = done
     matches.sort(key=lambda m: m['utc'])
