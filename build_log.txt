@@ -1,21 +1,21 @@
-espn historial EPL eventos 146 con córners en historial 146
-espn historial ENG eventos 162 con córners en historial 161
-espn historial EL1 eventos 170 con córners en historial 158
-espn historial SCO eventos 141 con córners en historial 141
-espn historial SC1 eventos 140 con córners en historial 81
-espn historial GB1 eventos 151 con córners en historial 151
-espn historial GER eventos 150 con córners en historial 148
-espn historial SA eventos 149 con córners en historial 149
-espn historial SB eventos 157 con córners en historial 157
-espn historial LL eventos 141 con córners en historial 141
-espn historial LL2 eventos 148 con córners en historial 147
-espn historial L1 eventos 147 con córners en historial 130
-espn historial L2 eventos 153 con córners en historial 153
-espn historial ERE eventos 151 con córners en historial 151
-espn historial BEL eventos 145 con córners en historial 128
-espn historial POR eventos 140 con córners en historial 140
-espn historial TUR eventos 140 con córners en historial 140
-espn historial GRE eventos 147 con córners en historial 94
+espn historial EPL eventos 175 con córners en historial 175
+espn historial ENG eventos 194 con córners en historial 193
+espn historial EL1 eventos 203 con córners en historial 191
+espn historial SCO eventos 168 con córners en historial 168
+espn historial SC1 eventos 169 con córners en historial 104
+espn historial GB1 eventos 180 con córners en historial 180
+espn historial GER eventos 180 con córners en historial 178
+espn historial SA eventos 177 con córners en historial 177
+espn historial SB eventos 189 con córners en historial 189
+espn historial LL eventos 169 con córners en historial 169
+espn historial LL2 eventos 177 con córners en historial 176
+espn historial L1 eventos 176 con córners en historial 157
+espn historial L2 eventos 183 con córners en historial 183
+espn historial ERE eventos 180 con córners en historial 180
+espn historial BEL eventos 174 con córners en historial 152
+espn historial POR eventos 169 con córners en historial 169
+espn historial TUR eventos 168 con córners en historial 168
+espn historial GRE eventos 176 con córners en historial 94
 espn historial SUI eventos 0 con córners en historial 0
 espn historial BRA eventos 457 con córners en historial 427
 espn historial ARG eventos 574 con córners en historial 534
@@ -32,16 +32,18 @@ espn historial RUS eventos 176 con córners en historial 156
 espn historial SWE eventos 255 con córners en historial 255
 espn historial USA eventos 406 con córners en historial 405
 espn historial CHN eventos 267 con córners en historial 267
-espn historial solo ECU partidos 157 con córners 153 con 1T córners 0
+espn historial solo ECU partidos 241 con córners 237 con 1T córners 0
 corners espn ENG Preston Sheffield United 3 3 1T 1 0
 corners espn BRA Athletico-PR Vasco 7 0 1T None None
 corners espn BRA Flamengo RJ Gremio 7 4 1T 7 1
+corners espn BRA Botafogo RJ Atletico-MG 4 4 1T None None
+corners espn BRA Sao Paulo Corinthians 6 8 1T 4 8
 corners espn BRA Chapecoense-SC Mirassol 4 5 1T 1 2
 corners espn BRA Internacional Coritiba 15 2 1T 5 1
 corners espn SWE Sirius Halmstad 5 4 1T None None
-resultados: 671
+resultados: 673
 {
- "generated": "2026-11-05T01:17:25.213310+00:00",
+ "generated": "2026-11-05T02:35:27.768625+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -189,4 +191,4 @@ resultados: 671
     "Port Vale",
     "Reading",
     "Rotherh
-partidos: 256
+partidos: 254
