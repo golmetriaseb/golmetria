@@ -1,14 +1,14 @@
-espn historial EPL eventos 358 con córners en historial 358
-espn historial ENG eventos 382 con córners en historial 381
-espn historial EL1 eventos 407 con córners en historial 395
+espn historial EPL eventos 389 con córners en historial 389
+espn historial ENG eventos 414 con córners en historial 413
+espn historial EL1 eventos 443 con córners en historial 431
 espn historial SCO eventos 260 con córners en historial 260
 espn historial SC1 eventos 205 con córners en historial 131
 espn historial GB1 eventos 333 con córners en historial 333
 espn historial GER eventos 333 con córners en historial 331
-espn historial SA eventos 347 con córners en historial 347
-espn historial SB eventos 374 con córners en historial 374
-espn historial LL eventos 337 con córners en historial 337
-espn historial LL2 eventos 352 con córners en historial 351
+espn historial SA eventos 377 con córners en historial 377
+espn historial SB eventos 405 con córners en historial 405
+espn historial LL eventos 364 con córners en historial 364
+espn historial LL2 eventos 382 con córners en historial 381
 espn historial L1 eventos 332 con córners en historial 295
 espn historial L2 eventos 333 con córners en historial 332
 espn historial ERE eventos 341 con córners en historial 341
@@ -43,7 +43,7 @@ corners espn BRA Internacional Coritiba 15 2 1T 5 1
 corners espn SWE Sirius Halmstad 5 4 1T None None
 resultados: 673
 {
- "generated": "2026-11-05T09:11:26.117131+00:00",
+ "generated": "2026-11-05T10:14:59.566797+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
