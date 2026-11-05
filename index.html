@@ -2,7 +2,7 @@
 <html lang="es"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
-<meta name="gm-v" content="20261105223159"><meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="gm-v" content="20261105230139"><meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Golmetría"><link rel="apple-touch-icon" href="icon-180.png"><link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#0a0b14"><meta name="color-scheme" content="dark">
 <title>Golmetría</title>
@@ -73,6 +73,7 @@ nav button.on{color:var(--bl)}nav button.on svg{filter:drop-shadow(0 0 6px rgba(
 .fxr.on{background:var(--blbg);border-color:var(--bl)}.fxr b{font:italic 800 17px var(--f1)}.fxr b.hi{color:var(--go)}.fxr b small{font:500 10px system-ui;color:var(--mu);margin-left:2px}
 .fxm{margin-top:10px;border-top:1px dashed var(--ln2);padding-top:10px;font-size:13px;color:var(--mu)}.fxm .ch{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
 .fxm .ch span{background:var(--blbg);border:1px solid var(--ln2);color:var(--tx);border-radius:999px;padding:5px 10px;font-size:12.5px}.fxm .ch span i{font-style:normal;color:var(--bl);font-weight:800;margin-left:4px}
+.fxavg{margin-top:8px;font-size:13.5px;color:var(--mu)}.fxavg b{font:italic 800 18px var(--f1);color:var(--ok)}
 .fxn{font-size:11.5px;color:var(--mu);margin-top:8px}
 .gt{font:italic 800 20px var(--f1);text-transform:uppercase;letter-spacing:.8px;color:var(--tx);margin:24px 0 9px;display:flex;align-items:center;gap:10px}.gt:before{content:"";width:5px;height:20px;background:linear-gradient(180deg,var(--bl),var(--ok));transform:skewX(-20deg);border-radius:2px}
 .row{background:linear-gradient(180deg,#121521,#0c0e15);border:1px solid var(--ln2);border-radius:14px;padding:13px 14px;margin-bottom:9px}
@@ -310,10 +311,11 @@ function fxBets(m,k){const B=m.bets,pick=(ty,re)=>{const a=B.filter(b=>b.type===
 function fxHtml(m){const f=m.form||{},H=f.h||{},A=f.a||{};const rows=FXR.filter(r=>H[r[0]]&&A[r[0]]);if(!rows.length)return'';if(!rows.some(r=>r[0]===fxSel))fxSel=rows[0][0];
  const cell=(x,t)=>t==='p'?`<b class="${x[0]/x[1]>=.7?'hi':''}">${x[0]}/${x[1]}</b>`:`<b>${x[0]}<small>prom.</small></b>`;
  const sel=rows.find(r=>r[0]===fxSel),bs=fxBets(m,fxSel);
+ const avg=(fxSel==='ct'||fxSel==='c1t')?(H[fxSel][0]+A[fxSel][0])/2:null;
  return `<div class="fx" id="fx"><h4>Cómo llegan al partido</h4><div class="sb">Sus últimos partidos: ${m.home} de local, ${m.away} de visitante. Toca una fila.</div>
  <div class="fxh"><span></span><span>${m.home}</span><span>${m.away}</span></div>`+
  rows.map(r=>`<div class="fxr${r[0]===fxSel?' on':''}" data-fx="${r[0]}"><span>${r[1]}</span>${cell(H[r[0]],r[2])}${cell(A[r[0]],r[2])}</div>`).join('')+
- `<div class="fxm">Lo que calcula el modelo para «${sel[1]}»:<div class="ch">${bs.length?bs.map(b=>`<span>${b.label}<i>${pc(b.p)}</i></span>`).join(''):'<span>Dato informativo, sin apuesta propia</span>'}</div></div>
+ (avg!=null?`<div class="fxavg">Entre los dos, el promedio es <b>${avg.toFixed(1)}</b> córners${fxSel==='c1t'?' en el 1er tiempo':''}.</div>`:'')+`<div class="fxm">Lo que calcula el modelo para «${sel[1]}»:<div class="ch">${bs.length?bs.map(b=>`<span>${b.label}<i>${pc(b.p)}</i></span>`).join(''):'<span>Dato informativo, sin apuesta propia</span>'}</div></div>
  <div class="fxn">Son pocos partidos (hasta 10 por equipo): úsalo como pista, no como garantía.</div></div>`}
 function drawDet(){const m=cur;let h=`<div class="meta">${m.leagueName} · ${dn(m.date)} ${m.time}</div><div class="tm" style="font-size:21px">${m.home} vs ${m.away}</div><p style="color:var(--mu);font-size:13px;margin:0 0 4px">Escribe la cuota de tu casa y el valor se recalcula.</p>`;
  h+=fxHtml(m);
