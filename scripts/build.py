@@ -527,9 +527,10 @@ def team_form(hist, team, home, k=10):
         if m.get('hc1') is not None and m.get('ac1') is not None:
             c1f, c1a = (m['hc1'], m['ac1']) if home else (m['ac1'], m['hc1'])
         g1 = None if m['h1'] is None or m['a1'] is None else (m['h1'] + m['a1'] > 0)
+        gt = gf + ga
         ct = None if cf is None else cf + ca
         c1t = None if c1f is None else c1f + c1a
-        rows.append(dict(sc=gf > 0, cn=ga > 0, bt=gf > 0 and ga > 0, o25=gf + ga > 2.5, g1=g1, gf=gf, ga=ga, cf=cf, ca=ca, c1f=c1f, c1a=c1a, ct=ct, c1t=c1t))
+        rows.append(dict(sc=gf > 0, cn=ga > 0, bt=gf > 0 and ga > 0, o25=gf + ga > 2.5, g1=g1, gf=gf, ga=ga, cf=cf, ca=ca, c1f=c1f, c1a=c1a, ct=ct, c1t=c1t, gt=gt))
     out = {'n': len(rows)}
     if len(rows) < 5:
         return out
@@ -537,7 +538,7 @@ def team_form(hist, team, home, k=10):
         v = [r[key] for r in rows if r[key] is not None]
         if len(v) >= 5:
             out[key] = [sum(1 for x in v if x), len(v)]
-    for key in ('gf', 'ga', 'cf', 'ca', 'ct', 'c1f', 'c1a', 'c1t'):
+    for key in ('gf', 'ga', 'gt', 'cf', 'ca', 'ct', 'c1f', 'c1a', 'c1t'):
         v = [r[key] for r in rows if r[key] is not None]
         if len(v) >= 5:
             out[key] = [round(sum(v) / len(v), 1), len(v)]
