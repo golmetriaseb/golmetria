@@ -35,7 +35,7 @@ espn historial CHN eventos 267 con córners en historial 267
 espn historial solo ECU partidos 351 con córners 275 con 1T córners 0
 resultados: 670
 {
- "generated": "2026-11-06T11:12:53.927786+00:00",
+ "generated": "2026-11-06T11:59:27.792176+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -69,7 +69,7 @@ resultados: 670
     "Wolves"
    ],
    "fav": false,
-   "fixtures_fd": 0,
+   "fixtures_fd": 10,
    "name_map": {
     "Coventry City": "Coventry",
     "Leeds United": "Leeds",
@@ -182,5 +182,5 @@ resultados: 670
     "Reading",
     "Rotherham",
     "Sheffield Weds",
-    "Stevena
-partidos: 278
+    "Steven
+partidos: 279
