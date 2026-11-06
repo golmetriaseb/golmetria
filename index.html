@@ -2,7 +2,7 @@
 <html lang="es"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
-<meta name="gm-v" content="20261105235309"><meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="gm-v" content="20261106001028"><meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Golmetría"><link rel="apple-touch-icon" href="icon-180.png"><link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#0a0b14"><meta name="color-scheme" content="dark">
 <title>Golmetría</title>
@@ -321,7 +321,7 @@ function fxHtml(m){const f=m.form||{},H=f.h||{},A=f.a||{};const ok=k=>H[k]&&A[k]
  const sel=lab[sk],bs=fxBets(m,sk),kind=sel[2],u=/^(gf|ga|gt)$/.test(sk)?'goles':/^c1/.test(sk)?'córners en el 1er tiempo':'córners';
  const avgT=kind==='p'?`pasa en <b>${Math.round((H[sk][0]/H[sk][1]+A[sk][0]/A[sk][1])/2*10)}</b> de cada 10 partidos`:`el promedio es <b>${((H[sk][0]+A[sk][0])/2).toFixed(1)}</b> ${u}`;
  let box='';if(ok(T[3])&&ok(T[4])){const hf=H[T[3]][0],hc=H[T[4]][0],af=A[T[3]][0],ac=A[T[4]][0],e1=(hf+ac)/2,e2=(af+hc)/2,n=x=>x.toFixed(1);
-  box=`<div class="esp"><small>${T[5]}</small><div class="pr"><span>${m.home} ${T[6]} <i>${n(hf)}</i></span><span>${m.away} ${T[7]} <i>${n(ac)}</i></span><span class="av">→ <b>${n(e1)}</b></span></div><div class="pr"><span>${m.away} ${T[6]} <i>${n(af)}</i></span><span>${m.home} ${T[7]} <i>${n(hc)}</i></span><span class="av">→ <b>${n(e2)}</b></span></div><div class="t"><span>Total del partido</span><b>${n(e1+e2)}</b></div></div>`}
+  box=`<div class="esp"><small>${T[5]}</small><div class="pr"><span>${m.home} ${T[6]} <i>${n(hf)}</i></span><span>${m.away} ${T[7]} <i>${n(ac)}</i></span><span class="av">→ <b>${n(e1)}</b></span></div><div class="pr"><span>${m.away} ${T[6]} <i>${n(af)}</i></span><span>${m.home} ${T[7]} <i>${n(hc)}</i></span><span class="av">→ <b>${n(e2)}</b></span></div><div class="t"><span>${fxTab==='t1'?'Total del 1er tiempo':'Total del partido'}</span><b>${n(e1+e2)}</b></div></div>`}
  return `<div class="fx" id="fx"><h4>Cómo llegan al partido</h4><div class="sb">Sus últimos 10 partidos: ${m.home} de local, ${m.away} de visitante.</div>
  <div class="tabs">${tabs.map(t=>`<span class="${t[0]===fxTab?'on':''}" data-tab="${t[0]}">${t[1]}</span>`).join('')}</div>${box}
  <div class="fxh"><span></span><span>${m.home}</span><span>${m.away}</span></div>`+
