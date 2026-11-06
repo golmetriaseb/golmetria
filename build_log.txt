@@ -43,7 +43,7 @@ corners espn ARG Aldosivi River Plate 1 8 1T 1 4
 corners espn ARG Gimnasia L.P. Belgrano 2 7 1T 0 2
 resultados: 667
 {
- "generated": "2026-11-06T04:00:37.849903+00:00",
+ "generated": "2026-11-06T05:07:09.294076+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
