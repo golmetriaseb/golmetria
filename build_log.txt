@@ -35,13 +35,21 @@ espn historial CHN eventos 267 con córners en historial 267
 espn historial solo ECU partidos 351 con córners 275 con 1T córners 0
 corners espn GER Dresden Greuther Furth 3 9 1T None None
 corners espn GER Braunschweig Cottbus 5 4 1T None None
+corners espn L2 Nancy Sochaux 4 2 1T None None
+corners espn L2 Boulogne Annecy 2 6 1T None None
+corners espn L2 Dijon Red Star 4 2 1T None None
+corners espn L2 Dunkerque Guingamp 6 1 1T None None
+corners espn L2 Grenoble Reims 1 8 1T None None
+corners espn L2 Montpellier Metz 9 4 1T None None
+corners espn ERE Willem II Zwolle 2 7 1T 0 5
 corners espn TUR Gaziantep Kasimpasa 7 2 1T None None
 corners espn ARG Barracas Central Racing Club 1 8 1T 1 5
 corners espn DNK Silkeborg Lyngby 0 1 1T None None
 corners espn RUS Lokomotiv Moscow Rubin Kazan 6 7 1T None None
-resultados: 676
+corners espn SWE Hammarby Elfsborg 4 2 1T None None
+resultados: 685
 {
- "generated": "2026-11-06T19:57:37.037829+00:00",
+ "generated": "2026-11-06T20:54:58.081099+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -193,4 +201,4 @@ resultados: 676
    "fav": false,
    "fixtures_fd": 0,
    
-partidos: 277
+partidos: 273
