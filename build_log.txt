@@ -33,11 +33,15 @@ espn historial SWE eventos 256 con córners en historial 256
 espn historial USA eventos 406 con córners en historial 405
 espn historial CHN eventos 267 con córners en historial 267
 espn historial solo ECU partidos 351 con córners 275 con 1T córners 0
+corners espn GER Dresden Greuther Furth 3 9 1T None None
+corners espn GER Braunschweig Cottbus 5 4 1T None None
 corners espn TUR Gaziantep Kasimpasa 7 2 1T None None
+corners espn ARG Barracas Central Racing Club 1 8 1T 1 5
+corners espn DNK Silkeborg Lyngby 0 1 1T None None
 corners espn RUS Lokomotiv Moscow Rubin Kazan 6 7 1T None None
-resultados: 672
+resultados: 676
 {
- "generated": "2026-11-06T19:02:02.500586+00:00",
+ "generated": "2026-11-06T19:57:37.037829+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -73,7 +77,6 @@ resultados: 672
    "fav": false,
    "fixtures_fd": 10,
    "name_map": {
-    "Coventry City": "Coventry",
     "Leeds United": "Leeds",
     "Tottenham Hotspur": "Tottenham",
     "Hull City": "Hull",
@@ -85,7 +88,7 @@ resultados: 672
     "AFC Bournemouth": "Bournemouth",
     "Manchester United": "Man United"
    },
-   "fixtures_espn": 10,
+   "fixtures_espn": 9,
    "espn_unmatched": 0,
    "matches": 10
   },
@@ -130,8 +133,6 @@ resultados: 672
    "fav": true,
    "fixtures_fd": 12,
    "name_map": {
-    "Derby County": "Derby",
-    "Bolton Wanderers": "Bolton",
     "Norwich City": "Norwich",
     "Stoke City": "Stoke",
     "Wolverhampton Wanderers": "Wolves",
@@ -146,7 +147,7 @@ resultados: 672
     "Lincoln City": "Lincoln",
     "West Bromwich Albion": "West Brom"
    },
-   "fixtures_espn": 12,
+   "fixtures_espn": 11,
    "espn_unmatched": 0,
    "matches": 12
   },
@@ -184,5 +185,12 @@ resultados: 672
     "Reading",
     "Rotherham",
     "Sheffield Weds",
-    "Steven
+    "Stevenage",
+    "Stockport",
+    "Wigan",
+    "Wycombe"
+   ],
+   "fav": false,
+   "fixtures_fd": 0,
+   
 partidos: 277
