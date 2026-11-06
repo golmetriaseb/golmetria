@@ -33,17 +33,16 @@ espn historial SWE eventos 255 con córners en historial 255
 espn historial USA eventos 406 con córners en historial 405
 espn historial CHN eventos 267 con córners en historial 267
 espn historial solo ECU partidos 351 con córners 275 con 1T córners 0
+corners espn BRA Palmeiras Remo 5 3 1T 1 3
 corners espn BRA Athletico-PR Vasco 7 0 1T None None
 corners espn BRA Flamengo RJ Gremio 7 4 1T 7 1
 corners espn BRA Botafogo RJ Atletico-MG 4 4 1T None None
 corners espn BRA Sao Paulo Corinthians 6 8 1T 4 8
-corners espn BRA Chapecoense-SC Mirassol 4 5 1T 1 2
-corners espn BRA Internacional Coritiba 15 2 1T 5 1
 corners espn ARG Aldosivi River Plate 1 8 1T 1 4
-corners espn SWE Sirius Halmstad 5 4 1T None None
-resultados: 673
+corners espn ARG Gimnasia L.P. Belgrano 2 7 1T 0 2
+resultados: 666
 {
- "generated": "2026-11-05T23:51:45.589857+00:00",
+ "generated": "2026-11-06T01:21:06.897469+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
