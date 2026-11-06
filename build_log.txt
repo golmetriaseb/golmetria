@@ -35,7 +35,7 @@ espn historial CHN eventos 267 con córners en historial 267
 espn historial solo ECU partidos 351 con córners 275 con 1T córners 0
 resultados: 670
 {
- "generated": "2026-11-06T15:57:50.561006+00:00",
+ "generated": "2026-11-06T17:00:14.035191+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -183,4 +183,4 @@ resultados: 670
     "Rotherham",
     "Sheffield Weds",
     "Steven
-partidos: 280
+partidos: 278
