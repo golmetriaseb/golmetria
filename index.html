@@ -2,7 +2,7 @@
 <html lang="es"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
-<meta name="gm-v" content="20261106012303"><meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="gm-v" content="20261106155307"><meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Golmetría"><link rel="apple-touch-icon" href="icon-180.png"><link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#0a0b14"><meta name="color-scheme" content="dark">
 <title>Golmetría</title>
@@ -215,6 +215,7 @@ let day=days.includes(loc(new Date()))?loc(new Date()):days[0],type='all',thr=.7
 const dn=d=>{const t=loc(new Date()),tm=loc(new Date(Date.now()+864e5));return d===t?'Hoy':d===tm?'Mañana':new Date(d+'T12:00').toLocaleDateString('es',{weekday:'short'})};
 const dd=d=>new Date(d+'T12:00').toLocaleDateString('es',{day:'numeric',month:'short'});
 const tc=p=>(p=Math.round(p*100)/100)>=.75?'c-go':p>=.65?'c-ok':p>=.55?'c-ye':'c-re',tw=p=>(p=Math.round(p*100)/100)>=.75?'Muy posible':p>=.65?'Buena':p>=.55?'Con riesgo':'Difícil';
+const rp=x=>Math.round(x*100)/100;
 const pc=x=>Math.round(x*100)+'%',val=b=>b.odd?b.p*b.odd-1:null,fmt=v=>v==null?'—':(v>=0?'+':'')+Math.round(v*100)+'%';
 function drawDays(){$('#days').innerHTML='<button class="day lv" id="lv">● En vivo <small id="lvn">0</small></button>'+days.map(d=>`<button class="day" data-d="${d}">${dn(d)}<small>${dd(d)}</small></button>`).join('')}drawDays();
 const TOP=['EPL','LL','GB1','SA','L1','ERE','POR','BEL','TUR','BRA','USA','MEX','ARG','ECU'];
@@ -256,18 +257,18 @@ function render(){
  document.querySelectorAll('.day').forEach(e=>e.classList.toggle('on',liveOn?e.id==='lv':e.dataset.d===day));const nl=DATA.filter(m=>isLive(m)&&sel.has(m.league)).length;$('#lvn').textContent=nl;$('#lv').classList.toggle('zero',!nl);
  const nv=M0=>M0.filter(m=>m.bets.some(b=>b.p>=.28&&val(b)!=null&&val(b)>=.05)).length;const LM=liveOn?ms():[];const LN=liveOn?'<div class="lvnote"><b>● En vivo: '+LM.length+(LM.length===1?' partido en juego':' partidos en juego')+'.</b> Las probabilidades son de antes del partido y no cambian con el marcador.</div>':'';
  const F=flat();
- const S=F.filter(x=>payOn?(x.b.p>=PLO&&x.b.p<=PHI):x.b.p>=thr).sort((a,b)=>b.b.p-a.b.p),GM=new Map();S.forEach(x=>{if(!GM.has(x.m.id))GM.set(x.m.id,[]);GM.get(x.m.id).push(x)});
+ const S=F.filter(x=>payOn?(rp(x.b.p)>=PLO&&rp(x.b.p)<=PHI):rp(x.b.p)>=thr).sort((a,b)=>b.b.p-a.b.p),GM=new Map();S.forEach(x=>{if(!GM.has(x.m.id))GM.set(x.m.id,[]);GM.get(x.m.id).push(x)});
  const SG=[...GM.values()].sort(sortM==='p'?(a,b)=>b[0].b.p-a[0].b.p:(a,b)=>(a[0].m.utc<b[0].m.utc?-1:a[0].m.utc>b[0].m.utc?1:b[0].b.p-a[0].b.p));
  $('#hs0').innerHTML=bestHtml();
  $('#l-seg').innerHTML=SG.length?LN+segHtml(SG):(payOn?'<div class="empty"><b style="display:block;color:var(--tx);font:italic 800 20px var(--f1);text-transform:uppercase;margin-bottom:6px">Sin apuestas entre '+pc(PLO)+' y '+pc(PHI)+'</b>Con estos filtros no hay ninguna. Quita un filtro o prueba otro día.</div>':emptyMsg('s'));
  const th=(a,k)=>'<span>Desde</span>'+[.95,.80,.75,.65].map(x=>`<button data-${k}="${x}" class="${a===x?'on':''}">${pc(x)} o más</button>`).join('');
  $('#fb').innerHTML=`<button class="fc dd hl" type="button" data-om="thr"><span>Desde</span><b>${payOn?pc(PLO)+'–'+pc(PHI):pc(thr)}</b></button><button class="fc dd" type="button" data-om="ord"><span>Orden</span><b>${sortM==='p'?'Más probables':'Por hora'}</b></button><button class="fc${grpLg?' on':''}" type="button" data-grp="1"><i></i>Agrupar</button><button class="fc${payOn?' on':''}" type="button" data-pay="1"><i></i>Para apostar</button>`;
- const NP=ms().length,SS=new Set(flat().filter(x=>x.b.p>=thr).map(x=>x.m.id)).size;
+ const NP=ms().length,SS=new Set(flat().filter(x=>rp(x.b.p)>=thr).map(x=>x.m.id)).size;
  $('#rs').innerHTML=(liveOn?'En vivo: ':(dn(day)==='Hoy'?'Hoy: ':dn(day)+': '))+'<b>'+NP+'</b> '+(NP===1?'partido':'partidos')+' · <b>'+SS+'</b> con '+pc(thr)+' o más';
  const fa=[];if(sel.size!==LGS.length)fa.push(lgLabel());if(type!=='all')fa.push(TYPES.find(t=>t[0]===type)[1]);if(liveOn)fa.push('En vivo');
  $('#actl').classList.toggle('on',fa.length>0&&view!=='mis');$('#actt').innerHTML='Filtrando: <b>'+fa.join(' · ')+'</b>';
  const M=ms();
- $('#l-par').innerHTML=M.length?LN+M.map(m=>{const n=m.bets.filter(b=>b.p>=thr).length;return`<div class="card" data-m="${m.id}" style="cursor:pointer">${head(m)}<span class="chipv ${n?'p':'n'}">${n?n+(n===1?' apuesta':' apuestas')+' con '+pc(thr)+' o más · ver todas ›':'Ninguna con '+pc(thr)+' o más · ver partido ›'}</span></div>`}).join(''):'<div class="empty">No hay partidos este día.</div>';
+ $('#l-par').innerHTML=M.length?LN+M.map(m=>{const n=m.bets.filter(b=>rp(b.p)>=thr).length;return`<div class="card" data-m="${m.id}" style="cursor:pointer">${head(m)}<span class="chipv ${n?'p':'n'}">${n?n+(n===1?' apuesta':' apuestas')+' con '+pc(thr)+' o más · ver todas ›':'Ninguna con '+pc(thr)+' o más · ver partido ›'}</span></div>`}).join(''):'<div class="empty">No hay partidos este día.</div>';
 }
 let payOn=LS.get('gm_pay',false)===true;const PLO=.65,PHI=.80;let autoThr=false;const openEx=new Set(),closedLg=new Set();let grpLg=LS.get('gm_grp',false)===true,sortM=LS.get('gm_sort','h')==='p'?'p':'h';
 const ODDS=LS.get('gm_odds',{}),oddKey=(id,l)=>id+'|'+l;
@@ -297,7 +298,7 @@ function segHtml(SG){const n=SG.length;let h=(payOn?`<div class="kc" style="marg
 function moved(){
  $('#note').classList.remove('on');if(autoThr){thr=.75;autoThr=false;render()}
  if(view!=='seg'||payOn)return;
- const F=flat(),has=t=>F.some(x=>x.b.p>=t);
+ const F=flat(),has=t=>F.some(x=>rp(x.b.p)>=t);
  if(!has(thr)){const l=[.80,.75,.65].find(t=>t<thr&&has(t));if(l){const o=thr;thr=l;autoThr=true;render();const n=$('#note');n.textContent='Bajé el mínimo a '+pc(l)+': con '+pc(o)+' o más no había apuestas con este filtro.';n.classList.add('on')}}
 }
 let demoBad=false;function stamp(){const el=$('#demo'),up=$('#upd');if(!REAL){demoBad=true;up.textContent='Sin datos reales';up.className='upd old';el.innerHTML='<b>No se pudieron cargar los datos reales.</b> Estás viendo partidos de ejemplo.';el.style.display=view==='mis'?'none':'';return}
