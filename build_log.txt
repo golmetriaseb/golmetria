@@ -1,5 +1,4 @@
-s 260 con córners en historial 260
-espn historial SC1 eventos 205 con córners en historial 131
+orial 131
 espn historial GB1 eventos 333 con córners en historial 333
 espn historial GER eventos 333 con córners en historial 331
 espn historial SA eventos 430 con córners en historial 430
@@ -37,6 +36,7 @@ corners espn GER Dresden Greuther Furth 3 9 1T None None
 corners espn GER Braunschweig Cottbus 5 4 1T None None
 corners espn SA Venezia Udinese 3 7 1T 1 0
 corners espn SB Ascoli Palermo 5 2 1T None None
+corners espn LL Sevilla Alaves 5 4 1T 1 1
 corners espn L1 Toulouse Strasbourg 7 1 1T 2 1
 corners espn L2 Nancy Sochaux 4 2 1T None None
 corners espn L2 Boulogne Annecy 2 6 1T None None
@@ -46,14 +46,15 @@ corners espn L2 Grenoble Reims 1 8 1T None None
 corners espn L2 Montpellier Metz 9 4 1T None None
 corners espn ERE Willem II Zwolle 2 7 1T 0 5
 corners espn BEL Standard Beveren 3 5 1T None None
+corners espn POR Famalicao Arouca 9 2 1T 4 0
 corners espn TUR Gaziantep Kasimpasa 7 2 1T None None
 corners espn ARG Barracas Central Racing Club 1 8 1T 1 5
 corners espn DNK Silkeborg Lyngby 0 1 1T None None
 corners espn RUS Lokomotiv Moscow Rubin Kazan 6 7 1T None None
 corners espn SWE Hammarby Elfsborg 4 2 1T None None
-resultados: 693
+resultados: 695
 {
- "generated": "2026-11-06T21:50:10.525283+00:00",
+ "generated": "2026-11-06T22:51:32.638656+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -205,4 +206,4 @@ resultados: 693
    "fav": false,
    "fixtures_fd": 0,
    
-partidos: 268
+partidos: 254
