@@ -1,7 +1,4 @@
-espn historial EPL eventos 410 con córners en historial 410
-espn historial ENG eventos 629 con córners en historial 629
-espn historial EL1 eventos 593 con córners en historial 593
-espn historial SCO eventos 260 con córners en historial 260
+s 260 con córners en historial 260
 espn historial SC1 eventos 205 con córners en historial 131
 espn historial GB1 eventos 333 con córners en historial 333
 espn historial GER eventos 333 con córners en historial 331
@@ -33,8 +30,14 @@ espn historial SWE eventos 256 con córners en historial 256
 espn historial USA eventos 406 con córners en historial 405
 espn historial CHN eventos 267 con córners en historial 267
 espn historial solo ECU partidos 351 con córners 275 con 1T córners 0
+corners espn EPL Everton Coventry 2 2 1T 1 1
+corners espn ENG Derby Bolton 4 6 1T 2 2
+corners espn GB1 Hamburg M'gladbach 5 3 1T None None
 corners espn GER Dresden Greuther Furth 3 9 1T None None
 corners espn GER Braunschweig Cottbus 5 4 1T None None
+corners espn SA Venezia Udinese 3 7 1T 1 0
+corners espn SB Ascoli Palermo 5 2 1T None None
+corners espn L1 Toulouse Strasbourg 7 1 1T 2 1
 corners espn L2 Nancy Sochaux 4 2 1T None None
 corners espn L2 Boulogne Annecy 2 6 1T None None
 corners espn L2 Dijon Red Star 4 2 1T None None
@@ -42,14 +45,15 @@ corners espn L2 Dunkerque Guingamp 6 1 1T None None
 corners espn L2 Grenoble Reims 1 8 1T None None
 corners espn L2 Montpellier Metz 9 4 1T None None
 corners espn ERE Willem II Zwolle 2 7 1T 0 5
+corners espn BEL Standard Beveren 3 5 1T None None
 corners espn TUR Gaziantep Kasimpasa 7 2 1T None None
 corners espn ARG Barracas Central Racing Club 1 8 1T 1 5
 corners espn DNK Silkeborg Lyngby 0 1 1T None None
 corners espn RUS Lokomotiv Moscow Rubin Kazan 6 7 1T None None
 corners espn SWE Hammarby Elfsborg 4 2 1T None None
-resultados: 685
+resultados: 693
 {
- "generated": "2026-11-06T20:54:58.081099+00:00",
+ "generated": "2026-11-06T21:50:10.525283+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -201,4 +205,4 @@ resultados: 685
    "fav": false,
    "fixtures_fd": 0,
    
-partidos: 273
+partidos: 268
