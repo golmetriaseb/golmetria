@@ -1,6 +1,4 @@
-orners espn GB1 Mainz Bayern Munich 7 8 1T 4 5
-corners espn GB1 RB Leipzig Augsburg 2 2 1T 2 0
-corners espn GB1 Paderborn Ein Frankfurt 2 6 1T 1 2
+1T 1 2
 corners espn GB1 Hamburg M'gladbach 5 3 1T None None
 corners espn GER Nurnberg Darmstadt 10 3 1T None None
 corners espn GER Holstein Kiel Bielefeld 6 5 1T None None
@@ -16,8 +14,10 @@ corners espn SB Padova Empoli 8 6 1T None None
 corners espn SB Pisa Sudtirol 8 4 1T None None
 corners espn SB Ascoli Palermo 5 2 1T None None
 corners espn LL Malaga Santander 6 3 1T 2 1
+corners espn LL Espanol La Coruna 9 5 1T 1 4
 corners espn LL Sevilla Alaves 5 4 1T 1 1
 corners espn LL2 Burgos Celta B 10 1 1T None None
+corners espn LL2 Cadiz Oviedo 8 4 1T None None
 corners espn L1 Toulouse Strasbourg 7 1 1T 2 1
 corners espn L2 Clermont Rodez 4 6 1T None None
 corners espn L2 Nancy Sochaux 4 2 1T None None
@@ -26,6 +26,7 @@ corners espn L2 Dijon Red Star 4 2 1T None None
 corners espn L2 Dunkerque Guingamp 6 1 1T None None
 corners espn L2 Grenoble Reims 1 8 1T None None
 corners espn L2 Montpellier Metz 9 4 1T None None
+corners espn ERE For Sittard Telstar 4 4 1T 2 1
 corners espn ERE Willem II Zwolle 2 7 1T 0 5
 corners espn BEL Westerlo Charleroi 1 6 1T None None
 corners espn BEL Standard Beveren 3 5 1T None None
@@ -55,9 +56,9 @@ corners espn RUS Fakel Voronezh Dynamo Moscow 5 3 1T None None
 corners espn RUS Akhmat Grozny Rodina Moscow 5 1 1T None None
 corners espn RUS Lokomotiv Moscow Rubin Kazan 6 7 1T None None
 corners espn SWE Hammarby Elfsborg 4 2 1T None None
-resultados: 712
+resultados: 721
 {
- "generated": "2026-11-07T16:50:13.333092+00:00",
+ "generated": "2026-11-07T17:44:29.974843+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -93,14 +94,12 @@ resultados: 712
    "fav": false,
    "fixtures_fd": 10,
    "name_map": {
-    "Nottingham Forest": "Nott'm Forest",
-    "Manchester City": "Man City",
     "Brighton & Hove Albion": "Brighton",
     "Ipswich Town": "Ipswich",
     "AFC Bournemouth": "Bournemouth",
     "Manchester United": "Man United"
    },
-   "fixtures_espn": 6,
+   "fixtures_espn": 5,
    "espn_unmatched": 0,
    "matches": 8
   },
@@ -214,5 +213,9 @@ resultados: 712
     "Aberdeen",
     "Celtic",
     "Dundee",
-  
-partidos: 238
+    "Dundee United",
+    "Falkirk",
+    "Hearts",
+    "Hibernian",
+    "Kilmarn
+partidos: 228
