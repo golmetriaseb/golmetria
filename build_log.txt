@@ -1,11 +1,6 @@
-orial CHN eventos 267 con córners en historial 267
-espn historial solo ECU partidos 351 con córners 275 con 1T córners 0
-corners espn EPL Leeds Tottenham 6 4 1T 1 2
-corners espn EPL Everton Coventry 2 2 1T 1 1
-corners espn ENG Bristol City Norwich 8 3 1T 3 0
-corners espn ENG Portsmouth Stoke 7 0 1T 5 0
-corners espn ENG Wrexham Wolves 2 7 1T 2 3
-corners espn ENG Derby Bolton 4 6 1T 2 2
+orners espn GB1 Mainz Bayern Munich 7 8 1T 4 5
+corners espn GB1 RB Leipzig Augsburg 2 2 1T 2 0
+corners espn GB1 Paderborn Ein Frankfurt 2 6 1T 1 2
 corners espn GB1 Hamburg M'gladbach 5 3 1T None None
 corners espn GER Nurnberg Darmstadt 10 3 1T None None
 corners espn GER Holstein Kiel Bielefeld 6 5 1T None None
@@ -13,8 +8,11 @@ corners espn GER Osnabruck Kaiserslautern 5 3 1T None None
 corners espn GER Dresden Greuther Furth 3 9 1T None None
 corners espn GER Braunschweig Cottbus 5 4 1T None None
 corners espn SA Cagliari Frosinone 3 13 1T 1 3
+corners espn SA Torino Lecce 4 5 1T 2 3
 corners espn SA Venezia Udinese 3 7 1T 1 0
-corners espn SB Cesena Catanzaro 2 9 1T None None
+corners espn SB Cesena Catanzaro 3 9 1T None None
+corners espn SB Juve Stabia Arezzo 6 8 1T None None
+corners espn SB Padova Empoli 8 6 1T None None
 corners espn SB Pisa Sudtirol 8 4 1T None None
 corners espn SB Ascoli Palermo 5 2 1T None None
 corners espn LL Malaga Santander 6 3 1T 2 1
@@ -29,11 +27,13 @@ corners espn L2 Dunkerque Guingamp 6 1 1T None None
 corners espn L2 Grenoble Reims 1 8 1T None None
 corners espn L2 Montpellier Metz 9 4 1T None None
 corners espn ERE Willem II Zwolle 2 7 1T 0 5
+corners espn BEL Westerlo Charleroi 1 6 1T None None
 corners espn BEL Standard Beveren 3 5 1T None None
 corners espn POR Famalicao Arouca 9 2 1T 4 0
 corners espn TUR Eyupspor Kocaelispor 4 1 1T None None
 corners espn TUR Samsunspor Konyaspor 2 3 1T None None
 corners espn TUR Gaziantep Kasimpasa 7 2 1T None None
+corners espn GRE Volos NFC Kifisia 2 7 1T None None
 corners espn BRA Vitoria Fluminense 9 6 1T 5 1
 corners espn ARG Barracas Central Racing Club 1 8 1T 1 5
 corners espn ARG Independiente Dep. Riestra 7 5 1T 5 3
@@ -55,9 +55,9 @@ corners espn RUS Fakel Voronezh Dynamo Moscow 5 3 1T None None
 corners espn RUS Akhmat Grozny Rodina Moscow 5 1 1T None None
 corners espn RUS Lokomotiv Moscow Rubin Kazan 6 7 1T None None
 corners espn SWE Hammarby Elfsborg 4 2 1T None None
-resultados: 692
+resultados: 712
 {
- "generated": "2026-11-07T15:48:04.039403+00:00",
+ "generated": "2026-11-07T16:50:13.333092+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -215,4 +215,4 @@ resultados: 692
     "Celtic",
     "Dundee",
   
-partidos: 245
+partidos: 238
