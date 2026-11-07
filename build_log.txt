@@ -1,7 +1,4 @@
-ventos 0 con córners en historial 0
-espn historial IRL eventos 20 con córners en historial 0
-espn historial JPN eventos 190 con córners en historial 171
-espn historial MEX eventos 252 con córners en historial 252
+s 252 con córners en historial 252
 espn historial NOR eventos 259 con córners en historial 259
 espn historial POL eventos 0 con córners en historial 0
 espn historial ROU eventos 0 con córners en historial 0
@@ -10,7 +7,11 @@ espn historial SWE eventos 256 con córners en historial 256
 espn historial USA eventos 406 con córners en historial 405
 espn historial CHN eventos 267 con córners en historial 267
 espn historial solo ECU partidos 351 con córners 275 con 1T córners 0
+corners espn EPL Leeds Tottenham 6 4 1T 1 2
 corners espn EPL Everton Coventry 2 2 1T 1 1
+corners espn ENG Bristol City Norwich 8 3 1T 3 0
+corners espn ENG Portsmouth Stoke 7 0 1T 5 0
+corners espn ENG Wrexham Wolves 2 7 1T 2 3
 corners espn ENG Derby Bolton 4 6 1T 2 2
 corners espn GB1 Hamburg M'gladbach 5 3 1T None None
 corners espn GER Nurnberg Darmstadt 10 3 1T None None
@@ -53,9 +54,9 @@ corners espn MEX Atlante Santos Laguna 3 6 1T 3 5
 corners espn RUS Fakel Voronezh Dynamo Moscow 5 3 1T None None
 corners espn RUS Lokomotiv Moscow Rubin Kazan 6 7 1T None None
 corners espn SWE Hammarby Elfsborg 4 2 1T None None
-resultados: 680
+resultados: 684
 {
- "generated": "2026-11-07T13:57:00.421240+00:00",
+ "generated": "2026-11-07T14:35:00.438217+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -207,4 +208,4 @@ resultados: 680
     "Sheffield Wednesday": "Sheffield Weds",
     "Plymouth Argyle": "Plymouth",
     "M
-partidos: 253
+partidos: 252
