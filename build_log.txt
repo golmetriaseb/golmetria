@@ -1,6 +1,4 @@
- córners en historial 0
-espn historial BRA eventos 466 con córners en historial 435
-espn historial ARG eventos 576 con córners en historial 536
+on córners en historial 536
 espn historial AUT eventos 211 con córners en historial 151
 espn historial DNK eventos 210 con córners en historial 210
 espn historial FIN eventos 0 con córners en historial 0
@@ -33,6 +31,7 @@ corners espn L2 Montpellier Metz 9 4 1T None None
 corners espn ERE Willem II Zwolle 2 7 1T 0 5
 corners espn BEL Standard Beveren 3 5 1T None None
 corners espn POR Famalicao Arouca 9 2 1T 4 0
+corners espn TUR Eyupspor Kocaelispor 4 1 1T None None
 corners espn TUR Gaziantep Kasimpasa 7 2 1T None None
 corners espn BRA Vitoria Fluminense 9 6 1T 5 1
 corners espn ARG Barracas Central Racing Club 1 8 1T 1 5
@@ -51,11 +50,12 @@ corners espn JPN Shimizu S-Pulse FC Tokyo 10 3 1T None None
 corners espn MEX Atl. San Luis Juarez 8 3 1T 3 0
 corners espn MEX Necaxa Club Tijuana 5 6 1T 3 2
 corners espn MEX Atlante Santos Laguna 3 6 1T 3 5
+corners espn RUS Fakel Voronezh Dynamo Moscow 5 3 1T None None
 corners espn RUS Lokomotiv Moscow Rubin Kazan 6 7 1T None None
 corners espn SWE Hammarby Elfsborg 4 2 1T None None
-resultados: 675
+resultados: 677
 {
- "generated": "2026-11-07T11:48:10.533014+00:00",
+ "generated": "2026-11-07T13:00:21.884491+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -91,8 +91,6 @@ resultados: 675
    "fav": false,
    "fixtures_fd": 10,
    "name_map": {
-    "Leeds United": "Leeds",
-    "Tottenham Hotspur": "Tottenham",
     "Hull City": "Hull",
     "Newcastle United": "Newcastle",
     "Nottingham Forest": "Nott'm Forest",
@@ -102,7 +100,7 @@ resultados: 675
     "AFC Bournemouth": "Bournemouth",
     "Manchester United": "Man United"
    },
-   "fixtures_espn": 9,
+   "fixtures_espn": 8,
    "espn_unmatched": 0,
    "matches": 9
   },
@@ -147,9 +145,6 @@ resultados: 675
    "fav": true,
    "fixtures_fd": 12,
    "name_map": {
-    "Norwich City": "Norwich",
-    "Stoke City": "Stoke",
-    "Wolverhampton Wanderers": "Wolves",
     "Birmingham City": "Birmingham",
     "Swansea City": "Swansea",
     "Blackburn Rovers": "Blackburn",
@@ -161,7 +156,7 @@ resultados: 675
     "Lincoln City": "Lincoln",
     "West Bromwich Albion": "West Brom"
    },
-   "fixtures_espn": 11,
+   "fixtures_espn": 8,
    "espn_unmatched": 0,
    "matches": 11
   },
@@ -206,5 +201,10 @@ resultados: 675
    ],
    "fav": false,
    "fixtures_fd": 0,
-   "
+   "name_map": {
+    "Doncaster Rovers": "Doncaster",
+    "Burton Albion": "Burton",
+    "Sheffield Wednesday": "Sheffield Weds",
+    "Plymouth Argyle": "Plymouth",
+    "M
 partidos: 254
