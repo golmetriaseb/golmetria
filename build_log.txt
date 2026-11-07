@@ -1,7 +1,4 @@
-one
-corners espn LL2 Cordoba Ceuta 11 5 1T None None
-corners espn LL2 Leganes Albacete 9 5 1T None None
-corners espn L1 Auxerre Paris FC 1 5 1T 0 1
+L1 Auxerre Paris FC 1 5 1T 0 1
 corners espn L1 Toulouse Strasbourg 7 1 1T 2 1
 corners espn L2 Clermont Rodez 4 6 1T None None
 corners espn L2 Pau FC Nantes 2 3 1T None None
@@ -17,6 +14,8 @@ corners espn ERE Den Haag Sparta Rotterdam 5 9 1T 4 6
 corners espn ERE Willem II Zwolle 2 7 1T 0 5
 corners espn BEL Westerlo Charleroi 1 6 1T None None
 corners espn BEL Oud-Heverlee Leuven Mechelen 6 16 1T None None
+corners espn BEL Antwerp Lommel SK 9 8 1T None None
+corners espn BEL RAAL La Louviere Cercle Brugge 6 2 1T None None
 corners espn BEL Standard Beveren 3 5 1T None None
 corners espn POR Alverca Casa Pia 9 2 1T 3 1
 corners espn POR Famalicao Arouca 9 2 1T 4 0
@@ -55,9 +54,9 @@ corners espn RUS Lokomotiv Moscow Rubin Kazan 6 7 1T None None
 corners espn SWE Degerfors GAIS 4 5 1T None None
 corners espn SWE Orgryte Vasteras SK 5 11 1T None None
 corners espn SWE Hammarby Elfsborg 4 2 1T None None
-resultados: 747
+resultados: 752
 {
- "generated": "2026-11-07T20:48:01.112560+00:00",
+ "generated": "2026-11-07T21:45:49.815639+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -217,4 +216,4 @@ resultados: 747
     "Hearts",
     "Hibernian",
     "Kilmarn
-partidos: 180
+partidos: 172
