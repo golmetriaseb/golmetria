@@ -1,7 +1,4 @@
-s 252 con córners en historial 252
-espn historial NOR eventos 259 con córners en historial 259
-espn historial POL eventos 0 con córners en historial 0
-espn historial ROU eventos 0 con córners en historial 0
+n historial 0
 espn historial RUS eventos 176 con córners en historial 156
 espn historial SWE eventos 256 con córners en historial 256
 espn historial USA eventos 406 con córners en historial 405
@@ -21,8 +18,11 @@ corners espn GER Dresden Greuther Furth 3 9 1T None None
 corners espn GER Braunschweig Cottbus 5 4 1T None None
 corners espn SA Venezia Udinese 3 7 1T 1 0
 corners espn SB Ascoli Palermo 5 2 1T None None
+corners espn LL Malaga Santander 6 3 1T 2 1
 corners espn LL Sevilla Alaves 5 4 1T 1 1
+corners espn LL2 Burgos Celta B 10 1 1T None None
 corners espn L1 Toulouse Strasbourg 7 1 1T 2 1
+corners espn L2 Clermont Rodez 4 5 1T None None
 corners espn L2 Nancy Sochaux 4 2 1T None None
 corners espn L2 Boulogne Annecy 2 6 1T None None
 corners espn L2 Dijon Red Star 4 2 1T None None
@@ -33,6 +33,7 @@ corners espn ERE Willem II Zwolle 2 7 1T 0 5
 corners espn BEL Standard Beveren 3 5 1T None None
 corners espn POR Famalicao Arouca 9 2 1T 4 0
 corners espn TUR Eyupspor Kocaelispor 4 1 1T None None
+corners espn TUR Samsunspor Konyaspor 2 3 1T None None
 corners espn TUR Gaziantep Kasimpasa 7 2 1T None None
 corners espn BRA Vitoria Fluminense 9 6 1T 5 1
 corners espn ARG Barracas Central Racing Club 1 8 1T 1 5
@@ -54,9 +55,9 @@ corners espn MEX Atlante Santos Laguna 3 6 1T 3 5
 corners espn RUS Fakel Voronezh Dynamo Moscow 5 3 1T None None
 corners espn RUS Lokomotiv Moscow Rubin Kazan 6 7 1T None None
 corners espn SWE Hammarby Elfsborg 4 2 1T None None
-resultados: 684
+resultados: 688
 {
- "generated": "2026-11-07T14:35:00.438217+00:00",
+ "generated": "2026-11-07T14:51:29.838184+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
