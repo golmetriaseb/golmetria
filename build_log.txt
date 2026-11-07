@@ -1,7 +1,4 @@
-rial 516
-espn historial L1 eventos 332 con córners en historial 295
-espn historial L2 eventos 333 con córners en historial 332
-espn historial ERE eventos 341 con córners en historial 341
+341 con córners en historial 341
 espn historial BEL eventos 330 con córners en historial 329
 espn historial POR eventos 333 con córners en historial 333
 espn historial TUR eventos 335 con córners en historial 335
@@ -30,6 +27,7 @@ corners espn GER Dresden Greuther Furth 3 9 1T None None
 corners espn GER Braunschweig Cottbus 5 4 1T None None
 corners espn SA Venezia Udinese 3 7 1T 1 0
 corners espn SB Ascoli Palermo 5 2 1T None None
+corners espn LL Sevilla Alaves 5 4 1T 1 1
 corners espn L1 Toulouse Strasbourg 7 1 1T 2 1
 corners espn L2 Nancy Sochaux 4 2 1T None None
 corners espn L2 Boulogne Annecy 2 6 1T None None
@@ -40,6 +38,7 @@ corners espn L2 Montpellier Metz 9 4 1T None None
 corners espn ERE Willem II Zwolle 2 7 1T 0 5
 corners espn BEL Standard Beveren 3 5 1T None None
 corners espn POR Famalicao Arouca 9 2 1T 4 0
+corners espn TUR Gaziantep Kasimpasa 7 2 1T None None
 corners espn BRA Vitoria Fluminense 9 6 1T 5 1
 corners espn ARG Barracas Central Racing Club 1 8 1T 1 5
 corners espn ARG Independiente Dep. Riestra 7 5 1T 5 3
@@ -48,14 +47,15 @@ corners espn ARG Union de Santa Fe Velez Sarsfield 5 1 1T 2 0
 corners espn ARG Banfield Atl. Tucuman 6 4 1T 1 3
 corners espn ARG Tigre Sarmiento Junin 4 4 1T 3 4
 corners espn DNK Silkeborg Lyngby 0 1 1T None None
+corners espn JPN Shimizu S-Pulse FC Tokyo 10 3 1T None None
 corners espn MEX Atl. San Luis Juarez 8 3 1T 3 0
 corners espn MEX Necaxa Club Tijuana 5 6 1T 3 2
 corners espn MEX Atlante Santos Laguna 3 6 1T 3 5
 corners espn RUS Lokomotiv Moscow Rubin Kazan 6 7 1T None None
 corners espn SWE Hammarby Elfsborg 4 2 1T None None
-resultados: 667
+resultados: 670
 {
- "generated": "2026-11-07T04:59:15.727524+00:00",
+ "generated": "2026-11-07T05:55:39.489582+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -96,10 +96,13 @@ resultados: 667
     "Hull City": "Hull",
     "Newcastle United": "Newcastle",
     "Nottingham Forest": "Nott'm Forest",
-    "Manchester City": "Man City"
+    "Manchester City": "Man City",
+    "Brighton & Hove Albion": "Brighton",
+    "Ipswich Town": "Ipswich",
+    "AFC Bournemouth": "Bournemouth",
+    "Manchester United": "Man United"
    },
-   "espn_fail": 1,
-   "fixtures_espn": 4,
+   "fixtures_espn": 9,
    "espn_unmatched": 0,
    "matches": 9
   },
@@ -203,9 +206,5 @@ resultados: 667
    ],
    "fav": false,
    "fixtures_fd": 0,
-   "name_map": {
-    "Doncaster Rovers": "Doncaster",
-    "Burton Albion": "Burton",
-    "Sheffield Wednesday": "Sheffield Weds",
-    "
+   "
 partidos: 261
