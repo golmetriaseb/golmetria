@@ -1,13 +1,11 @@
-a Coruna 9 5 1T 1 4
-corners espn LL Osasuna Ath Bilbao 6 4 1T 2 2
-corners espn LL Sevilla Alaves 5 4 1T 1 1
-corners espn LL2 Burgos Celta B 10 1 1T None None
-corners espn LL2 Cadiz Oviedo 8 4 1T None None
+one
 corners espn LL2 Cordoba Ceuta 11 5 1T None None
 corners espn LL2 Leganes Albacete 9 5 1T None None
 corners espn L1 Auxerre Paris FC 1 5 1T 0 1
 corners espn L1 Toulouse Strasbourg 7 1 1T 2 1
 corners espn L2 Clermont Rodez 4 6 1T None None
+corners espn L2 Pau FC Nantes 2 3 1T None None
+corners espn L2 St Etienne Laval 7 0 1T None None
 corners espn L2 Nancy Sochaux 4 2 1T None None
 corners espn L2 Boulogne Annecy 2 6 1T None None
 corners espn L2 Dijon Red Star 4 2 1T None None
@@ -20,6 +18,7 @@ corners espn ERE Willem II Zwolle 2 7 1T 0 5
 corners espn BEL Westerlo Charleroi 1 6 1T None None
 corners espn BEL Oud-Heverlee Leuven Mechelen 6 16 1T None None
 corners espn BEL Standard Beveren 3 5 1T None None
+corners espn POR Alverca Casa Pia 9 2 1T 3 1
 corners espn POR Famalicao Arouca 9 2 1T 4 0
 corners espn TUR Eyupspor Kocaelispor 4 1 1T None None
 corners espn TUR Samsunspor Konyaspor 2 3 1T None None
@@ -29,6 +28,7 @@ corners espn TUR Gaziantep Kasimpasa 7 2 1T None None
 corners espn GRE Volos NFC Kifisia 2 7 1T None None
 corners espn GRE Aris Panetolikos 3 5 1T None None
 corners espn BRA Vitoria Fluminense 9 6 1T 5 1
+corners espn ARG Gimnasia Mendoza Independiente 3 3 1T 1 1
 corners espn ARG Talleres Cordoba Estudiantes L.P. 2 5 1T 2 2
 corners espn ARG Barracas Central Racing Club 1 8 1T 1 5
 corners espn ARG Independiente Dep. Riestra 7 5 1T 5 3
@@ -55,9 +55,9 @@ corners espn RUS Lokomotiv Moscow Rubin Kazan 6 7 1T None None
 corners espn SWE Degerfors GAIS 4 5 1T None None
 corners espn SWE Orgryte Vasteras SK 5 11 1T None None
 corners espn SWE Hammarby Elfsborg 4 2 1T None None
-resultados: 741
+resultados: 747
 {
- "generated": "2026-11-07T19:50:13.772980+00:00",
+ "generated": "2026-11-07T20:48:01.112560+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -100,7 +100,7 @@ resultados: 741
    },
    "fixtures_espn": 5,
    "espn_unmatched": 0,
-   "matches": 6
+   "matches": 5
   },
   "ENG": {
    "name": "Championship",
@@ -217,4 +217,4 @@ resultados: 741
     "Hearts",
     "Hibernian",
     "Kilmarn
-partidos: 195
+partidos: 180
