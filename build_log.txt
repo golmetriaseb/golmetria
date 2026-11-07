@@ -1,5 +1,4 @@
-storial 516
-espn historial L1 eventos 332 con córners en historial 295
+rners en historial 295
 espn historial L2 eventos 333 con córners en historial 332
 espn historial ERE eventos 341 con córners en historial 341
 espn historial BEL eventos 330 con córners en historial 329
@@ -50,12 +49,13 @@ corners espn ARG Union de Santa Fe Velez Sarsfield 5 1 1T 2 0
 corners espn ARG Banfield Atl. Tucuman 6 4 1T 1 3
 corners espn ARG Tigre Sarmiento Junin 4 4 1T 3 4
 corners espn DNK Silkeborg Lyngby 0 1 1T None None
+corners espn MEX Atl. San Luis Juarez 8 3 1T 3 0
 corners espn MEX Necaxa Club Tijuana 5 6 1T 3 2
 corners espn RUS Lokomotiv Moscow Rubin Kazan 6 7 1T None None
 corners espn SWE Hammarby Elfsborg 4 2 1T None None
-resultados: 667
+resultados: 668
 {
- "generated": "2026-11-07T02:57:41.701474+00:00",
+ "generated": "2026-11-07T03:58:18.150245+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
