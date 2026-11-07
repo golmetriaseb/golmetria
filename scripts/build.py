@@ -758,6 +758,24 @@ def make_calibration(summary):
             cal[k] = sorted(pts)
     return cal
 
+LG_OFF = 0.0  # correccion extra de la liga que se esta procesando (se fija en main)
+
+def make_league_offsets(cal, lrecs):
+    """Por liga: que tanto se aparta lo real de lo que dice el modelo ya corregido en apuestas de 60% o mas. Con encogimiento y tope."""
+    out = {}
+    for code, r in lrecs.items():
+        n = 0; sp = 0.0; sy = 0.0
+        for k in CAL_KEYS:
+            for p, y in r.get(k, []):
+                q = apply_cal(cal, k, p)
+                if q is not None and q >= 0.6:
+                    n += 1; sp += q; sy += y
+        if n >= 60:
+            d = (sy - sp) / n
+            w = n / (n + 400.0)
+            out[code] = (round(max(-0.06, min(0.06, d * w)), 4), n, round(sp / n, 3), round(sy / n, 3))
+    return out
+
 def apply_cal(cal, k, p):
     pts = cal.get(k)
     if p is None or not pts: return p
@@ -771,6 +789,7 @@ def apply_cal(cal, k, p):
             if x0 <= p <= x1:
                 t = (p - x0) / (x1 - x0) if x1 > x0 else 0
                 q = y0 + t * (y1 - y0); break
+    q = q + LG_OFF * 4 * q * (1 - q)
     return min(0.98, max(0.02, q))
 
 def espn_results(l, teams):
@@ -863,9 +882,10 @@ def build_results(H):
     return res
 
 def main():
-    global CACHE, DEADLINE
+    global CACHE, DEADLINE, LG_OFF
     CACHE = load_cache(); DEADLINE = time.time() + RUN_SECONDS
     fx = load_fixtures()
+    LREC = {}
     bt, pooled, H, F = {}, {'ALL': {k: [] for k in BT_KEYS}, 'FAV': {k: [] for k in BT_KEYS}}, {}, {}
     # --- pasada 1: historial y prueba contra partidos reales
     for l in LEAGUES:
@@ -883,6 +903,7 @@ def main():
         st['fav'] = l['fav']
         try:
             r = backtest(hist)
+            LREC[code] = r
             bt[code] = summarize(r)
             for k in BT_KEYS:
                 pooled['ALL'][k] += r[k]
@@ -892,10 +913,13 @@ def main():
     save_cache()
     allsum = summarize(pooled['ALL'])
     cal = make_calibration(allsum)
+    LOFF = make_league_offsets(cal, LREC)
+    status['league_offsets'] = {k: dict(off=v[0], n=v[1], model=v[2], real=v[3]) for k, v in LOFF.items()}
     # --- pasada 2: calendario y predicciones (con correccion)
     matches = []
     for l in LEAGUES:
         code = l['code']; st = status['leagues'][code]; hist = H[code]; teams = st['teams']
+        LG_OFF = LOFF.get(code, (0.0,))[0]
         lf = fx.get(code, [])
         st['fixtures_fd'] = len(lf)
         try:
