@@ -1,8 +1,4 @@
-orial 131
-espn historial GB1 eventos 333 con córners en historial 333
-espn historial GER eventos 333 con córners en historial 331
-espn historial SA eventos 430 con córners en historial 430
-espn historial SB eventos 424 con córners en historial 424
+ntos 424 con córners en historial 424
 espn historial LL eventos 419 con córners en historial 419
 espn historial LL2 eventos 517 con córners en historial 516
 espn historial L1 eventos 332 con córners en historial 295
@@ -13,7 +9,7 @@ espn historial POR eventos 333 con córners en historial 333
 espn historial TUR eventos 335 con córners en historial 335
 espn historial GRE eventos 264 con córners en historial 94
 espn historial SUI eventos 0 con córners en historial 0
-espn historial BRA eventos 465 con córners en historial 435
+espn historial BRA eventos 466 con córners en historial 435
 espn historial ARG eventos 576 con córners en historial 536
 espn historial AUT eventos 211 con córners en historial 151
 espn historial DNK eventos 210 con córners en historial 210
@@ -48,13 +44,17 @@ corners espn ERE Willem II Zwolle 2 7 1T 0 5
 corners espn BEL Standard Beveren 3 5 1T None None
 corners espn POR Famalicao Arouca 9 2 1T 4 0
 corners espn TUR Gaziantep Kasimpasa 7 2 1T None None
+corners espn BRA Vitoria Fluminense 9 6 1T 5 1
 corners espn ARG Barracas Central Racing Club 1 8 1T 1 5
+corners espn ARG Independiente Dep. Riestra 7 5 1T 5 3
+corners espn ARG San Lorenzo Platense 3 3 1T 2 2
+corners espn ARG Union de Santa Fe Velez Sarsfield 5 1 1T 2 0
 corners espn DNK Silkeborg Lyngby 0 1 1T None None
 corners espn RUS Lokomotiv Moscow Rubin Kazan 6 7 1T None None
 corners espn SWE Hammarby Elfsborg 4 2 1T None None
-resultados: 695
+resultados: 664
 {
- "generated": "2026-11-06T23:46:50.706736+00:00",
+ "generated": "2026-11-07T01:10:18.243047+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -206,4 +206,4 @@ resultados: 695
    "fav": false,
    "fixtures_fd": 0,
    "
-partidos: 250
+partidos: 269
