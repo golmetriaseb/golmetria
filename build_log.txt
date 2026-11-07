@@ -1,8 +1,4 @@
-n historial 0
-espn historial RUS eventos 176 con córners en historial 156
-espn historial SWE eventos 256 con córners en historial 256
-espn historial USA eventos 406 con córners en historial 405
-espn historial CHN eventos 267 con córners en historial 267
+orial CHN eventos 267 con córners en historial 267
 espn historial solo ECU partidos 351 con córners 275 con 1T córners 0
 corners espn EPL Leeds Tottenham 6 4 1T 1 2
 corners espn EPL Everton Coventry 2 2 1T 1 1
@@ -16,13 +12,16 @@ corners espn GER Holstein Kiel Bielefeld 6 5 1T None None
 corners espn GER Osnabruck Kaiserslautern 5 3 1T None None
 corners espn GER Dresden Greuther Furth 3 9 1T None None
 corners espn GER Braunschweig Cottbus 5 4 1T None None
+corners espn SA Cagliari Frosinone 3 13 1T 1 3
 corners espn SA Venezia Udinese 3 7 1T 1 0
+corners espn SB Cesena Catanzaro 2 9 1T None None
+corners espn SB Pisa Sudtirol 8 4 1T None None
 corners espn SB Ascoli Palermo 5 2 1T None None
 corners espn LL Malaga Santander 6 3 1T 2 1
 corners espn LL Sevilla Alaves 5 4 1T 1 1
 corners espn LL2 Burgos Celta B 10 1 1T None None
 corners espn L1 Toulouse Strasbourg 7 1 1T 2 1
-corners espn L2 Clermont Rodez 4 5 1T None None
+corners espn L2 Clermont Rodez 4 6 1T None None
 corners espn L2 Nancy Sochaux 4 2 1T None None
 corners espn L2 Boulogne Annecy 2 6 1T None None
 corners espn L2 Dijon Red Star 4 2 1T None None
@@ -53,11 +52,12 @@ corners espn MEX Atl. San Luis Juarez 8 3 1T 3 0
 corners espn MEX Necaxa Club Tijuana 5 6 1T 3 2
 corners espn MEX Atlante Santos Laguna 3 6 1T 3 5
 corners espn RUS Fakel Voronezh Dynamo Moscow 5 3 1T None None
+corners espn RUS Akhmat Grozny Rodina Moscow 5 1 1T None None
 corners espn RUS Lokomotiv Moscow Rubin Kazan 6 7 1T None None
 corners espn SWE Hammarby Elfsborg 4 2 1T None None
-resultados: 688
+resultados: 692
 {
- "generated": "2026-11-07T14:51:29.838184+00:00",
+ "generated": "2026-11-07T15:48:04.039403+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -93,8 +93,6 @@ resultados: 688
    "fav": false,
    "fixtures_fd": 10,
    "name_map": {
-    "Hull City": "Hull",
-    "Newcastle United": "Newcastle",
     "Nottingham Forest": "Nott'm Forest",
     "Manchester City": "Man City",
     "Brighton & Hove Albion": "Brighton",
@@ -102,9 +100,9 @@ resultados: 688
     "AFC Bournemouth": "Bournemouth",
     "Manchester United": "Man United"
    },
-   "fixtures_espn": 8,
+   "fixtures_espn": 6,
    "espn_unmatched": 0,
-   "matches": 9
+   "matches": 8
   },
   "ENG": {
    "name": "Championship",
@@ -146,21 +144,9 @@ resultados: 688
    ],
    "fav": true,
    "fixtures_fd": 12,
-   "name_map": {
-    "Birmingham City": "Birmingham",
-    "Swansea City": "Swansea",
-    "Blackburn Rovers": "Blackburn",
-    "West Ham United": "West Ham",
-    "Cardiff City": "Cardiff",
-    "Charlton Athletic": "Charlton",
-    "Preston North End": "Preston",
-    "Queens Park Rangers": "QPR",
-    "Lincoln City": "Lincoln",
-    "West Bromwich Albion": "West Brom"
-   },
-   "fixtures_espn": 8,
+   "fixtures_espn": 0,
    "espn_unmatched": 0,
-   "matches": 11
+   "matches": 8
   },
   "EL1": {
    "name": "League One",
@@ -208,5 +194,25 @@ resultados: 688
     "Burton Albion": "Burton",
     "Sheffield Wednesday": "Sheffield Weds",
     "Plymouth Argyle": "Plymouth",
-    "M
-partidos: 252
+    "Mansfield Town": "Mansfield",
+    "Stockport County": "Stockport",
+    "Wigan Athletic": "Wigan",
+    "Wycombe Wanderers": "Wycombe",
+    "Huddersfield Town": "Huddersfield"
+   },
+   "fixtures_espn": 8,
+   "espn_unmatched": 0,
+   "matches": 8
+  },
+  "SCO": {
+   "name": "Premiership",
+   "hist": 297,
+   "last_result": "2026-11-01",
+   "has_corners": 297,
+   "has_half": 297,
+   "teams": [
+    "Aberdeen",
+    "Celtic",
+    "Dundee",
+  
+partidos: 245
