@@ -55,7 +55,7 @@ corners espn RUS Lokomotiv Moscow Rubin Kazan 6 7 1T None None
 corners espn SWE Hammarby Elfsborg 4 2 1T None None
 resultados: 675
 {
- "generated": "2026-11-07T10:52:03.244992+00:00",
+ "generated": "2026-11-07T11:48:10.533014+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
