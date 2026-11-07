@@ -1,13 +1,4 @@
-ogne Annecy 2 6 1T None None
-corners espn L2 Dijon Red Star 4 2 1T None None
-corners espn L2 Dunkerque Guingamp 6 1 1T None None
-corners espn L2 Grenoble Reims 1 8 1T None None
-corners espn L2 Montpellier Metz 9 4 1T None None
-corners espn ERE For Sittard Telstar 4 4 1T 2 1
-corners espn ERE Den Haag Sparta Rotterdam 5 9 1T 4 6
-corners espn ERE Excelsior Go Ahead Eagles 7 0 1T 3 0
-corners espn ERE Willem II Zwolle 2 7 1T 0 5
-corners espn BEL Westerlo Charleroi 1 6 1T None None
+eroi 1 6 1T None None
 corners espn BEL Oud-Heverlee Leuven Mechelen 6 16 1T None None
 corners espn BEL Antwerp Lommel SK 9 8 1T None None
 corners espn BEL RAAL La Louviere Cercle Brugge 6 2 1T None None
@@ -53,9 +44,17 @@ corners espn RUS Lokomotiv Moscow Rubin Kazan 6 7 1T None None
 corners espn SWE Degerfors GAIS 4 5 1T None None
 corners espn SWE Orgryte Vasteras SK 5 11 1T None None
 corners espn SWE Hammarby Elfsborg 4 2 1T None None
-resultados: 760
+corners espn USA CF Montreal Vancouver Whitecaps 4 5 1T 2 1
+corners espn USA Chicago Fire Columbus Crew 6 4 1T 1 3
+corners espn USA DC United New York City 5 3 1T 0 3
+corners espn USA FC Cincinnati Nashville SC 6 2 1T 2 1
+corners espn USA Inter Miami Charlotte 6 2 1T 4 1
+corners espn USA Orlando City New England Revolution 5 8 1T 5 6
+corners espn USA Philadelphia Union Toronto FC 6 1 1T 1 1
+corners espn USA New York Red Bulls Atlanta Utd 5 4 1T None None
+resultados: 769
 {
- "generated": "2026-11-07T22:46:32.223477+00:00",
+ "generated": "2026-11-07T23:44:13.292193+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -215,4 +214,4 @@ resultados: 760
     "Hearts",
     "Hibernian",
     "Kilmarn
-partidos: 164
+partidos: 156
