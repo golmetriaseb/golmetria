@@ -1,17 +1,10 @@
-1T 1 2
-corners espn GB1 Hamburg M'gladbach 5 3 1T None None
-corners espn GER Nurnberg Darmstadt 10 3 1T None None
-corners espn GER Holstein Kiel Bielefeld 6 5 1T None None
-corners espn GER Osnabruck Kaiserslautern 5 3 1T None None
-corners espn GER Dresden Greuther Furth 3 9 1T None None
-corners espn GER Braunschweig Cottbus 5 4 1T None None
-corners espn SA Cagliari Frosinone 3 13 1T 1 3
-corners espn SA Torino Lecce 4 5 1T 2 3
+ogna 1 15 1T 0 8
 corners espn SA Venezia Udinese 3 7 1T 1 0
 corners espn SB Cesena Catanzaro 3 9 1T None None
 corners espn SB Juve Stabia Arezzo 6 8 1T None None
 corners espn SB Padova Empoli 8 6 1T None None
 corners espn SB Pisa Sudtirol 8 4 1T None None
+corners espn SB Mantova Verona 3 3 1T None None
 corners espn SB Ascoli Palermo 5 2 1T None None
 corners espn LL Malaga Santander 6 3 1T 2 1
 corners espn LL Espanol La Coruna 9 5 1T 1 4
@@ -33,6 +26,8 @@ corners espn BEL Standard Beveren 3 5 1T None None
 corners espn POR Famalicao Arouca 9 2 1T 4 0
 corners espn TUR Eyupspor Kocaelispor 4 1 1T None None
 corners espn TUR Samsunspor Konyaspor 2 3 1T None None
+corners espn TUR Galatasaray Amedspor 3 6 1T None None
+corners espn TUR Goztep Buyuksehyr 7 7 1T None None
 corners espn TUR Gaziantep Kasimpasa 7 2 1T None None
 corners espn GRE Volos NFC Kifisia 2 7 1T None None
 corners espn BRA Vitoria Fluminense 9 6 1T 5 1
@@ -42,6 +37,7 @@ corners espn ARG San Lorenzo Platense 3 3 1T 2 2
 corners espn ARG Union de Santa Fe Velez Sarsfield 5 1 1T 2 0
 corners espn ARG Banfield Atl. Tucuman 6 4 1T 1 3
 corners espn ARG Tigre Sarmiento Junin 4 4 1T 3 4
+corners espn DNK Odense Viborg 2 7 1T None None
 corners espn DNK Silkeborg Lyngby 0 1 1T None None
 corners espn JPN Nagoya Grampus Kyoto 4 1 1T None None
 corners espn JPN Yokohama F. Marinos Okayama 8 6 1T None None
@@ -52,13 +48,17 @@ corners espn JPN Shimizu S-Pulse FC Tokyo 10 3 1T None None
 corners espn MEX Atl. San Luis Juarez 8 3 1T 3 0
 corners espn MEX Necaxa Club Tijuana 5 6 1T 3 2
 corners espn MEX Atlante Santos Laguna 3 6 1T 3 5
+corners espn NOR Rosenborg Start 6 3 1T None None
 corners espn RUS Fakel Voronezh Dynamo Moscow 5 3 1T None None
 corners espn RUS Akhmat Grozny Rodina Moscow 5 1 1T None None
+corners espn RUS Krasnodar CSKA Moscow 2 7 1T None None
 corners espn RUS Lokomotiv Moscow Rubin Kazan 6 7 1T None None
+corners espn SWE Degerfors GAIS 4 5 1T None None
+corners espn SWE Orgryte Vasteras SK 5 11 1T None None
 corners espn SWE Hammarby Elfsborg 4 2 1T None None
-resultados: 721
+resultados: 730
 {
- "generated": "2026-11-07T17:44:29.974843+00:00",
+ "generated": "2026-11-07T18:54:48.808669+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -101,7 +101,7 @@ resultados: 721
    },
    "fixtures_espn": 5,
    "espn_unmatched": 0,
-   "matches": 8
+   "matches": 6
   },
   "ENG": {
    "name": "Championship",
@@ -145,7 +145,7 @@ resultados: 721
    "fixtures_fd": 12,
    "fixtures_espn": 0,
    "espn_unmatched": 0,
-   "matches": 8
+   "matches": 0
   },
   "EL1": {
    "name": "League One",
@@ -218,4 +218,4 @@ resultados: 721
     "Hearts",
     "Hibernian",
     "Kilmarn
-partidos: 228
+partidos: 202
