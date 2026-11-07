@@ -1,16 +1,11 @@
-L1 Auxerre Paris FC 1 5 1T 0 1
-corners espn L1 Toulouse Strasbourg 7 1 1T 2 1
-corners espn L2 Clermont Rodez 4 6 1T None None
-corners espn L2 Pau FC Nantes 2 3 1T None None
-corners espn L2 St Etienne Laval 7 0 1T None None
-corners espn L2 Nancy Sochaux 4 2 1T None None
-corners espn L2 Boulogne Annecy 2 6 1T None None
+ogne Annecy 2 6 1T None None
 corners espn L2 Dijon Red Star 4 2 1T None None
 corners espn L2 Dunkerque Guingamp 6 1 1T None None
 corners espn L2 Grenoble Reims 1 8 1T None None
 corners espn L2 Montpellier Metz 9 4 1T None None
 corners espn ERE For Sittard Telstar 4 4 1T 2 1
 corners espn ERE Den Haag Sparta Rotterdam 5 9 1T 4 6
+corners espn ERE Excelsior Go Ahead Eagles 7 0 1T 3 0
 corners espn ERE Willem II Zwolle 2 7 1T 0 5
 corners espn BEL Westerlo Charleroi 1 6 1T None None
 corners espn BEL Oud-Heverlee Leuven Mechelen 6 16 1T None None
@@ -18,6 +13,7 @@ corners espn BEL Antwerp Lommel SK 9 8 1T None None
 corners espn BEL RAAL La Louviere Cercle Brugge 6 2 1T None None
 corners espn BEL Standard Beveren 3 5 1T None None
 corners espn POR Alverca Casa Pia 9 2 1T 3 1
+corners espn POR Sp Lisbon Moreirense 8 4 1T None None
 corners espn POR Famalicao Arouca 9 2 1T 4 0
 corners espn TUR Eyupspor Kocaelispor 4 1 1T None None
 corners espn TUR Samsunspor Konyaspor 2 3 1T None None
@@ -29,6 +25,9 @@ corners espn GRE Aris Panetolikos 3 5 1T None None
 corners espn BRA Vitoria Fluminense 9 6 1T 5 1
 corners espn ARG Gimnasia Mendoza Independiente 3 3 1T 1 1
 corners espn ARG Talleres Cordoba Estudiantes L.P. 2 5 1T 2 2
+corners espn ARG Argentinos Jrs Huracan 7 4 1T 2 1
+corners espn ARG Boca Juniors Defensa y Justicia 10 2 1T 4 1
+corners espn ARG Rosario Central Estudiantes Rio Cuarto 12 2 1T 10 1
 corners espn ARG Barracas Central Racing Club 1 8 1T 1 5
 corners espn ARG Independiente Dep. Riestra 7 5 1T 5 3
 corners espn ARG San Lorenzo Platense 3 3 1T 2 2
@@ -54,9 +53,9 @@ corners espn RUS Lokomotiv Moscow Rubin Kazan 6 7 1T None None
 corners espn SWE Degerfors GAIS 4 5 1T None None
 corners espn SWE Orgryte Vasteras SK 5 11 1T None None
 corners espn SWE Hammarby Elfsborg 4 2 1T None None
-resultados: 752
+resultados: 760
 {
- "generated": "2026-11-07T21:45:49.815639+00:00",
+ "generated": "2026-11-07T22:46:32.223477+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -216,4 +215,4 @@ resultados: 752
     "Hearts",
     "Hibernian",
     "Kilmarn
-partidos: 172
+partidos: 164
