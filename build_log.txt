@@ -1,5 +1,4 @@
-C Tokyo 10 3 1T None None
-corners espn MEX Atlas Pachuca 7 5 1T 1 3
+huca 7 5 1T 1 3
 corners espn MEX Tigres UANL Cruz Azul 10 4 1T 5 3
 corners espn MEX Toluca Monterrey 6 6 1T 3 4
 corners espn MEX UNAM Pumas Club America 4 2 1T 2 1
@@ -11,6 +10,7 @@ corners espn NOR HamKam Sarpsborg 08 8 5 1T None None
 corners espn NOR Lillestrom Aalesund 13 3 1T None None
 corners espn NOR Sandefjord Molde 3 14 1T None None
 corners espn NOR Viking KFUM Oslo 8 2 1T None None
+corners espn NOR Fredrikstad Brann 3 9 1T None None
 corners espn NOR Rosenborg Start 6 3 1T None None
 corners espn RUS Krylya Sovetov Orenburg 7 7 1T None None
 corners espn RUS Spartak Moscow Akron Togliatti 11 3 1T None None
@@ -51,9 +51,9 @@ corners espn CHN Shanghai Port Liaoning Tieren 5 3 1T 4 1
 corners espn CHN Shanghai Shenhua Qingdao West Coast 5 5 1T 4 3
 corners espn CHN Yunnan Yukun Wuhan Three Towns 1 5 1T 0 2
 corners espn CHN Zhejiang Professional Henan Songshan Longmen 8 5 1T 4 2
-resultados: 726
+resultados: 734
 {
- "generated": "2026-11-08T19:52:35.772114+00:00",
+ "generated": "2026-11-08T20:47:02.273984+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -217,4 +217,4 @@ resultados: 726
    "fixtures_fd": 6,
    "fixtures_espn": 0,
    "espn_unma
-partidos: 56
+partidos: 48
