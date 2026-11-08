@@ -53,7 +53,7 @@ corners espn USA San Diego FC Sporting Kansas City 8 4 1T 4 3
 corners espn USA Seattle Sounders Los Angeles FC 2 12 1T None None
 resultados: 644
 {
- "generated": "2026-11-08T03:08:13.241577+00:00",
+ "generated": "2026-11-08T03:59:54.906250+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
