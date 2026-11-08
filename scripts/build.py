@@ -670,7 +670,11 @@ def espn_fixtures(l, teams):
                 status['leagues'][l['code']].setdefault('unmatched_names', []).extend([n for n, t in ((h, th), (a, ta)) if not t])
                 continue
             try:
-                if ev['status']['type']['name'] != 'STATUS_SCHEDULED':
+                nm_st = ev['status']['type']['name']
+                # se conservan los partidos programados y los que estan en juego; solo se descartan los terminados, suspendidos o cancelados
+                if nm_st in ('STATUS_FULL_TIME', 'STATUS_FINAL', 'STATUS_FINAL_AET', 'STATUS_FINAL_PEN', 'STATUS_END_OF_REGULATION',
+                             'STATUS_POSTPONED', 'STATUS_CANCELED', 'STATUS_CANCELLED', 'STATUS_ABANDONED', 'STATUS_FORFEIT', 'STATUS_SUSPENDED') \
+                        or ev['status']['type'].get('completed'):
                     continue
             except Exception:
                 pass
