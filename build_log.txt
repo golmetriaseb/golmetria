@@ -1,12 +1,4 @@
--Heverlee Leuven Mechelen 6 16 1T None None
-corners espn BEL Antwerp Lommel SK 9 8 1T None None
-corners espn BEL RAAL La Louviere Cercle Brugge 6 2 1T None None
-corners espn BEL Standard Beveren 3 5 1T None None
-corners espn POR Alverca Casa Pia 9 2 1T 3 1
-corners espn POR Sp Lisbon Moreirense 8 4 1T None None
-corners espn POR Famalicao Arouca 9 2 1T 4 0
-corners espn TUR Eyupspor Kocaelispor 4 1 1T None None
-corners espn TUR Samsunspor Konyaspor 2 3 1T None None
+ TUR Samsunspor Konyaspor 2 3 1T None None
 corners espn TUR Galatasaray Amedspor 3 6 1T None None
 corners espn TUR Goztep Buyuksehyr 7 7 1T None None
 corners espn TUR Gaziantep Kasimpasa 7 2 1T None None
@@ -52,9 +44,16 @@ corners espn USA Inter Miami Charlotte 6 2 1T 4 1
 corners espn USA Orlando City New England Revolution 5 8 1T 5 6
 corners espn USA Philadelphia Union Toronto FC 6 1 1T 1 1
 corners espn USA New York Red Bulls Atlanta Utd 5 4 1T None None
-resultados: 634
+corners espn USA Austin FC Portland Timbers 5 5 1T 1 1
+corners espn USA FC Dallas Colorado Rapids 6 4 1T 3 2
+corners espn USA Houston Dynamo St. Louis City 9 3 1T 4 1
+corners espn USA Minnesota United San Jose Earthquakes 8 2 1T 2 1
+corners espn USA Real Salt Lake Los Angeles Galaxy 6 9 1T 6 3
+corners espn USA San Diego FC Sporting Kansas City 8 4 1T 4 3
+corners espn USA Seattle Sounders Los Angeles FC 2 12 1T None None
+resultados: 641
 {
- "generated": "2026-11-08T01:16:01.399787+00:00",
+ "generated": "2026-11-08T02:16:35.738710+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -214,4 +213,4 @@ resultados: 634
     "Hearts",
     "Hibernian",
     "Kilmarn
-partidos: 152
+partidos: 151
