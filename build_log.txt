@@ -1,7 +1,4 @@
- TUR Samsunspor Konyaspor 2 3 1T None None
-corners espn TUR Galatasaray Amedspor 3 6 1T None None
-corners espn TUR Goztep Buyuksehyr 7 7 1T None None
-corners espn TUR Gaziantep Kasimpasa 7 2 1T None None
+orners espn TUR Gaziantep Kasimpasa 7 2 1T None None
 corners espn GRE Volos NFC Kifisia 2 7 1T None None
 corners espn GRE Aris Panetolikos 3 5 1T None None
 corners espn BRA Vitoria Fluminense 9 6 1T 5 1
@@ -10,6 +7,7 @@ corners espn ARG Talleres Cordoba Estudiantes L.P. 2 5 1T 2 2
 corners espn ARG Argentinos Jrs Huracan 7 4 1T 2 1
 corners espn ARG Boca Juniors Defensa y Justicia 10 2 1T 4 1
 corners espn ARG Rosario Central Estudiantes Rio Cuarto 12 2 1T 10 1
+corners espn ARG Instituto Newells Old Boys 1 3 1T 0 2
 corners espn ARG Barracas Central Racing Club 1 8 1T 1 5
 corners espn ARG Independiente Dep. Riestra 7 5 1T 5 3
 corners espn ARG San Lorenzo Platense 3 3 1T 2 2
@@ -25,6 +23,8 @@ corners espn JPN FC Tokyo Kashima Antlers 5 7 1T None None
 corners espn JPN Kashiwa Reysol Kawasaki Frontale 4 2 1T None None
 corners espn JPN Shimizu S-Pulse FC Tokyo 10 3 1T None None
 corners espn MEX Atlas Pachuca 7 5 1T 1 3
+corners espn MEX Tigres UANL Cruz Azul 10 4 1T 5 3
+corners espn MEX Toluca Monterrey 6 6 1T 3 4
 corners espn MEX Atl. San Luis Juarez 8 3 1T 3 0
 corners espn MEX Necaxa Club Tijuana 5 6 1T 3 2
 corners espn MEX Atlante Santos Laguna 3 6 1T 3 5
@@ -51,9 +51,9 @@ corners espn USA Minnesota United San Jose Earthquakes 8 2 1T 2 1
 corners espn USA Real Salt Lake Los Angeles Galaxy 6 9 1T 6 3
 corners espn USA San Diego FC Sporting Kansas City 8 4 1T 4 3
 corners espn USA Seattle Sounders Los Angeles FC 2 12 1T None None
-resultados: 641
+resultados: 644
 {
- "generated": "2026-11-08T02:16:35.738710+00:00",
+ "generated": "2026-11-08T03:08:13.241577+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -213,4 +213,4 @@ resultados: 641
     "Hearts",
     "Hibernian",
     "Kilmarn
-partidos: 151
+partidos: 144
