@@ -1,5 +1,4 @@
- Lyngby 0 1 1T None None
-corners espn JPN Machida Sanfrecce Hiroshima 3 5 1T None None
+ima 3 5 1T None None
 corners espn JPN Vissel Kobe Urawa Reds 2 5 1T None None
 corners espn JPN Gamba Osaka Cerezo Osaka 4 6 1T None None
 corners espn JPN Chiba Mito 0 4 1T None None
@@ -18,6 +17,7 @@ corners espn MEX Necaxa Club Tijuana 5 6 1T 3 2
 corners espn MEX Atlante Santos Laguna 3 6 1T 3 5
 corners espn NOR Rosenborg Start 6 3 1T None None
 corners espn RUS Krylya Sovetov Orenburg 7 7 1T None None
+corners espn RUS Spartak Moscow Akron Togliatti 11 3 1T None None
 corners espn RUS Fakel Voronezh Dynamo Moscow 5 3 1T None None
 corners espn RUS Akhmat Grozny Rodina Moscow 5 1 1T None None
 corners espn RUS Krasnodar CSKA Moscow 2 7 1T None None
@@ -50,9 +50,9 @@ corners espn CHN Shanghai Port Liaoning Tieren 5 3 1T 4 1
 corners espn CHN Shanghai Shenhua Qingdao West Coast 5 5 1T 4 3
 corners espn CHN Yunnan Yukun Wuhan Three Towns 1 5 1T 0 2
 corners espn CHN Zhejiang Professional Henan Songshan Longmen 8 5 1T 4 2
-resultados: 671
+resultados: 682
 {
- "generated": "2026-11-08T14:50:01.501037+00:00",
+ "generated": "2026-11-08T15:46:48.652428+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -216,4 +216,4 @@ resultados: 671
     "St Mirren"
    ],
    "fav": tr
-partidos: 122
+partidos: 117
