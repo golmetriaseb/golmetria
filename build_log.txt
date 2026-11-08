@@ -1,5 +1,4 @@
-ima 3 5 1T None None
-corners espn JPN Vissel Kobe Urawa Reds 2 5 1T None None
+awa Reds 2 5 1T None None
 corners espn JPN Gamba Osaka Cerezo Osaka 4 6 1T None None
 corners espn JPN Chiba Mito 0 4 1T None None
 corners espn JPN Nagoya Grampus Kyoto 4 1 1T None None
@@ -15,6 +14,7 @@ corners espn MEX UNAM Pumas Club America 4 2 1T 2 1
 corners espn MEX Atl. San Luis Juarez 8 3 1T 3 0
 corners espn MEX Necaxa Club Tijuana 5 6 1T 3 2
 corners espn MEX Atlante Santos Laguna 3 6 1T 3 5
+corners espn NOR Tromso Bodo/Glimt 4 4 1T None None
 corners espn NOR Rosenborg Start 6 3 1T None None
 corners espn RUS Krylya Sovetov Orenburg 7 7 1T None None
 corners espn RUS Spartak Moscow Akron Togliatti 11 3 1T None None
@@ -50,9 +50,9 @@ corners espn CHN Shanghai Port Liaoning Tieren 5 3 1T 4 1
 corners espn CHN Shanghai Shenhua Qingdao West Coast 5 5 1T 4 3
 corners espn CHN Yunnan Yukun Wuhan Three Towns 1 5 1T 0 2
 corners espn CHN Zhejiang Professional Henan Songshan Longmen 8 5 1T 4 2
-resultados: 682
+resultados: 690
 {
- "generated": "2026-11-08T15:46:48.652428+00:00",
+ "generated": "2026-11-08T16:48:38.294115+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -87,10 +87,7 @@ resultados: 682
    ],
    "fav": false,
    "fixtures_fd": 10,
-   "name_map": {
-    "Manchester United": "Man United"
-   },
-   "fixtures_espn": 1,
+   "fixtures_espn": 0,
    "espn_unmatched": 0,
    "matches": 5
   },
@@ -215,5 +212,8 @@ resultados: 682
     "St Johnstone",
     "St Mirren"
    ],
-   "fav": tr
-partidos: 117
+   "fav": true,
+   "fixtures_fd": 6,
+   "fixtures_espn": 0,
+   "espn_unma
+partidos: 101
