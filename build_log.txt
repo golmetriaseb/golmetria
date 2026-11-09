@@ -53,7 +53,7 @@ corners espn CHN Yunnan Yukun Wuhan Three Towns 1 5 1T 0 2
 corners espn CHN Zhejiang Professional Henan Songshan Longmen 8 5 1T 4 2
 resultados: 631
 {
- "generated": "2026-11-09T22:55:42.078681+00:00",
+ "generated": "2026-11-09T23:48:34.603910+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
