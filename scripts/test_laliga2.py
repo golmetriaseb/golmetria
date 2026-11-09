@@ -1,9 +1,13 @@
-import json, urllib.request
-for d in ('20261108','20261109','20261110'):
-    try:
-        j = json.load(urllib.request.urlopen(urllib.request.Request(f'https://site.api.espn.com/apis/site/v2/sports/soccer/esp.2/scoreboard?dates={d}', headers={'User-Agent': 'Mozilla/5.0'}), timeout=30))
-    except Exception as e:
-        print(d, 'ERR', e); continue
-    for ev in j.get('events', []):
-        c = ev['competitions'][0]['competitors']
-        print(d, ev['date'], [x['team']['displayName'] for x in c], ev['status']['type']['name'], ev['status']['type'].get('completed'), ev['status'].get('displayClock'))
+import sys
+sys.path.insert(0, 'scripts')
+import build as B
+print('NOW', B.NOW, 'HORIZON', B.HORIZON)
+fx = B.load_fixtures()['LL2']
+for f in fx: print('FD', f['k'], f['h'], '-', f['a'])
+l = [x for x in B.LEAGUES if x['code'] == 'LL2'][0]
+hist = B.load_history(l)
+teams = sorted({m['h'] for m in hist} | {m['a'] for m in hist})
+print('has Las Palmas', 'Las Palmas' in teams, 'has Eldense', 'Eldense' in teams, len(teams))
+ef, miss = B.espn_fixtures(l, teams)
+print('miss', miss)
+for f in ef: print('ESPN', f['k'], f['h'], '-', f['a'])
