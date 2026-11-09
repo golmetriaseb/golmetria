@@ -51,16 +51,16 @@ corners espn CHN Shanghai Port Liaoning Tieren 5 3 1T 4 1
 corners espn CHN Shanghai Shenhua Qingdao West Coast 5 5 1T 4 3
 corners espn CHN Yunnan Yukun Wuhan Three Towns 1 5 1T 0 2
 corners espn CHN Zhejiang Professional Henan Songshan Longmen 8 5 1T 4 2
-resultados: 604
+resultados: 626
 {
- "generated": "2026-11-09T08:35:31.338868+00:00",
+ "generated": "2026-11-09T10:09:18.180334+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
-   "hist": 470,
-   "last_result": "2026-11-02",
-   "has_corners": 470,
-   "has_half": 470,
+   "hist": 480,
+   "last_result": "2026-11-08",
+   "has_corners": 480,
+   "has_half": 480,
    "teams": [
     "Arsenal",
     "Aston Villa",
@@ -94,10 +94,10 @@ resultados: 604
   },
   "ENG": {
    "name": "Championship",
-   "hist": 720,
-   "last_result": "2026-11-04",
-   "has_corners": 720,
-   "has_half": 720,
+   "hist": 732,
+   "last_result": "2026-11-07",
+   "has_corners": 732,
+   "has_half": 732,
    "teams": [
     "Birmingham",
     "Blackburn",
@@ -194,10 +194,10 @@ resultados: 604
   },
   "SCO": {
    "name": "Premiership",
-   "hist": 297,
-   "last_result": "2026-11-01",
-   "has_corners": 297,
-   "has_half": 297,
+   "hist": 303,
+   "last_result": "2026-11-08",
+   "has_corners": 303,
+   "has_half": 303,
    "teams": [
     "Aberdeen",
     "Celtic",
