@@ -931,11 +931,14 @@ def main():
         except Exception as e:
             ef, miss = [], 0; status['errors'].append(f'espn {code}: {e}')
         st['fixtures_espn'] = len(ef); st['espn_unmatched'] = miss
-        seen = {(x['h'], x['a'], x['k'].date()) for x in lf}
         allf = list(lf)
         for e in ef:
-            if not any((e['h'], e['a'], e['k'].date() + timedelta(days=dd)) in seen for dd in (-1, 0, 1)):
+            dup = next((x for x in allf if x['h'] == e['h'] and x['a'] == e['a'] and abs((x['k'].date() - e['k'].date()).days) <= 1), None)
+            if dup is None:
                 allf.append(e)
+            elif abs((dup['k'] - e['k']).total_seconds()) > 3600:
+                # football-data trae la fecha vieja (partido reprogramado): ESPN es mas reciente, se usa su hora
+                dup['k'] = e['k']
         done = 0
         for f in allf:
             if not (NOW - timedelta(hours=3) <= f['k'] <= NOW + timedelta(days=HORIZON)):
