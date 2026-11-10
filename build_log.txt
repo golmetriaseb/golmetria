@@ -1,4 +1,6 @@
-76 con córners en historial 536
+rs en historial 0
+espn historial BRA eventos 466 con córners en historial 435
+espn historial ARG eventos 576 con córners en historial 536
 espn historial AUT eventos 211 con córners en historial 151
 espn historial DNK eventos 210 con córners en historial 210
 espn historial FIN eventos 0 con córners en historial 0
@@ -13,8 +15,6 @@ espn historial SWE eventos 256 con córners en historial 256
 espn historial USA eventos 406 con córners en historial 405
 espn historial CHN eventos 267 con córners en historial 267
 espn historial solo ECU partidos 359 con córners 283 con 1T córners 0
-corners espn LL2 Sabadell Sociedad B 5 3 1T None None
-corners espn LL2 Las Palmas Eldense 5 2 1T None None
 corners espn ARG Central Cordoba Lanus 3 8 1T 2 2
 corners espn DNK FC Copenhagen Brondby 6 2 1T None None
 corners espn DNK Aarhus Horsens 5 3 1T None None
@@ -52,7 +52,7 @@ corners espn CHN Yunnan Yukun Wuhan Three Towns 1 5 1T 0 2
 corners espn CHN Zhejiang Professional Henan Songshan Longmen 8 5 1T 4 2
 resultados: 570
 {
- "generated": "2026-11-10T09:00:21.928345+00:00",
+ "generated": "2026-11-10T10:02:31.363252+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
