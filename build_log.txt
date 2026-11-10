@@ -1,197 +1,209 @@
-espn historial EPL eventos 420 con córners en historial 0
-espn historial ENG eventos 641 con córners en historial 0
-espn historial EL1 eventos 593 con córners en historial 0
-espn historial SCO eventos 266 con córners en historial 0
-espn historial SC1 eventos 210 con córners en historial 0
-espn historial GB1 eventos 342 con córners en historial 0
-espn historial GER eventos 342 con córners en historial 0
-espn historial SA eventos 440 con córners en historial 0
-espn historial SB eventos 434 con córners en historial 0
-espn historial LL eventos 429 con córners en historial 0
-espn historial LL2 eventos 525 con córners en historial 0
-espn historial L1 eventos 341 con córners en historial 0
-espn historial L2 eventos 342 con córners en historial 0
-espn historial ERE eventos 350 con córners en historial 0
-espn historial BEL eventos 339 con córners en historial 0
-espn historial POR eventos 341 con córners en historial 0
-espn historial TUR eventos 344 con córners en historial 0
-espn historial GRE eventos 271 con córners en historial 0
+espn historial EPL eventos 420 con córners en historial 420
+espn historial ENG eventos 641 con córners en historial 641
+espn historial EL1 eventos 593 con córners en historial 593
+espn historial SCO eventos 266 con córners en historial 266
+espn historial SC1 eventos 210 con córners en historial 131
+espn historial GB1 eventos 342 con córners en historial 342
+espn historial GER eventos 342 con córners en historial 340
+espn historial SA eventos 440 con córners en historial 440
+espn historial SB eventos 434 con córners en historial 434
+espn historial LL eventos 429 con córners en historial 429
+espn historial LL2 eventos 525 con córners en historial 525
+espn historial L1 eventos 341 con córners en historial 303
+espn historial L2 eventos 342 con córners en historial 341
+espn historial ERE eventos 350 con córners en historial 350
+espn historial BEL eventos 339 con córners en historial 338
+espn historial POR eventos 341 con córners en historial 341
+espn historial TUR eventos 344 con córners en historial 344
+espn historial GRE eventos 271 con córners en historial 101
 espn historial SUI eventos 0 con córners en historial 0
-espn historial BRA eventos 466 con córners en historial 0
-espn historial ARG eventos 589 con córners en historial 0
-espn historial AUT eventos 217 con córners en historial 0
-espn historial DNK eventos 216 con córners en historial 0
+espn historial BRA eventos 466 con córners en historial 436
+espn historial ARG eventos 589 con córners en historial 548
+espn historial AUT eventos 217 con córners en historial 151
+espn historial DNK eventos 216 con córners en historial 216
 espn historial FIN eventos 0 con córners en historial 0
 espn historial IRL eventos 20 con córners en historial 0
-espn historial JPN eventos 199 con córners en historial 0
-espn historial MEX eventos 258 con córners en historial 0
-espn historial NOR eventos 267 con córners en historial 0
+espn historial JPN eventos 199 con córners en historial 180
+espn historial MEX eventos 258 con córners en historial 258
+espn historial NOR eventos 267 con córners en historial 267
 espn historial POL eventos 0 con córners en historial 0
 espn historial ROU eventos 0 con córners en historial 0
-espn historial RUS eventos 176 con córners en historial 0
-espn historial SWE eventos 264 con córners en historial 0
-espn historial USA eventos 421 con córners en historial 0
-espn historial CHN eventos 275 con córners en historial 0
+espn historial RUS eventos 176 con córners en historial 156
+espn historial SWE eventos 264 con córners en historial 264
+espn historial USA eventos 421 con córners en historial 420
+espn historial CHN eventos 275 con córners en historial 275
 espn historial solo ECU partidos 359 con córners 283 con 1T córners 0
-resultados: 16
+corners espn RUS Krylya Sovetov Orenburg 7 7 1T None None
+corners espn RUS Spartak Moscow Akron Togliatti 11 3 1T None None
+corners espn RUS Zenit FK Rostov 3 0 1T None None
+corners espn RUS Baltika Dynamo Makhachkala 7 2 1T None None
+resultados: 647
 {
- "generated": "2026-11-10T14:23:55.308139+00:00",
+ "generated": "2026-11-10T15:58:03.306474+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
-   "hist": 0,
-   "last_result": null,
-   "has_corners": 0,
-   "has_half": 0,
-   "teams": [],
+   "hist": 480,
+   "last_result": "2026-11-08",
+   "has_corners": 480,
+   "has_half": 480,
+   "teams": [
+    "Arsenal",
+    "Aston Villa",
+    "Bournemouth",
+    "Brentford",
+    "Brighton",
+    "Burnley",
+    "Chelsea",
+    "Coventry",
+    "Crystal Palace",
+    "Everton",
+    "Fulham",
+    "Hull",
+    "Ipswich",
+    "Leeds",
+    "Liverpool",
+    "Man City",
+    "Man United",
+    "Newcastle",
+    "Nott'm Forest",
+    "Sunderland",
+    "Tottenham",
+    "West Ham",
+    "Wolves"
+   ],
    "fav": false,
-   "fixtures_fd": 0,
+   "fixtures_fd": 10,
    "fixtures_espn": 0,
    "espn_unmatched": 0,
    "matches": 0
   },
   "ENG": {
    "name": "Championship",
-   "hist": 0,
-   "last_result": null,
-   "has_corners": 0,
-   "has_half": 0,
-   "teams": [],
+   "hist": 732,
+   "last_result": "2026-11-07",
+   "has_corners": 732,
+   "has_half": 732,
+   "teams": [
+    "Birmingham",
+    "Blackburn",
+    "Bolton",
+    "Bristol City",
+    "Burnley",
+    "Cardiff",
+    "Charlton",
+    "Coventry",
+    "Derby",
+    "Hull",
+    "Ipswich",
+    "Leicester",
+    "Lincoln",
+    "Middlesbrough",
+    "Millwall",
+    "Norwich",
+    "Oxford",
+    "Portsmouth",
+    "Preston",
+    "QPR",
+    "Sheffield United",
+    "Sheffield Weds",
+    "Southampton",
+    "Stoke",
+    "Swansea",
+    "Watford",
+    "West Brom",
+    "West Ham",
+    "Wolves",
+    "Wrexham"
+   ],
    "fav": true,
-   "fixtures_fd": 0,
+   "fixtures_fd": 12,
    "fixtures_espn": 0,
    "espn_unmatched": 0,
    "matches": 0
   },
   "EL1": {
    "name": "League One",
-   "hist": 0,
-   "last_result": null,
-   "has_corners": 0,
-   "has_half": 0,
-   "teams": [],
+   "hist": 710,
+   "last_result": "2026-11-04",
+   "has_corners": 710,
+   "has_half": 710,
+   "teams": [
+    "AFC Wimbledon",
+    "Barnsley",
+    "Blackpool",
+    "Bolton",
+    "Bradford",
+    "Bromley",
+    "Burton",
+    "Cambridge",
+    "Cardiff",
+    "Doncaster",
+    "Exeter",
+    "Huddersfield",
+    "Leicester",
+    "Leyton Orient",
+    "Lincoln",
+    "Luton",
+    "Mansfield",
+    "Milton Keynes Dons",
+    "Northampton",
+    "Notts County",
+    "Oxford",
+    "Peterboro",
+    "Plymouth",
+    "Port Vale",
+    "Reading",
+    "Rotherham",
+    "Sheffield Weds",
+    "Stevenage",
+    "Stockport",
+    "Wigan",
+    "Wycombe"
+   ],
    "fav": false,
    "fixtures_fd": 0,
-   "unmatched_names": [
-    "AFC Wimbledon",
-    "Blackpool",
-    "Bromley",
-    "Notts County",
-    "Doncaster Rovers",
-    "Leyton Orient",
-    "Leicester City",
-    "Bradford City",
-    "Luton Town",
-    "Cambridge United",
-    "Milton Keynes Dons",
-    "Burton Albion",
-    "Sheffield Wednesday",
-    "Plymouth Argyle",
-    "Stevenage",
-    "Mansfield Town",
-    "Stockport County",
-    "Reading",
-    "Wigan Athletic",
-    "Barnsley",
-    "Wycombe Wanderers",
-    "Huddersfield Town"
-   ],
-   "fixtures_espn": 0,
-   "espn_unmatched": 11,
-   "matches": 0
+   "name_map": {
+    "Burton Albion": "Burton",
+    "Sheffield Wednesday": "Sheffield Weds",
+    "Plymouth Argyle": "Plymouth",
+    "Stockport County": "Stockport",
+    "Wigan Athletic": "Wigan"
+   },
+   "fixtures_espn": 5,
+   "espn_unmatched": 0,
+   "matches": 5
   },
   "SCO": {
    "name": "Premiership",
-   "hist": 0,
-   "last_result": null,
-   "has_corners": 0,
-   "has_half": 0,
-   "teams": [],
+   "hist": 303,
+   "last_result": "2026-11-08",
+   "has_corners": 303,
+   "has_half": 303,
+   "teams": [
+    "Aberdeen",
+    "Celtic",
+    "Dundee",
+    "Dundee United",
+    "Falkirk",
+    "Hearts",
+    "Hibernian",
+    "Kilmarnock",
+    "Livingston",
+    "Motherwell",
+    "Rangers",
+    "St Johnstone",
+    "St Mirren"
+   ],
    "fav": true,
-   "fixtures_fd": 0,
+   "fixtures_fd": 6,
    "fixtures_espn": 0,
    "espn_unmatched": 0,
    "matches": 0
   },
   "SC1": {
    "name": "Championship (Escocia)",
-   "hist": 0,
-   "last_result": null,
-   "has_corners": 0,
-   "has_half": 0,
-   "teams": [],
-   "fav": false,
-   "fixtures_fd": 0,
-   "unmatched_names": [
-    "Ayr United",
-    "Raith Rovers",
-    "Livingston",
-    "Greenock Morton",
-    "Partick Thistle",
-    "Inverness Caledonian Thistle",
-    "Stenhousemuir",
-    "Queen's Park"
-   ],
-   "fixtures_espn": 0,
-   "espn_unmatched": 4,
-   "matches": 0
-  },
-  "GB1": {
-   "name": "Bundesliga",
-   "hist": 0,
-   "last_result": null,
-   "has_corners": 0,
-   "has_half": 0,
-   "teams": [],
-   "fav": false,
-   "fixtures_fd": 0,
-   "fixtures_espn": 0,
-   "espn_unmatched": 0,
-   "matches": 0
-  },
-  "GER": {
-   "name": "2. Bundesliga",
-   "hist": 0,
-   "last_result": null,
-   "has_corners": 0,
-   "has_half": 0,
-   "teams": [],
-   "fav": true,
-   "fixtures_fd": 0,
-   "fixtures_espn": 0,
-   "espn_unmatched": 0,
-   "matches": 0
-  },
-  "SA": {
-   "name": "Serie A",
-   "hist": 0,
-   "last_result": null,
-   "has_corners": 0,
-   "has_half": 0,
-   "teams": [],
-   "fav": false,
-   "fixtures_fd": 0,
-   "fixtures_espn": 0,
-   "espn_unmatched": 0,
-   "matches": 0
-  },
-  "SB": {
-   "name": "Serie B",
-   "hist": 0,
-   "last_result": null,
-   "has_corners": 0,
-   "has_half": 0,
-   "teams": [],
-   "fav": false,
-   "fixtures_fd": 0,
-   "fixtures_espn": 0,
-   "espn_unmatched": 0,
-   "matches": 0
-  },
-  "LL": {
-   "name": "La Liga",
-   "hist": 0,
-   "last_result": null,
-   "has_corners": 0,
-   "has_half"
-partidos: 0
+   "hist": 249,
+   "last_result": "2026-11-07",
+   "has_corners": 249
+partidos: 23
