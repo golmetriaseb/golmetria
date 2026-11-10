@@ -39,7 +39,7 @@ corners espn RUS Zenit FK Rostov 3 0 1T None None
 corners espn RUS Baltika Dynamo Makhachkala 7 2 1T None None
 resultados: 647
 {
- "generated": "2026-11-10T11:57:55.060150+00:00",
+ "generated": "2026-11-10T13:14:17.095744+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
