@@ -1,11 +1,31 @@
-None None
-corners espn JPN Kashiwa Reysol Kawasaki Frontale 4 2 1T None None
+76 con córners en historial 536
+espn historial AUT eventos 211 con córners en historial 151
+espn historial DNK eventos 210 con córners en historial 210
+espn historial FIN eventos 0 con córners en historial 0
+espn historial IRL eventos 20 con córners en historial 0
+espn historial JPN eventos 190 con córners en historial 171
+espn historial MEX eventos 252 con córners en historial 252
+espn historial NOR eventos 259 con córners en historial 259
+espn historial POL eventos 0 con córners en historial 0
+espn historial ROU eventos 0 con córners en historial 0
+espn historial RUS eventos 176 con córners en historial 156
+espn historial SWE eventos 256 con córners en historial 256
+espn historial USA eventos 406 con córners en historial 405
+espn historial CHN eventos 267 con córners en historial 267
+espn historial solo ECU partidos 359 con córners 283 con 1T córners 0
+corners espn LL2 Sabadell Sociedad B 5 3 1T None None
+corners espn LL2 Las Palmas Eldense 5 2 1T None None
+corners espn ARG Central Cordoba Lanus 3 8 1T 2 2
+corners espn DNK FC Copenhagen Brondby 6 2 1T None None
+corners espn DNK Aarhus Horsens 5 3 1T None None
+corners espn DNK Randers FC Nordsjaelland 0 1 1T None None
+corners espn DNK Midtjylland Sonderjyske 9 5 1T None None
+corners espn JPN Machida Sanfrecce Hiroshima 3 5 1T None None
+corners espn JPN Vissel Kobe Urawa Reds 2 5 1T None None
+corners espn JPN Gamba Osaka Cerezo Osaka 4 6 1T None None
+corners espn JPN Chiba Mito 0 4 1T None None
 corners espn MEX Queretaro Puebla 9 0 1T 3 0
 corners espn MEX Club Leon Guadalajara Chivas 2 6 1T 1 3
-corners espn MEX Atlas Pachuca 7 5 1T 1 3
-corners espn MEX Tigres UANL Cruz Azul 10 4 1T 5 3
-corners espn MEX Toluca Monterrey 6 6 1T 3 4
-corners espn MEX UNAM Pumas Club America 4 2 1T 2 1
 corners espn NOR Kristiansund Valerenga 4 3 1T None None
 corners espn NOR Tromso Bodo/Glimt 4 4 1T None None
 corners espn NOR HamKam Sarpsborg 08 8 5 1T None None
@@ -13,36 +33,15 @@ corners espn NOR Lillestrom Aalesund 13 3 1T None None
 corners espn NOR Sandefjord Molde 3 14 1T None None
 corners espn NOR Viking KFUM Oslo 8 2 1T None None
 corners espn NOR Fredrikstad Brann 3 9 1T None None
-corners espn NOR Rosenborg Start 6 3 1T None None
 corners espn RUS Krylya Sovetov Orenburg 7 7 1T None None
 corners espn RUS Spartak Moscow Akron Togliatti 11 3 1T None None
 corners espn RUS Zenit FK Rostov 3 0 1T None None
 corners espn RUS Baltika Dynamo Makhachkala 7 2 1T None None
-corners espn RUS Fakel Voronezh Dynamo Moscow 5 3 1T None None
-corners espn RUS Akhmat Grozny Rodina Moscow 5 1 1T None None
-corners espn RUS Krasnodar CSKA Moscow 2 7 1T None None
 corners espn SWE Halmstad Djurgarden 8 7 1T None None
 corners espn SWE Goteborg Malmo FF 6 3 1T None None
 corners espn SWE AIK Hacken 5 4 1T None None
 corners espn SWE Brommapojkarna Mjallby 10 3 1T None None
 corners espn SWE Kalmar Sirius 1 3 1T None None
-corners espn SWE Degerfors GAIS 4 5 1T None None
-corners espn SWE Orgryte Vasteras SK 5 11 1T None None
-corners espn USA CF Montreal Vancouver Whitecaps 4 5 1T 2 1
-corners espn USA Chicago Fire Columbus Crew 6 4 1T 1 3
-corners espn USA DC United New York City 5 3 1T 0 3
-corners espn USA FC Cincinnati Nashville SC 6 2 1T 2 1
-corners espn USA Inter Miami Charlotte 6 2 1T 4 1
-corners espn USA Orlando City New England Revolution 5 8 1T 5 6
-corners espn USA Philadelphia Union Toronto FC 6 1 1T 1 1
-corners espn USA New York Red Bulls Atlanta Utd 5 4 1T None None
-corners espn USA Austin FC Portland Timbers 5 5 1T 1 1
-corners espn USA FC Dallas Colorado Rapids 6 4 1T 3 2
-corners espn USA Houston Dynamo St. Louis City 9 3 1T 4 1
-corners espn USA Minnesota United San Jose Earthquakes 8 2 1T 2 1
-corners espn USA Real Salt Lake Los Angeles Galaxy 6 9 1T 6 3
-corners espn USA San Diego FC Sporting Kansas City 8 4 1T 4 3
-corners espn USA Seattle Sounders Los Angeles FC 2 12 1T None None
 corners espn CHN Beijing Guoan Chongqing Tonglianglong 11 3 1T 5 1
 corners espn CHN Dalian Yingbo Tianjin Jinmen Tiger 5 4 1T 2 4
 corners espn CHN Qingdao Hainiu Shenzhen Xinpengcheng 3 5 1T None None
@@ -51,9 +50,9 @@ corners espn CHN Shanghai Port Liaoning Tieren 5 3 1T 4 1
 corners espn CHN Shanghai Shenhua Qingdao West Coast 5 5 1T 4 3
 corners espn CHN Yunnan Yukun Wuhan Three Towns 1 5 1T 0 2
 corners espn CHN Zhejiang Professional Henan Songshan Longmen 8 5 1T 4 2
-resultados: 631
+resultados: 570
 {
- "generated": "2026-11-09T23:48:34.603910+00:00",
+ "generated": "2026-11-10T01:13:10.272611+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
