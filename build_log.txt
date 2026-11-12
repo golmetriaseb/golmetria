@@ -35,7 +35,7 @@ espn historial CHN eventos 275 con córners en historial 275
 espn historial solo ECU partidos 359 con córners 283 con 1T córners 0
 resultados: 597
 {
- "generated": "2026-11-12T17:14:55.879152+00:00",
+ "generated": "2026-11-12T18:03:30.333023+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -160,13 +160,15 @@ resultados: 597
    "fav": false,
    "fixtures_fd": 0,
    "name_map": {
+    "Luton Town": "Luton",
+    "Cambridge United": "Cambridge",
     "Burton Albion": "Burton",
     "Sheffield Wednesday": "Sheffield Weds",
     "Plymouth Argyle": "Plymouth",
     "Stockport County": "Stockport",
     "Wigan Athletic": "Wigan"
    },
-   "fixtures_espn": 5,
+   "fixtures_espn": 6,
    "espn_unmatched": 0,
    "matches": 5
   },
@@ -199,7 +201,5 @@ resultados: 597
   },
   "SC1": {
    "name": "Championship (Escocia)",
-   "hist": 249,
-   "last_result": "2026-11-07",
-   "has_corners": 249
+   "h
 partidos: 34
