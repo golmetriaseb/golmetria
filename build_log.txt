@@ -35,7 +35,7 @@ espn historial CHN eventos 275 con córners en historial 275
 espn historial solo ECU partidos 359 con córners 283 con 1T córners 0
 resultados: 597
 {
- "generated": "2026-11-12T02:59:23.340984+00:00",
+ "generated": "2026-11-12T04:04:09.027907+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -202,4 +202,4 @@ resultados: 597
    "hist": 249,
    "last_result": "2026-11-07",
    "has_corners": 249
-partidos: 33
+partidos: 34
