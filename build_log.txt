@@ -33,9 +33,9 @@ espn historial SWE eventos 264 con córners en historial 264
 espn historial USA eventos 421 con córners en historial 420
 espn historial CHN eventos 275 con córners en historial 275
 espn historial solo ECU partidos 359 con córners 283 con 1T córners 0
-resultados: 624
+resultados: 597
 {
- "generated": "2026-11-11T23:56:08.957004+00:00",
+ "generated": "2026-11-12T01:24:55.842838+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -202,4 +202,4 @@ resultados: 624
    "hist": 249,
    "last_result": "2026-11-07",
    "has_corners": 249
-partidos: 29
+partidos: 33
