@@ -35,7 +35,7 @@ espn historial CHN eventos 275 con córners en historial 275
 espn historial solo ECU partidos 359 con córners 283 con 1T córners 0
 resultados: 576
 {
- "generated": "2026-11-13T13:21:11.242586+00:00",
+ "generated": "2026-11-13T14:58:54.653783+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -69,7 +69,7 @@ resultados: 576
     "Wolves"
    ],
    "fav": false,
-   "fixtures_fd": 10,
+   "fixtures_fd": 0,
    "fixtures_espn": 0,
    "espn_unmatched": 0,
    "matches": 0
@@ -113,7 +113,7 @@ resultados: 576
     "Wrexham"
    ],
    "fav": true,
-   "fixtures_fd": 12,
+   "fixtures_fd": 0,
    "fixtures_espn": 0,
    "espn_unmatched": 0,
    "matches": 0
@@ -158,7 +158,7 @@ resultados: 576
     "Wycombe"
    ],
    "fav": false,
-   "fixtures_fd": 0,
+   "fixtures_fd": 5,
    "name_map": {
     "Burton Albion": "Burton",
     "Sheffield Wednesday": "Sheffield Weds",
@@ -192,7 +192,7 @@ resultados: 576
     "St Mirren"
    ],
    "fav": true,
-   "fixtures_fd": 6,
+   "fixtures_fd": 0,
    "fixtures_espn": 0,
    "espn_unmatched": 0,
    "matches": 0
@@ -201,5 +201,6 @@ resultados: 576
    "name": "Championship (Escocia)",
    "hist": 249,
    "last_result": "2026-11-07",
-   "has_corners": 249
+   "has_corners": 249,
+
 partidos: 60
