@@ -33,9 +33,10 @@ espn historial SWE eventos 264 con córners en historial 264
 espn historial USA eventos 421 con córners en historial 420
 espn historial CHN eventos 275 con córners en historial 275
 espn historial solo ECU partidos 359 con córners 283 con 1T córners 0
-resultados: 576
+corners espn LL2 Leganes Burgos 4 9 1T None None
+resultados: 577
 {
- "generated": "2026-11-13T21:00:00.422117+00:00",
+ "generated": "2026-11-13T21:55:10.612984+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
