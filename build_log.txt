@@ -36,7 +36,7 @@ espn historial solo ECU partidos 359 con córners 283 con 1T córners 0
 corners espn LL2 Leganes Burgos 4 9 1T None None
 resultados: 545
 {
- "generated": "2026-11-14T02:59:29.420740+00:00",
+ "generated": "2026-11-14T04:00:22.591937+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -189,4 +189,4 @@ resultados: 545
    "name_map": {
     "Burton Albion": "Burton",
     "
-partidos: 181
+partidos: 182
