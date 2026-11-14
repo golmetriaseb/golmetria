@@ -33,11 +33,16 @@ espn historial SWE eventos 264 con córners en historial 264
 espn historial USA eventos 421 con córners en historial 420
 espn historial CHN eventos 275 con córners en historial 275
 espn historial solo ECU partidos 359 con córners 283 con 1T córners 0
+corners espn EL1 AFC Wimbledon Blackpool 3 7 1T None None
+corners espn EL1 Milton Keynes Dons Burton 4 1 1T None None
+corners espn EL1 Sheffield Weds Plymouth 7 5 1T None None
+corners espn EL1 Stockport Reading 7 5 1T None None
+corners espn EL1 Wigan Barnsley 2 10 1T None None
 corners espn LL2 Valladolid Castellon 3 9 1T None None
 corners espn LL2 Leganes Burgos 4 9 1T None None
-resultados: 546
+resultados: 555
 {
- "generated": "2026-11-14T15:49:57.250419+00:00",
+ "generated": "2026-11-14T16:50:44.762104+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -188,6 +193,5 @@ resultados: 546
    "fav": false,
    "fixtures_fd": 5,
    "name_map": {
-    "Burton Albion": "Burton",
-    "
-partidos: 182
+    "Sheffield Wednesday": "Sheffiel
+partidos: 181
