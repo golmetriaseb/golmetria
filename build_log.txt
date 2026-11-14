@@ -33,10 +33,11 @@ espn historial SWE eventos 264 con córners en historial 264
 espn historial USA eventos 421 con córners en historial 420
 espn historial CHN eventos 275 con córners en historial 275
 espn historial solo ECU partidos 359 con córners 283 con 1T córners 0
+corners espn LL2 Valladolid Castellon 3 9 1T None None
 corners espn LL2 Leganes Burgos 4 9 1T None None
-resultados: 545
+resultados: 546
 {
- "generated": "2026-11-14T14:52:31.349132+00:00",
+ "generated": "2026-11-14T15:49:57.250419+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
