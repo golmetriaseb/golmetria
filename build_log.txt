@@ -43,7 +43,7 @@ corners espn LL2 Sociedad B Sp Gijon 6 6 1T None None
 corners espn LL2 Leganes Burgos 4 9 1T None None
 resultados: 556
 {
- "generated": "2026-11-14T17:46:22.963195+00:00",
+ "generated": "2026-11-14T18:54:36.872348+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -195,4 +195,4 @@ resultados: 556
    "fixtures_fd": 5,
    "name_map": {
     "Sheffield Wednesday": "Sheffiel
-partidos: 181
+partidos: 171
