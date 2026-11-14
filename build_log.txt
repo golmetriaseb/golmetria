@@ -44,9 +44,10 @@ corners espn LL2 Almeria Andorra 0 6 1T None None
 corners espn LL2 Mallorca Cordoba 8 3 1T None None
 corners espn LL2 Oviedo Girona 6 6 1T None None
 corners espn LL2 Leganes Burgos 4 9 1T None None
-resultados: 559
+corners espn BRA Mirassol Atletico-MG 4 3 1T None None
+resultados: 560
 {
- "generated": "2026-11-14T22:47:54.878385+00:00",
+ "generated": "2026-11-14T23:44:54.508892+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -198,4 +199,4 @@ resultados: 559
    "fixtures_fd": 5,
    "name_map": {
     "Sheffield Wednesday": "Sheffiel
-partidos: 169
+partidos: 168
