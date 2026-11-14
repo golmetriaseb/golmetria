@@ -40,10 +40,12 @@ corners espn EL1 Stockport Reading 7 5 1T None None
 corners espn EL1 Wigan Barnsley 2 10 1T None None
 corners espn LL2 Valladolid Castellon 3 9 1T None None
 corners espn LL2 Sociedad B Sp Gijon 6 6 1T None None
+corners espn LL2 Almeria Andorra 0 6 1T None None
+corners espn LL2 Mallorca Cordoba 8 3 1T None None
 corners espn LL2 Leganes Burgos 4 9 1T None None
-resultados: 556
+resultados: 558
 {
- "generated": "2026-11-14T18:54:36.872348+00:00",
+ "generated": "2026-11-14T19:51:04.611590+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
