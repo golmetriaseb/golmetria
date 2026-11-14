@@ -45,7 +45,7 @@ corners espn LL2 Mallorca Cordoba 8 3 1T None None
 corners espn LL2 Leganes Burgos 4 9 1T None None
 resultados: 558
 {
- "generated": "2026-11-14T20:48:37.435606+00:00",
+ "generated": "2026-11-14T21:46:16.962318+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
