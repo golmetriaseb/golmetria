@@ -34,9 +34,9 @@ espn historial USA eventos 421 con córners en historial 420
 espn historial CHN eventos 275 con córners en historial 275
 espn historial solo ECU partidos 359 con córners 283 con 1T córners 0
 corners espn LL2 Leganes Burgos 4 9 1T None None
-resultados: 577
+resultados: 545
 {
- "generated": "2026-11-13T23:48:52.748530+00:00",
+ "generated": "2026-11-14T01:13:38.491783+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -71,9 +71,19 @@ resultados: 577
    ],
    "fav": false,
    "fixtures_fd": 0,
-   "fixtures_espn": 0,
+   "name_map": {
+    "Manchester City": "Man City",
+    "AFC Bournemouth": "Bournemouth",
+    "Nottingham Forest": "Nott'm Forest",
+    "Leeds United": "Leeds",
+    "Coventry City": "Coventry",
+    "Tottenham Hotspur": "Tottenham",
+    "Ipswich Town": "Ipswich",
+    "Newcastle United": "Newcastle"
+   },
+   "fixtures_espn": 7,
    "espn_unmatched": 0,
-   "matches": 0
+   "matches": 7
   },
   "ENG": {
    "name": "Championship",
@@ -115,9 +125,25 @@ resultados: 577
    ],
    "fav": true,
    "fixtures_fd": 0,
-   "fixtures_espn": 0,
+   "name_map": {
+    "Queens Park Rangers": "QPR",
+    "Norwich City": "Norwich",
+    "Cardiff City": "Cardiff",
+    "Derby County": "Derby",
+    "Bolton Wanderers": "Bolton",
+    "Lincoln City": "Lincoln",
+    "Stoke City": "Stoke",
+    "Birmingham City": "Birmingham",
+    "Swansea City": "Swansea",
+    "West Bromwich Albion": "West Brom",
+    "West Ham United": "West Ham",
+    "Preston North End": "Preston",
+    "Wolverhampton Wanderers": "Wolves",
+    "Charlton Athletic": "Charlton"
+   },
+   "fixtures_espn": 11,
    "espn_unmatched": 0,
-   "matches": 0
+   "matches": 11
   },
   "EL1": {
    "name": "League One",
@@ -162,46 +188,5 @@ resultados: 577
    "fixtures_fd": 5,
    "name_map": {
     "Burton Albion": "Burton",
-    "Sheffield Wednesday": "Sheffield Weds",
-    "Plymouth Argyle": "Plymouth",
-    "Stockport County": "Stockport",
-    "Wigan Athletic": "Wigan"
-   },
-   "fixtures_espn": 6,
-   "espn_unmatched": 0,
-   "matches": 6
-  },
-  "SCO": {
-   "name": "Premiership",
-   "hist": 303,
-   "last_result": "2026-11-08",
-   "has_corners": 303,
-   "has_half": 303,
-   "teams": [
-    "Aberdeen",
-    "Celtic",
-    "Dundee",
-    "Dundee United",
-    "Falkirk",
-    "Hearts",
-    "Hibernian",
-    "Kilmarnock",
-    "Livingston",
-    "Motherwell",
-    "Rangers",
-    "St Johnstone",
-    "St Mirren"
-   ],
-   "fav": true,
-   "fixtures_fd": 0,
-   "fixtures_espn": 0,
-   "espn_unmatched": 0,
-   "matches": 0
-  },
-  "SC1": {
-   "name": "Championship (Escocia)",
-   "hist": 249,
-   "last_result": "2026-11-07",
-   "has_corners": 249,
-
-partidos: 59
+    "
+partidos: 181
