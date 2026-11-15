@@ -45,10 +45,11 @@ corners espn LL2 Mallorca Cordoba 8 3 1T None None
 corners espn LL2 Oviedo Girona 6 6 1T None None
 corners espn LL2 Leganes Burgos 4 9 1T None None
 corners espn BRA Mirassol Atletico-MG 4 3 1T None None
+corners espn BRA Chapecoense-SC Vasco 6 4 1T 3 3
 corners espn MEX Queretaro Monterrey 4 6 1T 1 2
-resultados: 442
+resultados: 443
 {
- "generated": "2026-11-15T01:18:44.595005+00:00",
+ "generated": "2026-11-15T02:57:48.931023+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -196,4 +197,4 @@ resultados: 442
     "Rotherham",
     "Sheffield Weds",
     "Stevenage"
-partidos: 239
+partidos: 237
