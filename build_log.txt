@@ -52,7 +52,7 @@ corners espn BRA Chapecoense-SC Vasco 6 4 1T 3 3
 corners espn MEX Queretaro Monterrey 4 6 1T 1 2
 resultados: 447
 {
- "generated": "2026-11-15T19:52:03.180328+00:00",
+ "generated": "2026-11-15T20:50:19.849994+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -200,4 +200,4 @@ resultados: 447
     "Rotherham",
     "Sheffield Weds",
     "Stevenage"
-partidos: 235
+partidos: 233
