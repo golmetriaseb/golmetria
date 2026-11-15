@@ -41,6 +41,7 @@ _new = [('SUI', 'SWZ', 'Switzerland', 'Super League (Suiza)', 'sui.1'), ('BRA', 
 LEAGUES = [dict(code=c, name=n, kind='main', div=d, espn=e, fav=c in FAV) for c, d, n, e in _main] + \
           [dict(code=c, name=n, kind='new', file=f, country=co, espn=e, fav=c in FAV, flt=('Serie A' if c == 'BRA' else None)) for c, f, co, n, e in _new]
 LEAGUES.append(dict(code='ECU', name='LigaPro (Ecuador)', kind='espn', espn='ecu.1', fav=True))   # sin datos en football-data: todo sale de ESPN
+LEAGUES.append(dict(code='URU', name='Primera División (Uruguay)', kind='espn', espn='uru.1', fav=False))   # solo ESPN: goles y 1er tiempo; sin córners
 status = {'generated': NOW.isoformat(), 'leagues': {}, 'errors': []}
 
 def log(*a):
