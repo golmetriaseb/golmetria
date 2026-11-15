@@ -45,9 +45,10 @@ corners espn LL2 Mallorca Cordoba 8 3 1T None None
 corners espn LL2 Oviedo Girona 6 6 1T None None
 corners espn LL2 Leganes Burgos 4 9 1T None None
 corners espn BRA Mirassol Atletico-MG 4 3 1T None None
-resultados: 560
+corners espn MEX Queretaro Monterrey 4 6 1T 1 2
+resultados: 442
 {
- "generated": "2026-11-14T23:44:54.508892+00:00",
+ "generated": "2026-11-15T01:18:44.595005+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -90,11 +91,14 @@ resultados: 560
     "Coventry City": "Coventry",
     "Tottenham Hotspur": "Tottenham",
     "Ipswich Town": "Ipswich",
-    "Newcastle United": "Newcastle"
+    "Newcastle United": "Newcastle",
+    "Hull City": "Hull",
+    "Brighton & Hove Albion": "Brighton",
+    "Manchester United": "Man United"
    },
-   "fixtures_espn": 7,
+   "fixtures_espn": 9,
    "espn_unmatched": 0,
-   "matches": 7
+   "matches": 9
   },
   "ENG": {
    "name": "Championship",
@@ -150,11 +154,12 @@ resultados: 560
     "West Ham United": "West Ham",
     "Preston North End": "Preston",
     "Wolverhampton Wanderers": "Wolves",
-    "Charlton Athletic": "Charlton"
+    "Charlton Athletic": "Charlton",
+    "Blackburn Rovers": "Blackburn"
    },
-   "fixtures_espn": 11,
+   "fixtures_espn": 12,
    "espn_unmatched": 0,
-   "matches": 11
+   "matches": 12
   },
   "EL1": {
    "name": "League One",
@@ -190,13 +195,5 @@ resultados: 560
     "Reading",
     "Rotherham",
     "Sheffield Weds",
-    "Stevenage",
-    "Stockport",
-    "Wigan",
-    "Wycombe"
-   ],
-   "fav": false,
-   "fixtures_fd": 5,
-   "name_map": {
-    "Sheffield Wednesday": "Sheffiel
-partidos: 168
+    "Stevenage"
+partidos: 239
