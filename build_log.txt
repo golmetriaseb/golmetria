@@ -1,13 +1,14 @@
-storial 641
-espn historial EL1 eventos 593 con córners en historial 593
+espn historial EPL eventos 420 con córners en historial 420
+espn historial ENG eventos 641 con córners en historial 641
+espn historial EL1 eventos 598 con córners en historial 598
 espn historial SCO eventos 266 con córners en historial 266
-espn historial SC1 eventos 210 con córners en historial 131
+espn historial SC1 eventos 214 con córners en historial 131
 espn historial GB1 eventos 342 con córners en historial 342
 espn historial GER eventos 342 con córners en historial 340
 espn historial SA eventos 440 con córners en historial 440
 espn historial SB eventos 434 con córners en historial 434
 espn historial LL eventos 429 con córners en historial 429
-espn historial LL2 eventos 525 con córners en historial 525
+espn historial LL2 eventos 535 con córners en historial 535
 espn historial L1 eventos 341 con córners en historial 303
 espn historial L2 eventos 342 con córners en historial 341
 espn historial ERE eventos 350 con córners en historial 350
@@ -16,14 +17,14 @@ espn historial POR eventos 341 con córners en historial 341
 espn historial TUR eventos 344 con córners en historial 344
 espn historial GRE eventos 271 con córners en historial 101
 espn historial SUI eventos 0 con córners en historial 0
-espn historial BRA eventos 466 con córners en historial 436
+espn historial BRA eventos 468 con córners en historial 438
 espn historial ARG eventos 589 con córners en historial 548
 espn historial AUT eventos 217 con córners en historial 151
 espn historial DNK eventos 216 con córners en historial 216
 espn historial FIN eventos 0 con córners en historial 0
 espn historial IRL eventos 20 con córners en historial 0
 espn historial JPN eventos 199 con córners en historial 180
-espn historial MEX eventos 258 con córners en historial 258
+espn historial MEX eventos 259 con córners en historial 259
 espn historial NOR eventos 267 con córners en historial 267
 espn historial POL eventos 0 con córners en historial 0
 espn historial ROU eventos 0 con córners en historial 0
@@ -33,26 +34,9 @@ espn historial USA eventos 421 con córners en historial 420
 espn historial CHN eventos 275 con córners en historial 275
 espn historial solo ECU partidos 359 con córners 283 con 1T córners 0
 espn historial solo URU partidos 323 con córners 0 con 1T córners 0
-corners espn EL1 AFC Wimbledon Blackpool 3 7 1T None None
-corners espn EL1 Milton Keynes Dons Burton 4 1 1T None None
-corners espn EL1 Sheffield Weds Plymouth 7 5 1T None None
-corners espn EL1 Stockport Reading 7 5 1T None None
-corners espn EL1 Wigan Barnsley 2 10 1T None None
-corners espn LL2 Tenerife Ceuta 5 7 1T None None
-corners espn LL2 Granada Las Palmas 2 7 1T None None
-corners espn LL2 Eibar Cadiz 4 2 1T None None
-corners espn LL2 Eldense Sabadell 1 2 1T None None
-corners espn LL2 Valladolid Castellon 3 9 1T None None
-corners espn LL2 Sociedad B Sp Gijon 6 6 1T None None
-corners espn LL2 Almeria Andorra 0 6 1T None None
-corners espn LL2 Mallorca Cordoba 8 3 1T None None
-corners espn LL2 Oviedo Girona 6 6 1T None None
-corners espn BRA Mirassol Atletico-MG 4 3 1T None None
-corners espn BRA Chapecoense-SC Vasco 6 4 1T 3 3
-corners espn MEX Queretaro Monterrey 4 6 1T 1 2
-resultados: 361
+resultados: 362
 {
- "generated": "2026-11-16T11:32:39.742908+00:00",
+ "generated": "2026-11-16T15:16:13.689360+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -167,10 +151,10 @@ resultados: 361
   },
   "EL1": {
    "name": "League One",
-   "hist": 710,
-   "last_result": "2026-11-04",
-   "has_corners": 710,
-   "has_half": 710,
+   "hist": 715,
+   "last_result": "2026-11-14",
+   "has_corners": 715,
+   "has_half": 715,
    "teams": [
     "AFC Wimbledon",
     "Barnsley",
