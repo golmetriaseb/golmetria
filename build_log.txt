@@ -34,9 +34,10 @@ espn historial USA eventos 421 con córners en historial 420
 espn historial CHN eventos 275 con córners en historial 275
 espn historial solo ECU partidos 359 con córners 283 con 1T córners 0
 espn historial solo URU partidos 323 con córners 0 con 1T córners 0
-resultados: 362
+corners espn LL2 Albacete Celta B 9 5 1T None None
+resultados: 363
 {
- "generated": "2026-11-16T20:58:49.243493+00:00",
+ "generated": "2026-11-16T21:57:40.038488+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
