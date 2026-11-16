@@ -31,7 +31,7 @@ espn historial SWE eventos 264 con córners en historial 264
 espn historial USA eventos 421 con córners en historial 420
 espn historial CHN eventos 275 con córners en historial 275
 espn historial solo ECU partidos 359 con córners 283 con 1T córners 0
-espn historial solo URU partidos 148 con córners 0 con 1T córners 0
+espn historial solo URU partidos 233 con córners 0 con 1T córners 0
 corners espn EL1 AFC Wimbledon Blackpool 3 7 1T None None
 corners espn EL1 Milton Keynes Dons Burton 4 1 1T None None
 corners espn EL1 Sheffield Weds Plymouth 7 5 1T None None
@@ -52,7 +52,7 @@ corners espn BRA Chapecoense-SC Vasco 6 4 1T 3 3
 corners espn MEX Queretaro Monterrey 4 6 1T 1 2
 resultados: 458
 {
- "generated": "2026-11-15T22:49:00.565897+00:00",
+ "generated": "2026-11-15T23:54:07.433616+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
