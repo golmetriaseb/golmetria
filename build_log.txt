@@ -52,7 +52,7 @@ corners espn BRA Chapecoense-SC Vasco 6 4 1T 3 3
 corners espn MEX Queretaro Monterrey 4 6 1T 1 2
 resultados: 361
 {
- "generated": "2026-11-16T03:07:22.805000+00:00",
+ "generated": "2026-11-16T04:34:42.990478+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
