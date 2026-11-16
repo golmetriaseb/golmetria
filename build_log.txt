@@ -1,4 +1,5 @@
-�rners en historial 593
+storial 641
+espn historial EL1 eventos 593 con córners en historial 593
 espn historial SCO eventos 266 con córners en historial 266
 espn historial SC1 eventos 210 con córners en historial 131
 espn historial GB1 eventos 342 con córners en historial 342
@@ -31,7 +32,7 @@ espn historial SWE eventos 264 con córners en historial 264
 espn historial USA eventos 421 con córners en historial 420
 espn historial CHN eventos 275 con córners en historial 275
 espn historial solo ECU partidos 359 con córners 283 con 1T córners 0
-espn historial solo URU partidos 233 con córners 0 con 1T córners 0
+espn historial solo URU partidos 288 con córners 0 con 1T córners 0
 corners espn EL1 AFC Wimbledon Blackpool 3 7 1T None None
 corners espn EL1 Milton Keynes Dons Burton 4 1 1T None None
 corners espn EL1 Sheffield Weds Plymouth 7 5 1T None None
@@ -46,13 +47,12 @@ corners espn LL2 Sociedad B Sp Gijon 6 6 1T None None
 corners espn LL2 Almeria Andorra 0 6 1T None None
 corners espn LL2 Mallorca Cordoba 8 3 1T None None
 corners espn LL2 Oviedo Girona 6 6 1T None None
-corners espn LL2 Leganes Burgos 4 9 1T None None
 corners espn BRA Mirassol Atletico-MG 4 3 1T None None
 corners espn BRA Chapecoense-SC Vasco 6 4 1T 3 3
 corners espn MEX Queretaro Monterrey 4 6 1T 1 2
-resultados: 458
+resultados: 361
 {
- "generated": "2026-11-15T23:54:07.433616+00:00",
+ "generated": "2026-11-16T01:34:54.130342+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -100,9 +100,9 @@ resultados: 458
     "Brighton & Hove Albion": "Brighton",
     "Manchester United": "Man United"
    },
-   "fixtures_espn": 9,
+   "fixtures_espn": 10,
    "espn_unmatched": 0,
-   "matches": 9
+   "matches": 10
   },
   "ENG": {
    "name": "Championship",
@@ -199,5 +199,5 @@ resultados: 458
     "Reading",
     "Rotherham",
     "Sheffield Weds",
-    "Stevenage"
-partidos: 235
+    "Stevenag
+partidos: 249
