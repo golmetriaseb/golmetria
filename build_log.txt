@@ -8,7 +8,7 @@ espn historial GER eventos 342 con córners en historial 340
 espn historial SA eventos 440 con córners en historial 440
 espn historial SB eventos 434 con córners en historial 434
 espn historial LL eventos 429 con córners en historial 429
-espn historial LL2 eventos 535 con córners en historial 535
+espn historial LL2 eventos 536 con córners en historial 536
 espn historial L1 eventos 341 con córners en historial 303
 espn historial L2 eventos 342 con córners en historial 341
 espn historial ERE eventos 350 con córners en historial 350
@@ -33,10 +33,10 @@ espn historial SWE eventos 264 con córners en historial 264
 espn historial USA eventos 421 con córners en historial 420
 espn historial CHN eventos 275 con córners en historial 275
 espn historial solo ECU partidos 359 con córners 283 con 1T córners 0
-espn historial solo URU partidos 323 con córners 0 con 1T córners 0
-resultados: 363
+espn historial solo URU partidos 324 con córners 0 con 1T córners 0
+resultados: 329
 {
- "generated": "2026-11-16T23:52:37.510229+00:00",
+ "generated": "2026-11-17T01:24:14.041484+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -145,9 +145,9 @@ resultados: 363
     "Charlton Athletic": "Charlton",
     "Blackburn Rovers": "Blackburn"
    },
-   "fixtures_espn": 12,
+   "fixtures_espn": 20,
    "espn_unmatched": 0,
-   "matches": 12
+   "matches": 20
   },
   "EL1": {
    "name": "League One",
@@ -184,4 +184,4 @@ resultados: 363
     "Rotherham",
     "Sheffield Weds",
     "Stevenag
-partidos: 248
+partidos: 268
