@@ -34,9 +34,9 @@ espn historial USA eventos 421 con córners en historial 420
 espn historial CHN eventos 275 con córners en historial 275
 espn historial solo ECU partidos 359 con córners 283 con 1T córners 0
 espn historial solo URU partidos 324 con córners 0 con 1T córners 0
-resultados: 329
+resultados: 313
 {
- "generated": "2026-11-17T23:57:30.057145+00:00",
+ "generated": "2026-11-18T01:28:18.092095+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -145,9 +145,9 @@ resultados: 329
     "Charlton Athletic": "Charlton",
     "Blackburn Rovers": "Blackburn"
    },
-   "fixtures_espn": 20,
+   "fixtures_espn": 24,
    "espn_unmatched": 0,
-   "matches": 20
+   "matches": 24
   },
   "EL1": {
    "name": "League One",
@@ -184,4 +184,4 @@ resultados: 329
     "Rotherham",
     "Sheffield Weds",
     "Stevenag
-partidos: 269
+partidos: 287
