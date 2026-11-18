@@ -36,7 +36,7 @@ espn historial solo ECU partidos 359 con córners 283 con 1T córners 0
 espn historial solo URU partidos 324 con córners 0 con 1T córners 0
 resultados: 313
 {
- "generated": "2026-11-18T03:00:07.293188+00:00",
+ "generated": "2026-11-18T04:06:07.173362+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
