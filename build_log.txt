@@ -42,7 +42,7 @@ corners espn BRA Corinthians Botafogo RJ 2 2 1T 1 0
 corners espn BRA Gremio Bahia 7 4 1T 5 1
 resultados: 311
 {
- "generated": "2026-11-19T20:14:36.797814+00:00",
+ "generated": "2026-11-19T21:05:18.859255+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
