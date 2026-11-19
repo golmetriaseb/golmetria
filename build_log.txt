@@ -38,9 +38,11 @@ corners espn BRA Coritiba Santos 5 3 1T 1 3
 corners espn BRA Remo Chapecoense-SC 4 5 1T 0 2
 corners espn BRA Cruzeiro Palmeiras 7 1 1T 4 0
 corners espn BRA Flamengo RJ Athletico-PR 5 4 1T None None
-resultados: 309
+corners espn BRA Corinthians Botafogo RJ 2 2 1T 1 0
+corners espn BRA Gremio Bahia 7 4 1T 5 1
+resultados: 311
 {
- "generated": "2026-11-19T01:25:51.019518+00:00",
+ "generated": "2026-11-19T03:00:20.960569+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -188,4 +190,4 @@ resultados: 309
     "Rotherham",
     "Sheffield Weds",
     "Stevenag
-partidos: 289
+partidos: 285
