@@ -34,9 +34,13 @@ espn historial USA eventos 421 con córners en historial 420
 espn historial CHN eventos 275 con córners en historial 275
 espn historial solo ECU partidos 359 con córners 283 con 1T córners 0
 espn historial solo URU partidos 324 con córners 0 con 1T córners 0
-resultados: 313
+corners espn BRA Coritiba Santos 5 3 1T 1 3
+corners espn BRA Remo Chapecoense-SC 4 5 1T 0 2
+corners espn BRA Cruzeiro Palmeiras 7 1 1T 4 0
+corners espn BRA Flamengo RJ Athletico-PR 5 4 1T None None
+resultados: 309
 {
- "generated": "2026-11-18T23:58:08.499542+00:00",
+ "generated": "2026-11-19T01:25:51.019518+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -184,4 +188,4 @@ resultados: 313
     "Rotherham",
     "Sheffield Weds",
     "Stevenag
-partidos: 287
+partidos: 289
