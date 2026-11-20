@@ -1,10 +1,4 @@
-espn historial EPL eventos 420 con córners en historial 420
-espn historial ENG eventos 641 con córners en historial 641
-espn historial EL1 eventos 598 con córners en historial 598
-espn historial SCO eventos 266 con córners en historial 266
-espn historial SC1 eventos 214 con córners en historial 131
-espn historial GB1 eventos 342 con córners en historial 342
-espn historial GER eventos 342 con córners en historial 340
+rial 340
 espn historial SA eventos 440 con córners en historial 440
 espn historial SB eventos 434 con córners en historial 434
 espn historial LL eventos 429 con córners en historial 429
@@ -33,13 +27,22 @@ espn historial SWE eventos 264 con córners en historial 264
 espn historial USA eventos 421 con córners en historial 420
 espn historial CHN eventos 275 con córners en historial 275
 espn historial solo ECU partidos 360 con córners 284 con 1T córners 0
-espn historial solo URU partidos 327 con córners 0 con 1T córners 0
+espn historial solo URU partidos 330 con córners 0 con 1T córners 0
+corners espn EL1 Barnsley Sheffield Weds 4 2 1T None None
+corners espn SC1 Inverness C Ayr 6 3 1T None None
+corners espn GB1 Bayern Munich FC Koln 5 0 1T 2 0
 corners espn GER Bielefeld Magdeburg 7 1 1T None None
 corners espn GER Darmstadt Heidenheim 5 4 1T None None
+corners espn SB Verona Cesena 11 1 1T None None
+corners espn LL Ath Bilbao Espanol 9 2 1T 3 2
+corners espn LL2 Andorra Leganes 7 1 1T None None
+corners espn L1 Troyes Le Havre 7 0 1T 3 0
 corners espn L2 Annecy Clermont 8 7 1T None None
 corners espn L2 Nancy Dijon 7 4 1T None None
 corners espn L2 Guingamp Rodez 5 6 1T None None
 corners espn L2 Metz Boulogne 9 4 1T None None
+corners espn L2 Red Star Pau FC 5 8 1T None None
+corners espn BEL Cercle Brugge Westerlo 2 4 1T None None
 corners espn DNK Aarhus Lyngby 4 2 1T None None
 corners espn JPN Kashima Antlers Shimizu S-Pulse 7 3 1T None None
 corners espn JPN Kashiwa Reysol Chiba 11 1 1T None None
@@ -48,9 +51,9 @@ corners espn NOR Molde Bodo/Glimt 7 6 1T None None
 corners espn RUS FK Rostov Krylya Sovetov 5 5 1T None None
 corners espn USA Orlando City FC Cincinnati 3 5 1T 1 5
 corners espn USA Seattle Sounders Real Salt Lake 7 1 1T 4 0
-resultados: 327
+resultados: 339
 {
- "generated": "2026-11-20T21:00:29.037867+00:00",
+ "generated": "2026-11-20T21:58:02.620307+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -198,4 +201,4 @@ resultados: 327
     "Rotherham",
     "Sheffield Weds",
     "Steven
-partidos: 318
+partidos: 314
