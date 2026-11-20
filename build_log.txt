@@ -38,7 +38,7 @@ corners espn USA Orlando City FC Cincinnati 3 5 1T 1 5
 corners espn USA Seattle Sounders Real Salt Lake 7 1 1T 4 0
 resultados: 314
 {
- "generated": "2026-11-20T09:15:20.575370+00:00",
+ "generated": "2026-11-20T10:22:28.990204+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
