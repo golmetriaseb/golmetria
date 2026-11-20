@@ -36,15 +36,17 @@ espn historial solo ECU partidos 359 con córners 283 con 1T córners 0
 espn historial solo URU partidos 327 con córners 0 con 1T córners 0
 corners espn BRA Vasco Internacional 12 8 1T 7 2
 corners espn BRA Vitoria Bragantino 7 8 1T None None
+corners espn BRA Sao Paulo Fluminense 8 6 1T 4 4
 corners espn BRA Coritiba Santos 5 3 1T 1 3
 corners espn BRA Remo Chapecoense-SC 4 5 1T 0 2
 corners espn BRA Cruzeiro Palmeiras 7 1 1T 4 0
 corners espn BRA Flamengo RJ Athletico-PR 5 4 1T None None
 corners espn BRA Corinthians Botafogo RJ 2 2 1T 1 0
 corners espn BRA Gremio Bahia 7 4 1T 5 1
-resultados: 311
+corners espn USA Orlando City FC Cincinnati 3 5 1T 1 5
+resultados: 313
 {
- "generated": "2026-11-20T01:19:41.498590+00:00",
+ "generated": "2026-11-20T02:56:57.807500+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -192,4 +194,4 @@ resultados: 311
     "Rotherham",
     "Sheffield Weds",
     "Stevenag
-partidos: 304
+partidos: 303
