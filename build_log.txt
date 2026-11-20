@@ -34,11 +34,14 @@ espn historial USA eventos 421 con córners en historial 420
 espn historial CHN eventos 275 con córners en historial 275
 espn historial solo ECU partidos 359 con córners 283 con 1T córners 0
 espn historial solo URU partidos 327 con córners 0 con 1T córners 0
+corners espn JPN Kashima Antlers Shimizu S-Pulse 7 3 1T None None
+corners espn JPN Kashiwa Reysol Chiba 11 1 1T None None
+corners espn JPN Vissel Kobe Mito 4 2 1T None None
 corners espn USA Orlando City FC Cincinnati 3 5 1T 1 5
 corners espn USA Seattle Sounders Real Salt Lake 7 1 1T 4 0
-resultados: 314
+resultados: 317
 {
- "generated": "2026-11-20T10:22:28.990204+00:00",
+ "generated": "2026-11-20T12:07:41.874960+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -72,7 +75,7 @@ resultados: 314
     "Wolves"
    ],
    "fav": false,
-   "fixtures_fd": 0,
+   "fixtures_fd": 10,
    "name_map": {
     "Manchester City": "Man City",
     "AFC Bournemouth": "Bournemouth",
@@ -129,7 +132,7 @@ resultados: 314
     "Wrexham"
    ],
    "fav": true,
-   "fixtures_fd": 0,
+   "fixtures_fd": 12,
    "name_map": {
     "Queens Park Rangers": "QPR",
     "Norwich City": "Norwich",
@@ -185,5 +188,5 @@ resultados: 314
     "Reading",
     "Rotherham",
     "Sheffield Weds",
-    "Stevenag
-partidos: 328
+    "Steven
+partidos: 329
