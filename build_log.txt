@@ -34,15 +34,17 @@ espn historial USA eventos 421 con córners en historial 420
 espn historial CHN eventos 275 con córners en historial 275
 espn historial solo ECU partidos 359 con córners 283 con 1T córners 0
 espn historial solo URU partidos 327 con córners 0 con 1T córners 0
+corners espn BRA Vasco Internacional 12 8 1T 7 2
+corners espn BRA Vitoria Bragantino 7 8 1T None None
 corners espn BRA Coritiba Santos 5 3 1T 1 3
 corners espn BRA Remo Chapecoense-SC 4 5 1T 0 2
 corners espn BRA Cruzeiro Palmeiras 7 1 1T 4 0
 corners espn BRA Flamengo RJ Athletico-PR 5 4 1T None None
 corners espn BRA Corinthians Botafogo RJ 2 2 1T 1 0
 corners espn BRA Gremio Bahia 7 4 1T 5 1
-resultados: 314
+resultados: 311
 {
- "generated": "2026-11-19T23:54:09.631656+00:00",
+ "generated": "2026-11-20T01:19:41.498590+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -90,9 +92,9 @@ resultados: 314
     "Brighton & Hove Albion": "Brighton",
     "Manchester United": "Man United"
    },
-   "fixtures_espn": 10,
+   "fixtures_espn": 11,
    "espn_unmatched": 0,
-   "matches": 10
+   "matches": 11
   },
   "ENG": {
    "name": "Championship",
@@ -151,9 +153,9 @@ resultados: 314
     "Charlton Athletic": "Charlton",
     "Blackburn Rovers": "Blackburn"
    },
-   "fixtures_espn": 24,
+   "fixtures_espn": 25,
    "espn_unmatched": 0,
-   "matches": 24
+   "matches": 25
   },
   "EL1": {
    "name": "League One",
@@ -190,4 +192,4 @@ resultados: 314
     "Rotherham",
     "Sheffield Weds",
     "Stevenag
-partidos: 288
+partidos: 304
