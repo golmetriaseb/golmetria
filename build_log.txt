@@ -44,9 +44,10 @@ corners espn BRA Flamengo RJ Athletico-PR 5 4 1T None None
 corners espn BRA Corinthians Botafogo RJ 2 2 1T 1 0
 corners espn BRA Gremio Bahia 7 4 1T 5 1
 corners espn USA Orlando City FC Cincinnati 3 5 1T 1 5
-resultados: 313
+corners espn USA Seattle Sounders Real Salt Lake 7 1 1T 4 0
+resultados: 314
 {
- "generated": "2026-11-20T05:12:41.024433+00:00",
+ "generated": "2026-11-20T06:16:43.469199+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -194,4 +195,4 @@ resultados: 313
     "Rotherham",
     "Sheffield Weds",
     "Stevenag
-partidos: 302
+partidos: 304
