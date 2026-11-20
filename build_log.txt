@@ -41,7 +41,7 @@ corners espn USA Orlando City FC Cincinnati 3 5 1T 1 5
 corners espn USA Seattle Sounders Real Salt Lake 7 1 1T 4 0
 resultados: 317
 {
- "generated": "2026-11-20T12:07:41.874960+00:00",
+ "generated": "2026-11-20T13:24:59.393591+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -189,4 +189,4 @@ resultados: 317
     "Rotherham",
     "Sheffield Weds",
     "Steven
-partidos: 329
+partidos: 326
