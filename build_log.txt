@@ -34,15 +34,19 @@ espn historial USA eventos 421 con córners en historial 420
 espn historial CHN eventos 275 con córners en historial 275
 espn historial solo ECU partidos 360 con córners 284 con 1T córners 0
 espn historial solo URU partidos 327 con córners 0 con 1T córners 0
+corners espn GER Bielefeld Magdeburg 7 1 1T None None
+corners espn GER Darmstadt Heidenheim 5 4 1T None None
+corners espn DNK Aarhus Lyngby 4 2 1T None None
 corners espn JPN Kashima Antlers Shimizu S-Pulse 7 3 1T None None
 corners espn JPN Kashiwa Reysol Chiba 11 1 1T None None
 corners espn JPN Vissel Kobe Mito 4 2 1T None None
+corners espn NOR Molde Bodo/Glimt 7 6 1T None None
 corners espn RUS FK Rostov Krylya Sovetov 5 5 1T None None
 corners espn USA Orlando City FC Cincinnati 3 5 1T 1 5
 corners espn USA Seattle Sounders Real Salt Lake 7 1 1T 4 0
-resultados: 319
+resultados: 323
 {
- "generated": "2026-11-20T19:13:26.998557+00:00",
+ "generated": "2026-11-20T20:12:00.266001+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -190,4 +194,4 @@ resultados: 319
     "Rotherham",
     "Sheffield Weds",
     "Steven
-partidos: 323
+partidos: 322
