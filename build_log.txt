@@ -51,9 +51,9 @@ corners espn NOR Molde Bodo/Glimt 7 6 1T None None
 corners espn RUS FK Rostov Krylya Sovetov 5 5 1T None None
 corners espn USA Orlando City FC Cincinnati 3 5 1T 1 5
 corners espn USA Seattle Sounders Real Salt Lake 7 1 1T 4 0
-resultados: 339
+resultados: 306
 {
- "generated": "2026-11-20T23:56:43.442478+00:00",
+ "generated": "2026-11-21T01:24:18.597674+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -101,9 +101,9 @@ resultados: 339
     "Brighton & Hove Albion": "Brighton",
     "Manchester United": "Man United"
    },
-   "fixtures_espn": 11,
+   "fixtures_espn": 14,
    "espn_unmatched": 0,
-   "matches": 11
+   "matches": 14
   },
   "ENG": {
    "name": "Championship",
@@ -162,9 +162,9 @@ resultados: 339
     "Charlton Athletic": "Charlton",
     "Blackburn Rovers": "Blackburn"
    },
-   "fixtures_espn": 25,
+   "fixtures_espn": 35,
    "espn_unmatched": 0,
-   "matches": 25
+   "matches": 35
   },
   "EL1": {
    "name": "League One",
@@ -201,4 +201,4 @@ resultados: 339
     "Rotherham",
     "Sheffield Weds",
     "Steven
-partidos: 300
+partidos: 393
