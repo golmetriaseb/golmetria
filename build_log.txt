@@ -1,6 +1,4 @@
-rial 340
-espn historial SA eventos 440 con córners en historial 440
-espn historial SB eventos 434 con córners en historial 434
+ córners en historial 434
 espn historial LL eventos 429 con córners en historial 429
 espn historial LL2 eventos 536 con córners en historial 536
 espn historial L1 eventos 341 con córners en historial 303
@@ -43,17 +41,19 @@ corners espn L2 Guingamp Rodez 5 6 1T None None
 corners espn L2 Metz Boulogne 9 4 1T None None
 corners espn L2 Red Star Pau FC 5 8 1T None None
 corners espn BEL Cercle Brugge Westerlo 2 4 1T None None
+corners espn ARG Velez Sarsfield Belgrano 6 8 1T 5 1
 corners espn DNK Aarhus Lyngby 4 2 1T None None
 corners espn JPN Kashima Antlers Shimizu S-Pulse 7 3 1T None None
 corners espn JPN Kashiwa Reysol Chiba 11 1 1T None None
 corners espn JPN Vissel Kobe Mito 4 2 1T None None
+corners espn MEX Puebla Atl. San Luis 2 7 1T 1 1
 corners espn NOR Molde Bodo/Glimt 7 6 1T None None
 corners espn RUS FK Rostov Krylya Sovetov 5 5 1T None None
 corners espn USA Orlando City FC Cincinnati 3 5 1T 1 5
 corners espn USA Seattle Sounders Real Salt Lake 7 1 1T 4 0
-resultados: 306
+resultados: 308
 {
- "generated": "2026-11-21T01:24:18.597674+00:00",
+ "generated": "2026-11-21T02:57:09.762820+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
