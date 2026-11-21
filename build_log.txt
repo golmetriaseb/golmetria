@@ -1,14 +1,11 @@
-la 11 2 1T None None
-corners espn SB Modena Juve Stabia 7 2 1T None None
-corners espn SB Sampdoria Benevento 2 9 1T None None
-corners espn SB Sudtirol Cremonese 4 6 1T None None
-corners espn SB Catanzaro Palermo 1 7 1T None None
-corners espn SB Verona Cesena 11 1 1T None None
+Cesena 11 1 1T None None
 corners espn LL Alaves La Coruna 8 2 1T 3 1
 corners espn LL Vallecano Valencia 8 5 1T 6 3
+corners espn LL Sevilla Betis 7 2 1T 1 2
 corners espn LL Ath Bilbao Espanol 9 2 1T 3 2
 corners espn LL2 Sabadell Granada 10 2 1T None None
 corners espn LL2 Sociedad B Cadiz 7 1 1T None None
+corners espn LL2 Castellon Eldense 9 1 1T None None
 corners espn LL2 Andorra Leganes 7 1 1T None None
 corners espn L1 Nice Paris FC 1 5 1T 1 2
 corners espn L1 Troyes Le Havre 7 0 1T 3 0
@@ -19,6 +16,7 @@ corners espn L2 Guingamp Rodez 5 6 1T None None
 corners espn L2 Metz Boulogne 9 4 1T None None
 corners espn L2 Red Star Pau FC 5 8 1T None None
 corners espn ERE Nijmegen PSV Eindhoven 5 3 1T 2 1
+corners espn ERE Feyenoord Excelsior 8 4 1T 3 1
 corners espn BEL Charleroi St Truiden 4 7 1T None None
 corners espn BEL Genk RAAL La Louviere 3 1 1T None None
 corners espn BEL Cercle Brugge Westerlo 2 4 1T None None
@@ -26,6 +24,8 @@ corners espn TUR Genclerbirligi Gaziantep 1 3 1T None None
 corners espn TUR Amedspor Rizespor 7 4 1T None None
 corners espn TUR Galatasaray Samsunspor 5 8 1T None None
 corners espn TUR Kocaelispor Fenerbahce 4 5 1T None None
+corners espn GRE Kalamata AEK 2 8 1T None None
+corners espn ARG Defensa y Justicia Barracas Central 4 3 1T 2 3
 corners espn ARG Velez Sarsfield Belgrano 6 8 1T 5 1
 corners espn DNK Aarhus Lyngby 4 2 1T None None
 corners espn JPN Kyoto Urawa Reds 6 4 1T None None
@@ -55,9 +55,9 @@ corners espn SWE Mjallby Malmo FF 4 8 1T None None
 corners espn SWE GAIS Vasteras SK 5 3 1T None None
 corners espn USA Orlando City FC Cincinnati 3 5 1T 1 5
 corners espn USA Seattle Sounders Real Salt Lake 7 1 1T 4 0
-resultados: 394
+resultados: 402
 {
- "generated": "2026-11-21T18:58:37.578476+00:00",
+ "generated": "2026-11-21T19:54:55.403388+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -93,7 +93,6 @@ resultados: 394
    "fav": false,
    "fixtures_fd": 10,
    "name_map": {
-    "Newcastle United": "Newcastle",
     "Hull City": "Hull",
     "Brighton & Hove Albion": "Brighton",
     "Manchester United": "Man United",
@@ -102,7 +101,7 @@ resultados: 394
     "Coventry City": "Coventry",
     "Ipswich Town": "Ipswich"
    },
-   "fixtures_espn": 8,
+   "fixtures_espn": 7,
    "espn_unmatched": 0,
    "matches": 8
   },
@@ -209,5 +208,6 @@ resultados: 394
    "fav": false,
    "fixtures_fd": 12,
    "name_map": {
- 
-partidos: 311
+    "Leicester City": "Leicester",
+   
+partidos: 304
