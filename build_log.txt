@@ -1,8 +1,4 @@
-Cesena 11 1 1T None None
-corners espn LL Alaves La Coruna 8 2 1T 3 1
-corners espn LL Vallecano Valencia 8 5 1T 6 3
-corners espn LL Sevilla Betis 7 2 1T 1 2
-corners espn LL Ath Bilbao Espanol 9 2 1T 3 2
+ LL Ath Bilbao Espanol 9 2 1T 3 2
 corners espn LL2 Sabadell Granada 10 2 1T None None
 corners espn LL2 Sociedad B Cadiz 7 1 1T None None
 corners espn LL2 Castellon Eldense 9 1 1T None None
@@ -10,12 +6,14 @@ corners espn LL2 Andorra Leganes 7 1 1T None None
 corners espn L1 Nice Paris FC 1 5 1T 1 2
 corners espn L1 Troyes Le Havre 7 0 1T 3 0
 corners espn L2 Laval Montpellier 4 1 1T None None
+corners espn L2 Reims St Etienne 4 3 1T None None
 corners espn L2 Annecy Clermont 8 7 1T None None
 corners espn L2 Nancy Dijon 7 4 1T None None
 corners espn L2 Guingamp Rodez 5 6 1T None None
 corners espn L2 Metz Boulogne 9 4 1T None None
 corners espn L2 Red Star Pau FC 5 8 1T None None
 corners espn ERE Nijmegen PSV Eindhoven 5 3 1T 2 1
+corners espn ERE Utrecht Cambuur 3 3 1T 2 2
 corners espn ERE Feyenoord Excelsior 8 4 1T 3 1
 corners espn BEL Charleroi St Truiden 4 7 1T None None
 corners espn BEL Genk RAAL La Louviere 3 1 1T None None
@@ -55,9 +53,10 @@ corners espn SWE Mjallby Malmo FF 4 8 1T None None
 corners espn SWE GAIS Vasteras SK 5 3 1T None None
 corners espn USA Orlando City FC Cincinnati 3 5 1T 1 5
 corners espn USA Seattle Sounders Real Salt Lake 7 1 1T 4 0
-resultados: 402
+corners espn ECU Técnico Universitario Deportivo Cuenca 4 5 1T None None
+resultados: 407
 {
- "generated": "2026-11-21T19:54:55.403388+00:00",
+ "generated": "2026-11-21T20:52:33.415336+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -103,7 +102,7 @@ resultados: 402
    },
    "fixtures_espn": 7,
    "espn_unmatched": 0,
-   "matches": 8
+   "matches": 7
   },
   "ENG": {
    "name": "Championship",
@@ -210,4 +209,4 @@ resultados: 402
    "name_map": {
     "Leicester City": "Leicester",
    
-partidos: 304
+partidos: 290
