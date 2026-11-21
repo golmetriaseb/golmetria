@@ -1,8 +1,4 @@
-istorial 0
-espn historial BRA eventos 477 con córners en historial 447
-espn historial ARG eventos 589 con córners en historial 548
-espn historial AUT eventos 217 con córners en historial 151
-espn historial DNK eventos 216 con córners en historial 216
+en historial 216
 espn historial FIN eventos 0 con córners en historial 0
 espn historial IRL eventos 20 con córners en historial 0
 espn historial JPN eventos 199 con córners en historial 180
@@ -19,6 +15,9 @@ espn historial solo URU partidos 330 con córners 0 con 1T córners 0
 corners espn EL1 Barnsley Sheffield Weds 4 2 1T None None
 corners espn SC1 Inverness C Ayr 6 3 1T None None
 corners espn GB1 Bayern Munich FC Koln 5 0 1T 2 0
+corners espn GER Nurnberg Braunschweig 7 5 1T None None
+corners espn GER Hannover Greuther Furth 4 6 1T None None
+corners espn GER Wolfsburg Holstein Kiel 10 4 1T None None
 corners espn GER Bielefeld Magdeburg 7 1 1T None None
 corners espn GER Darmstadt Heidenheim 5 4 1T None None
 corners espn SB Verona Cesena 11 1 1T None None
@@ -49,12 +48,13 @@ corners espn MEX Juarez Atlas 9 9 1T 5 5
 corners espn MEX Club Tijuana Atlante 5 9 1T 4 2
 corners espn NOR Molde Bodo/Glimt 7 6 1T None None
 corners espn RUS Orenburg Baltika 5 9 1T None None
+corners espn RUS Akron Togliatti Fakel Voronezh 3 5 1T None None
 corners espn RUS FK Rostov Krylya Sovetov 5 5 1T None None
 corners espn USA Orlando City FC Cincinnati 3 5 1T 1 5
 corners espn USA Seattle Sounders Real Salt Lake 7 1 1T 4 0
-resultados: 319
+resultados: 323
 {
- "generated": "2026-11-21T13:08:39.454831+00:00",
+ "generated": "2026-11-21T14:09:52.770618+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -202,4 +202,4 @@ resultados: 319
     "Rotherham",
     "Sheffield Weds",
     "Steven
-partidos: 382
+partidos: 381
