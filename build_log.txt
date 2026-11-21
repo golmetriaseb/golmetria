@@ -1,12 +1,4 @@
-con córners en historial 420
-espn historial CHN eventos 275 con córners en historial 275
-espn historial solo ECU partidos 360 con córners 284 con 1T córners 0
-espn historial solo URU partidos 330 con córners 0 con 1T córners 0
-corners espn EPL Man City Fulham 8 6 1T 5 2
-corners espn ENG Millwall QPR 3 12 1T 1 5
-corners espn ENG Norwich Cardiff 8 3 1T 1 1
-corners espn ENG Southampton Derby 10 4 1T 5 1
-corners espn EL1 Blackpool Wigan 7 4 1T None None
+7 4 1T None None
 corners espn EL1 Reading Bromley 12 2 1T None None
 corners espn EL1 Barnsley Sheffield Weds 4 2 1T None None
 corners espn SC1 Inverness C Ayr 6 3 1T None None
@@ -16,6 +8,13 @@ corners espn GER Hannover Greuther Furth 4 6 1T None None
 corners espn GER Wolfsburg Holstein Kiel 10 4 1T None None
 corners espn GER Bielefeld Magdeburg 7 1 1T None None
 corners espn GER Darmstadt Heidenheim 5 4 1T None None
+corners espn SA Como Cagliari 3 3 1T 2 0
+corners espn SA Lazio Lecce 9 3 1T 4 1
+corners espn SB Ascoli Vicenza 4 4 1T None None
+corners espn SB Carrarese Virtus Entella 11 2 1T None None
+corners espn SB Modena Juve Stabia 7 2 1T None None
+corners espn SB Sampdoria Benevento 2 9 1T None None
+corners espn SB Sudtirol Cremonese 4 6 1T None None
 corners espn SB Verona Cesena 11 1 1T None None
 corners espn LL Alaves La Coruna 8 2 1T 3 1
 corners espn LL Ath Bilbao Espanol 9 2 1T 3 2
@@ -52,11 +51,13 @@ corners espn NOR Molde Bodo/Glimt 7 6 1T None None
 corners espn RUS Orenburg Baltika 5 9 1T None None
 corners espn RUS Akron Togliatti Fakel Voronezh 3 5 1T None None
 corners espn RUS FK Rostov Krylya Sovetov 5 5 1T None None
+corners espn SWE AIK Degerfors 8 3 1T None None
+corners espn SWE Mjallby Malmo FF 4 8 1T None None
 corners espn USA Orlando City FC Cincinnati 3 5 1T 1 5
 corners espn USA Seattle Sounders Real Salt Lake 7 1 1T 4 0
-resultados: 335
+resultados: 344
 {
- "generated": "2026-11-21T14:59:22.874405+00:00",
+ "generated": "2026-11-21T15:55:29.574545+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -105,7 +106,7 @@ resultados: 335
    },
    "fixtures_espn": 13,
    "espn_unmatched": 0,
-   "matches": 14
+   "matches": 13
   },
   "ENG": {
    "name": "Championship",
@@ -166,7 +167,7 @@ resultados: 335
    },
    "fixtures_espn": 32,
    "espn_unmatched": 0,
-   "matches": 35
+   "matches": 32
   },
   "EL1": {
    "name": "League One",
@@ -205,4 +206,4 @@ resultados: 335
     "Stevenage",
     "Stockport",
     "Wigan",
-partidos: 381
+partidos: 372
