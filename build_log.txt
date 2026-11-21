@@ -1,6 +1,4 @@
-n historial BEL eventos 339 con córners en historial 338
-espn historial POR eventos 341 con córners en historial 341
-espn historial TUR eventos 344 con córners en historial 344
+44
 espn historial GRE eventos 271 con córners en historial 101
 espn historial SUI eventos 0 con córners en historial 0
 espn historial BRA eventos 477 con córners en historial 447
@@ -41,6 +39,9 @@ corners espn JPN Kyoto Urawa Reds 6 4 1T None None
 corners espn JPN Machida V-Varen Nagasaki 9 2 1T None None
 corners espn JPN Sanfrecce Hiroshima Yokohama F. Marinos 5 0 1T None None
 corners espn JPN FC Tokyo Nagoya Grampus 3 6 1T None None
+corners espn JPN Cerezo Osaka FC Tokyo 0 1 1T None None
+corners espn JPN Kawasaki Frontale Avispa Fukuoka 6 4 1T None None
+corners espn JPN Gamba Osaka Okayama 6 3 1T None None
 corners espn JPN Kashima Antlers Shimizu S-Pulse 7 3 1T None None
 corners espn JPN Kashiwa Reysol Chiba 11 1 1T None None
 corners espn JPN Vissel Kobe Mito 4 2 1T None None
@@ -51,9 +52,9 @@ corners espn NOR Molde Bodo/Glimt 7 6 1T None None
 corners espn RUS FK Rostov Krylya Sovetov 5 5 1T None None
 corners espn USA Orlando City FC Cincinnati 3 5 1T 1 5
 corners espn USA Seattle Sounders Real Salt Lake 7 1 1T 4 0
-resultados: 314
+resultados: 317
 {
- "generated": "2026-11-21T07:22:44.721020+00:00",
+ "generated": "2026-11-21T08:57:44.776634+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -201,4 +202,4 @@ resultados: 314
     "Rotherham",
     "Sheffield Weds",
     "Steven
-partidos: 390
+partidos: 386
