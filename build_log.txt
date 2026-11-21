@@ -1,10 +1,4 @@
- LL Ath Bilbao Espanol 9 2 1T 3 2
-corners espn LL2 Sabadell Granada 10 2 1T None None
-corners espn LL2 Sociedad B Cadiz 7 1 1T None None
-corners espn LL2 Castellon Eldense 9 1 1T None None
-corners espn LL2 Andorra Leganes 7 1 1T None None
-corners espn L1 Nice Paris FC 1 5 1T 1 2
-corners espn L1 Troyes Le Havre 7 0 1T 3 0
+ Le Havre 7 0 1T 3 0
 corners espn L2 Laval Montpellier 4 1 1T None None
 corners espn L2 Reims St Etienne 4 3 1T None None
 corners espn L2 Annecy Clermont 8 7 1T None None
@@ -15,15 +9,21 @@ corners espn L2 Red Star Pau FC 5 8 1T None None
 corners espn ERE Nijmegen PSV Eindhoven 5 3 1T 2 1
 corners espn ERE Utrecht Cambuur 3 3 1T 2 2
 corners espn ERE Feyenoord Excelsior 8 4 1T 3 1
+corners espn ERE Groningen Heerenveen 4 4 1T 1 2
+corners espn ERE Telstar Zwolle 11 7 1T 4 4
 corners espn BEL Charleroi St Truiden 4 7 1T None None
 corners espn BEL Genk RAAL La Louviere 3 1 1T None None
+corners espn BEL Mechelen Club Brugge 5 7 1T None None
+corners espn BEL Waregem Antwerp 8 3 1T None None
 corners espn BEL Cercle Brugge Westerlo 2 4 1T None None
 corners espn TUR Genclerbirligi Gaziantep 1 3 1T None None
 corners espn TUR Amedspor Rizespor 7 4 1T None None
 corners espn TUR Galatasaray Samsunspor 5 8 1T None None
 corners espn TUR Kocaelispor Fenerbahce 4 5 1T None None
 corners espn GRE Kalamata AEK 2 8 1T None None
+corners espn BRA Palmeiras Flamengo RJ 2 10 1T 1 8
 corners espn ARG Defensa y Justicia Barracas Central 4 3 1T 2 3
+corners espn ARG Argentinos Jrs Independiente 7 5 1T 3 1
 corners espn ARG Velez Sarsfield Belgrano 6 8 1T 5 1
 corners espn DNK Aarhus Lyngby 4 2 1T None None
 corners espn JPN Kyoto Urawa Reds 6 4 1T None None
@@ -51,12 +51,12 @@ corners espn RUS FK Rostov Krylya Sovetov 5 5 1T None None
 corners espn SWE AIK Degerfors 8 3 1T None None
 corners espn SWE Mjallby Malmo FF 4 8 1T None None
 corners espn SWE GAIS Vasteras SK 5 3 1T None None
+corners espn USA New England Revolution Philadelphia Union 5 9 1T 3 5
 corners espn USA Orlando City FC Cincinnati 3 5 1T 1 5
 corners espn USA Seattle Sounders Real Salt Lake 7 1 1T 4 0
-corners espn ECU Técnico Universitario Deportivo Cuenca 4 5 1T None None
-resultados: 407
+resultados: 422
 {
- "generated": "2026-11-21T20:52:33.415336+00:00",
+ "generated": "2026-11-21T21:51:59.479347+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -209,4 +209,4 @@ resultados: 407
    "name_map": {
     "Leicester City": "Leicester",
    
-partidos: 290
+partidos: 286
