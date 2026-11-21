@@ -1,8 +1,4 @@
-burg 5 3 1T 4 3
-corners espn GB1 Bayern Munich FC Koln 5 0 1T 2 0
-corners espn GER Nurnberg Braunschweig 7 5 1T None None
-corners espn GER Hannover Greuther Furth 4 6 1T None None
-corners espn GER Wolfsburg Holstein Kiel 10 4 1T None None
+g Holstein Kiel 10 4 1T None None
 corners espn GER Bielefeld Magdeburg 7 1 1T None None
 corners espn GER Darmstadt Heidenheim 5 4 1T None None
 corners espn SA Como Cagliari 3 3 1T 2 0
@@ -14,8 +10,10 @@ corners espn SB Sampdoria Benevento 2 9 1T None None
 corners espn SB Sudtirol Cremonese 4 6 1T None None
 corners espn SB Verona Cesena 11 1 1T None None
 corners espn LL Alaves La Coruna 8 2 1T 3 1
+corners espn LL Vallecano Valencia 8 5 1T 6 3
 corners espn LL Ath Bilbao Espanol 9 2 1T 3 2
 corners espn LL2 Sabadell Granada 10 2 1T None None
+corners espn LL2 Sociedad B Cadiz 7 1 1T None None
 corners espn LL2 Andorra Leganes 7 1 1T None None
 corners espn L1 Troyes Le Havre 7 0 1T 3 0
 corners espn L2 Laval Montpellier 4 1 1T None None
@@ -24,11 +22,13 @@ corners espn L2 Nancy Dijon 7 4 1T None None
 corners espn L2 Guingamp Rodez 5 6 1T None None
 corners espn L2 Metz Boulogne 9 4 1T None None
 corners espn L2 Red Star Pau FC 5 8 1T None None
+corners espn ERE Nijmegen PSV Eindhoven 5 3 1T 2 1
 corners espn BEL Charleroi St Truiden 4 7 1T None None
 corners espn BEL Cercle Brugge Westerlo 2 4 1T None None
 corners espn TUR Genclerbirligi Gaziantep 1 3 1T None None
 corners espn TUR Amedspor Rizespor 7 4 1T None None
 corners espn TUR Galatasaray Samsunspor 5 8 1T None None
+corners espn TUR Kocaelispor Fenerbahce 4 5 1T None None
 corners espn ARG Velez Sarsfield Belgrano 6 8 1T 5 1
 corners espn DNK Aarhus Lyngby 4 2 1T None None
 corners espn JPN Kyoto Urawa Reds 6 4 1T None None
@@ -55,9 +55,9 @@ corners espn SWE AIK Degerfors 8 3 1T None None
 corners espn SWE Mjallby Malmo FF 4 8 1T None None
 corners espn USA Orlando City FC Cincinnati 3 5 1T 1 5
 corners espn USA Seattle Sounders Real Salt Lake 7 1 1T 4 0
-resultados: 381
+resultados: 387
 {
- "generated": "2026-11-21T16:56:15.780090+00:00",
+ "generated": "2026-11-21T17:52:12.748439+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -210,4 +210,4 @@ resultados: 381
    "fixtures_fd": 12,
    "name_map": {
 
-partidos: 363
+partidos: 349
