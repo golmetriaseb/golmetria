@@ -1,6 +1,4 @@
- córners en historial 434
-espn historial LL eventos 429 con córners en historial 429
-espn historial LL2 eventos 536 con córners en historial 536
+n historial LL2 eventos 536 con córners en historial 536
 espn historial L1 eventos 341 con córners en historial 303
 espn historial L2 eventos 342 con córners en historial 341
 espn historial ERE eventos 350 con córners en historial 350
@@ -47,13 +45,15 @@ corners espn JPN Kashima Antlers Shimizu S-Pulse 7 3 1T None None
 corners espn JPN Kashiwa Reysol Chiba 11 1 1T None None
 corners espn JPN Vissel Kobe Mito 4 2 1T None None
 corners espn MEX Puebla Atl. San Luis 2 7 1T 1 1
+corners espn MEX Juarez Atlas 9 9 1T 5 5
+corners espn MEX Club Tijuana Atlante 5 9 1T 4 2
 corners espn NOR Molde Bodo/Glimt 7 6 1T None None
 corners espn RUS FK Rostov Krylya Sovetov 5 5 1T None None
 corners espn USA Orlando City FC Cincinnati 3 5 1T 1 5
 corners espn USA Seattle Sounders Real Salt Lake 7 1 1T 4 0
-resultados: 308
+resultados: 310
 {
- "generated": "2026-11-21T04:01:31.675043+00:00",
+ "generated": "2026-11-21T05:05:42.943055+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
