@@ -1,13 +1,8 @@
-g Holstein Kiel 10 4 1T None None
-corners espn GER Bielefeld Magdeburg 7 1 1T None None
-corners espn GER Darmstadt Heidenheim 5 4 1T None None
-corners espn SA Como Cagliari 3 3 1T 2 0
-corners espn SA Lazio Lecce 9 3 1T 4 1
-corners espn SB Ascoli Vicenza 4 4 1T None None
-corners espn SB Carrarese Virtus Entella 11 2 1T None None
+la 11 2 1T None None
 corners espn SB Modena Juve Stabia 7 2 1T None None
 corners espn SB Sampdoria Benevento 2 9 1T None None
 corners espn SB Sudtirol Cremonese 4 6 1T None None
+corners espn SB Catanzaro Palermo 1 7 1T None None
 corners espn SB Verona Cesena 11 1 1T None None
 corners espn LL Alaves La Coruna 8 2 1T 3 1
 corners espn LL Vallecano Valencia 8 5 1T 6 3
@@ -15,6 +10,7 @@ corners espn LL Ath Bilbao Espanol 9 2 1T 3 2
 corners espn LL2 Sabadell Granada 10 2 1T None None
 corners espn LL2 Sociedad B Cadiz 7 1 1T None None
 corners espn LL2 Andorra Leganes 7 1 1T None None
+corners espn L1 Nice Paris FC 1 5 1T 1 2
 corners espn L1 Troyes Le Havre 7 0 1T 3 0
 corners espn L2 Laval Montpellier 4 1 1T None None
 corners espn L2 Annecy Clermont 8 7 1T None None
@@ -24,6 +20,7 @@ corners espn L2 Metz Boulogne 9 4 1T None None
 corners espn L2 Red Star Pau FC 5 8 1T None None
 corners espn ERE Nijmegen PSV Eindhoven 5 3 1T 2 1
 corners espn BEL Charleroi St Truiden 4 7 1T None None
+corners espn BEL Genk RAAL La Louviere 3 1 1T None None
 corners espn BEL Cercle Brugge Westerlo 2 4 1T None None
 corners espn TUR Genclerbirligi Gaziantep 1 3 1T None None
 corners espn TUR Amedspor Rizespor 7 4 1T None None
@@ -46,18 +43,21 @@ corners espn MEX Juarez Atlas 9 9 1T 5 5
 corners espn MEX Club Tijuana Atlante 5 9 1T 4 2
 corners espn NOR Tromso Viking 2 7 1T None None
 corners espn NOR HamKam Fredrikstad 3 3 1T None None
+corners espn NOR Valerenga Start 5 8 1T None None
 corners espn NOR Molde Bodo/Glimt 7 6 1T None None
 corners espn RUS Orenburg Baltika 5 9 1T None None
 corners espn RUS Akron Togliatti Fakel Voronezh 3 5 1T None None
 corners espn RUS Rubin Kazan Zenit 5 3 1T None None
+corners espn RUS CSKA Moscow Akhmat Grozny 8 5 1T None None
 corners espn RUS FK Rostov Krylya Sovetov 5 5 1T None None
 corners espn SWE AIK Degerfors 8 3 1T None None
 corners espn SWE Mjallby Malmo FF 4 8 1T None None
+corners espn SWE GAIS Vasteras SK 5 3 1T None None
 corners espn USA Orlando City FC Cincinnati 3 5 1T 1 5
 corners espn USA Seattle Sounders Real Salt Lake 7 1 1T 4 0
-resultados: 387
+resultados: 394
 {
- "generated": "2026-11-21T17:52:12.748439+00:00",
+ "generated": "2026-11-21T18:58:37.578476+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -104,7 +104,7 @@ resultados: 387
    },
    "fixtures_espn": 8,
    "espn_unmatched": 0,
-   "matches": 13
+   "matches": 8
   },
   "ENG": {
    "name": "Championship",
@@ -165,7 +165,7 @@ resultados: 387
    },
    "fixtures_espn": 24,
    "espn_unmatched": 0,
-   "matches": 32
+   "matches": 24
   },
   "EL1": {
    "name": "League One",
@@ -209,5 +209,5 @@ resultados: 387
    "fav": false,
    "fixtures_fd": 12,
    "name_map": {
-
-partidos: 349
+ 
+partidos: 311
