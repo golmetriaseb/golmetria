@@ -54,9 +54,9 @@ corners espn SWE GAIS Vasteras SK 5 3 1T None None
 corners espn USA New England Revolution Philadelphia Union 5 9 1T 3 5
 corners espn USA FC Dallas Portland Timbers 7 5 1T 1 2
 corners espn USA Inter Miami Columbus Crew 3 3 1T 1 1
-resultados: 319
+resultados: 321
 {
- "generated": "2026-11-22T13:06:50.801342+00:00",
+ "generated": "2026-11-22T14:06:54.238473+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -149,7 +149,6 @@ resultados: 319
    "fav": true,
    "fixtures_fd": 12,
    "name_map": {
-    "Blackburn Rovers": "Blackburn",
     "Cardiff City": "Cardiff",
     "Preston North End": "Preston",
     "Charlton Athletic": "Charlton",
@@ -163,9 +162,10 @@ resultados: 319
     "Bolton Wanderers": "Bolton",
     "West Bromwich Albion": "West Brom",
     "Birmingham City": "Birmingham",
+    "Blackburn Rovers": "Blackburn",
     "Stoke City": "Stoke"
    },
-   "fixtures_espn": 25,
+   "fixtures_espn": 24,
    "espn_unmatched": 0,
    "matches": 25
   },
@@ -204,4 +204,4 @@ resultados: 319
     "Rotherham",
     "Sheffield Weds",
     "Steven
-partidos: 348
+partidos: 347
