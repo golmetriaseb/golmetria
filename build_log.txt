@@ -1,8 +1,6 @@
-8 1T None None
-corners espn TUR Kocaelispor Fenerbahce 4 5 1T None None
-corners espn GRE Levadeiakos Atromitos 3 1 1T None None
-corners espn GRE Panetolikos Volos NFC 4 2 1T None None
+2 1T None None
 corners espn GRE Panathinaikos OFI Crete 4 3 1T None None
+corners espn GRE Olympiakos Iraklis 9 0 1T None None
 corners espn GRE Kalamata AEK 2 8 1T None None
 corners espn BRA Palmeiras Flamengo RJ 2 10 1T 1 8
 corners espn BRA Bahia Coritiba 8 9 1T 4 6
@@ -13,6 +11,7 @@ corners espn ARG Velez Sarsfield Belgrano 6 8 1T 5 1
 corners espn DNK Horsens Silkeborg 1 1 1T None None
 corners espn DNK Viborg Randers FC 2 4 1T None None
 corners espn DNK Sonderjyske Odense 6 7 1T None None
+corners espn DNK Nordsjaelland FC Copenhagen 4 5 1T None None
 corners espn DNK Aarhus Lyngby 4 2 1T None None
 corners espn JPN Kyoto Urawa Reds 6 4 1T None None
 corners espn JPN Machida V-Varen Nagasaki 9 2 1T None None
@@ -31,6 +30,7 @@ corners espn MEX Tigres UANL Club America 6 5 1T 1 4
 corners espn MEX Puebla Atl. San Luis 2 7 1T 1 1
 corners espn MEX Juarez Atlas 9 9 1T 5 5
 corners espn MEX Club Tijuana Atlante 5 9 1T 4 2
+corners espn NOR Aalesund Rosenborg 4 11 1T None None
 corners espn NOR Kristiansund Sandefjord 4 8 1T None None
 corners espn NOR Tromso Viking 2 7 1T None None
 corners espn NOR HamKam Fredrikstad 3 3 1T None None
@@ -53,9 +53,9 @@ corners espn SWE GAIS Vasteras SK 5 3 1T None None
 corners espn USA New England Revolution Philadelphia Union 5 9 1T 3 5
 corners espn USA FC Dallas Portland Timbers 7 5 1T 1 2
 corners espn USA Inter Miami Columbus Crew 3 3 1T 1 1
-resultados: 357
+resultados: 366
 {
- "generated": "2026-11-22T17:51:30.451795+00:00",
+ "generated": "2026-11-22T18:59:30.456120+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -91,10 +91,10 @@ resultados: 357
    "fav": false,
    "fixtures_fd": 10,
    "name_map": {
-    "Manchester United": "Man United",
     "Nottingham Forest": "Nott'm Forest",
     "Leeds United": "Leeds",
     "Coventry City": "Coventry",
+    "Manchester United": "Man United",
     "Ipswich Town": "Ipswich",
     "Brighton & Hove Albion": "Brighton",
     "Newcastle United": "Newcastle",
@@ -103,7 +103,7 @@ resultados: 357
     "Tottenham Hotspur": "Tottenham",
     "Manchester City": "Man City"
    },
-   "fixtures_espn": 12,
+   "fixtures_espn": 11,
    "espn_unmatched": 0,
    "matches": 12
   },
@@ -203,4 +203,4 @@ resultados: 357
     "Rotherham",
     "Sheffield Weds",
     "Steven
-partidos: 317
+partidos: 305
