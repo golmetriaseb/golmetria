@@ -1,5 +1,4 @@
-tienne 4 3 1T None None
-corners espn L2 Annecy Clermont 8 7 1T None None
+pn L2 Annecy Clermont 8 7 1T None None
 corners espn L2 Nancy Dijon 7 4 1T None None
 corners espn L2 Guingamp Rodez 5 6 1T None None
 corners espn L2 Metz Boulogne 9 4 1T None None
@@ -35,6 +34,8 @@ corners espn JPN Gamba Osaka Okayama 6 3 1T None None
 corners espn JPN Kashima Antlers Shimizu S-Pulse 7 3 1T None None
 corners espn JPN Kashiwa Reysol Chiba 11 1 1T None None
 corners espn JPN Vissel Kobe Mito 4 2 1T None None
+corners espn MEX Pachuca Toluca 5 2 1T 4 1
+corners espn MEX Santos Laguna Club Leon 4 5 1T 3 2
 corners espn MEX Puebla Atl. San Luis 2 7 1T 1 1
 corners espn MEX Juarez Atlas 9 9 1T 5 5
 corners espn MEX Club Tijuana Atlante 5 9 1T 4 2
@@ -52,11 +53,10 @@ corners espn SWE Mjallby Malmo FF 4 8 1T None None
 corners espn SWE GAIS Vasteras SK 5 3 1T None None
 corners espn USA New England Revolution Philadelphia Union 5 9 1T 3 5
 corners espn USA FC Dallas Portland Timbers 7 5 1T 1 2
-corners espn USA Orlando City FC Cincinnati 3 5 1T 1 5
-corners espn USA Seattle Sounders Real Salt Lake 7 1 1T 4 0
-resultados: 426
+corners espn USA Inter Miami Columbus Crew 3 3 1T 1 1
+resultados: 313
 {
- "generated": "2026-11-21T23:48:48.936770+00:00",
+ "generated": "2026-11-22T01:20:49.039246+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -98,11 +98,15 @@ resultados: 426
     "Nottingham Forest": "Nott'm Forest",
     "Leeds United": "Leeds",
     "Coventry City": "Coventry",
-    "Ipswich Town": "Ipswich"
+    "Ipswich Town": "Ipswich",
+    "Newcastle United": "Newcastle",
+    "AFC Bournemouth": "Bournemouth",
+    "Tottenham Hotspur": "Tottenham",
+    "Manchester City": "Man City"
    },
-   "fixtures_espn": 7,
+   "fixtures_espn": 13,
    "espn_unmatched": 0,
-   "matches": 7
+   "matches": 13
   },
   "ENG": {
    "name": "Championship",
@@ -161,9 +165,9 @@ resultados: 426
     "Birmingham City": "Birmingham",
     "Stoke City": "Stoke"
    },
-   "fixtures_espn": 24,
+   "fixtures_espn": 25,
    "espn_unmatched": 0,
-   "matches": 24
+   "matches": 25
   },
   "EL1": {
    "name": "League One",
@@ -199,14 +203,5 @@ resultados: 426
     "Reading",
     "Rotherham",
     "Sheffield Weds",
-    "Stevenage",
-    "Stockport",
-    "Wigan",
-    "Wycombe"
-   ],
-   "fav": false,
-   "fixtures_fd": 12,
-   "name_map": {
-    "Leicester City": "Leicester",
-   
-partidos: 265
+    "Steven
+partidos: 355
