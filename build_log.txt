@@ -1,6 +1,5 @@
-2 1T None None
-corners espn GRE Panathinaikos OFI Crete 4 3 1T None None
-corners espn GRE Olympiakos Iraklis 9 0 1T None None
+kos Iraklis 9 0 1T None None
+corners espn GRE PAOK Kifisia 8 2 1T None None
 corners espn GRE Kalamata AEK 2 8 1T None None
 corners espn BRA Palmeiras Flamengo RJ 2 10 1T 1 8
 corners espn BRA Bahia Coritiba 8 9 1T 4 6
@@ -32,6 +31,7 @@ corners espn MEX Juarez Atlas 9 9 1T 5 5
 corners espn MEX Club Tijuana Atlante 5 9 1T 4 2
 corners espn NOR Aalesund Rosenborg 4 11 1T None None
 corners espn NOR Kristiansund Sandefjord 4 8 1T None None
+corners espn NOR KFUM Oslo Brann 3 3 1T None None
 corners espn NOR Tromso Viking 2 7 1T None None
 corners espn NOR HamKam Fredrikstad 3 3 1T None None
 corners espn NOR Valerenga Start 5 8 1T None None
@@ -53,9 +53,9 @@ corners espn SWE GAIS Vasteras SK 5 3 1T None None
 corners espn USA New England Revolution Philadelphia Union 5 9 1T 3 5
 corners espn USA FC Dallas Portland Timbers 7 5 1T 1 2
 corners espn USA Inter Miami Columbus Crew 3 3 1T 1 1
-resultados: 366
+resultados: 372
 {
- "generated": "2026-11-22T18:59:30.456120+00:00",
+ "generated": "2026-11-22T19:56:47.600138+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -105,7 +105,7 @@ resultados: 366
    },
    "fixtures_espn": 11,
    "espn_unmatched": 0,
-   "matches": 12
+   "matches": 11
   },
   "ENG": {
    "name": "Championship",
@@ -203,4 +203,4 @@ resultados: 366
     "Rotherham",
     "Sheffield Weds",
     "Steven
-partidos: 305
+partidos: 296
