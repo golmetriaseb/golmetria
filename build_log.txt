@@ -1,12 +1,11 @@
- Brugge Westerlo 2 4 1T None None
-corners espn TUR Erzurumspor Goztep 5 5 1T None None
-corners espn TUR Kasimpasa Alanyaspor 4 1 1T None None
+pasa Alanyaspor 4 1 1T None None
 corners espn TUR Konyaspor Besiktas 2 3 1T None None
 corners espn TUR Genclerbirligi Gaziantep 1 3 1T None None
 corners espn TUR Amedspor Rizespor 7 4 1T None None
 corners espn TUR Galatasaray Samsunspor 5 8 1T None None
 corners espn TUR Kocaelispor Fenerbahce 4 5 1T None None
 corners espn GRE Levadeiakos Atromitos 3 1 1T None None
+corners espn GRE Panetolikos Volos NFC 4 2 1T None None
 corners espn GRE Kalamata AEK 2 8 1T None None
 corners espn BRA Palmeiras Flamengo RJ 2 10 1T 1 8
 corners espn BRA Bahia Coritiba 8 9 1T 4 6
@@ -16,6 +15,7 @@ corners espn ARG Argentinos Jrs Independiente 7 5 1T 3 1
 corners espn ARG Velez Sarsfield Belgrano 6 8 1T 5 1
 corners espn DNK Horsens Silkeborg 1 1 1T None None
 corners espn DNK Viborg Randers FC 2 4 1T None None
+corners espn DNK Sonderjyske Odense 6 7 1T None None
 corners espn DNK Aarhus Lyngby 4 2 1T None None
 corners espn JPN Kyoto Urawa Reds 6 4 1T None None
 corners espn JPN Machida V-Varen Nagasaki 9 2 1T None None
@@ -53,9 +53,9 @@ corners espn SWE GAIS Vasteras SK 5 3 1T None None
 corners espn USA New England Revolution Philadelphia Union 5 9 1T 3 5
 corners espn USA FC Dallas Portland Timbers 7 5 1T 1 2
 corners espn USA Inter Miami Columbus Crew 3 3 1T 1 1
-resultados: 344
+resultados: 348
 {
- "generated": "2026-11-22T15:54:55.057990+00:00",
+ "generated": "2026-11-22T16:56:36.402988+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -203,4 +203,4 @@ resultados: 344
     "Rotherham",
     "Sheffield Weds",
     "Steven
-partidos: 338
+partidos: 324
