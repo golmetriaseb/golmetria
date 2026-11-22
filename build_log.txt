@@ -1,14 +1,9 @@
-en 5 3 1T 2 1
-corners espn ERE Utrecht Cambuur 3 3 1T 2 2
-corners espn ERE Feyenoord Excelsior 8 4 1T 3 1
-corners espn ERE Groningen Heerenveen 4 4 1T 1 2
-corners espn ERE Telstar Zwolle 11 7 1T 4 4
-corners espn BEL Charleroi St Truiden 4 7 1T None None
-corners espn BEL Genk RAAL La Louviere 3 1 1T None None
-corners espn BEL Mechelen Club Brugge 5 7 1T None None
+ers espn BEL Mechelen Club Brugge 5 7 1T None None
 corners espn BEL Waregem Antwerp 8 3 1T None None
 corners espn BEL Cercle Brugge Westerlo 2 4 1T None None
 corners espn TUR Erzurumspor Goztep 5 5 1T None None
+corners espn TUR Kasimpasa Alanyaspor 4 1 1T None None
+corners espn TUR Konyaspor Besiktas 2 3 1T None None
 corners espn TUR Genclerbirligi Gaziantep 1 3 1T None None
 corners espn TUR Amedspor Rizespor 7 4 1T None None
 corners espn TUR Galatasaray Samsunspor 5 8 1T None None
@@ -20,6 +15,8 @@ corners espn BRA Chapecoense-SC Cruzeiro 4 7 1T 2 3
 corners espn ARG Defensa y Justicia Barracas Central 4 3 1T 2 3
 corners espn ARG Argentinos Jrs Independiente 7 5 1T 3 1
 corners espn ARG Velez Sarsfield Belgrano 6 8 1T 5 1
+corners espn DNK Horsens Silkeborg 1 1 1T None None
+corners espn DNK Viborg Randers FC 2 4 1T None None
 corners espn DNK Aarhus Lyngby 4 2 1T None None
 corners espn JPN Kyoto Urawa Reds 6 4 1T None None
 corners espn JPN Machida V-Varen Nagasaki 9 2 1T None None
@@ -48,15 +45,17 @@ corners espn RUS Akron Togliatti Fakel Voronezh 3 5 1T None None
 corners espn RUS Rubin Kazan Zenit 5 3 1T None None
 corners espn RUS CSKA Moscow Akhmat Grozny 8 5 1T None None
 corners espn RUS FK Rostov Krylya Sovetov 5 5 1T None None
+corners espn SWE Hacken Elfsborg 7 7 1T None None
+corners espn SWE Sirius Djurgarden 3 6 1T None None
 corners espn SWE AIK Degerfors 8 3 1T None None
 corners espn SWE Mjallby Malmo FF 4 8 1T None None
 corners espn SWE GAIS Vasteras SK 5 3 1T None None
 corners espn USA New England Revolution Philadelphia Union 5 9 1T 3 5
 corners espn USA FC Dallas Portland Timbers 7 5 1T 1 2
 corners espn USA Inter Miami Columbus Crew 3 3 1T 1 1
-resultados: 321
+resultados: 333
 {
- "generated": "2026-11-22T14:06:54.238473+00:00",
+ "generated": "2026-11-22T14:57:50.141102+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -204,4 +203,4 @@ resultados: 321
     "Rotherham",
     "Sheffield Weds",
     "Steven
-partidos: 347
+partidos: 344
