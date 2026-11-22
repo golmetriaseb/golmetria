@@ -1,6 +1,4 @@
-ers espn BEL Mechelen Club Brugge 5 7 1T None None
-corners espn BEL Waregem Antwerp 8 3 1T None None
-corners espn BEL Cercle Brugge Westerlo 2 4 1T None None
+ Brugge Westerlo 2 4 1T None None
 corners espn TUR Erzurumspor Goztep 5 5 1T None None
 corners espn TUR Kasimpasa Alanyaspor 4 1 1T None None
 corners espn TUR Konyaspor Besiktas 2 3 1T None None
@@ -8,6 +6,7 @@ corners espn TUR Genclerbirligi Gaziantep 1 3 1T None None
 corners espn TUR Amedspor Rizespor 7 4 1T None None
 corners espn TUR Galatasaray Samsunspor 5 8 1T None None
 corners espn TUR Kocaelispor Fenerbahce 4 5 1T None None
+corners espn GRE Levadeiakos Atromitos 3 1 1T None None
 corners espn GRE Kalamata AEK 2 8 1T None None
 corners espn BRA Palmeiras Flamengo RJ 2 10 1T 1 8
 corners espn BRA Bahia Coritiba 8 9 1T 4 6
@@ -40,6 +39,7 @@ corners espn NOR HamKam Fredrikstad 3 3 1T None None
 corners espn NOR Valerenga Start 5 8 1T None None
 corners espn NOR Molde Bodo/Glimt 7 6 1T None None
 corners espn RUS Dynamo Moscow Krasnodar 2 7 1T None None
+corners espn RUS Dynamo Makhachkala Spartak Moscow 7 5 1T None None
 corners espn RUS Orenburg Baltika 5 9 1T None None
 corners espn RUS Akron Togliatti Fakel Voronezh 3 5 1T None None
 corners espn RUS Rubin Kazan Zenit 5 3 1T None None
@@ -53,9 +53,9 @@ corners espn SWE GAIS Vasteras SK 5 3 1T None None
 corners espn USA New England Revolution Philadelphia Union 5 9 1T 3 5
 corners espn USA FC Dallas Portland Timbers 7 5 1T 1 2
 corners espn USA Inter Miami Columbus Crew 3 3 1T 1 1
-resultados: 333
+resultados: 344
 {
- "generated": "2026-11-22T14:57:50.141102+00:00",
+ "generated": "2026-11-22T15:54:55.057990+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -91,19 +91,19 @@ resultados: 333
    "fav": false,
    "fixtures_fd": 10,
    "name_map": {
-    "Hull City": "Hull",
-    "Brighton & Hove Albion": "Brighton",
     "Manchester United": "Man United",
     "Nottingham Forest": "Nott'm Forest",
     "Leeds United": "Leeds",
     "Coventry City": "Coventry",
     "Ipswich Town": "Ipswich",
+    "Brighton & Hove Albion": "Brighton",
     "Newcastle United": "Newcastle",
+    "Hull City": "Hull",
     "AFC Bournemouth": "Bournemouth",
     "Tottenham Hotspur": "Tottenham",
     "Manchester City": "Man City"
    },
-   "fixtures_espn": 13,
+   "fixtures_espn": 12,
    "espn_unmatched": 0,
    "matches": 13
   },
@@ -166,7 +166,7 @@ resultados: 333
    },
    "fixtures_espn": 24,
    "espn_unmatched": 0,
-   "matches": 25
+   "matches": 24
   },
   "EL1": {
    "name": "League One",
@@ -203,4 +203,4 @@ resultados: 333
     "Rotherham",
     "Sheffield Weds",
     "Steven
-partidos: 344
+partidos: 338
