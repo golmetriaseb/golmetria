@@ -1,6 +1,4 @@
-oulogne 9 4 1T None None
-corners espn L2 Red Star Pau FC 5 8 1T None None
-corners espn ERE Nijmegen PSV Eindhoven 5 3 1T 2 1
+en 5 3 1T 2 1
 corners espn ERE Utrecht Cambuur 3 3 1T 2 2
 corners espn ERE Feyenoord Excelsior 8 4 1T 3 1
 corners espn ERE Groningen Heerenveen 4 4 1T 1 2
@@ -10,6 +8,7 @@ corners espn BEL Genk RAAL La Louviere 3 1 1T None None
 corners espn BEL Mechelen Club Brugge 5 7 1T None None
 corners espn BEL Waregem Antwerp 8 3 1T None None
 corners espn BEL Cercle Brugge Westerlo 2 4 1T None None
+corners espn TUR Erzurumspor Goztep 5 5 1T None None
 corners espn TUR Genclerbirligi Gaziantep 1 3 1T None None
 corners espn TUR Amedspor Rizespor 7 4 1T None None
 corners espn TUR Galatasaray Samsunspor 5 8 1T None None
@@ -43,6 +42,7 @@ corners espn NOR Tromso Viking 2 7 1T None None
 corners espn NOR HamKam Fredrikstad 3 3 1T None None
 corners espn NOR Valerenga Start 5 8 1T None None
 corners espn NOR Molde Bodo/Glimt 7 6 1T None None
+corners espn RUS Dynamo Moscow Krasnodar 2 7 1T None None
 corners espn RUS Orenburg Baltika 5 9 1T None None
 corners espn RUS Akron Togliatti Fakel Voronezh 3 5 1T None None
 corners espn RUS Rubin Kazan Zenit 5 3 1T None None
@@ -54,9 +54,9 @@ corners espn SWE GAIS Vasteras SK 5 3 1T None None
 corners espn USA New England Revolution Philadelphia Union 5 9 1T 3 5
 corners espn USA FC Dallas Portland Timbers 7 5 1T 1 2
 corners espn USA Inter Miami Columbus Crew 3 3 1T 1 1
-resultados: 316
+resultados: 319
 {
- "generated": "2026-11-22T11:52:44.666471+00:00",
+ "generated": "2026-11-22T13:06:50.801342+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
