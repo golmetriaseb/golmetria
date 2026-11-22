@@ -1,11 +1,8 @@
-pasa Alanyaspor 4 1 1T None None
-corners espn TUR Konyaspor Besiktas 2 3 1T None None
-corners espn TUR Genclerbirligi Gaziantep 1 3 1T None None
-corners espn TUR Amedspor Rizespor 7 4 1T None None
-corners espn TUR Galatasaray Samsunspor 5 8 1T None None
+8 1T None None
 corners espn TUR Kocaelispor Fenerbahce 4 5 1T None None
 corners espn GRE Levadeiakos Atromitos 3 1 1T None None
 corners espn GRE Panetolikos Volos NFC 4 2 1T None None
+corners espn GRE Panathinaikos OFI Crete 4 3 1T None None
 corners espn GRE Kalamata AEK 2 8 1T None None
 corners espn BRA Palmeiras Flamengo RJ 2 10 1T 1 8
 corners espn BRA Bahia Coritiba 8 9 1T 4 6
@@ -34,12 +31,14 @@ corners espn MEX Tigres UANL Club America 6 5 1T 1 4
 corners espn MEX Puebla Atl. San Luis 2 7 1T 1 1
 corners espn MEX Juarez Atlas 9 9 1T 5 5
 corners espn MEX Club Tijuana Atlante 5 9 1T 4 2
+corners espn NOR Kristiansund Sandefjord 4 8 1T None None
 corners espn NOR Tromso Viking 2 7 1T None None
 corners espn NOR HamKam Fredrikstad 3 3 1T None None
 corners espn NOR Valerenga Start 5 8 1T None None
 corners espn NOR Molde Bodo/Glimt 7 6 1T None None
 corners espn RUS Dynamo Moscow Krasnodar 2 7 1T None None
 corners espn RUS Dynamo Makhachkala Spartak Moscow 7 5 1T None None
+corners espn RUS Rodina Moscow Lokomotiv Moscow 6 3 1T None None
 corners espn RUS Orenburg Baltika 5 9 1T None None
 corners espn RUS Akron Togliatti Fakel Voronezh 3 5 1T None None
 corners espn RUS Rubin Kazan Zenit 5 3 1T None None
@@ -47,15 +46,16 @@ corners espn RUS CSKA Moscow Akhmat Grozny 8 5 1T None None
 corners espn RUS FK Rostov Krylya Sovetov 5 5 1T None None
 corners espn SWE Hacken Elfsborg 7 7 1T None None
 corners espn SWE Sirius Djurgarden 3 6 1T None None
+corners espn SWE Brommapojkarna Halmstad 7 1 1T None None
 corners espn SWE AIK Degerfors 8 3 1T None None
 corners espn SWE Mjallby Malmo FF 4 8 1T None None
 corners espn SWE GAIS Vasteras SK 5 3 1T None None
 corners espn USA New England Revolution Philadelphia Union 5 9 1T 3 5
 corners espn USA FC Dallas Portland Timbers 7 5 1T 1 2
 corners espn USA Inter Miami Columbus Crew 3 3 1T 1 1
-resultados: 348
+resultados: 357
 {
- "generated": "2026-11-22T16:56:36.402988+00:00",
+ "generated": "2026-11-22T17:51:30.451795+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -105,7 +105,7 @@ resultados: 348
    },
    "fixtures_espn": 12,
    "espn_unmatched": 0,
-   "matches": 13
+   "matches": 12
   },
   "ENG": {
    "name": "Championship",
@@ -203,4 +203,4 @@ resultados: 348
     "Rotherham",
     "Sheffield Weds",
     "Steven
-partidos: 324
+partidos: 317
