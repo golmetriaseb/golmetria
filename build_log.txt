@@ -1,8 +1,6 @@
-ne
-corners espn BRA Palmeiras Flamengo RJ 2 10 1T 1 8
-corners espn BRA Bahia Coritiba 8 9 1T 4 6
-corners espn BRA Chapecoense-SC Cruzeiro 4 7 1T 2 3
+ers espn BRA Chapecoense-SC Cruzeiro 4 7 1T 2 3
 corners espn ARG Rosario Central Gimnasia Mendoza 4 1 1T 1 0
+corners espn ARG River Plate Lanus 5 4 1T 1 3
 corners espn ARG Defensa y Justicia Barracas Central 4 3 1T 2 3
 corners espn ARG Argentinos Jrs Independiente 7 5 1T 3 1
 corners espn ARG Velez Sarsfield Belgrano 6 8 1T 5 1
@@ -50,12 +48,13 @@ corners espn SWE Brommapojkarna Halmstad 7 1 1T None None
 corners espn SWE AIK Degerfors 8 3 1T None None
 corners espn SWE Mjallby Malmo FF 4 8 1T None None
 corners espn SWE GAIS Vasteras SK 5 3 1T None None
+corners espn USA Nashville SC FC Cincinnati 9 2 1T 4 1
 corners espn USA New England Revolution Philadelphia Union 5 9 1T 3 5
 corners espn USA FC Dallas Portland Timbers 7 5 1T 1 2
 corners espn USA Inter Miami Columbus Crew 3 3 1T 1 1
-resultados: 381
+resultados: 385
 {
- "generated": "2026-11-22T22:53:51.059080+00:00",
+ "generated": "2026-11-22T23:52:15.450497+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -203,4 +202,4 @@ resultados: 381
     "Rotherham",
     "Sheffield Weds",
     "Steven
-partidos: 280
+partidos: 277
