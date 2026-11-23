@@ -53,9 +53,9 @@ corners espn USA Vancouver Whitecaps Real Salt Lake 7 8 1T 4 4
 corners espn USA New England Revolution Philadelphia Union 5 9 1T 3 5
 corners espn USA FC Dallas Portland Timbers 7 5 1T 1 2
 corners espn USA Inter Miami Columbus Crew 3 3 1T 1 1
-resultados: 273
+resultados: 280
 {
- "generated": "2026-11-23T21:01:54.370924+00:00",
+ "generated": "2026-11-23T22:00:56.038064+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -103,7 +103,7 @@ resultados: 273
     "Tottenham Hotspur": "Tottenham",
     "Manchester City": "Man City"
    },
-   "fixtures_espn": 11,
+   "fixtures_espn": 10,
    "espn_unmatched": 0,
    "matches": 11
   },
@@ -203,4 +203,4 @@ resultados: 273
     "Rotherham",
     "Sheffield Weds",
     "Steven
-partidos: 273
+partidos: 272
