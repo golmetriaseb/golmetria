@@ -55,7 +55,7 @@ corners espn USA FC Dallas Portland Timbers 7 5 1T 1 2
 corners espn USA Inter Miami Columbus Crew 3 3 1T 1 1
 resultados: 269
 {
- "generated": "2026-11-23T17:12:52.944204+00:00",
+ "generated": "2026-11-23T18:10:47.556197+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -203,4 +203,4 @@ resultados: 269
     "Rotherham",
     "Sheffield Weds",
     "Steven
-partidos: 280
+partidos: 279
