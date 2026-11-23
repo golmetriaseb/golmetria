@@ -1,7 +1,4 @@
-T None None
-corners espn BRA Athletico-PR Remo 4 4 1T None None
-corners espn BRA Fluminense Mirassol 8 1 1T 3 1
-corners espn BRA Bragantino Vasco 5 4 1T None None
+ne None
 corners espn BRA Palmeiras Flamengo RJ 2 10 1T 1 8
 corners espn BRA Bahia Coritiba 8 9 1T 4 6
 corners espn BRA Chapecoense-SC Cruzeiro 4 7 1T 2 3
@@ -10,6 +7,7 @@ corners espn ARG River Plate Lanus 5 4 1T 1 3
 corners espn ARG Instituto Huracan 2 3 1T 1 0
 corners espn ARG Defensa y Justicia Barracas Central 4 3 1T 2 3
 corners espn ARG Argentinos Jrs Independiente 7 5 1T 3 1
+corners espn DNK Brondby Midtjylland 7 1 1T None None
 corners espn DNK Horsens Silkeborg 1 1 1T None None
 corners espn DNK Viborg Randers FC 2 4 1T None None
 corners espn DNK Sonderjyske Odense 6 7 1T None None
@@ -41,6 +39,8 @@ corners espn RUS Orenburg Baltika 5 9 1T None None
 corners espn RUS Akron Togliatti Fakel Voronezh 3 5 1T None None
 corners espn RUS Rubin Kazan Zenit 5 3 1T None None
 corners espn RUS CSKA Moscow Akhmat Grozny 8 5 1T None None
+corners espn SWE Hammarby Goteborg 6 4 1T None None
+corners espn SWE Orgryte Kalmar 1 1 1T None None
 corners espn SWE Hacken Elfsborg 7 7 1T None None
 corners espn SWE Sirius Djurgarden 3 6 1T None None
 corners espn SWE Brommapojkarna Halmstad 7 1 1T None None
@@ -53,9 +53,9 @@ corners espn USA Vancouver Whitecaps Real Salt Lake 7 8 1T 4 4
 corners espn USA New England Revolution Philadelphia Union 5 9 1T 3 5
 corners espn USA FC Dallas Portland Timbers 7 5 1T 1 2
 corners espn USA Inter Miami Columbus Crew 3 3 1T 1 1
-resultados: 270
+resultados: 273
 {
- "generated": "2026-11-23T19:13:06.612480+00:00",
+ "generated": "2026-11-23T20:13:05.913545+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -203,4 +203,4 @@ resultados: 270
     "Rotherham",
     "Sheffield Weds",
     "Steven
-partidos: 279
+partidos: 278
