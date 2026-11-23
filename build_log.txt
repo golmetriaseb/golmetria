@@ -1,5 +1,4 @@
-OK Kifisia 8 2 1T None None
-corners espn GRE Kalamata AEK 2 8 1T None None
+T None None
 corners espn BRA Athletico-PR Remo 4 4 1T None None
 corners espn BRA Fluminense Mirassol 8 1 1T 3 1
 corners espn BRA Bragantino Vasco 5 4 1T None None
@@ -50,12 +49,13 @@ corners espn SWE Mjallby Malmo FF 4 8 1T None None
 corners espn SWE GAIS Vasteras SK 5 3 1T None None
 corners espn USA Nashville SC FC Cincinnati 9 2 1T 4 1
 corners espn USA Chicago Fire Charlotte 5 8 1T 1 2
+corners espn USA Vancouver Whitecaps Real Salt Lake 7 8 1T 4 4
 corners espn USA New England Revolution Philadelphia Union 5 9 1T 3 5
 corners espn USA FC Dallas Portland Timbers 7 5 1T 1 2
 corners espn USA Inter Miami Columbus Crew 3 3 1T 1 1
-resultados: 251
+resultados: 252
 {
- "generated": "2026-11-23T03:06:49.939162+00:00",
+ "generated": "2026-11-23T04:20:00.681850+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -203,4 +203,4 @@ resultados: 251
     "Rotherham",
     "Sheffield Weds",
     "Steven
-partidos: 283
+partidos: 266
