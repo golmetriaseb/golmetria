@@ -35,12 +35,17 @@ espn historial CHN eventos 275 con córners en historial 275
 espn historial solo ECU partidos 365 con córners 288 con 1T córners 0
 espn historial solo URU partidos 332 con córners 0 con 1T córners 0
 corners espn SB Juve Stabia Catanzaro 1 3 1T None None
+corners espn SB Benevento Empoli 3 8 1T None None
+corners espn SB Cesena Ascoli 6 4 1T None None
+corners espn SB Palermo Sudtirol 4 3 1T None None
+corners espn SB Vicenza Carrarese 8 3 1T None None
+corners espn SB Virtus Entella Verona 7 5 1T None None
 corners espn RUS Dynamo Moscow Krasnodar 2 7 1T None None
 corners espn RUS Dynamo Makhachkala Spartak Moscow 7 5 1T None None
 corners espn RUS Rodina Moscow Lokomotiv Moscow 6 3 1T None None
-resultados: 308
+resultados: 313
 {
- "generated": "2026-11-24T20:12:28.230250+00:00",
+ "generated": "2026-11-24T21:05:44.429948+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -188,4 +193,4 @@ resultados: 308
     "Rotherham",
     "Sheffield Weds",
     "Stevena
-partidos: 285
+partidos: 284
