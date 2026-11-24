@@ -39,7 +39,7 @@ corners espn RUS Dynamo Makhachkala Spartak Moscow 7 5 1T None None
 corners espn RUS Rodina Moscow Lokomotiv Moscow 6 3 1T None None
 resultados: 307
 {
- "generated": "2026-11-24T09:20:22.266315+00:00",
+ "generated": "2026-11-24T11:03:12.470797+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -73,7 +73,7 @@ resultados: 307
     "Wolves"
    ],
    "fav": false,
-   "fixtures_fd": 10,
+   "fixtures_fd": 0,
    "name_map": {
     "Nottingham Forest": "Nott'm Forest",
     "Leeds United": "Leeds",
@@ -186,5 +186,5 @@ resultados: 307
     "Reading",
     "Rotherham",
     "Sheffield Weds",
-    "Steven
+    "Stevena
 partidos: 285
