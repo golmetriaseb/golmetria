@@ -1,59 +1,45 @@
-ners en historial 353
+espn historial EPL eventos 430 con córners en historial 430
+espn historial ENG eventos 653 con córners en historial 653
+espn historial EL1 eventos 610 con córners en historial 610
+espn historial SCO eventos 272 con córners en historial 272
+espn historial SC1 eventos 218 con córners en historial 135
+espn historial GB1 eventos 351 con córners en historial 351
+espn historial GER eventos 351 con córners en historial 349
+espn historial SA eventos 450 con córners en historial 450
+espn historial SB eventos 444 con córners en historial 444
+espn historial LL eventos 439 con córners en historial 439
+espn historial LL2 eventos 547 con córners en historial 547
+espn historial L1 eventos 350 con córners en historial 311
+espn historial L2 eventos 351 con córners en historial 350
+espn historial ERE eventos 359 con córners en historial 359
+espn historial BEL eventos 348 con córners en historial 347
+espn historial POR eventos 341 con córners en historial 341
+espn historial TUR eventos 353 con córners en historial 353
 espn historial GRE eventos 278 con córners en historial 108
 espn historial SUI eventos 0 con córners en historial 0
-espn historial BRA eventos 477 con córners en historial 447
-espn historial ARG eventos 589 con córners en historial 548
-espn historial AUT eventos 217 con córners en historial 151
-espn historial DNK eventos 216 con córners en historial 216
+espn historial BRA eventos 486 con córners en historial 456
+espn historial ARG eventos 596 con córners en historial 555
+espn historial AUT eventos 223 con córners en historial 151
+espn historial DNK eventos 222 con córners en historial 222
 espn historial FIN eventos 0 con córners en historial 0
 espn historial IRL eventos 20 con córners en historial 0
-espn historial JPN eventos 199 con córners en historial 180
-espn historial MEX eventos 259 con córners en historial 259
-espn historial NOR eventos 267 con córners en historial 267
+espn historial JPN eventos 209 con córners en historial 189
+espn historial MEX eventos 265 con córners en historial 265
+espn historial NOR eventos 275 con córners en historial 275
 espn historial POL eventos 0 con córners en historial 0
 espn historial ROU eventos 0 con córners en historial 0
 espn historial RUS eventos 176 con córners en historial 156
-espn historial SWE eventos 264 con córners en historial 264
-espn historial USA eventos 421 con córners en historial 420
+espn historial SWE eventos 272 con córners en historial 272
+espn historial USA eventos 428 con córners en historial 427
 espn historial CHN eventos 275 con córners en historial 275
 espn historial solo ECU partidos 365 con córners 288 con 1T córners 0
 espn historial solo URU partidos 332 con córners 0 con 1T córners 0
-corners espn BRA Internacional Vitoria 11 5 1T 5 4
-corners espn BRA Botafogo RJ Sao Paulo 6 3 1T 2 0
-corners espn BRA Santos Gremio 9 2 1T 4 1
-corners espn BRA Athletico-PR Remo 4 4 1T None None
-corners espn BRA Fluminense Mirassol 8 1 1T 3 1
-corners espn BRA Bragantino Vasco 5 4 1T None None
-corners espn ARG Gimnasia L.P. Newells Old Boys 4 8 1T 1 4
-corners espn ARG Rosario Central Gimnasia Mendoza 4 1 1T 1 0
-corners espn ARG River Plate Lanus 5 4 1T 1 3
-corners espn ARG Instituto Huracan 2 3 1T 1 0
-corners espn DNK Brondby Midtjylland 7 1 1T None None
-corners espn DNK Horsens Silkeborg 1 1 1T None None
-corners espn DNK Viborg Randers FC 2 4 1T None None
-corners espn DNK Sonderjyske Odense 6 7 1T None None
-corners espn DNK Nordsjaelland FC Copenhagen 4 5 1T None None
-corners espn MEX Guadalajara Chivas Cruz Azul 3 5 1T 2 3
-corners espn MEX Queretaro Necaxa 5 6 1T 2 3
-corners espn NOR Aalesund Rosenborg 4 11 1T None None
-corners espn NOR Kristiansund Sandefjord 4 8 1T None None
-corners espn NOR KFUM Oslo Brann 3 3 1T None None
-corners espn NOR Sarpsborg 08 Lillestrom 10 4 1T None None
 corners espn RUS Dynamo Moscow Krasnodar 2 7 1T None None
 corners espn RUS Dynamo Makhachkala Spartak Moscow 7 5 1T None None
 corners espn RUS Rodina Moscow Lokomotiv Moscow 6 3 1T None None
-corners espn SWE Hammarby Goteborg 6 4 1T None None
-corners espn SWE Orgryte Kalmar 1 1 1T None None
-corners espn SWE Hacken Elfsborg 7 7 1T None None
-corners espn SWE Sirius Djurgarden 3 6 1T None None
-corners espn SWE Brommapojkarna Halmstad 7 1 1T None None
-corners espn USA St. Louis City Los Angeles FC 7 2 1T None None
-corners espn USA Nashville SC FC Cincinnati 9 2 1T 4 1
-corners espn USA Chicago Fire Charlotte 5 8 1T 1 2
-corners espn USA Vancouver Whitecaps Real Salt Lake 7 8 1T 4 4
-resultados: 245
+resultados: 307
 {
- "generated": "2026-11-24T07:32:13.733773+00:00",
+ "generated": "2026-11-24T09:20:22.266315+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -201,4 +187,4 @@ resultados: 245
     "Rotherham",
     "Sheffield Weds",
     "Steven
-partidos: 283
+partidos: 285
