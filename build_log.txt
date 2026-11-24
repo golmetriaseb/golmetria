@@ -1,5 +1,4 @@
-órners en historial 341
-espn historial TUR eventos 353 con córners en historial 353
+ners en historial 353
 espn historial GRE eventos 278 con córners en historial 108
 espn historial SUI eventos 0 con córners en historial 0
 espn historial BRA eventos 477 con córners en historial 447
@@ -48,12 +47,13 @@ corners espn SWE Orgryte Kalmar 1 1 1T None None
 corners espn SWE Hacken Elfsborg 7 7 1T None None
 corners espn SWE Sirius Djurgarden 3 6 1T None None
 corners espn SWE Brommapojkarna Halmstad 7 1 1T None None
+corners espn USA St. Louis City Los Angeles FC 7 2 1T None None
 corners espn USA Nashville SC FC Cincinnati 9 2 1T 4 1
 corners espn USA Chicago Fire Charlotte 5 8 1T 1 2
 corners espn USA Vancouver Whitecaps Real Salt Lake 7 8 1T 4 4
-resultados: 244
+resultados: 245
 {
- "generated": "2026-11-24T03:01:57.311669+00:00",
+ "generated": "2026-11-24T04:11:41.629610+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -201,4 +201,4 @@ resultados: 244
     "Rotherham",
     "Sheffield Weds",
     "Steven
-partidos: 276
+partidos: 275
