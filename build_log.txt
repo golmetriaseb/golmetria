@@ -54,14 +54,14 @@ corners espn USA FC Dallas Portland Timbers 7 5 1T 1 2
 corners espn USA Inter Miami Columbus Crew 3 3 1T 1 1
 resultados: 281
 {
- "generated": "2026-11-23T23:03:02.573412+00:00",
+ "generated": "2026-11-23T23:58:49.714000+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
-   "hist": 489,
-   "last_result": "2026-11-22",
-   "has_corners": 489,
-   "has_half": 489,
+   "hist": 490,
+   "last_result": "2026-11-23",
+   "has_corners": 490,
+   "has_half": 490,
    "teams": [
     "Arsenal",
     "Aston Villa",
