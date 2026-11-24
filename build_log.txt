@@ -1,5 +1,4 @@
-l 347
-espn historial POR eventos 341 con córners en historial 341
+órners en historial 341
 espn historial TUR eventos 353 con córners en historial 353
 espn historial GRE eventos 278 con córners en historial 108
 espn historial SUI eventos 0 con córners en historial 0
@@ -22,6 +21,7 @@ espn historial solo ECU partidos 365 con córners 288 con 1T córners 0
 espn historial solo URU partidos 332 con córners 0 con 1T córners 0
 corners espn BRA Internacional Vitoria 11 5 1T 5 4
 corners espn BRA Botafogo RJ Sao Paulo 6 3 1T 2 0
+corners espn BRA Santos Gremio 9 2 1T 4 1
 corners espn BRA Athletico-PR Remo 4 4 1T None None
 corners espn BRA Fluminense Mirassol 8 1 1T 3 1
 corners espn BRA Bragantino Vasco 5 4 1T None None
@@ -51,9 +51,9 @@ corners espn SWE Brommapojkarna Halmstad 7 1 1T None None
 corners espn USA Nashville SC FC Cincinnati 9 2 1T 4 1
 corners espn USA Chicago Fire Charlotte 5 8 1T 1 2
 corners espn USA Vancouver Whitecaps Real Salt Lake 7 8 1T 4 4
-resultados: 243
+resultados: 244
 {
- "generated": "2026-11-24T01:25:14.066415+00:00",
+ "generated": "2026-11-24T03:01:57.311669+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -201,4 +201,4 @@ resultados: 243
     "Rotherham",
     "Sheffield Weds",
     "Steven
-partidos: 279
+partidos: 276
