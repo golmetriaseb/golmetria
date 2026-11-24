@@ -1,5 +1,4 @@
-torial 349
-espn historial SA eventos 450 con córners en historial 450
+en historial 450
 espn historial SB eventos 444 con córners en historial 444
 espn historial LL eventos 439 con córners en historial 439
 espn historial LL2 eventos 547 con córners en historial 547
@@ -48,12 +47,13 @@ corners espn SB Cesena Ascoli 6 4 1T None None
 corners espn SB Palermo Sudtirol 4 3 1T None None
 corners espn SB Vicenza Carrarese 8 3 1T None None
 corners espn SB Virtus Entella Verona 7 5 1T None None
+corners espn BRA Chapecoense-SC Palmeiras 5 10 1T 0 4
 corners espn RUS Dynamo Moscow Krasnodar 2 7 1T None None
 corners espn RUS Dynamo Makhachkala Spartak Moscow 7 5 1T None None
 corners espn RUS Rodina Moscow Lokomotiv Moscow 6 3 1T None None
-resultados: 327
+resultados: 328
 {
- "generated": "2026-11-24T22:08:41.341024+00:00",
+ "generated": "2026-11-24T23:07:16.375660+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -164,7 +164,7 @@ resultados: 327
    },
    "fixtures_espn": 16,
    "espn_unmatched": 0,
-   "matches": 24
+   "matches": 16
   },
   "EL1": {
    "name": "League One",
@@ -201,4 +201,4 @@ resultados: 327
     "Rotherham",
     "Sheffield Weds",
     "Stevena
-partidos: 279
+partidos: 265
