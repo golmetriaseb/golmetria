@@ -1,5 +1,4 @@
-硆ners en historial 350
-espn historial ERE eventos 359 con c贸rners en historial 359
+59 con c贸rners en historial 359
 espn historial BEL eventos 348 con c贸rners en historial 347
 espn historial POR eventos 341 con c贸rners en historial 341
 espn historial TUR eventos 353 con c贸rners en historial 353
@@ -36,6 +35,7 @@ corners espn EL1 Bromley Wycombe 6 4 1T None None
 corners espn EL1 Stevenage Sheffield Weds 5 7 1T None None
 corners espn SCO Hibernian Dundee 5 3 1T None None
 corners espn SCO Rangers Aberdeen 3 3 1T None None
+corners espn SB Cremonese Avellino 5 5 1T None None
 corners espn SB Juve Stabia Catanzaro 1 3 1T None None
 corners espn SB Benevento Empoli 3 8 1T None None
 corners espn SB Cesena Ascoli 6 4 1T None None
@@ -51,9 +51,9 @@ corners espn JPN Mito FC Tokyo 6 2 1T None None
 corners espn JPN V-Varen Nagasaki Kawasaki Frontale 5 7 1T None None
 corners espn JPN Urawa Reds Cerezo Osaka 3 10 1T None None
 corners espn USA San Jose Earthquakes Houston Dynamo 7 5 1T 5 1
-resultados: 333
+resultados: 334
 {
- "generated": "2026-11-25T19:05:26.405823+00:00",
+ "generated": "2026-11-25T20:06:23.750179+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
