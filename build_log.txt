@@ -1,4 +1,7 @@
-en historial 450
+córners en historial 135
+espn historial GB1 eventos 351 con córners en historial 351
+espn historial GER eventos 351 con córners en historial 349
+espn historial SA eventos 450 con córners en historial 450
 espn historial SB eventos 444 con córners en historial 444
 espn historial LL eventos 439 con córners en historial 439
 espn historial LL2 eventos 547 con córners en historial 547
@@ -10,7 +13,7 @@ espn historial POR eventos 341 con córners en historial 341
 espn historial TUR eventos 353 con córners en historial 353
 espn historial GRE eventos 278 con córners en historial 108
 espn historial SUI eventos 0 con córners en historial 0
-espn historial BRA eventos 486 con córners en historial 456
+espn historial BRA eventos 487 con córners en historial 456
 espn historial ARG eventos 596 con córners en historial 555
 espn historial AUT eventos 223 con córners en historial 151
 espn historial DNK eventos 222 con córners en historial 222
@@ -48,12 +51,9 @@ corners espn SB Palermo Sudtirol 4 3 1T None None
 corners espn SB Vicenza Carrarese 8 3 1T None None
 corners espn SB Virtus Entella Verona 7 5 1T None None
 corners espn BRA Chapecoense-SC Palmeiras 5 10 1T 0 4
-corners espn RUS Dynamo Moscow Krasnodar 2 7 1T None None
-corners espn RUS Dynamo Makhachkala Spartak Moscow 7 5 1T None None
-corners espn RUS Rodina Moscow Lokomotiv Moscow 6 3 1T None None
-resultados: 328
+resultados: 325
 {
- "generated": "2026-11-24T23:57:18.815495+00:00",
+ "generated": "2026-11-25T01:29:12.711255+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -101,9 +101,9 @@ resultados: 328
     "Tottenham Hotspur": "Tottenham",
     "Manchester City": "Man City"
    },
-   "fixtures_espn": 11,
+   "fixtures_espn": 19,
    "espn_unmatched": 0,
-   "matches": 11
+   "matches": 19
   },
   "ENG": {
    "name": "Championship",
@@ -201,4 +201,4 @@ resultados: 328
     "Rotherham",
     "Sheffield Weds",
     "Stevena
-partidos: 265
+partidos: 296
