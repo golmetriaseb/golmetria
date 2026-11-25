@@ -1,7 +1,4 @@
-storial 341
-espn historial TUR eventos 353 con córners en historial 353
-espn historial GRE eventos 278 con córners en historial 108
-espn historial SUI eventos 0 con córners en historial 0
+storial 0
 espn historial BRA eventos 487 con córners en historial 456
 espn historial ARG eventos 596 con córners en historial 555
 espn historial AUT eventos 223 con córners en historial 151
@@ -19,6 +16,10 @@ espn historial USA eventos 428 con córners en historial 427
 espn historial CHN eventos 275 con córners en historial 275
 espn historial solo ECU partidos 365 con córners 288 con 1T córners 0
 espn historial solo URU partidos 332 con córners 0 con 1T córners 0
+corners espn ENG Bolton West Brom 1 4 1T 0 2
+corners espn ENG Burnley Birmingham 9 7 1T 6 3
+corners espn ENG Watford Blackburn 5 4 1T 3 0
+corners espn ENG Stoke Millwall 2 5 1T 2 1
 corners espn ENG Bristol City Wrexham 4 9 1T 0 4
 corners espn ENG Cardiff Preston 8 8 1T 4 3
 corners espn ENG Charlton Lincoln 10 3 1T 6 3
@@ -52,9 +53,9 @@ corners espn JPN Mito FC Tokyo 6 2 1T None None
 corners espn JPN V-Varen Nagasaki Kawasaki Frontale 5 7 1T None None
 corners espn JPN Urawa Reds Cerezo Osaka 3 10 1T None None
 corners espn USA San Jose Earthquakes Houston Dynamo 7 5 1T 5 1
-resultados: 337
+resultados: 341
 {
- "generated": "2026-11-25T21:07:47.928038+00:00",
+ "generated": "2026-11-25T22:07:24.424780+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -147,23 +148,23 @@ resultados: 337
    "fav": true,
    "fixtures_fd": 12,
    "name_map": {
-    "Bolton Wanderers": "Bolton",
-    "West Bromwich Albion": "West Brom",
-    "Birmingham City": "Birmingham",
     "Blackburn Rovers": "Blackburn",
-    "Stoke City": "Stoke",
     "Charlton Athletic": "Charlton",
     "Lincoln City": "Lincoln",
     "Wolverhampton Wanderers": "Wolves",
     "Preston North End": "Preston",
     "Norwich City": "Norwich",
+    "Birmingham City": "Birmingham",
+    "Bolton Wanderers": "Bolton",
     "Derby County": "Derby",
     "Queens Park Rangers": "QPR",
+    "West Bromwich Albion": "West Brom",
     "West Ham United": "West Ham",
+    "Stoke City": "Stoke",
     "Swansea City": "Swansea",
     "Cardiff City": "Cardiff"
    },
-   "fixtures_espn": 16,
+   "fixtures_espn": 12,
    "espn_unmatched": 0,
    "matches": 16
   },
@@ -202,4 +203,4 @@ resultados: 337
     "Rotherham",
     "Sheffield Weds",
     "Stevena
-partidos: 290
+partidos: 287
