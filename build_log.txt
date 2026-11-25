@@ -1,10 +1,4 @@
-rners en historial 351
-espn historial GER eventos 351 con córners en historial 349
-espn historial SA eventos 450 con córners en historial 450
-espn historial SB eventos 444 con córners en historial 444
-espn historial LL eventos 439 con córners en historial 439
-espn historial LL2 eventos 547 con córners en historial 547
-espn historial L1 eventos 350 con córners en historial 311
+rners en historial 311
 espn historial L2 eventos 351 con córners en historial 350
 espn historial ERE eventos 359 con córners en historial 359
 espn historial BEL eventos 348 con córners en historial 347
@@ -50,10 +44,16 @@ corners espn SB Palermo Sudtirol 4 3 1T None None
 corners espn SB Vicenza Carrarese 8 3 1T None None
 corners espn SB Virtus Entella Verona 7 5 1T None None
 corners espn BRA Chapecoense-SC Palmeiras 5 10 1T 0 4
+corners espn JPN Avispa Fukuoka Yokohama F. Marinos 4 5 1T None None
+corners espn JPN Okayama Shimizu S-Pulse 8 2 1T None None
+corners espn JPN FC Tokyo Sanfrecce Hiroshima 4 2 1T None None
+corners espn JPN Chiba Nagoya Grampus 6 6 1T None None
+corners espn JPN Mito FC Tokyo 6 2 1T None None
+corners espn JPN V-Varen Nagasaki Kawasaki Frontale 5 7 1T None None
 corners espn USA San Jose Earthquakes Houston Dynamo 7 5 1T 5 1
-resultados: 326
+resultados: 332
 {
- "generated": "2026-11-25T11:08:43.501096+00:00",
+ "generated": "2026-11-25T12:14:43.738427+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -201,4 +201,4 @@ resultados: 326
     "Rotherham",
     "Sheffield Weds",
     "Stevena
-partidos: 297
+partidos: 296
