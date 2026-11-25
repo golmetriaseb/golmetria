@@ -1,5 +1,4 @@
-rners en historial 311
-espn historial L2 eventos 351 con c贸rners en historial 350
+硆ners en historial 350
 espn historial ERE eventos 359 con c贸rners en historial 359
 espn historial BEL eventos 348 con c贸rners en historial 347
 espn historial POR eventos 341 con c贸rners en historial 341
@@ -50,10 +49,11 @@ corners espn JPN FC Tokyo Sanfrecce Hiroshima 4 2 1T None None
 corners espn JPN Chiba Nagoya Grampus 6 6 1T None None
 corners espn JPN Mito FC Tokyo 6 2 1T None None
 corners espn JPN V-Varen Nagasaki Kawasaki Frontale 5 7 1T None None
+corners espn JPN Urawa Reds Cerezo Osaka 3 10 1T None None
 corners espn USA San Jose Earthquakes Houston Dynamo 7 5 1T 5 1
-resultados: 332
+resultados: 333
 {
- "generated": "2026-11-25T12:14:43.738427+00:00",
+ "generated": "2026-11-25T13:39:47.618863+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -201,4 +201,4 @@ resultados: 332
     "Rotherham",
     "Sheffield Weds",
     "Stevena
-partidos: 296
+partidos: 289
