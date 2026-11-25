@@ -1,5 +1,4 @@
-córners en historial 135
-espn historial GB1 eventos 351 con córners en historial 351
+rners en historial 351
 espn historial GER eventos 351 con córners en historial 349
 espn historial SA eventos 450 con córners en historial 450
 espn historial SB eventos 444 con córners en historial 444
@@ -51,9 +50,10 @@ corners espn SB Palermo Sudtirol 4 3 1T None None
 corners espn SB Vicenza Carrarese 8 3 1T None None
 corners espn SB Virtus Entella Verona 7 5 1T None None
 corners espn BRA Chapecoense-SC Palmeiras 5 10 1T 0 4
-resultados: 325
+corners espn USA San Jose Earthquakes Houston Dynamo 7 5 1T 5 1
+resultados: 326
 {
- "generated": "2026-11-25T04:19:52.064939+00:00",
+ "generated": "2026-11-25T06:08:54.956605+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -201,4 +201,4 @@ resultados: 325
     "Rotherham",
     "Sheffield Weds",
     "Stevena
-partidos: 298
+partidos: 297
