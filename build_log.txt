@@ -53,7 +53,7 @@ corners espn JPN Urawa Reds Cerezo Osaka 3 10 1T None None
 corners espn USA San Jose Earthquakes Houston Dynamo 7 5 1T 5 1
 resultados: 333
 {
- "generated": "2026-11-25T13:39:47.618863+00:00",
+ "generated": "2026-11-25T15:19:36.678938+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -201,4 +201,4 @@ resultados: 333
     "Rotherham",
     "Sheffield Weds",
     "Stevena
-partidos: 289
+partidos: 291
