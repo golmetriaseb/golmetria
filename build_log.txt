@@ -1,4 +1,26 @@
-NK eventos 222 con córners en historial 222
+espn historial EPL eventos 430 con córners en historial 430
+espn historial ENG eventos 665 con córners en historial 665
+espn historial EL1 eventos 614 con córners en historial 614
+espn historial SCO eventos 274 con córners en historial 274
+espn historial SC1 eventos 218 con córners en historial 135
+espn historial GB1 eventos 351 con córners en historial 351
+espn historial GER eventos 351 con córners en historial 349
+espn historial SA eventos 450 con córners en historial 450
+espn historial SB eventos 454 con córners en historial 454
+espn historial LL eventos 439 con córners en historial 439
+espn historial LL2 eventos 547 con córners en historial 547
+espn historial L1 eventos 350 con córners en historial 311
+espn historial L2 eventos 351 con córners en historial 350
+espn historial ERE eventos 359 con córners en historial 359
+espn historial BEL eventos 348 con córners en historial 347
+espn historial POR eventos 341 con córners en historial 341
+espn historial TUR eventos 353 con córners en historial 353
+espn historial GRE eventos 278 con córners en historial 108
+espn historial SUI eventos 0 con córners en historial 0
+espn historial BRA eventos 487 con córners en historial 456
+espn historial ARG eventos 596 con córners en historial 555
+espn historial AUT eventos 223 con córners en historial 151
+espn historial DNK eventos 222 con córners en historial 222
 espn historial FIN eventos 0 con córners en historial 0
 espn historial IRL eventos 20 con córners en historial 0
 espn historial JPN eventos 209 con córners en historial 189
@@ -12,34 +34,6 @@ espn historial USA eventos 428 con córners en historial 427
 espn historial CHN eventos 275 con córners en historial 275
 espn historial solo ECU partidos 366 con córners 289 con 1T córners 0
 espn historial solo URU partidos 332 con córners 0 con 1T córners 0
-corners espn ENG Bolton West Brom 1 4 1T 0 2
-corners espn ENG Burnley Birmingham 9 7 1T 6 3
-corners espn ENG Watford Blackburn 5 4 1T 3 0
-corners espn ENG Stoke Millwall 2 5 1T 2 1
-corners espn ENG Bristol City Wrexham 4 9 1T 0 4
-corners espn ENG Cardiff Preston 8 8 1T 4 3
-corners espn ENG Charlton Lincoln 10 3 1T 6 3
-corners espn ENG Middlesbrough Swansea 3 2 1T 1 1
-corners espn ENG Norwich QPR 4 3 1T 2 3
-corners espn ENG Portsmouth West Ham 4 5 1T 2 3
-corners espn ENG Sheffield United Southampton 9 6 1T 2 4
-corners espn ENG Wolves Derby 11 1 1T 4 1
-corners espn EL1 Blackpool Leicester 1 12 1T None None
-corners espn EL1 Bradford Barnsley 5 5 1T None None
-corners espn EL1 Bromley Wycombe 6 4 1T None None
-corners espn EL1 Stevenage Sheffield Weds 5 7 1T None None
-corners espn SCO Hibernian Dundee 5 3 1T None None
-corners espn SCO Rangers Aberdeen 3 3 1T None None
-corners espn SB Cremonese Avellino 5 5 1T None None
-corners espn SB Mantova Arezzo 3 5 1T None None
-corners espn SB Padova Sampdoria 2 5 1T None None
-corners espn SB Pisa Modena 2 1 1T None None
-corners espn SB Juve Stabia Catanzaro 1 3 1T None None
-corners espn SB Benevento Empoli 3 8 1T None None
-corners espn SB Cesena Ascoli 6 4 1T None None
-corners espn SB Palermo Sudtirol 4 3 1T None None
-corners espn SB Vicenza Carrarese 8 3 1T None None
-corners espn SB Virtus Entella Verona 7 5 1T None None
 corners espn BRA Atletico-MG Corinthians 14 0 1T None None
 corners espn BRA Chapecoense-SC Palmeiras 5 10 1T 0 4
 corners espn ARG Boca Juniors Independiente 11 1 1T 3 1
@@ -55,7 +49,7 @@ corners espn MEX Monterrey Club America 3 12 1T 1 10
 corners espn USA San Jose Earthquakes Houston Dynamo 7 5 1T 5 1
 resultados: 346
 {
- "generated": "2026-11-26T09:21:37.852783+00:00",
+ "generated": "2026-11-26T11:07:43.259611+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -109,10 +103,10 @@ resultados: 346
   },
   "ENG": {
    "name": "Championship",
-   "hist": 744,
-   "last_result": "2026-11-22",
-   "has_corners": 744,
-   "has_half": 744,
+   "hist": 756,
+   "last_result": "2026-11-25",
+   "has_corners": 756,
+   "has_half": 756,
    "teams": [
     "Birmingham",
     "Blackburn",
@@ -170,10 +164,10 @@ resultados: 346
   },
   "EL1": {
    "name": "League One",
-   "hist": 727,
-   "last_result": "2026-11-21",
-   "has_corners": 727,
-   "has_half": 727,
+   "hist": 731,
+   "last_result": "2026-11-24",
+   "has_corners": 731,
+   "has_half": 731,
    "teams": [
     "AFC Wimbledon",
     "Barnsley",
