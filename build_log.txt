@@ -1,6 +1,4 @@
-storial 456
-espn historial ARG eventos 596 con córners en historial 555
-espn historial AUT eventos 223 con córners en historial 151
+os 223 con córners en historial 151
 espn historial DNK eventos 222 con córners en historial 222
 espn historial FIN eventos 0 con córners en historial 0
 espn historial IRL eventos 20 con córners en historial 0
@@ -13,7 +11,7 @@ espn historial RUS eventos 176 con córners en historial 156
 espn historial SWE eventos 272 con córners en historial 272
 espn historial USA eventos 428 con córners en historial 427
 espn historial CHN eventos 275 con córners en historial 275
-espn historial solo ECU partidos 365 con córners 288 con 1T córners 0
+espn historial solo ECU partidos 366 con córners 289 con 1T córners 0
 espn historial solo URU partidos 332 con córners 0 con 1T córners 0
 corners espn ENG Bolton West Brom 1 4 1T 0 2
 corners espn ENG Burnley Birmingham 9 7 1T 6 3
@@ -45,6 +43,7 @@ corners espn SB Vicenza Carrarese 8 3 1T None None
 corners espn SB Virtus Entella Verona 7 5 1T None None
 corners espn BRA Atletico-MG Corinthians 14 0 1T None None
 corners espn BRA Chapecoense-SC Palmeiras 5 10 1T 0 4
+corners espn ARG Boca Juniors Independiente 11 1 1T 3 1
 corners espn JPN Avispa Fukuoka Yokohama F. Marinos 4 5 1T None None
 corners espn JPN Okayama Shimizu S-Pulse 8 2 1T None None
 corners espn JPN FC Tokyo Sanfrecce Hiroshima 4 2 1T None None
@@ -52,10 +51,11 @@ corners espn JPN Chiba Nagoya Grampus 6 6 1T None None
 corners espn JPN Mito FC Tokyo 6 2 1T None None
 corners espn JPN V-Varen Nagasaki Kawasaki Frontale 5 7 1T None None
 corners espn JPN Urawa Reds Cerezo Osaka 3 10 1T None None
+corners espn MEX Toluca Atlas 7 5 1T 4 3
 corners espn USA San Jose Earthquakes Houston Dynamo 7 5 1T 5 1
-resultados: 342
+resultados: 345
 {
- "generated": "2026-11-26T01:29:10.186518+00:00",
+ "generated": "2026-11-26T03:06:17.614963+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -203,4 +203,4 @@ resultados: 342
     "Rotherham",
     "Sheffield Weds",
     "Stevena
-partidos: 282
+partidos: 280
