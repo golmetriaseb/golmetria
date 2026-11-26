@@ -49,7 +49,7 @@ corners espn MEX Monterrey Club America 3 12 1T 1 10
 corners espn USA San Jose Earthquakes Houston Dynamo 7 5 1T 5 1
 resultados: 346
 {
- "generated": "2026-11-26T12:12:41.402556+00:00",
+ "generated": "2026-11-26T13:34:17.520404+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
