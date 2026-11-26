@@ -1,5 +1,4 @@
-os 223 con córners en historial 151
-espn historial DNK eventos 222 con córners en historial 222
+NK eventos 222 con córners en historial 222
 espn historial FIN eventos 0 con córners en historial 0
 espn historial IRL eventos 20 con córners en historial 0
 espn historial JPN eventos 209 con córners en historial 189
@@ -52,10 +51,11 @@ corners espn JPN Mito FC Tokyo 6 2 1T None None
 corners espn JPN V-Varen Nagasaki Kawasaki Frontale 5 7 1T None None
 corners espn JPN Urawa Reds Cerezo Osaka 3 10 1T None None
 corners espn MEX Toluca Atlas 7 5 1T 4 3
+corners espn MEX Monterrey Club America 3 12 1T 1 10
 corners espn USA San Jose Earthquakes Houston Dynamo 7 5 1T 5 1
-resultados: 345
+resultados: 346
 {
- "generated": "2026-11-26T04:15:33.212349+00:00",
+ "generated": "2026-11-26T05:26:55.265667+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
