@@ -1,5 +1,4 @@
-storial 0
-espn historial BRA eventos 487 con córners en historial 456
+storial 456
 espn historial ARG eventos 596 con córners en historial 555
 espn historial AUT eventos 223 con córners en historial 151
 espn historial DNK eventos 222 con córners en historial 222
@@ -44,6 +43,7 @@ corners espn SB Cesena Ascoli 6 4 1T None None
 corners espn SB Palermo Sudtirol 4 3 1T None None
 corners espn SB Vicenza Carrarese 8 3 1T None None
 corners espn SB Virtus Entella Verona 7 5 1T None None
+corners espn BRA Atletico-MG Corinthians 14 0 1T None None
 corners espn BRA Chapecoense-SC Palmeiras 5 10 1T 0 4
 corners espn JPN Avispa Fukuoka Yokohama F. Marinos 4 5 1T None None
 corners espn JPN Okayama Shimizu S-Pulse 8 2 1T None None
@@ -53,9 +53,9 @@ corners espn JPN Mito FC Tokyo 6 2 1T None None
 corners espn JPN V-Varen Nagasaki Kawasaki Frontale 5 7 1T None None
 corners espn JPN Urawa Reds Cerezo Osaka 3 10 1T None None
 corners espn USA San Jose Earthquakes Houston Dynamo 7 5 1T 5 1
-resultados: 341
+resultados: 342
 {
- "generated": "2026-11-25T23:58:13.814395+00:00",
+ "generated": "2026-11-26T01:29:10.186518+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -103,9 +103,9 @@ resultados: 341
     "Tottenham Hotspur": "Tottenham",
     "Manchester City": "Man City"
    },
-   "fixtures_espn": 19,
+   "fixtures_espn": 20,
    "espn_unmatched": 0,
-   "matches": 19
+   "matches": 20
   },
   "ENG": {
    "name": "Championship",
@@ -203,4 +203,4 @@ resultados: 341
     "Rotherham",
     "Sheffield Weds",
     "Stevena
-partidos: 283
+partidos: 282
