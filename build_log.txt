@@ -55,7 +55,7 @@ corners espn JPN Urawa Reds Cerezo Osaka 3 10 1T None None
 corners espn USA San Jose Earthquakes Houston Dynamo 7 5 1T 5 1
 resultados: 341
 {
- "generated": "2026-11-25T23:04:59.815485+00:00",
+ "generated": "2026-11-25T23:58:13.814395+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
