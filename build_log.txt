@@ -55,7 +55,7 @@ corners espn MEX Monterrey Club America 3 12 1T 1 10
 corners espn USA San Jose Earthquakes Houston Dynamo 7 5 1T 5 1
 resultados: 346
 {
- "generated": "2026-11-26T05:26:55.265667+00:00",
+ "generated": "2026-11-26T07:35:05.747610+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -203,4 +203,4 @@ resultados: 346
     "Rotherham",
     "Sheffield Weds",
     "Stevena
-partidos: 279
+partidos: 278
