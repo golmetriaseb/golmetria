@@ -1,4 +1,4 @@
-espn historial EPL eventos 430 con córners en historial 430
+30 con córners en historial 430
 espn historial ENG eventos 665 con córners en historial 665
 espn historial EL1 eventos 614 con córners en historial 614
 espn historial SCO eventos 274 con córners en historial 274
@@ -34,6 +34,7 @@ espn historial USA eventos 428 con córners en historial 427
 espn historial CHN eventos 275 con córners en historial 275
 espn historial solo ECU partidos 366 con córners 289 con 1T córners 0
 espn historial solo URU partidos 332 con córners 0 con 1T córners 0
+corners espn EL1 Doncaster Huddersfield 5 6 1T None None
 corners espn BRA Atletico-MG Corinthians 14 0 1T None None
 corners espn BRA Chapecoense-SC Palmeiras 5 10 1T 0 4
 corners espn ARG Boca Juniors Independiente 11 1 1T 3 1
@@ -47,9 +48,9 @@ corners espn JPN Urawa Reds Cerezo Osaka 3 10 1T None None
 corners espn MEX Toluca Atlas 7 5 1T 4 3
 corners espn MEX Monterrey Club America 3 12 1T 1 10
 corners espn USA San Jose Earthquakes Houston Dynamo 7 5 1T 5 1
-resultados: 346
+resultados: 347
 {
- "generated": "2026-11-26T21:09:42.921508+00:00",
+ "generated": "2026-11-26T22:05:36.405232+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
