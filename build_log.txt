@@ -55,7 +55,7 @@ corners espn MEX Toluca Atlas 7 5 1T 4 3
 corners espn USA San Jose Earthquakes Houston Dynamo 7 5 1T 5 1
 resultados: 345
 {
- "generated": "2026-11-26T03:06:17.614963+00:00",
+ "generated": "2026-11-26T04:15:33.212349+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -203,4 +203,4 @@ resultados: 345
     "Rotherham",
     "Sheffield Weds",
     "Stevena
-partidos: 280
+partidos: 279
