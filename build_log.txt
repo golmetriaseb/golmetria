@@ -39,7 +39,7 @@ corners espn ARG Boca Juniors Independiente 11 1 1T 3 1
 corners espn JPN Mito FC Tokyo 6 2 1T None None
 resultados: 351
 {
- "generated": "2026-11-27T16:16:48.806036+00:00",
+ "generated": "2026-11-27T17:25:31.447543+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
