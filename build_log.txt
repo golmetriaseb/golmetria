@@ -50,7 +50,7 @@ corners espn MEX Toluca Atlas 7 5 1T 4 3
 corners espn MEX Monterrey Club America 3 12 1T 1 10
 resultados: 346
 {
- "generated": "2026-11-27T03:10:28.917527+00:00",
+ "generated": "2026-11-27T04:19:26.425028+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
