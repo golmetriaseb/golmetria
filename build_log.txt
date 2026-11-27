@@ -1,4 +1,4 @@
- 430
+espn historial EPL eventos 430 con córners en historial 430
 espn historial ENG eventos 665 con córners en historial 665
 espn historial EL1 eventos 614 con córners en historial 614
 espn historial SCO eventos 274 con córners en historial 274
@@ -17,14 +17,14 @@ espn historial POR eventos 341 con córners en historial 341
 espn historial TUR eventos 353 con córners en historial 353
 espn historial GRE eventos 278 con córners en historial 108
 espn historial SUI eventos 0 con córners en historial 0
-espn historial BRA eventos 487 con córners en historial 456
+espn historial BRA eventos 489 con córners en historial 459
 espn historial ARG eventos 596 con córners en historial 555
 espn historial AUT eventos 223 con córners en historial 151
 espn historial DNK eventos 222 con córners en historial 222
 espn historial FIN eventos 0 con córners en historial 0
 espn historial IRL eventos 20 con córners en historial 0
-espn historial JPN eventos 209 con córners en historial 189
-espn historial MEX eventos 265 con córners en historial 265
+espn historial JPN eventos 216 con córners en historial 195
+espn historial MEX eventos 267 con córners en historial 267
 espn historial NOR eventos 275 con córners en historial 275
 espn historial POL eventos 0 con córners en historial 0
 espn historial ROU eventos 0 con córners en historial 0
@@ -35,23 +35,11 @@ espn historial CHN eventos 275 con córners en historial 275
 espn historial solo ECU partidos 366 con córners 289 con 1T córners 0
 espn historial solo URU partidos 332 con córners 0 con 1T córners 0
 corners espn EL1 Doncaster Huddersfield 5 6 1T None None
-corners espn BRA Sao Paulo Remo 4 3 1T 3 0
-corners espn BRA Atletico-MG Corinthians 14 0 1T None None
 corners espn ARG Boca Juniors Independiente 11 1 1T 3 1
-corners espn JPN Avispa Fukuoka Yokohama F. Marinos 4 5 1T None None
-corners espn JPN Okayama Shimizu S-Pulse 8 2 1T None None
-corners espn JPN FC Tokyo Sanfrecce Hiroshima 4 2 1T None None
-corners espn JPN Chiba Nagoya Grampus 6 6 1T None None
 corners espn JPN Mito FC Tokyo 6 2 1T None None
-corners espn JPN V-Varen Nagasaki Kawasaki Frontale 5 7 1T None None
-corners espn JPN Urawa Reds Cerezo Osaka 3 10 1T None None
-corners espn MEX Pachuca Guadalajara Chivas 6 1 1T 4 0
-corners espn MEX Club Leon Cruz Azul 5 4 1T 1 1
-corners espn MEX Toluca Atlas 7 5 1T 4 3
-corners espn MEX Monterrey Club America 3 12 1T 1 10
-resultados: 347
+resultados: 351
 {
- "generated": "2026-11-27T07:35:40.292245+00:00",
+ "generated": "2026-11-27T09:21:56.126610+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -199,4 +187,4 @@ resultados: 347
     "Rotherham",
     "Sheffield Weds",
     "Stevena
-partidos: 297
+partidos: 322
