@@ -1,4 +1,4 @@
-espn historial EPL eventos 430 con córners en historial 430
+torial EPL eventos 430 con córners en historial 430
 espn historial ENG eventos 665 con córners en historial 665
 espn historial EL1 eventos 614 con córners en historial 614
 espn historial SCO eventos 274 con córners en historial 274
@@ -45,11 +45,12 @@ corners espn JPN Chiba Nagoya Grampus 6 6 1T None None
 corners espn JPN Mito FC Tokyo 6 2 1T None None
 corners espn JPN V-Varen Nagasaki Kawasaki Frontale 5 7 1T None None
 corners espn JPN Urawa Reds Cerezo Osaka 3 10 1T None None
+corners espn MEX Pachuca Guadalajara Chivas 6 1 1T 4 0
 corners espn MEX Toluca Atlas 7 5 1T 4 3
 corners espn MEX Monterrey Club America 3 12 1T 1 10
-resultados: 345
+resultados: 346
 {
- "generated": "2026-11-27T01:32:04.159711+00:00",
+ "generated": "2026-11-27T03:10:28.917527+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -197,4 +198,4 @@ resultados: 345
     "Rotherham",
     "Sheffield Weds",
     "Stevena
-partidos: 299
+partidos: 298
