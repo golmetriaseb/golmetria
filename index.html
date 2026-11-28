@@ -107,6 +107,10 @@ nav button.on{color:var(--bl)}nav button.on svg{filter:drop-shadow(0 0 6px rgba(
 .sel{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;align-items:center}.sel::-webkit-scrollbar{display:none}#fb{display:contents}.sel #fl,.sel select{flex:none;width:auto;height:34px;box-sizing:border-box;border-radius:999px;padding:8px 11px;font:700 12.5px Barlow}.sel select{padding-right:26px;background-position:right 9px center;background-size:10px}.sel #fl:after{margin:-3px 0 0 4px}
 .fc{flex:none;height:34px;box-sizing:border-box;border:1px solid var(--ln2);background:var(--card);color:var(--tx);border-radius:999px;padding:8px 11px;font:700 12.5px Barlow;display:flex;gap:5px;align-items:center;cursor:pointer;white-space:nowrap}.fc span{color:var(--mu);font-weight:600}.fc.dd:after{content:"▾";font-size:10px;color:var(--mu)}.fc.hl{border-color:var(--bl)}
 .fc i{width:28px;height:17px;border-radius:99px;background:#243047;position:relative;display:inline-block}.fc i:after{content:"";position:absolute;left:2px;top:2px;width:13px;height:13px;border-radius:50%;background:#9fb0cc;transition:.2s}.fc.on i{background:linear-gradient(135deg,#1f7bff,#2ec5ff)}.fc.on i:after{left:13px;background:#fff}
+.cbd{background:linear-gradient(160deg,#101a2b,#0b111b);border:1px solid #243452;border-radius:14px;padding:6px 12px 10px;margin-bottom:8px}
+.cbd .cl{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid #1a2740}.cbd .cl b{display:block;font-size:14px}.cbd .cl small{color:var(--mu);font-size:11.5px}.cbd .cl i{font:italic 800 20px var(--f1);font-style:italic;color:var(--tc)}
+.cbd .cf{display:flex;justify-content:space-between;align-items:center;gap:10px;padding-top:9px;font-size:12.5px;color:var(--mu)}.cbd .cf b{color:var(--tx);font:italic 800 15px var(--f1)}.cbd .cf button{flex:none;padding:7px 12px;border-radius:999px;border:1px solid var(--bl);background:var(--blbg);color:var(--tx);font:italic 800 13px var(--f1);text-transform:uppercase;letter-spacing:.4px}
+.cbd.no{padding:10px 12px;font-size:12.5px;color:var(--mu)}
 .hs{margin:4px 0 6px}.hs h4{margin:0 0 8px;font:800 11px/1 Barlow;letter-spacing:1.6px;color:var(--go);text-transform:uppercase}
 .hsr{display:flex;gap:10px;overflow-x:auto;scrollbar-width:none;padding-bottom:4px}.hsr::-webkit-scrollbar{display:none}
 .hsc{flex:none;width:205px;background:linear-gradient(160deg,#101a2b,#0b111b);border:1px solid #243452;border-radius:16px;padding:12px 14px;cursor:pointer;text-align:left;color:var(--tx);font-family:inherit}
@@ -259,7 +263,7 @@ function render(){
  const F=flat();
  const S=F.filter(x=>payOn?(rp(x.b.p)>=PLO&&rp(x.b.p)<=PHI):rp(x.b.p)>=thr).sort((a,b)=>b.b.p-a.b.p),GM=new Map();S.forEach(x=>{if(!GM.has(x.m.id))GM.set(x.m.id,[]);GM.get(x.m.id).push(x)});
  const SG=[...GM.values()].sort(sortM==='p'?(a,b)=>b[0].b.p-a[0].b.p:(a,b)=>(a[0].m.utc<b[0].m.utc?-1:a[0].m.utc>b[0].m.utc?1:b[0].b.p-a[0].b.p));
- $('#hs0').innerHTML=bestHtml();
+ $('#hs0').innerHTML=bestHtml()+comboHtml();
  $('#l-seg').innerHTML=SG.length?LN+segHtml(SG):(payOn?'<div class="empty"><b style="display:block;color:var(--tx);font:italic 800 20px var(--f1);text-transform:uppercase;margin-bottom:6px">Sin apuestas entre '+pc(PLO)+' y '+pc(PHI)+'</b>Con estos filtros no hay ninguna. Quita un filtro o prueba otro día.</div>':emptyMsg('s'));
  const th=(a,k)=>'<span>Desde</span>'+[.95,.80,.75,.65].map(x=>`<button data-${k}="${x}" class="${a===x?'on':''}">${pc(x)} o más</button>`).join('');
  $('#fb').innerHTML=`<button class="fc dd hl" type="button" data-om="thr"><span>Desde</span><b>${payOn?pc(PLO)+'–'+pc(PHI):pc(thr)}</b></button><button class="fc dd" type="button" data-om="ord"><span>Orden</span><b>${sortM==='p'?'Más probables':'Por hora'}</b></button><button class="fc${grpLg?' on':''}" type="button" data-grp="1"><i></i>Agrupar</button><button class="fc${payOn?' on':''}" type="button" data-pay="1"><i></i>Para apostar</button>`;
@@ -288,6 +292,16 @@ function bestDay(){const C=DATA.filter(m=>m.date===day&&!over(m)&&m.bets.length)
  for(const x of C){if(ids.length>=3)break;if(!ids.includes(x.m.id))ids.push(x.m.id)}
  const ns={};days.forEach(d=>{if(st[d])ns[d]=st[d]});ns[day]=ids;LS.set('gm_best',ns);
  return C.filter(x=>ids.includes(x.m.id)).slice(0,3)}
+let comboP=null;
+function comboDay(){const now=Date.now(),C=[];DATA.filter(m=>m.date===day&&sel.has(m.league)&&new Date(m.utc)>now).forEach(m=>m.bets.forEach(b=>{if(b.type!=='win'&&rp(b.p)>=.7)C.push({m,b})}));
+ C.sort((a,b)=>b.b.p-a.b.p);const T=C;let best=null;
+ for(let i=0;i<T.length;i++)for(let j=i+1;j<T.length;j++){if(T[i].m.id===T[j].m.id)continue;const jp=T[i].b.p*T[j].b.p;if(1/jp>=1.5&&(!best||jp>best.jp))best={jp,a:T[i],c:T[j]}}
+ return best}
+function comboHtml(){const c=comboDay();comboP=c;const t=dn(day)==='Hoy'?'de hoy':'del día';
+ if(!c)return `<div class="hs"><h4>Combinada ${t}</h4><div class="cbd no">No hay dos apuestas muy probables que lleguen a cuota 1.50. Para este día no se recomienda combinada.</div></div>`;
+ const ln=y=>`<div class="cl ${tc(y.b.p)}"><span><b>${y.b.label}</b><small>${y.m.home} vs ${y.m.away} · ${y.m.time}</small></span><i>${pc(y.b.p)}</i></div>`;
+ return `<div class="hs"><h4>Combinada ${t} · mínimo 1.50</h4><div class="cbd">${ln(c.a)}${ln(c.c)}<div class="cf"><span>Salen las dos <b>${pc(c.jp)}</b> · cuota mín. <b>${(1/c.jp).toFixed(2)}</b></span><button type="button" data-cb="1">Añadir</button></div></div></div>`}
+document.addEventListener('click',e=>{const bt=e.target.closest('[data-cb]');if(!bt||!comboP)return;[comboP.a,comboP.c].forEach(y=>{if(inSlip(y.m.id,y.b.label))return;const to=parseFloat(ODDS[oddKey(y.m.id,y.b.label)]);slip.push({id:Date.now()+Math.random(),matchId:y.m.id,league:y.m.league,home:y.m.home,away:y.m.away,utc:y.m.utc,match:y.m.home+' vs '+y.m.away,label:y.b.label,btype:y.b.type,odd:(to>1?to:null)||y.b.odd||null,p:y.b.p,res:'p',date:y.m.date})});slipBar();render();toast('✓ Añadidas las 2 a tu combinada')});
 function bestHtml(){const T=bestDay();if(!T.length)return'';return `<div class="hs"><h4>Las mejores ${dn(day)==='Hoy'?'de hoy':'del día'}</h4><div class="hsr">`+T.map(x=>`<button class="hsc" type="button" data-m="${x.m.id}"><div style="margin-bottom:8px">${lbadge(x.m)}</div><div class="p">${pc(x.b.p)}<small>cuota mín. ${(1/x.b.p).toFixed(2)}</small></div><div class="l">${x.b.label}</div><div class="m">${x.m.home} vs ${x.m.away} · ${isLive(x.m)?'<b style="color:#ff9a62">● En vivo</b>':x.m.time}</div></button>`).join('')+`</div></div>`}
 function segHtml(SG){const n=SG.length;let h=(payOn?`<div class="kc" style="margin-bottom:10px;padding:10px 12px;border:1px dashed #2a3a58;border-radius:12px;background:#0b111c"><b style="color:var(--go)">Para apostar:</b> entre ${pc(PLO)} y ${pc(PHI)} de probabilidad. Quedan fuera las de ${pc(PHI+.01)} o más, que casi no pagan. Siguen en la vista completa.</div>`:'')+`<div class="kc"><b>${n} ${n===1?'partido':'partidos'}</b> con ${payOn?pc(PLO)+' a '+pc(PHI):pc(thr)+' o más'} · ${sortM==='p'?'de mayor a menor probabilidad':'en vivo primero, luego por hora'}</div>`;
   const body=a=>sortM==='p'?a.map(kRow).join(''):kSlots(a);
