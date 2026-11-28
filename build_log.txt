@@ -1,11 +1,4 @@
-s en historial 665
-espn historial EL1 eventos 614 con córners en historial 614
-espn historial SCO eventos 274 con córners en historial 274
-espn historial SC1 eventos 218 con córners en historial 135
-espn historial GB1 eventos 351 con córners en historial 351
-espn historial GER eventos 351 con córners en historial 349
-espn historial SA eventos 450 con córners en historial 450
-espn historial SB eventos 454 con córners en historial 454
+54 con córners en historial 454
 espn historial LL eventos 439 con córners en historial 439
 espn historial LL2 eventos 547 con córners en historial 547
 espn historial L1 eventos 350 con córners en historial 311
@@ -32,7 +25,7 @@ espn historial SWE eventos 272 con córners en historial 272
 espn historial USA eventos 428 con córners en historial 427
 espn historial CHN eventos 275 con córners en historial 275
 espn historial solo ECU partidos 368 con córners 291 con 1T córners 0
-espn historial solo URU partidos 332 con córners 0 con 1T córners 0
+espn historial solo URU partidos 333 con córners 0 con 1T córners 0
 corners espn EPL Nott'm Forest Chelsea 1 2 1T 1 1
 corners espn ENG Southampton Middlesbrough 6 6 1T 4 4
 corners espn EL1 Doncaster Huddersfield 5 6 1T None None
@@ -50,9 +43,16 @@ corners espn TUR Alanyaspor Konyaspor 3 3 1T None None
 corners espn TUR Rizespor Kasimpasa 5 2 1T None None
 corners espn BRA Fluminense Cruzeiro 4 5 1T 1 3
 corners espn DNK Sonderjyske Brondby 4 4 1T None None
-resultados: 366
+corners espn JPN Kyoto Cerezo Osaka 2 7 1T None None
+corners espn JPN Shimizu S-Pulse Urawa Reds 3 8 1T None None
+corners espn JPN Kashima Antlers Okayama 10 2 1T None None
+corners espn JPN Vissel Kobe Chiba 3 3 1T None None
+corners espn JPN Kashiwa Reysol Sanfrecce Hiroshima 4 8 1T None None
+corners espn USA Columbus Crew Inter Miami 8 6 1T 6 2
+corners espn USA Real Salt Lake Vancouver Whitecaps 5 6 1T 2 2
+resultados: 374
 {
- "generated": "2026-11-28T01:27:13.091424+00:00",
+ "generated": "2026-11-28T10:27:28.294227+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -200,4 +200,4 @@ resultados: 366
     "Rotherham",
     "Sheffield Weds",
     "Steven
-partidos: 383
+partidos: 374
