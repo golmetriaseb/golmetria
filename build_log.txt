@@ -1,5 +1,4 @@
-espn historial EPL eventos 430 con córners en historial 430
-espn historial ENG eventos 665 con córners en historial 665
+s en historial 665
 espn historial EL1 eventos 614 con córners en historial 614
 espn historial SCO eventos 274 con córners en historial 274
 espn historial SC1 eventos 218 con córners en historial 135
@@ -32,14 +31,28 @@ espn historial RUS eventos 176 con córners en historial 156
 espn historial SWE eventos 272 con córners en historial 272
 espn historial USA eventos 428 con córners en historial 427
 espn historial CHN eventos 275 con córners en historial 275
-espn historial solo ECU partidos 366 con córners 289 con 1T córners 0
+espn historial solo ECU partidos 368 con córners 291 con 1T córners 0
 espn historial solo URU partidos 332 con córners 0 con 1T córners 0
+corners espn EPL Nott'm Forest Chelsea 1 2 1T 1 1
+corners espn ENG Southampton Middlesbrough 6 6 1T 4 4
 corners espn EL1 Doncaster Huddersfield 5 6 1T None None
-corners espn ARG Boca Juniors Independiente 11 1 1T 3 1
-corners espn JPN Mito FC Tokyo 6 2 1T None None
-resultados: 351
+corners espn GB1 Werder Bremen M'gladbach 7 4 1T None None
+corners espn GER Heidenheim Nurnberg 4 5 1T None None
+corners espn GER Bochum Darmstadt 10 7 1T None None
+corners espn SA Venezia Bologna 3 6 1T 3 2
+corners espn LL Levante Santander 9 5 1T 5 3
+corners espn LL2 Leganes Sabadell 5 9 1T None None
+corners espn L1 Brest Paris FC 3 5 1T 3 3
+corners espn ERE Groningen Willem II 6 1 1T 3 1
+corners espn BEL Oud-Heverlee Leuven Kortrijk 9 2 1T None None
+corners espn POR Maritimo Nacional 9 1 1T None None
+corners espn TUR Alanyaspor Konyaspor 3 3 1T None None
+corners espn TUR Rizespor Kasimpasa 5 2 1T None None
+corners espn BRA Fluminense Cruzeiro 4 5 1T 1 3
+corners espn DNK Sonderjyske Brondby 4 4 1T None None
+resultados: 366
 {
- "generated": "2026-11-27T17:25:31.447543+00:00",
+ "generated": "2026-11-28T01:27:13.091424+00:00",
  "leagues": {
   "EPL": {
    "name": "Premier League",
@@ -75,7 +88,6 @@ resultados: 351
    "fav": false,
    "fixtures_fd": 10,
    "name_map": {
-    "Nottingham Forest": "Nott'm Forest",
     "Leeds United": "Leeds",
     "Coventry City": "Coventry",
     "Manchester United": "Man United",
@@ -85,11 +97,12 @@ resultados: 351
     "Hull City": "Hull",
     "AFC Bournemouth": "Bournemouth",
     "Tottenham Hotspur": "Tottenham",
-    "Manchester City": "Man City"
+    "Manchester City": "Man City",
+    "Nottingham Forest": "Nott'm Forest"
    },
-   "fixtures_espn": 20,
+   "fixtures_espn": 26,
    "espn_unmatched": 0,
-   "matches": 20
+   "matches": 26
   },
   "ENG": {
    "name": "Championship",
@@ -148,9 +161,9 @@ resultados: 351
     "Swansea City": "Swansea",
     "Cardiff City": "Cardiff"
    },
-   "fixtures_espn": 13,
+   "fixtures_espn": 22,
    "espn_unmatched": 0,
-   "matches": 13
+   "matches": 22
   },
   "EL1": {
    "name": "League One",
@@ -187,4 +200,4 @@ resultados: 351
     "Rotherham",
     "Sheffield Weds",
     "Steven
-partidos: 323
+partidos: 383
